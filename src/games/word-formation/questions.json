@@ -1,0 +1,1329 @@
+[
+  {
+    "id": "addition-additional",
+    "family": "addition",
+    "root": "ADDITION",
+    "category": "adjective",
+    "label": "Adjetivo (-al)",
+    "level": 2,
+    "sentence": "Learning a second language is not just useful for travelling; many studies show it also brings important ___ benefits for memory and concentration.",
+    "answers": [
+      "additional"
+    ],
+    "explanation": "ADDITION → additional. Delante del sustantivo 'benefits' va un adjetivo; -al convierte sustantivos en adjetivos."
+  },
+  {
+    "id": "addition-additionally",
+    "family": "addition",
+    "root": "ADDITION",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 3,
+    "sentence": "The course covers grammar and vocabulary in detail; ___, every student receives one hour of individual pronunciation practice each week.",
+    "answers": [
+      "additionally"
+    ],
+    "explanation": "ADDITION → additionally. Conector al principio de la oración, separado por coma: adverbio."
+  },
+  {
+    "id": "agree-agreement",
+    "family": "agree",
+    "root": "AGREE",
+    "category": "noun",
+    "label": "Sustantivo (-ment)",
+    "level": 1,
+    "sentence": "After eight hours of difficult discussion the two sides finally reached an ___ that satisfied nobody completely but did end the strike.",
+    "answers": [
+      "agreement"
+    ],
+    "explanation": "AGREE → agreement. Después de 'an' va un sustantivo contable; -ment convierte verbos en sustantivos."
+  },
+  {
+    "id": "agree-disagree",
+    "family": "agree",
+    "root": "AGREE",
+    "category": "prefix",
+    "label": "Prefijo negativo (dis-)",
+    "level": 2,
+    "sentence": "Although I respect your point of view and understand your reasons, I completely ___ with your opinion about banning cars from the city centre.",
+    "answers": [
+      "disagree"
+    ],
+    "explanation": "AGREE → disagree. 'Although' marca contraste: el sentido es negativo. Aquí falta un verbo, negado con dis-."
+  },
+  {
+    "id": "agree-disagreement",
+    "family": "agree",
+    "root": "AGREE",
+    "category": "noun",
+    "label": "Sustantivo negativo (dis- + -ment)",
+    "level": 2,
+    "sentence": "A minor ___ about who should pay for the meal gradually turned into an argument that ruined the rest of the evening.",
+    "answers": [
+      "disagreement"
+    ],
+    "explanation": "AGREE → disagreement. Sustantivo, y el contexto ('turned into an argument') pide el negativo: dis-."
+  },
+  {
+    "id": "attend-attendance",
+    "family": "attend",
+    "root": "ATTEND",
+    "category": "noun",
+    "label": "Sustantivo (-ance)",
+    "level": 2,
+    "sentence": "___ at the evening lectures has fallen so sharply this term that the university is seriously thinking of cancelling them altogether.",
+    "answers": [
+      "attendance"
+    ],
+    "explanation": "ATTEND → attendance. Es el sujeto de 'has fallen', así que necesitás un sustantivo."
+  },
+  {
+    "id": "attend-attendant",
+    "family": "attend",
+    "root": "ATTEND",
+    "category": "person",
+    "label": "Sustantivo de persona (-or)",
+    "level": 2,
+    "sentence": "Before the plane took off, a flight ___ walked down the aisle checking that every passenger had fastened their seatbelt correctly.",
+    "answers": [
+      "attendant"
+    ],
+    "explanation": "ATTEND → attendant. No todos los sustantivos de persona usan -er: attendant, assistant, applicant usan -ant."
+  },
+  {
+    "id": "attend-attention",
+    "family": "attend",
+    "root": "ATTEND",
+    "category": "noun",
+    "label": "Sustantivo (-tion)",
+    "level": 1,
+    "sentence": "The teacher asked the whole class to pay close ___ to the diagram on the board, because something very similar would appear in the exam.",
+    "answers": [
+      "attention"
+    ],
+    "explanation": "ATTEND → attention. 'Pay ___' es una colocación fija con sustantivo."
+  },
+  {
+    "id": "bear-bearable",
+    "family": "bear",
+    "root": "BEAR",
+    "category": "adjective",
+    "label": "Adjetivo (-able)",
+    "level": 3,
+    "sentence": "The afternoon heat was just about ___ as long as you stayed in the shade and drank plenty of water every hour.",
+    "answers": [
+      "bearable"
+    ],
+    "explanation": "BEAR → bearable. 'Just about ___' pide un adjetivo; -able significa 'que se puede soportar'."
+  },
+  {
+    "id": "bear-unbearable",
+    "family": "bear",
+    "root": "BEAR",
+    "category": "adjective",
+    "label": "Doble cambio (un- + -able)",
+    "level": 3,
+    "sentence": "The heat in the city during August was almost ___, so most families escaped to the coast for the entire month.",
+    "answers": [
+      "unbearable"
+    ],
+    "explanation": "BEAR → bearable → unbearable. ¡Prefijo Y sufijo a la vez! El nivel más alto del examen combina ambos."
+  },
+  {
+    "id": "child-childhood",
+    "family": "child",
+    "root": "CHILD",
+    "category": "noun",
+    "label": "Sustantivo (-hood)",
+    "level": 2,
+    "sentence": "She wrote a beautiful book of memories about her ___ in a small fishing village on the northern coast of Spain.",
+    "answers": [
+      "childhood"
+    ],
+    "explanation": "CHILD → childhood. 'Her ___ in a village' pide un sustantivo; -hood expresa etapa o condición (adulthood, neighbourhood)."
+  },
+  {
+    "id": "child-childish",
+    "family": "child",
+    "root": "CHILD",
+    "category": "adjective",
+    "label": "Adjetivo (-ish)",
+    "level": 2,
+    "sentence": "Refusing to speak to a colleague for an entire week over something so small strikes me as frankly ___ behaviour.",
+    "answers": [
+      "childish"
+    ],
+    "explanation": "CHILD → childish. Delante de 'behaviour' va un adjetivo; -ish acá tiene sentido despectivo: 'propio de un chico'."
+  },
+  {
+    "id": "clear-clarity",
+    "family": "clear",
+    "root": "CLEAR",
+    "category": "noun",
+    "label": "Sustantivo (-ity)",
+    "level": 3,
+    "sentence": "What makes his lectures so popular among students is the ___ with which he explains ideas that other people manage to make sound impossible.",
+    "answers": [
+      "clarity"
+    ],
+    "explanation": "CLEAR → clarity. 'The ___ with which' pide un sustantivo abstracto; clear pierde la e y toma -ity."
+  },
+  {
+    "id": "clear-clearly",
+    "family": "clear",
+    "root": "CLEAR",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 1,
+    "sentence": "Please write your name and full address ___ at the top of the form, because we cannot process applications that we are unable to read.",
+    "answers": [
+      "clearly"
+    ],
+    "explanation": "CLEAR → clearly. Modifica al verbo 'write' (cómo escribir): adverbio."
+  },
+  {
+    "id": "clear-unclear",
+    "family": "clear",
+    "root": "CLEAR",
+    "category": "prefix",
+    "label": "Prefijo + adjetivo",
+    "level": 2,
+    "sentence": "The assembly instructions that came with the furniture were so ___ that we spent the whole afternoon trying to figure out which screw went where.",
+    "answers": [
+      "unclear"
+    ],
+    "explanation": "CLEAR → unclear. El contexto (pasaron la tarde intentando entenderlas) pide sentido negativo: un- + adjetivo."
+  },
+  {
+    "id": "comfort-comfortable",
+    "family": "comfort",
+    "root": "COMFORT",
+    "category": "adjective",
+    "label": "Adjetivo (-able)",
+    "level": 1,
+    "sentence": "Despite being one of the cheapest hotels in the city centre, the room was surprisingly clean, quiet and ___, so we decided to stay an extra night.",
+    "answers": [
+      "comfortable"
+    ],
+    "explanation": "COMFORT → comfortable. Va en una lista de adjetivos (clean, quiet and ___), así que debe ser otro adjetivo."
+  },
+  {
+    "id": "comfort-comfortably",
+    "family": "comfort",
+    "root": "COMFORT",
+    "category": "adverb",
+    "label": "Adverbio (-ably)",
+    "level": 3,
+    "sentence": "The car seats five adults ___, which makes it an ideal choice for a family that travels long distances at weekends.",
+    "answers": [
+      "comfortably"
+    ],
+    "explanation": "COMFORT → comfortably. Modifica al verbo 'seats' (cómo se sientan): adverbio. Ojo, -able pierde la e final."
+  },
+  {
+    "id": "comfort-uncomfortable",
+    "family": "comfort",
+    "root": "COMFORTABLE",
+    "category": "prefix",
+    "label": "Prefijo negativo (un-)",
+    "level": 2,
+    "sentence": "The seats on the overnight bus were so ___ that hardly anyone managed to sleep for more than a few minutes at a time.",
+    "answers": [
+      "uncomfortable"
+    ],
+    "explanation": "COMFORTABLE → uncomfortable. 'So ___ that nadie durmió' pide el adjetivo en negativo: prefijo un-."
+  },
+  {
+    "id": "construct-construction",
+    "family": "construct",
+    "root": "CONSTRUCT",
+    "category": "noun",
+    "label": "Sustantivo (-tion)",
+    "level": 1,
+    "sentence": "After years of delays and rising costs, the ___ of the new hospital was finally completed last month, and local residents celebrated the opening with a small ceremony.",
+    "answers": [
+      "construction"
+    ],
+    "explanation": "CONSTRUCT → construction. Después de 'the' y antes de 'of' casi siempre va un sustantivo."
+  },
+  {
+    "id": "construct-constructive",
+    "family": "construct",
+    "root": "CONSTRUCT",
+    "category": "adjective",
+    "label": "Adjetivo (-ive)",
+    "level": 2,
+    "sentence": "Rather than simply listing everything that was wrong with the report, she offered several ___ suggestions about how the team could improve it before the deadline.",
+    "answers": [
+      "constructive"
+    ],
+    "explanation": "CONSTRUCT → constructive. 'Several ___ suggestions': delante de un sustantivo va un adjetivo; -ive forma adjetivos a partir de verbos."
+  },
+  {
+    "id": "construct-reconstruct",
+    "family": "construct",
+    "root": "CONSTRUCT",
+    "category": "verb",
+    "label": "Verbo (prefijo re-)",
+    "level": 3,
+    "sentence": "Using old photographs and the original architect's drawings, the town council plans to ___ the bridge exactly as it looked before the flood destroyed it.",
+    "answers": [
+      "reconstruct"
+    ],
+    "explanation": "CONSTRUCT → reconstruct. Después de 'to' va un infinitivo; el prefijo re- significa 'volver a hacer'."
+  },
+  {
+    "id": "correct-correction",
+    "family": "correct",
+    "root": "CORRECT",
+    "category": "noun",
+    "label": "Sustantivo (-ion)",
+    "level": 2,
+    "sentence": "The teacher returned the essay covered in red ink, but every single ___ was explained clearly in a note in the margin.",
+    "answers": [
+      "correction"
+    ],
+    "explanation": "CORRECT → correction. Sujeto de 'was explained': necesitás un sustantivo contable."
+  },
+  {
+    "id": "correct-correctly",
+    "family": "correct",
+    "root": "CORRECT",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 1,
+    "sentence": "To everyone's surprise, the youngest student in the class answered all of the examiner's questions ___ and finished the test twenty minutes early.",
+    "answers": [
+      "correctly"
+    ],
+    "explanation": "CORRECT → correctly. Modifica al verbo 'answered' (¿cómo respondió?), así que es un adverbio."
+  },
+  {
+    "id": "correct-incorrect",
+    "family": "correct",
+    "root": "CORRECT",
+    "category": "prefix",
+    "label": "Prefijo negativo (in-)",
+    "level": 2,
+    "sentence": "The referee's decision was so obviously ___ that even supporters of the winning team complained about it after the match.",
+    "answers": [
+      "incorrect"
+    ],
+    "explanation": "CORRECT → incorrect. El contexto (todos se quejaron) pide negación; correct usa in-, no un-."
+  },
+  {
+    "id": "courage-courageous",
+    "family": "courage",
+    "root": "COURAGE",
+    "category": "adjective",
+    "label": "Adjetivo (-ous)",
+    "level": 3,
+    "sentence": "It was an extremely ___ decision to speak out publicly about the problem when she knew perfectly well that it might cost her the job.",
+    "answers": [
+      "courageous"
+    ],
+    "explanation": "COURAGE → courageous. Delante del sustantivo 'decision' va un adjetivo; -ous es un sufijo adjetival frecuente."
+  },
+  {
+    "id": "courage-discourage",
+    "family": "courage",
+    "root": "COURAGE",
+    "category": "verb",
+    "label": "Verbo (prefijo dis-)",
+    "level": 3,
+    "sentence": "The very high price of the tickets seems almost designed to ___ ordinary families from visiting the museum more than once a year.",
+    "answers": [
+      "discourage"
+    ],
+    "explanation": "COURAGE → discourage. Después de 'to' va un infinitivo; dis- invierte el sentido de encourage."
+  },
+  {
+    "id": "courage-encourage",
+    "family": "courage",
+    "root": "COURAGE",
+    "category": "verb",
+    "label": "Verbo (en-)",
+    "level": 3,
+    "sentence": "The school has introduced a new reading programme designed to ___ young children to pick up a book instead of a tablet.",
+    "answers": [
+      "encourage"
+    ],
+    "explanation": "COURAGE → encourage. A veces el prefijo en- forma el verbo (enable, enrich, enlarge)."
+  },
+  {
+    "id": "courage-encouragement",
+    "family": "courage",
+    "root": "COURAGE",
+    "category": "noun",
+    "label": "Sustantivo (en- + -ment)",
+    "level": 2,
+    "sentence": "With a little ___ from his history teacher, he finally entered the writing competition and ended up winning first prize.",
+    "answers": [
+      "encouragement"
+    ],
+    "explanation": "COURAGE → encouragement. Después de 'a little' va un sustantivo incontable; en- + -ment."
+  },
+  {
+    "id": "create-creation",
+    "family": "create",
+    "root": "CREATE",
+    "category": "noun",
+    "label": "Sustantivo (-ion)",
+    "level": 2,
+    "sentence": "The ___ of the national park took almost fifteen years of difficult negotiation between the government and the farmers who owned the land.",
+    "answers": [
+      "creation"
+    ],
+    "explanation": "CREATE → creation. 'The ___ of' pide un sustantivo; -ion convierte verbos en sustantivos."
+  },
+  {
+    "id": "create-creative",
+    "family": "create",
+    "root": "CREATE",
+    "category": "adjective",
+    "label": "Adjetivo (-ive)",
+    "level": 1,
+    "sentence": "Everyone in the family says my sister is the most ___ of us all, because she paints, writes her own songs and even designs her own clothes.",
+    "answers": [
+      "creative"
+    ],
+    "explanation": "CREATE → creative. 'The most ___' es un superlativo, así que necesitas un adjetivo."
+  },
+  {
+    "id": "create-creativity",
+    "family": "create",
+    "root": "CREATE",
+    "category": "noun",
+    "label": "Sustantivo (-ivity)",
+    "level": 2,
+    "sentence": "What impressed the judges most was not her technique but the sheer ___ she showed in choosing such an unusual subject for the painting.",
+    "answers": [
+      "creativity"
+    ],
+    "explanation": "CREATE → creativity. Después de 'the sheer' va un sustantivo abstracto incontable."
+  },
+  {
+    "id": "danger-dangerous",
+    "family": "danger",
+    "root": "DANGER",
+    "category": "adjective",
+    "label": "Adjetivo (-ous)",
+    "level": 1,
+    "sentence": "Experienced climbers always warn beginners that attempting the north face of the mountain without a guide is extremely ___, especially in winter conditions.",
+    "answers": [
+      "dangerous"
+    ],
+    "explanation": "DANGER → dangerous. 'Extremely ___' pide un adjetivo; -ous convierte sustantivos en adjetivos."
+  },
+  {
+    "id": "danger-dangerously",
+    "family": "danger",
+    "root": "DANGER",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 2,
+    "sentence": "The lorry was travelling ___ close to the car in front, and the driver was later fined a substantial amount for it.",
+    "answers": [
+      "dangerously"
+    ],
+    "explanation": "DANGER → dangerously. Modifica al adjetivo 'close', así que necesitás un adverbio."
+  },
+  {
+    "id": "danger-endanger",
+    "family": "danger",
+    "root": "DANGER",
+    "category": "verb",
+    "label": "Verbo (prefijo en-)",
+    "level": 3,
+    "sentence": "Environmental groups argue that the proposed road would ___ several rare species of bird that still nest in the forest.",
+    "answers": [
+      "endanger"
+    ],
+    "explanation": "DANGER → endanger. Después de 'would' va un infinitivo; el prefijo en- convierte sustantivos en verbos."
+  },
+  {
+    "id": "dark-darken",
+    "family": "dark",
+    "root": "DARK",
+    "category": "verb",
+    "label": "Verbo (-en)",
+    "level": 2,
+    "sentence": "The sky began to ___ long before the storm actually arrived, and the street lights came on almost two hours earlier than usual.",
+    "answers": [
+      "darken"
+    ],
+    "explanation": "DARK → darken. Después de 'began to' va un infinitivo; el sufijo -en convierte adjetivos en verbos (dark → darken)."
+  },
+  {
+    "id": "dark-darkness",
+    "family": "dark",
+    "root": "DARK",
+    "category": "noun",
+    "label": "Sustantivo (-ness)",
+    "level": 1,
+    "sentence": "As soon as the storm knocked out the electricity, the ___ of the house made it impossible to find the candles we kept in the kitchen drawer.",
+    "answers": [
+      "darkness"
+    ],
+    "explanation": "DARK → darkness. 'The ___ of the house' pide un sustantivo; los adjetivos forman sustantivos con -ness."
+  },
+  {
+    "id": "differ-difference",
+    "family": "differ",
+    "root": "DIFFER",
+    "category": "noun",
+    "label": "Sustantivo (-ence)",
+    "level": 2,
+    "sentence": "Even after living in both countries for several years, she still finds it fascinating how big the ___ between British and American English can be.",
+    "answers": [
+      "difference"
+    ],
+    "explanation": "DIFFER → difference. 'How big the ___' pide un sustantivo; el verbo differ forma difference con -ence."
+  },
+  {
+    "id": "differ-different",
+    "family": "differ",
+    "root": "DIFFER",
+    "category": "adjective",
+    "label": "Adjetivo (-ent)",
+    "level": 1,
+    "sentence": "Although the two brothers grew up in the same house and went to the same school, they have completely ___ opinions about almost every subject.",
+    "answers": [
+      "different"
+    ],
+    "explanation": "DIFFER → different. Delante del sustantivo 'opinions' va un adjetivo."
+  },
+  {
+    "id": "differ-differently",
+    "family": "differ",
+    "root": "DIFFER",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 2,
+    "sentence": "If I could start the whole project again, I would organise the first few weeks quite ___ and ask for help much earlier than I did.",
+    "answers": [
+      "differently"
+    ],
+    "explanation": "DIFFER → differently. Modifica al verbo 'organise', o sea adverbio."
+  },
+  {
+    "id": "electric-electrical",
+    "family": "electric",
+    "root": "ELECTRIC",
+    "category": "adjective",
+    "label": "Adjetivo (-al)",
+    "level": 2,
+    "sentence": "Before you plug in the heater, make sure that a qualified expert has checked all the ___ connections at the back of the unit.",
+    "answers": [
+      "electrical"
+    ],
+    "explanation": "ELECTRIC → electrical. Delante de 'connections' va un adjetivo; -al se usa para 'relativo a la electricidad'."
+  },
+  {
+    "id": "electric-electrician",
+    "family": "electric",
+    "root": "ELECTRIC",
+    "category": "person",
+    "label": "Sustantivo de persona (-ian)",
+    "level": 2,
+    "sentence": "You should take the car to a qualified ___ instead of trying to repair the engine yourself with videos from the internet.",
+    "answers": [
+      "electrician"
+    ],
+    "explanation": "ELECTRIC → electrician. -ian forma profesiones (musician, politician, technician)."
+  },
+  {
+    "id": "electric-electricity",
+    "family": "electric",
+    "root": "ELECTRIC",
+    "category": "noun",
+    "label": "Sustantivo (-ity)",
+    "level": 1,
+    "sentence": "The storm cut off the ___ to the whole village, and it took engineers almost two days to repair the cables that had come down.",
+    "answers": [
+      "electricity"
+    ],
+    "explanation": "ELECTRIC → electricity. Después de 'the' va un sustantivo; -ity forma sustantivos abstractos."
+  },
+  {
+    "id": "excite-excitedly",
+    "family": "excite",
+    "root": "EXCITE",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 3,
+    "sentence": "The children ran ___ towards the beach the moment the car doors opened, leaving their parents to carry all the bags by themselves.",
+    "answers": [
+      "excitedly"
+    ],
+    "explanation": "EXCITE → excitedly. Modifica al verbo 'ran' (cómo corrieron), así que necesitás un adverbio."
+  },
+  {
+    "id": "excite-excitement",
+    "family": "excite",
+    "root": "EXCITE",
+    "category": "noun",
+    "label": "Sustantivo (-ment)",
+    "level": 1,
+    "sentence": "When the results were announced, her ___ was so obvious that everyone in the room could see she had been dreaming about this moment for years.",
+    "answers": [
+      "excitement"
+    ],
+    "explanation": "EXCITE → excitement. 'Her ___ was' necesita un sustantivo; -ment convierte verbos en sustantivos."
+  },
+  {
+    "id": "excite-exciting",
+    "family": "excite",
+    "root": "EXCITE",
+    "category": "adjective",
+    "label": "Adjetivo (-ing)",
+    "level": 1,
+    "sentence": "Everyone agreed it was the most ___ match of the whole season, with three goals scored in the final ten minutes of the game.",
+    "answers": [
+      "exciting"
+    ],
+    "explanation": "EXCITE → exciting. Describe la COSA que provoca la emoción (el partido), no a quien la siente: por eso -ing y no -ed."
+  },
+  {
+    "id": "fascinate-fascinated",
+    "family": "fascinate",
+    "root": "FASCINATE",
+    "category": "adjective",
+    "label": "Adjetivo (-ed)",
+    "level": 2,
+    "sentence": "The audience sat completely ___ as the magician calmly explained exactly how the trick they had just watched had been done.",
+    "answers": [
+      "fascinated"
+    ],
+    "explanation": "FASCINATE → fascinated. Describe cómo SE SIENTE el público, no cómo es: por eso -ed y no -ing."
+  },
+  {
+    "id": "fascinate-fascinating",
+    "family": "fascinate",
+    "root": "FASCINATE",
+    "category": "adjective",
+    "label": "Adjetivo (-ing / -ed)",
+    "level": 2,
+    "sentence": "The documentary about deep-sea creatures was absolutely ___, and we ended up watching the whole series in a single weekend.",
+    "answers": [
+      "fascinating"
+    ],
+    "explanation": "FASCINATE → fascinating. -ing describe la cosa que causa la sensación; -ed describe a quien la siente (I was fascinated)."
+  },
+  {
+    "id": "fascinate-fascination",
+    "family": "fascinate",
+    "root": "FASCINATE",
+    "category": "noun",
+    "label": "Sustantivo (-ion)",
+    "level": 3,
+    "sentence": "His lifelong ___ with insects began when he found a rare beetle in the garden at the age of six and kept it in a jar.",
+    "answers": [
+      "fascination"
+    ],
+    "explanation": "FASCINATE → fascination. 'His lifelong ___' pide un sustantivo abstracto."
+  },
+  {
+    "id": "fortune-fortunate",
+    "family": "fortune",
+    "root": "FORTUNE",
+    "category": "adjective",
+    "label": "Adjetivo (-ate)",
+    "level": 2,
+    "sentence": "We were ___ enough to get the last two tickets, although we ended up sitting at opposite ends of the theatre.",
+    "answers": [
+      "fortunate"
+    ],
+    "explanation": "FORTUNE → fortunate. 'Were ___ enough to' pide un adjetivo."
+  },
+  {
+    "id": "fortune-fortunately",
+    "family": "fortune",
+    "root": "FORTUNE",
+    "category": "adverb",
+    "label": "Adverbio (doble cambio)",
+    "level": 3,
+    "sentence": "The fire spread through the building in a matter of minutes, but ___, all the employees had already left for lunch and nobody was hurt.",
+    "answers": [
+      "fortunately"
+    ],
+    "explanation": "FORTUNE → fortunate → fortunately. ¡Doble transformación! Sustantivo → adjetivo → adverbio. Muy típico del examen."
+  },
+  {
+    "id": "fortune-unfortunate",
+    "family": "fortune",
+    "root": "FORTUNATE",
+    "category": "prefix",
+    "label": "Prefijo negativo (un-)",
+    "level": 2,
+    "sentence": "It was extremely ___ that the concert was cancelled on the very day her parents had travelled two hundred miles to hear her play.",
+    "answers": [
+      "unfortunate"
+    ],
+    "explanation": "FORTUNATE → unfortunate. El sentido de la frase (se canceló justo ese día) es negativo: prefijo un-."
+  },
+  {
+    "id": "friend-friendly",
+    "family": "friend",
+    "root": "FRIEND",
+    "category": "adjective",
+    "label": "Adjetivo (-ly)",
+    "level": 1,
+    "sentence": "The staff at the little hotel were so ___ that we felt completely at home within an hour of arriving, even though nobody spoke our language.",
+    "answers": [
+      "friendly"
+    ],
+    "explanation": "FRIEND → friendly. Después de 'were so' va un adjetivo. Ojo: -ly acá forma ADJETIVO, no adverbio."
+  },
+  {
+    "id": "friend-friendship",
+    "family": "friend",
+    "root": "FRIEND",
+    "category": "noun",
+    "label": "Sustantivo (-ship)",
+    "level": 2,
+    "sentence": "Their ___ began at primary school more than thirty years ago, and they still meet for coffee every single Saturday morning.",
+    "answers": [
+      "friendship"
+    ],
+    "explanation": "FRIEND → friendship. 'Their ___ began' pide un sustantivo abstracto; -ship expresa relación o estado."
+  },
+  {
+    "id": "friend-unfriendly",
+    "family": "friend",
+    "root": "FRIENDLY",
+    "category": "prefix",
+    "label": "Prefijo negativo (un-)",
+    "level": 2,
+    "sentence": "I found the atmosphere in the office rather ___ during my first week, though I later realised that everyone was simply under enormous pressure.",
+    "answers": [
+      "unfriendly"
+    ],
+    "explanation": "FRIENDLY → unfriendly. 'Rather ___' pide un adjetivo y el contraste con 'though' marca sentido negativo."
+  },
+  {
+    "id": "grow-growing",
+    "family": "grow",
+    "root": "GROW",
+    "category": "adjective",
+    "label": "Adjetivo (-ing)",
+    "level": 2,
+    "sentence": "There is a ___ number of people in the city who have decided to give up their cars altogether and travel everywhere by bicycle instead.",
+    "answers": [
+      "growing"
+    ],
+    "explanation": "GROW → growing. 'A ___ number' pide un adjetivo delante del sustantivo."
+  },
+  {
+    "id": "grow-growth",
+    "family": "grow",
+    "root": "GROW",
+    "category": "noun",
+    "label": "Sustantivo irregular",
+    "level": 3,
+    "sentence": "Scientists say that the recent ___ in average temperatures is one of the clearest signs of climate change affecting the region.",
+    "answers": [
+      "growth"
+    ],
+    "explanation": "GROW → growth. Sustantivo irregular con -th, como wide → width o strong → strength."
+  },
+  {
+    "id": "happy-happily",
+    "family": "happy",
+    "root": "HAPPY",
+    "category": "adverb",
+    "label": "Adverbio (-ily)",
+    "level": 2,
+    "sentence": "___, the missing documents turned up in a drawer just hours before the meeting, so the presentation could go ahead as planned.",
+    "answers": [
+      "happily"
+    ],
+    "explanation": "HAPPY → happily. Los adjetivos en -y cambian a -ily (easy → easily, angry → angrily)."
+  },
+  {
+    "id": "happy-happiness",
+    "family": "happy",
+    "root": "HAPPY",
+    "category": "noun",
+    "label": "Sustantivo (-ness)",
+    "level": 1,
+    "sentence": "Money certainly makes daily life easier, but most researchers now agree that it has surprisingly little effect on long-term ___.",
+    "answers": [
+      "happiness"
+    ],
+    "explanation": "HAPPY → happiness. Después de 'long-term' va un sustantivo; -ness convierte adjetivos en sustantivos abstractos."
+  },
+  {
+    "id": "happy-unhappy",
+    "family": "happy",
+    "root": "HAPPY",
+    "category": "prefix",
+    "label": "Prefijo negativo (un-)",
+    "level": 1,
+    "sentence": "She was so ___ in her first job that she resigned after only four months and went travelling around South America instead.",
+    "answers": [
+      "unhappy"
+    ],
+    "explanation": "HAPPY → unhappy. Renunció a los cuatro meses: el sentido es negativo, prefijo un-."
+  },
+  {
+    "id": "help-helpful",
+    "family": "help",
+    "root": "HELP",
+    "category": "adjective",
+    "label": "Adjetivo (-ful)",
+    "level": 1,
+    "sentence": "The advice you gave me before the interview turned out to be incredibly ___, and I honestly don't think I would have got the job without it.",
+    "answers": [
+      "helpful"
+    ],
+    "explanation": "HELP → helpful. Después de 'incredibly' (adverbio) y el verbo 'be' va un adjetivo; -ful = 'lleno de'."
+  },
+  {
+    "id": "help-helpless",
+    "family": "help",
+    "root": "HELP",
+    "category": "adjective",
+    "label": "Adjetivo (-less)",
+    "level": 2,
+    "sentence": "Watching the flood slowly destroy everything they had built over twenty years, the family felt completely ___ and could do nothing but wait.",
+    "answers": [
+      "helpless"
+    ],
+    "explanation": "HELP → helpless. Después de 'felt' va un adjetivo; -less significa 'sin', o sea sin capacidad de ayudar."
+  },
+  {
+    "id": "help-unhelpful",
+    "family": "help",
+    "root": "HELPFUL",
+    "category": "prefix",
+    "label": "Prefijo negativo (un-)",
+    "level": 2,
+    "sentence": "The instructions that came with the furniture were so ___ that in the end we assembled the whole thing by guessing where each piece went.",
+    "answers": [
+      "unhelpful"
+    ],
+    "explanation": "HELPFUL → unhelpful. El resultado ('lo armamos adivinando') marca sentido negativo: prefijo un-."
+  },
+  {
+    "id": "honest-dishonest",
+    "family": "honest",
+    "root": "HONEST",
+    "category": "prefix",
+    "label": "Prefijo negativo (dis-)",
+    "level": 2,
+    "sentence": "It would be ___ of me to pretend that I had read the entire report when in fact I only glanced at the summary.",
+    "answers": [
+      "dishonest"
+    ],
+    "explanation": "HONEST → dishonest. 'Pretender que leí todo cuando no' es negativo; con honest el prefijo es dis-, no un-."
+  },
+  {
+    "id": "honest-honestly",
+    "family": "honest",
+    "root": "HONEST",
+    "category": "adverb",
+    "label": "Adverbio (doble cambio)",
+    "level": 3,
+    "sentence": "The new manager speaks to every member of staff ___, which is probably why the whole team trusts her decisions so much.",
+    "answers": [
+      "honestly"
+    ],
+    "explanation": "HONEST → honestly. Describe cómo habla (verbo 'speaks'), así que es un adverbio de modo."
+  },
+  {
+    "id": "honest-honesty",
+    "family": "honest",
+    "root": "HONEST",
+    "category": "noun",
+    "label": "Sustantivo (-y)",
+    "level": 2,
+    "sentence": "What I admire most about him is his complete ___, even when telling the truth is clearly going to cost him something important.",
+    "answers": [
+      "honesty"
+    ],
+    "explanation": "HONEST → honesty. Después de 'his complete' va un sustantivo abstracto."
+  },
+  {
+    "id": "journal-journalism",
+    "family": "journal",
+    "root": "JOURNAL",
+    "category": "noun",
+    "label": "Sustantivo (-ism)",
+    "level": 2,
+    "sentence": "After three years of studying ___ at university and writing for the student magazine, she was offered a job at a small local newspaper.",
+    "answers": [
+      "journalism"
+    ],
+    "explanation": "JOURNAL → journalism. Después de 'studying' va un sustantivo; -ism nombra la profesión o disciplina."
+  },
+  {
+    "id": "journal-journalist",
+    "family": "journal",
+    "root": "JOURNAL",
+    "category": "person",
+    "label": "Sustantivo de persona (-ist)",
+    "level": 2,
+    "sentence": "The newspaper sent its most experienced ___ to cover the elections, since she had been reporting on politics for two decades.",
+    "answers": [
+      "journalist"
+    ],
+    "explanation": "JOURNAL → journalist. -ist forma la persona que ejerce una actividad (artist, scientist, pianist)."
+  },
+  {
+    "id": "legal-illegal",
+    "family": "legal",
+    "root": "LEGAL",
+    "category": "prefix",
+    "label": "Prefijo negativo (il-)",
+    "level": 3,
+    "sentence": "Parking on the pavement is completely ___ in this neighbourhood, and the police give out dozens of fines every single week.",
+    "answers": [
+      "illegal"
+    ],
+    "explanation": "LEGAL → illegal. Ante l, el prefijo negativo es il- (illogical, illegible)."
+  },
+  {
+    "id": "legal-illegally",
+    "family": "legal",
+    "root": "LEGAL",
+    "category": "adverb",
+    "label": "Adverbio negativo (il- + -ly)",
+    "level": 3,
+    "sentence": "The van had been parked ___ across the entrance for so many days that the council eventually had it towed away.",
+    "answers": [
+      "illegally"
+    ],
+    "explanation": "LEGAL → illegally. Adverbio (modifica a 'parked') y el contexto pide el negativo: il- delante de l."
+  },
+  {
+    "id": "legal-legally",
+    "family": "legal",
+    "root": "LEGAL",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 2,
+    "sentence": "In this country you are ___ required to carry some form of photographic identification whenever you are driving a vehicle.",
+    "answers": [
+      "legally"
+    ],
+    "explanation": "LEGAL → legally. Modifica al participio 'required': hace falta un adverbio."
+  },
+  {
+    "id": "likely-likelihood",
+    "family": "likely",
+    "root": "LIKELY",
+    "category": "noun",
+    "label": "Sustantivo (-hood)",
+    "level": 3,
+    "sentence": "Given how much rain has already fallen this week, there is every ___ that Saturday's match will be postponed once again.",
+    "answers": [
+      "likelihood"
+    ],
+    "explanation": "LIKELY → likelihood. 'There is every ___ that' pide un sustantivo; -hood forma sustantivos abstractos."
+  },
+  {
+    "id": "likely-unlikely",
+    "family": "likely",
+    "root": "LIKELY",
+    "category": "prefix",
+    "label": "Prefijo negativo (un-)",
+    "level": 1,
+    "sentence": "Given the amount of traffic on the motorway at this time of day, it seems highly ___ that they will arrive in time for the beginning of the ceremony.",
+    "answers": [
+      "unlikely"
+    ],
+    "explanation": "LIKELY → unlikely. El contexto (mucho tráfico) indica sentido negativo: necesitas el prefijo un-. Sigue siendo adjetivo."
+  },
+  {
+    "id": "locate-location",
+    "family": "locate",
+    "root": "LOCATE",
+    "category": "noun",
+    "label": "Sustantivo irregular",
+    "level": 3,
+    "sentence": "The doctor asked him to describe the exact ___ of the pain so she could decide which tests were necessary.",
+    "answers": [
+      "location"
+    ],
+    "explanation": "LOCATE → location. La -e final se elimina antes de añadir -ion."
+  },
+  {
+    "id": "locate-relocate",
+    "family": "locate",
+    "root": "LOCATE",
+    "category": "verb",
+    "label": "Verbo (prefijo re-)",
+    "level": 3,
+    "sentence": "When the company announced that it would ___ its head office to another country, almost half the staff decided to look for new jobs.",
+    "answers": [
+      "relocate"
+    ],
+    "explanation": "LOCATE → relocate. Después de 'would' va un infinitivo sin to; re- indica cambio de lugar."
+  },
+  {
+    "id": "perform-performance",
+    "family": "perform",
+    "root": "PERFORM",
+    "category": "noun",
+    "label": "Sustantivo (-ance)",
+    "level": 2,
+    "sentence": "The final ___ of the school orchestra was so impressive that the audience stood up and applauded for almost five minutes.",
+    "answers": [
+      "performance"
+    ],
+    "explanation": "PERFORM → performance. 'The final ___ of' pide un sustantivo; perform forma performance con -ance."
+  },
+  {
+    "id": "perform-performer",
+    "family": "perform",
+    "root": "PERFORM",
+    "category": "person",
+    "label": "Persona (-er)",
+    "level": 2,
+    "sentence": "As a young ___, she used to get so nervous before going on stage that she could hardly remember the first line of the song.",
+    "answers": [
+      "performer"
+    ],
+    "explanation": "PERFORM → performer. 'A young ___' pide un sustantivo de persona; -er indica quien hace la acción."
+  },
+  {
+    "id": "permit-permissible",
+    "family": "permit",
+    "root": "PERMIT",
+    "category": "adjective",
+    "label": "Adjetivo (-ible)",
+    "level": 3,
+    "sentence": "Under the new parking rules it is no longer ___ to leave your car along this street between eight in the morning and six in the evening.",
+    "answers": [
+      "permissible"
+    ],
+    "explanation": "PERMIT → permissible. 'It is no longer ___ to...' pide un adjetivo; -ible se usa para 'que se puede'."
+  },
+  {
+    "id": "permit-permission",
+    "family": "permit",
+    "root": "PERMIT",
+    "category": "noun",
+    "label": "Sustantivo irregular (-ssion)",
+    "level": 3,
+    "sentence": "Visitors must obtain written ___ from the head office before they are allowed to take photographs anywhere inside the museum.",
+    "answers": [
+      "permission"
+    ],
+    "explanation": "PERMIT → permission. Cambio irregular: -ssion, no -tion. Igual que admit → admission."
+  },
+  {
+    "id": "photograph-photographer",
+    "family": "photograph",
+    "root": "PHOTOGRAPH",
+    "category": "person",
+    "label": "Sustantivo de persona (-er)",
+    "level": 1,
+    "sentence": "My uncle worked as a professional ___ for over twenty years, travelling around the world to capture images of wildlife for nature magazines.",
+    "answers": [
+      "photographer"
+    ],
+    "explanation": "PHOTOGRAPH → photographer. 'Worked as a ___' pide un sustantivo de persona; se forman con -er/-or/-ist."
+  },
+  {
+    "id": "photograph-photographic",
+    "family": "photograph",
+    "root": "PHOTOGRAPH",
+    "category": "adjective",
+    "label": "Adjetivo (-ic)",
+    "level": 3,
+    "sentence": "The museum has an extraordinary ___ collection covering more than a century of everyday life in the city and its surrounding villages.",
+    "answers": [
+      "photographic"
+    ],
+    "explanation": "PHOTOGRAPH → photographic. Delante del sustantivo 'collection' va un adjetivo; -ic es un sufijo adjetival muy común."
+  },
+  {
+    "id": "photograph-photography",
+    "family": "photograph",
+    "root": "PHOTOGRAPH",
+    "category": "noun",
+    "label": "Sustantivo (-y)",
+    "level": 2,
+    "sentence": "He became seriously interested in ___ at the age of twelve, when his grandfather gave him an old camera that somehow still worked perfectly.",
+    "answers": [
+      "photography"
+    ],
+    "explanation": "PHOTOGRAPH → photography. Después de la preposición 'in' va un sustantivo; -y nombra la disciplina."
+  },
+  {
+    "id": "possible-impossible",
+    "family": "possible",
+    "root": "POSSIBLE",
+    "category": "prefix",
+    "label": "Prefijo negativo (im-)",
+    "level": 2,
+    "sentence": "The manager insisted that finishing such a complex project in a single week was completely ___ and asked the client for at least one more month.",
+    "answers": [
+      "impossible"
+    ],
+    "explanation": "POSSIBLE → impossible. El contexto pide negación, y ante p se usa im-, no un- (impatient, impolite)."
+  },
+  {
+    "id": "possible-possibility",
+    "family": "possible",
+    "root": "POSSIBLE",
+    "category": "noun",
+    "label": "Sustantivo (-ity)",
+    "level": 2,
+    "sentence": "Although the weather forecast looks good for the weekend, there is still a strong ___ that the outdoor concert will be moved to the indoor arena.",
+    "answers": [
+      "possibility"
+    ],
+    "explanation": "POSSIBLE → possibility. 'A strong ___' pide un sustantivo; los adjetivos en -ble cambian a -bility."
+  },
+  {
+    "id": "possible-possibly",
+    "family": "possible",
+    "root": "POSSIBLE",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 2,
+    "sentence": "She promised she would help us with the move if she ___ could, but she has already agreed to work at the hospital that weekend.",
+    "answers": [
+      "possibly"
+    ],
+    "explanation": "POSSIBLE → possibly. 'If she ___ could' modifica al verbo: hace falta un adverbio."
+  },
+  {
+    "id": "responsible-irresponsible",
+    "family": "responsible",
+    "root": "RESPONSIBLE",
+    "category": "prefix",
+    "label": "Prefijo negativo (ir-)",
+    "level": 3,
+    "sentence": "Leaving a campfire burning in the middle of a dry forest is one of the most ___ things a visitor can possibly do.",
+    "answers": [
+      "irresponsible"
+    ],
+    "explanation": "RESPONSIBLE → irresponsible. Ante r, el prefijo negativo es ir- (irregular, irrelevant)."
+  },
+  {
+    "id": "responsible-responsibility",
+    "family": "responsible",
+    "root": "RESPONSIBLE",
+    "category": "noun",
+    "label": "Sustantivo (-ility)",
+    "level": 2,
+    "sentence": "Taking ___ for a mistake in front of your colleagues is far more impressive than quietly pretending that it never happened.",
+    "answers": [
+      "responsibility"
+    ],
+    "explanation": "RESPONSIBLE → responsibility. 'Taking ___ for' es una colocación fija con sustantivo."
+  },
+  {
+    "id": "responsible-responsibly",
+    "family": "responsible",
+    "root": "RESPONSIBLE",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 3,
+    "sentence": "The campaign encourages young drivers to behave ___ and to leave the car at home whenever they are planning to drink.",
+    "answers": [
+      "responsibly"
+    ],
+    "explanation": "RESPONSIBLE → responsibly. Modifica al verbo 'behave': adverbio. Ojo, -ble pasa a -bly."
+  },
+  {
+    "id": "summary-summarize",
+    "family": "summary",
+    "root": "SUMMARY",
+    "category": "verb",
+    "label": "Verbo (-ize/-ise)",
+    "level": 3,
+    "sentence": "Before you hand in your essay, remember to ___ your main arguments in a short final paragraph so the reader remembers your key points.",
+    "answers": [
+      "summarize",
+      "summarise"
+    ],
+    "explanation": "SUMMARY → summarize/summarise. -ize (US) o -ise (UK) convierten sustantivos en verbos; Cambridge acepta ambas grafías."
+  },
+  {
+    "id": "summary-summary",
+    "family": "summary",
+    "root": "SUMMARIZE",
+    "category": "noun",
+    "label": "Sustantivo (base)",
+    "level": 2,
+    "sentence": "Please write a short ___ of the article in no more than one hundred words and hand it in before Friday afternoon.",
+    "answers": [
+      "summary"
+    ],
+    "explanation": "SUMMARIZE → summary. 'A short ___ of' pide un sustantivo. Acá la transformación va al revés: del verbo al sustantivo."
+  },
+  {
+    "id": "understand-misunderstood",
+    "family": "understand",
+    "root": "UNDERSTAND",
+    "category": "prefix",
+    "label": "Prefijo (mis-) + pasado",
+    "level": 3,
+    "sentence": "I'm so sorry about the confusion yesterday; I completely ___ your instructions and sent the report to the wrong department.",
+    "answers": [
+      "misunderstood"
+    ],
+    "explanation": "UNDERSTAND → misunderstood. mis- = hacer algo mal, y el contexto (yesterday) exige pasado: misunderstood. Es un verbo."
+  },
+  {
+    "id": "understand-understandable",
+    "family": "understand",
+    "root": "UNDERSTAND",
+    "category": "adjective",
+    "label": "Adjetivo (-able)",
+    "level": 3,
+    "sentence": "It is perfectly ___ that you feel nervous before an interview; almost everybody does, including the people who are interviewing you.",
+    "answers": [
+      "understandable"
+    ],
+    "explanation": "UNDERSTAND → understandable. 'It is perfectly ___ that...' pide un adjetivo; -able significa 'que se puede'."
+  },
+  {
+    "id": "understand-understanding",
+    "family": "understand",
+    "root": "UNDERSTAND",
+    "category": "noun",
+    "label": "Sustantivo (-ing)",
+    "level": 2,
+    "sentence": "Living abroad for a year gave her a far deeper ___ of how differently two people can see exactly the same problem.",
+    "answers": [
+      "understanding"
+    ],
+    "explanation": "UNDERSTAND → understanding. 'A far deeper ___ of' pide un sustantivo."
+  },
+  {
+    "id": "use-useful",
+    "family": "use",
+    "root": "USE",
+    "category": "adjective",
+    "label": "Adjetivo (-ful)",
+    "level": 1,
+    "sentence": "The old paper map turned out to be surprisingly ___ once we left the main road and started exploring the tiny villages up in the hills.",
+    "answers": [
+      "useful"
+    ],
+    "explanation": "USE → useful. Después de 'to be surprisingly' va un adjetivo; -ful significa 'lleno de'."
+  },
+  {
+    "id": "use-useless",
+    "family": "use",
+    "root": "USE",
+    "category": "adjective",
+    "label": "Adjetivo (-less)",
+    "level": 1,
+    "sentence": "After arguing with him for more than an hour, I realised that trying to change his mind was completely ___, so I simply gave up and left.",
+    "answers": [
+      "useless"
+    ],
+    "explanation": "USE → useless. El contexto (gave up) indica sentido negativo: -less = 'sin'. Es lo contrario de useful."
+  },
+  {
+    "id": "use-user",
+    "family": "use",
+    "root": "USE",
+    "category": "person",
+    "label": "Persona (-er)",
+    "level": 1,
+    "sentence": "Every ___ has to create a password of at least ten characters before the system will allow them to log in for the first time.",
+    "answers": [
+      "user"
+    ],
+    "explanation": "USE → user. 'Every ___' pide un sustantivo contable de persona; -er indica quien hace la acción."
+  },
+  {
+    "id": "vision-invisible",
+    "family": "vision",
+    "root": "VISIBLE",
+    "category": "prefix",
+    "label": "Prefijo negativo (in-)",
+    "level": 2,
+    "sentence": "The stain was almost ___ in ordinary daylight, but under the lamp you could see exactly where the coffee had been spilt.",
+    "answers": [
+      "invisible"
+    ],
+    "explanation": "VISIBLE → invisible. El contraste con 'but under the lamp you could see' marca sentido negativo: prefijo in-."
+  },
+  {
+    "id": "vision-visibility",
+    "family": "vision",
+    "root": "VISION",
+    "category": "noun",
+    "label": "Sustantivo (-ility)",
+    "level": 3,
+    "sentence": "Thick fog reduced ___ to less than fifty metres, and as a result the motorway was closed for most of the morning.",
+    "answers": [
+      "visibility"
+    ],
+    "explanation": "VISION → visibility. Objeto directo de 'reduced': hace falta un sustantivo."
+  },
+  {
+    "id": "vision-visible",
+    "family": "vision",
+    "root": "VISION",
+    "category": "adjective",
+    "label": "Adjetivo (-ible)",
+    "level": 3,
+    "sentence": "The instructions on the medicine bottle were printed in letters so small that they were barely ___ without a magnifying glass.",
+    "answers": [
+      "visible"
+    ],
+    "explanation": "VISION → visible. Ojo: no es 'visionable'. Algunos adjetivos usan -ible y cambian la raíz (vision → visible)."
+  },
+  {
+    "id": "wide-widely",
+    "family": "wide",
+    "root": "WIDE",
+    "category": "adverb",
+    "label": "Adverbio (-ly)",
+    "level": 2,
+    "sentence": "The novel has been ___ translated since it first appeared and is now available in more than thirty different languages.",
+    "answers": [
+      "widely"
+    ],
+    "explanation": "WIDE → widely. Modifica al participio 'translated': adverbio."
+  },
+  {
+    "id": "wide-widen",
+    "family": "wide",
+    "root": "WIDE",
+    "category": "verb",
+    "label": "Verbo (-en)",
+    "level": 2,
+    "sentence": "The city council has announced ambitious plans to ___ the main road next year in order to reduce the terrible traffic jams during rush hour.",
+    "answers": [
+      "widen"
+    ],
+    "explanation": "WIDE → widen. Después de 'to' va un verbo; -en convierte adjetivos en verbos (strengthen, shorten, brighten)."
+  },
+  {
+    "id": "wide-width",
+    "family": "wide",
+    "root": "WIDE",
+    "category": "noun",
+    "label": "Sustantivo (irregular)",
+    "level": 2,
+    "sentence": "Before ordering the carpet, measure both the length and the ___ of the room and write both figures down somewhere safe.",
+    "answers": [
+      "width"
+    ],
+    "explanation": "WIDE → width. Después de 'the' va un sustantivo. Es irregular: cambia la vocal y toma -th, como long → length."
+  },
+  {
+    "id": "wind-windy",
+    "family": "wind",
+    "root": "WIND",
+    "category": "adjective",
+    "label": "Adjetivo (-y)",
+    "level": 1,
+    "sentence": "We had planned a picnic by the lake, but the weather was so ___ that we could hardly keep the blanket on the ground.",
+    "answers": [
+      "windy"
+    ],
+    "explanation": "WIND → windy. 'The weather was so ___' pide un adjetivo; muchos sustantivos de clima forman adjetivos con -y."
+  }
+]

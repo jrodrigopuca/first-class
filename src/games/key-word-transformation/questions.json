@@ -1,0 +1,569 @@
+[
+  {
+    "id": "comparative-basic-is-better-than",
+    "family": "comparative-basic",
+    "category": "comparative",
+    "label": "Comparativo",
+    "level": 1,
+    "original": "The film is not as good as the book.",
+    "keyWord": "BETTER",
+    "gapped": "The book ___ the film.",
+    "answers": [
+      "is better than"
+    ],
+    "explanation": "Se invierte la comparación: si A no es tan bueno como B, entonces B es mejor que A."
+  },
+  {
+    "id": "comparative-basic-was-much-shorter-than",
+    "family": "comparative-basic",
+    "category": "comparative",
+    "label": "Comparativo con intensificador",
+    "level": 2,
+    "original": "I expected the journey to be much longer.",
+    "keyWord": "SHORTER",
+    "gapped": "The journey ___ I expected.",
+    "answers": [
+      "was much shorter than"
+    ],
+    "explanation": "Se invierte el adjetivo y se mantiene el intensificador 'much'."
+  },
+  {
+    "id": "comparative-same-the-same-age-as",
+    "family": "comparative-same",
+    "category": "comparative",
+    "label": "Igualdad",
+    "level": 2,
+    "original": "Tom is fifteen and Ana is fifteen as well.",
+    "keyWord": "SAME",
+    "gapped": "Tom is ___ Ana.",
+    "answers": [
+      "the same age as"
+    ],
+    "explanation": "Igualdad con sustantivo: the same + sustantivo + as."
+  },
+  {
+    "id": "comparative-superlative-the-most-delicious",
+    "family": "comparative-superlative",
+    "category": "comparative",
+    "label": "Superlativo",
+    "level": 1,
+    "original": "I have never eaten such a delicious meal.",
+    "keyWord": "MOST",
+    "gapped": "This is ___ meal I have ever eaten.",
+    "answers": [
+      "the most delicious"
+    ],
+    "explanation": "'Nunca comí algo tan rico' equivale al superlativo: the most + adjetivo largo."
+  },
+  {
+    "id": "conditional-precaution-in-case-it-rains",
+    "family": "conditional-precaution",
+    "category": "conditional",
+    "label": "In case",
+    "level": 2,
+    "original": "Take an umbrella because it might rain later.",
+    "keyWord": "CASE",
+    "gapped": "Take an umbrella ___ later.",
+    "answers": [
+      "in case it rains"
+    ],
+    "explanation": "'in case' expresa precaución y va seguido de presente, nunca de 'will'."
+  },
+  {
+    "id": "conditional-second-if-i-had",
+    "family": "conditional-second",
+    "category": "conditional",
+    "label": "Segundo condicional",
+    "level": 2,
+    "original": "I don't have a car, so I can't give you a lift.",
+    "keyWord": "IF",
+    "gapped": "I could give you a lift ___ a car.",
+    "answers": [
+      "if i had"
+    ],
+    "explanation": "Situación irreal en presente: segundo condicional, con past simple después de 'if'."
+  },
+  {
+    "id": "conditional-third-had-not",
+    "family": "conditional-third",
+    "category": "conditional",
+    "label": "Tercer condicional negativo",
+    "level": 3,
+    "original": "Without your help, I would never have finished the project.",
+    "keyWord": "NOT",
+    "gapped": "If you ___ helped me, I would never have finished the project.",
+    "answers": [
+      "had not"
+    ],
+    "explanation": "'Without your help' equivale a 'if you had not helped me'. Ojo: 'hadn't' cuenta como DOS palabras."
+  },
+  {
+    "id": "conditional-third-had-studied",
+    "family": "conditional-third",
+    "category": "conditional",
+    "label": "Tercer condicional",
+    "level": 2,
+    "original": "I didn't study hard enough, so I failed the exam.",
+    "keyWord": "HAD",
+    "gapped": "If I ___ harder, I would have passed the exam.",
+    "answers": [
+      "had studied"
+    ],
+    "explanation": "Tercer condicional: la parte del 'if' va en past perfect."
+  },
+  {
+    "id": "conditional-unless-unless-you-leave",
+    "family": "conditional-unless",
+    "category": "conditional",
+    "label": "Unless",
+    "level": 2,
+    "original": "If you don't leave now, you will miss the train.",
+    "keyWord": "UNLESS",
+    "gapped": "You will miss the train ___ now.",
+    "answers": [
+      "unless you leave"
+    ],
+    "explanation": "'unless' ya es negativo: significa 'if not'. Por eso el verbo va en afirmativo."
+  },
+  {
+    "id": "expression-enough-was-not-light-enough",
+    "family": "expression-enough",
+    "category": "expression",
+    "label": "Not + adjetivo + enough",
+    "level": 2,
+    "original": "The box was too heavy for me to lift.",
+    "keyWord": "ENOUGH",
+    "gapped": "The box ___ for me to lift.",
+    "answers": [
+      "was not light enough"
+    ],
+    "explanation": "'too heavy' se reformula con el adjetivo opuesto: not + light + enough."
+  },
+  {
+    "id": "expression-first-the-first-time-i",
+    "family": "expression-first",
+    "category": "expression",
+    "label": "The first time",
+    "level": 2,
+    "original": "I have never visited Rome before.",
+    "keyWord": "FIRST",
+    "gapped": "This is ___ have visited Rome.",
+    "answers": [
+      "the first time i"
+    ],
+    "explanation": "'Nunca antes' equivale a 'es la primera vez que'."
+  },
+  {
+    "id": "expression-for-has-worked-here-for",
+    "family": "expression-for",
+    "category": "expression",
+    "label": "Present perfect + for",
+    "level": 1,
+    "original": "He started working here five years ago.",
+    "keyWord": "FOR",
+    "gapped": "He ___ five years.",
+    "answers": [
+      "has worked here for",
+      "has been working here for"
+    ],
+    "explanation": "Acción que sigue ocurriendo: present perfect + FOR + duración."
+  },
+  {
+    "id": "expression-last-last-time-i-saw",
+    "family": "expression-last",
+    "category": "expression",
+    "label": "The last time",
+    "level": 2,
+    "original": "It is ages since I last saw him.",
+    "keyWord": "TIME",
+    "gapped": "The ___ him was ages ago.",
+    "answers": [
+      "last time i saw"
+    ],
+    "explanation": "Estructura 'the last time + sujeto + pasado simple'."
+  },
+  {
+    "id": "expression-mind-you-mind-closing",
+    "family": "expression-mind",
+    "category": "expression",
+    "label": "Would you mind + gerundio",
+    "level": 3,
+    "original": "Would you please close the window?",
+    "keyWord": "MIND",
+    "gapped": "Would ___ the window?",
+    "answers": [
+      "you mind closing"
+    ],
+    "explanation": "Pedido cortés: 'Would you mind' + gerundio."
+  },
+  {
+    "id": "expression-since-have-not-been-to",
+    "family": "expression-since",
+    "category": "expression",
+    "label": "Present perfect + since",
+    "level": 1,
+    "original": "I last went to the cinema in March.",
+    "keyWord": "BEEN",
+    "gapped": "I ___ the cinema since March.",
+    "answers": [
+      "have not been to"
+    ],
+    "explanation": "'La última vez fue en marzo' equivale a 'no he ido desde marzo': present perfect negativo + since."
+  },
+  {
+    "id": "expression-so-such-was-such-loud",
+    "family": "expression-so-such",
+    "category": "expression",
+    "label": "Such + sustantivo",
+    "level": 2,
+    "original": "The music was so loud that we could not talk.",
+    "keyWord": "SUCH",
+    "gapped": "It ___ music that we could not talk.",
+    "answers": [
+      "was such loud"
+    ],
+    "explanation": "'so' va con adjetivo solo; 'such' va con sustantivo (loud music)."
+  },
+  {
+    "id": "modal-deduction-cannot-have-taken",
+    "family": "modal-deduction",
+    "category": "modal",
+    "label": "Deducción negativa",
+    "level": 3,
+    "original": "I am sure that Ana did not take your keys.",
+    "keyWord": "HAVE",
+    "gapped": "Ana ___ your keys.",
+    "answers": [
+      "cannot have taken",
+      "can not have taken",
+      "could not have taken"
+    ],
+    "explanation": "Deducción negativa sobre el pasado: can't / couldn't + have + participio."
+  },
+  {
+    "id": "modal-deduction-must-have-forgotten",
+    "family": "modal-deduction",
+    "category": "modal",
+    "label": "Deducción afirmativa",
+    "level": 2,
+    "original": "I'm certain that he forgot about the meeting.",
+    "keyWord": "MUST",
+    "gapped": "He ___ about the meeting.",
+    "answers": [
+      "must have forgotten"
+    ],
+    "explanation": "Deducción sobre el pasado: must + have + participio."
+  },
+  {
+    "id": "modal-necessity-do-not-need-to-book",
+    "family": "modal-necessity",
+    "category": "modal",
+    "label": "Ausencia de obligación",
+    "level": 1,
+    "original": "It isn't necessary for you to book a table.",
+    "keyWord": "NEED",
+    "gapped": "You ___ a table.",
+    "answers": [
+      "do not need to book",
+      "need not book"
+    ],
+    "explanation": "Falta de necesidad: 'don't need to' + infinitivo, o 'needn't' + infinitivo sin to."
+  },
+  {
+    "id": "modal-permission-are-not-allowed-to",
+    "family": "modal-permission",
+    "category": "modal",
+    "label": "Prohibición",
+    "level": 2,
+    "original": "Smoking is forbidden anywhere inside the building.",
+    "keyWord": "ALLOWED",
+    "gapped": "You ___ smoke anywhere inside the building.",
+    "answers": [
+      "are not allowed to"
+    ],
+    "explanation": "Prohibición: be + not allowed + to + infinitivo."
+  },
+  {
+    "id": "modal-regret-should-not-have-lent",
+    "family": "modal-regret",
+    "category": "modal",
+    "label": "Reproche sobre el pasado",
+    "level": 3,
+    "original": "It was a mistake to lend him so much money.",
+    "keyWord": "SHOULD",
+    "gapped": "I ___ him so much money.",
+    "answers": [
+      "should not have lent"
+    ],
+    "explanation": "Crítica de una acción pasada: should + not + have + participio."
+  },
+  {
+    "id": "passive-continuous-is-being-built",
+    "family": "passive-continuous",
+    "category": "passive",
+    "label": "Pasiva continua",
+    "level": 2,
+    "original": "They are building a new hospital on the edge of town.",
+    "keyWord": "BEING",
+    "gapped": "A new hospital ___ on the edge of town.",
+    "answers": [
+      "is being built"
+    ],
+    "explanation": "Presente continuo en pasiva: is/are + being + participio."
+  },
+  {
+    "id": "passive-modal-must-have-been-taken",
+    "family": "passive-modal",
+    "category": "passive",
+    "label": "Pasiva con modal perfecto",
+    "level": 3,
+    "original": "I am certain that someone has taken my umbrella by mistake.",
+    "keyWord": "BEEN",
+    "gapped": "My umbrella ___ by mistake.",
+    "answers": [
+      "must have been taken"
+    ],
+    "explanation": "Deducción en pasado + pasiva: must + have + been + participio."
+  },
+  {
+    "id": "passive-report-is-said-to-be",
+    "family": "passive-report",
+    "category": "passive",
+    "label": "Pasiva impersonal",
+    "level": 3,
+    "original": "People say that he is extremely wealthy.",
+    "keyWord": "SAID",
+    "gapped": "He ___ extremely wealthy.",
+    "answers": [
+      "is said to be"
+    ],
+    "explanation": "Estructura impersonal: sujeto + is said + to + infinitivo. Muy frecuente en el Part 4."
+  },
+  {
+    "id": "passive-simple-was-designed-by",
+    "family": "passive-simple",
+    "category": "passive",
+    "label": "Pasiva con agente",
+    "level": 2,
+    "original": "A famous architect designed this building in 1930.",
+    "keyWord": "DESIGNED",
+    "gapped": "This building ___ a famous architect in 1930.",
+    "answers": [
+      "was designed by"
+    ],
+    "explanation": "Pasiva en pasado simple. Como el agente importa, aparece con 'by'."
+  },
+  {
+    "id": "passive-simple-was-stolen",
+    "family": "passive-simple",
+    "category": "passive",
+    "label": "Pasiva en pasado",
+    "level": 1,
+    "original": "Someone stole my bicycle from outside the library last night.",
+    "keyWord": "STOLEN",
+    "gapped": "My bicycle ___ from outside the library last night.",
+    "answers": [
+      "was stolen"
+    ],
+    "explanation": "Activa → pasiva. El objeto ('my bicycle') pasa a sujeto y el verbo va a 'was' + participio."
+  },
+  {
+    "id": "phrasal-cancel-was-called-off",
+    "family": "phrasal-cancel",
+    "category": "phrasal",
+    "label": "Call off",
+    "level": 2,
+    "original": "The concert was cancelled because of the storm.",
+    "keyWord": "CALLED",
+    "gapped": "The concert ___ because of the storm.",
+    "answers": [
+      "was called off"
+    ],
+    "explanation": "'call off' = cancelar. Acá además va en pasiva."
+  },
+  {
+    "id": "phrasal-give-up-gave-up-smoking",
+    "family": "phrasal-give-up",
+    "category": "phrasal",
+    "label": "Give up + gerundio",
+    "level": 2,
+    "original": "She stopped smoking three years ago.",
+    "keyWord": "GAVE",
+    "gapped": "She ___ three years ago.",
+    "answers": [
+      "gave up smoking"
+    ],
+    "explanation": "'give up' = dejar (un hábito), y va seguido de gerundio."
+  },
+  {
+    "id": "phrasal-look-after-looks-after",
+    "family": "phrasal-look-after",
+    "category": "phrasal",
+    "label": "Look after",
+    "level": 1,
+    "original": "Who takes care of your dog when you travel?",
+    "keyWord": "LOOKS",
+    "gapped": "Who ___ your dog when you travel?",
+    "answers": [
+      "looks after"
+    ],
+    "explanation": "'look after' = cuidar. Ojo con la -s: el sujeto es 'who' en tercera persona."
+  },
+  {
+    "id": "phrasal-tolerate-put-up-with",
+    "family": "phrasal-tolerate",
+    "category": "phrasal",
+    "label": "Put up with",
+    "level": 3,
+    "original": "I refuse to tolerate that kind of behaviour.",
+    "keyWord": "PUT",
+    "gapped": "I am not prepared to ___ that kind of behaviour.",
+    "answers": [
+      "put up with"
+    ],
+    "explanation": "'put up with' = tolerar. Es un phrasal de tres partes: se aprende entero."
+  },
+  {
+    "id": "reported-apology-apologised-for-breaking",
+    "family": "reported-apology",
+    "category": "reported",
+    "label": "Disculpa reportada",
+    "level": 3,
+    "original": "'I'm sorry I broke your window,' said Leo.",
+    "keyWord": "APOLOGISED",
+    "gapped": "Leo ___ my window.",
+    "answers": [
+      "apologised for breaking"
+    ],
+    "explanation": "apologise FOR + gerundio. Después de preposición siempre va -ing."
+  },
+  {
+    "id": "reported-command-not-to-touch",
+    "family": "reported-command",
+    "category": "reported",
+    "label": "Orden negativa reportada",
+    "level": 2,
+    "original": "'Don't touch the paintings,' the guard warned us.",
+    "keyWord": "NOT",
+    "gapped": "The guard warned us ___ the paintings.",
+    "answers": [
+      "not to touch"
+    ],
+    "explanation": "Órdenes negativas reportadas: verbo + objeto + NOT + to + infinitivo."
+  },
+  {
+    "id": "reported-statement-had-never-been",
+    "family": "reported-statement",
+    "category": "reported",
+    "label": "Estilo indirecto (present perfect)",
+    "level": 2,
+    "original": "'I have never been to Japan,' said Marta.",
+    "keyWord": "HAD",
+    "gapped": "Marta said that she ___ to Japan.",
+    "answers": [
+      "had never been"
+    ],
+    "explanation": "El present perfect retrocede a past perfect: have been → had been."
+  },
+  {
+    "id": "reported-statement-would-call-me",
+    "family": "reported-statement",
+    "category": "reported",
+    "label": "Estilo indirecto (futuro)",
+    "level": 2,
+    "original": "'I'll call you tomorrow,' Ana told me.",
+    "keyWord": "WOULD",
+    "gapped": "Ana told me that she ___ the following day.",
+    "answers": [
+      "would call me"
+    ],
+    "explanation": "En estilo indirecto 'will' retrocede a 'would', y 'you' pasa a 'me'."
+  },
+  {
+    "id": "reported-suggestion-suggested-travelling",
+    "family": "reported-suggestion",
+    "category": "reported",
+    "label": "Sugerencia reportada",
+    "level": 3,
+    "original": "'Why don't we travel by train?' said Tom.",
+    "keyWord": "SUGGESTED",
+    "gapped": "Tom ___ by train.",
+    "answers": [
+      "suggested travelling",
+      "suggested traveling",
+      "suggested we travel",
+      "suggested that we travel"
+    ],
+    "explanation": "'suggest' NO lleva to + infinitivo. Va con gerundio o con '(that) we + verbo'."
+  },
+  {
+    "id": "pattern-avoid-avoids-arriving",
+    "family": "pattern-avoid",
+    "category": "verb-pattern",
+    "label": "Avoid + gerundio",
+    "level": 2,
+    "original": "She always tries not to arrive late.",
+    "keyWord": "AVOIDS",
+    "gapped": "She always ___ late.",
+    "answers": [
+      "avoids arriving"
+    ],
+    "explanation": "'avoid' siempre va seguido de gerundio."
+  },
+  {
+    "id": "pattern-look-forward-looking-forward-to-seeing",
+    "family": "pattern-look-forward",
+    "category": "verb-pattern",
+    "label": "Look forward to + gerundio",
+    "level": 2,
+    "original": "I am excited about seeing you next week.",
+    "keyWord": "FORWARD",
+    "gapped": "I am ___ you next week.",
+    "answers": [
+      "looking forward to seeing"
+    ],
+    "explanation": "En 'look forward to', el 'to' es preposición: le sigue gerundio, no infinitivo."
+  },
+  {
+    "id": "pattern-succeed-did-not-succeed-in-finishing",
+    "family": "pattern-succeed",
+    "category": "verb-pattern",
+    "label": "Succeed in + gerundio",
+    "level": 3,
+    "original": "He did not manage to finish the report on time.",
+    "keyWord": "SUCCEED",
+    "gapped": "He ___ the report on time.",
+    "answers": [
+      "did not succeed in finishing"
+    ],
+    "explanation": "'succeed' va con IN + gerundio, no con to + infinitivo."
+  },
+  {
+    "id": "pattern-wish-wish-i-could",
+    "family": "pattern-wish",
+    "category": "verb-pattern",
+    "label": "Wish + could",
+    "level": 3,
+    "original": "I am sorry that I cannot drive.",
+    "keyWord": "WISH",
+    "gapped": "I ___ drive.",
+    "answers": [
+      "wish i could"
+    ],
+    "explanation": "Deseo sobre una capacidad presente: wish + could + infinitivo sin to."
+  },
+  {
+    "id": "pattern-wish-wish-i-had-told",
+    "family": "pattern-wish",
+    "category": "verb-pattern",
+    "label": "Wish + past perfect",
+    "level": 3,
+    "original": "I regret not telling her the truth.",
+    "keyWord": "WISH",
+    "gapped": "I ___ her the truth.",
+    "answers": [
+      "wish i had told"
+    ],
+    "explanation": "Arrepentimiento sobre el pasado: wish + past perfect."
+  }
+]
