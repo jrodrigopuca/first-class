@@ -80,8 +80,117 @@ export default tseslint.config(
     },
   },
 
+
+  /*
+   * Reglas de CAPA, enforzadas sobre el string del import.
+   *
+   * Aburrido a propósito: no-restricted-imports es una regla del core de
+   * ESLint que mira el texto del import y nada más. No resuelve archivos,
+   * no clasifica elementos, no puede fallar en silencio.
+   *
+   * Los patrones enumeran las profundidades relativas que existen en este
+   * proyecto (../ y ../../) en vez de usar ** — porque ** no matchea ".."
+   * salvo que el matcher tenga dot:true, y depender de ese detalle sería
+   * volver al mismo problema.
+   */
+  {
+    files: ["src/engine/**/*.{ts,tsx}"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: [
+                "../exam/*", "../../exam/*",
+                "../games/*", "../../games/*", "../games/*/*", "../../games/*/*",
+                "../app/*", "../../app/*",
+                "../registry", "../../registry",
+              ],
+              message:
+                "El motor no sabe inglés ni conoce juegos concretos: esa ignorancia es lo que le permite servir a cualquiera. Solo puede usar lib.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    files: ["src/lib/**/*.{ts,tsx}"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: [
+                "../engine/*", "../../engine/*",
+                "../exam/*", "../../exam/*",
+                "../games/*", "../../games/*", "../games/*/*", "../../games/*/*",
+                "../app/*", "../../app/*",
+                "../registry", "../../registry",
+              ],
+              message: "lib es la capa de abajo de todo: utilidades puras que no importan nada del proyecto.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    files: ["src/exam/**/*.{ts,tsx}"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: [
+                "../engine/*", "../../engine/*",
+                "../games/*", "../../games/*", "../games/*/*", "../../games/*/*",
+                "../app/*", "../../app/*",
+                "../registry", "../../registry",
+              ],
+              message: "exam son reglas del examen: no sabe de rondas, de puntaje ni de juegos concretos. Solo puede usar lib.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    files: ["src/app/**/*.{ts,tsx}"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: [
+                "../games/*", "../../games/*", "../games/*/*", "../../games/*/*",
+                "../exam/*", "../../exam/*",
+              ],
+              message: "La cáscara conoce el registry, nunca un juego concreto ni las reglas del examen.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
   /*
    * Aislamiento entre juegos, ENFORZADO por el linter.
+   *
+   * LÍMITE MEDIDO, no supuesto: eslint-plugin-boundaries solo resuelve
+   * como dependencia lo que cae bajo `src/games/*`. Un import a
+   * src/engine, src/lib o src/exam le queda como "unknown element" y la
+   * regla no dispara — comprobado con boundaries/no-unknown.
+   *
+   * O sea: de todo este bloque, lo único que realmente se ejecuta es la
+   * política de juego contra juego. Es justo la que importa y está
+   * verificada rompiéndola a propósito. Las reglas de CAPAS se enforzan
+   * más abajo con no-restricted-imports, que trabaja sobre el string del
+   * import y no depende de que ninguna librería resuelva nada.
    *
    * Esto convierte "los juegos no comparten información" de promesa
    * en garantía. Un comentario en el README no frena a nadie un viernes
@@ -89,7 +198,10 @@ export default tseslint.config(
    *
    * Capas, de abajo hacia arriba:
    *   lib      -> utilidades puras, no importan nada
-   *   engine   -> el motor y su UI; puede usar lib
+   *   exam     -> reglas del B2 First (contar palabras, normalizar)
+   *   engine   -> el motor y su UI; puede usar lib. NO usa exam: el
+   *               motor no sabe inglés, y esa ignorancia es lo que le
+   *               permite servir a cualquier juego
    *   game     -> un juego; puede usar engine y lib, y SOLO a sí mismo
    *   registry -> la única capa que conoce a todos los juegos
    *   app      -> la cáscara; conoce el registry, nunca un juego concreto
@@ -101,6 +213,7 @@ export default tseslint.config(
       "boundaries/include": ["src/**/*"],
       "boundaries/elements": [
         { type: "lib", pattern: "src/lib/**", partialMatch: false },
+        { type: "exam", pattern: "src/exam/**", partialMatch: false },
         { type: "engine", pattern: "src/engine/**", partialMatch: false },
         { type: "game", pattern: "src/games/*/**", partialMatch: false, capture: ["game"] },
         { type: "registry", pattern: "src/registry/**", partialMatch: false },
@@ -140,9 +253,17 @@ export default tseslint.config(
               ],
             },
             {
+              from: [{ element: { type: "exam" } }],
+              allow: [
+                { to: { element: { type: "exam" } } },
+                { to: { element: { type: "lib" } } },
+              ],
+            },
+            {
               from: [{ element: { type: "game" } }],
               allow: [
                 { to: { element: { type: "engine" } } },
+                { to: { element: { type: "exam" } } },
                 { to: { element: { type: "lib" } } },
                 // La captura obliga a que el nombre de carpeta destino
                 // sea EL MISMO que el de origen. Un juego solo se importa

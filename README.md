@@ -16,6 +16,8 @@ entre juegos), `npm test` y `npm run test:watch`.
 ```
 src/
 ├── lib/        utilidades puras (shuffle, router). No importan nada.
+├── exam/       reglas del B2 First compartidas: normalizar y contar
+│               palabras como Cambridge (una contracción vale dos).
 ├── engine/     el motor: useGameRound, repetición espaciada y UI compartida.
 ├── games/      un juego = una carpeta. Usa engine y lib, y SOLO a sí mismo.
 ├── registry/   la única capa que conoce a todos los juegos.
@@ -115,13 +117,27 @@ const round = useGameRound<MiPregunta, MiRespuesta>({
 
 | Parte  | Juego                     | Estado    |
 | ------ | ------------------------- | --------- |
-| Part 1 | Multiple-choice Cloze     | pendiente |
-| Part 2 | Open Cloze                | pendiente |
+| Part 1 | Multiple-choice Cloze     | ✅ listo  |
+| Part 2 | Open Cloze                | ✅ listo  |
 | Part 3 | Word Formation            | ✅ listo  |
 | Part 4 | Key Word Transformation   | ✅ listo  |
 
-**Contenido:** Part 3 tiene 102 ítems en 38 familias (2,7 formas por familia).
+**Contenido:** Part 1 tiene 41 ítems en 23 familias de vocabulario.
+Part 2 tiene 45 ítems en 8 tipos de palabra gramatical.
+Part 3 tiene 102 ítems en 38 familias (2,7 formas por familia).
 Part 4 tiene 40 ítems en 34 estructuras gramaticales.
+
+El Part 1 se modela como frases sueltas y no como un texto de 8 huecos,
+porque con repetición espaciada **un hueco es una unidad de
+programación**: si un ítem fuera un texto entero, fallar un hueco te
+haría repasar los ocho. Se pierde el entrenamiento de "leer el texto
+completo", que se cubre con exámenes de práctica reales.
+
+Sus opciones se barajan en cada presentación: si la correcta cayera
+siempre en el mismo lugar, memorizarías la posición en vez del
+vocabulario. Y hay un test que exige que las palabras se reutilicen como
+respuesta en un ítem y como distractor en otro, para que ninguna sea
+"siempre la correcta".
 
 El Part 4 cuenta las palabras **como Cambridge**: las contracciones valen
 dos (`aren't` = are + not). Esa lógica vive en `grading.ts` y la usan tanto
@@ -164,6 +180,20 @@ Tres capas, ninguna basada en buena voluntad:
    (`clear-clarity`, no `42`). Son la llave de la memoria del usuario:
    si fueran posicionales, insertar una pregunta le reasignaría a cada
    ítem el historial de otro.
+
+### Sobre las reglas de capa en ESLint
+
+`eslint-plugin-boundaries` enforza el aislamiento entre juegos, y eso
+está verificado rompiéndolo. Pero **solo resuelve dependencias bajo
+`src/games/*`**: un import a `src/engine`, `src/lib` o `src/exam` le
+queda como "unknown element" y su regla no dispara. Medido con
+`boundaries/no-unknown`, no supuesto.
+
+Por eso las reglas de CAPA (el motor no sabe inglés, lib no importa
+nada, la cáscara no conoce juegos concretos) se enforzan con
+`no-restricted-imports`, del core de ESLint: mira el string del import
+y nada más, así que no puede fallar en silencio. Las ocho están
+verificadas una por una.
 
 > **Límite honesto:** `localStorage` vive en ESE navegador. Para
 > estudiar en el celular y en la notebook con el mismo progreso hace

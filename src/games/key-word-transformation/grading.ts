@@ -1,52 +1,12 @@
+import { countWords, normalize, wordsOf } from "../../exam/text";
 import { MAX_WORDS, MIN_WORDS, type KeyWordQuestion } from "./types";
 
 /**
- * Corrección del Part 4. Toda la lógica sucia del dominio vive acá,
- * fuera del componente y fuera del engine: es JavaScript puro y se
- * testea sin renderizar nada.
+ * Corrección del Part 4. Las reglas de texto compartidas viven en
+ * ../../exam/text; acá queda solo lo que es propio de esta parte.
  */
 
-/**
- * Cambridge cuenta las contracciones como DOS palabras: "don't" son
- * do + not. Si no expandís antes de contar, aceptás respuestas de seis
- * palabras creyendo que son de cinco, y le enseñás al alumno algo que
- * el examen le va a marcar mal.
- */
-const IRREGULAR_CONTRACTIONS: Readonly<Record<string, string>> = {
-  "won't": "will not",
-  "can't": "can not",
-  "cannot": "can not",
-  "shan't": "shall not",
-};
-
-function expandContractions(text: string): string {
-  let out = text;
-  for (const [contraction, expansion] of Object.entries(IRREGULAR_CONTRACTIONS)) {
-    out = out.replaceAll(contraction, expansion);
-  }
-  return out
-    .replace(/n't\b/g, " not")
-    .replace(/'ll\b/g, " will")
-    .replace(/'ve\b/g, " have")
-    .replace(/'re\b/g, " are")
-    .replace(/'m\b/g, " am")
-    .replace(/'d\b/g, " would");
-}
-
-/** Minúsculas, sin puntuación, espacios colapsados. */
-export function normalize(text: string): string {
-  return text
-    .trim()
-    .toLowerCase()
-    .replace(/[.,;:!?]/g, "")
-    .replace(/\s+/g, " ");
-}
-
-/** Palabras según las cuenta Cambridge, no según las cuenta un split. */
-export function countWords(text: string): number {
-  const expanded = expandContractions(normalize(text));
-  return expanded.split(" ").filter((word) => word.length > 0).length;
-}
+export { countWords, normalize };
 
 export const SUBMISSION_ISSUE = {
   EMPTY: "empty",
@@ -80,11 +40,7 @@ export function findSubmissionIssue(
   // La clave se busca en la forma escrita Y en la expandida: si el
   // alumno escribe "cannot" y la clave es CANNOT, expandir a "can not"
   // haría desaparecer la palabra que estamos buscando.
-  const writtenWords = new Set([
-    ...clean.split(" "),
-    ...expandContractions(clean).split(" "),
-  ]);
-  if (!writtenWords.has(question.keyWord.toLowerCase())) {
+  if (!wordsOf(clean).has(question.keyWord.toLowerCase())) {
     return SUBMISSION_ISSUE.MISSING_KEY_WORD;
   }
 

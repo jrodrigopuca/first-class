@@ -1,6 +1,5 @@
 import { clsx } from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
-import { normalize } from "../../exam/text";
 import { ROUND_STATUS } from "../../engine/types";
 import { useGameRound } from "../../engine/useGameRound";
 import { useSpacedRepetition } from "../../engine/useSpacedRepetition";
@@ -15,61 +14,66 @@ import {
   ResultScreen,
   Scoreboard,
 } from "../../engine/ui";
+import { findSubmissionIssue, isCorrect, SUBMISSION_ISSUE, type SubmissionIssue } from "./grading";
 import { QUESTIONS } from "./questions";
-import { WORD_CATEGORY, type WordCategory, type WordFormationQuestion } from "./types";
-import styles from "./WordFormationGame.module.css";
+import { GAP_TYPE, type GapType, type OpenClozeQuestion } from "./types";
+import styles from "./OpenCloze.module.css";
 
-const ROUND_LENGTH = 15;
-const ALL_CATEGORIES = "all";
+const ROUND_LENGTH = 12;
+const ALL = "all";
 const STREAK_BONUS_FROM = 4;
 
-type CategoryFilter = WordCategory | typeof ALL_CATEGORIES;
+type CategoryFilter = GapType | typeof ALL;
 
 const FILTER_LABELS: Record<CategoryFilter, string> = {
-  [ALL_CATEGORIES]: "Todas",
-  [WORD_CATEGORY.NOUN]: "Sustantivos",
-  [WORD_CATEGORY.ADJECTIVE]: "Adjetivos",
-  [WORD_CATEGORY.ADVERB]: "Adverbios",
-  [WORD_CATEGORY.VERB]: "Verbos",
-  [WORD_CATEGORY.PERSON]: "Personas",
-  [WORD_CATEGORY.PREFIX]: "Prefijos",
+  [ALL]: "Todas",
+  [GAP_TYPE.ARTICLE]: "Artículos",
+  [GAP_TYPE.PREPOSITION]: "Preposiciones",
+  [GAP_TYPE.AUXILIARY]: "Auxiliares",
+  [GAP_TYPE.PRONOUN]: "Pronombres",
+  [GAP_TYPE.QUANTIFIER]: "Cuantificadores",
+  [GAP_TYPE.LINKER]: "Conectores",
+  [GAP_TYPE.FIXED_PHRASE]: "Frases hechas",
+  [GAP_TYPE.COMPARATIVE]: "Comparativos",
 };
 
 const CATEGORY_FILTERS: readonly CategoryFilter[] = [
-  ALL_CATEGORIES,
-  WORD_CATEGORY.NOUN,
-  WORD_CATEGORY.ADJECTIVE,
-  WORD_CATEGORY.ADVERB,
-  WORD_CATEGORY.VERB,
-  WORD_CATEGORY.PERSON,
-  WORD_CATEGORY.PREFIX,
+  ALL,
+  GAP_TYPE.ARTICLE,
+  GAP_TYPE.PREPOSITION,
+  GAP_TYPE.AUXILIARY,
+  GAP_TYPE.PRONOUN,
+  GAP_TYPE.QUANTIFIER,
+  GAP_TYPE.LINKER,
+  GAP_TYPE.FIXED_PHRASE,
+  GAP_TYPE.COMPARATIVE,
 ];
 
-function checkAnswer(question: WordFormationQuestion, answer: string): boolean {
-  return question.answers.includes(normalize(answer));
+function describeIssue(issue: SubmissionIssue): string {
+  switch (issue) {
+    case SUBMISSION_ISSUE.EMPTY:
+      return "Escribí una palabra primero.";
+    case SUBMISSION_ISSUE.TOO_MANY:
+      return "Solo UNA palabra por hueco. Ojo: una contracción como \"don't\" cuenta como dos.";
+  }
 }
 
-export function WordFormationGame() {
-  const [filter, setFilter] = useState<CategoryFilter>(ALL_CATEGORIES);
+export function OpenCloze() {
+  const [filter, setFilter] = useState<CategoryFilter>(ALL);
   const [input, setInput] = useState("");
-  const [showEmptyWarning, setShowEmptyWarning] = useState(false);
+  const [issue, setIssue] = useState<SubmissionIssue | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Sin useMemo: el React Compiler memoiza esto solo.
   const pool =
-    filter === ALL_CATEGORIES
-      ? QUESTIONS
-      : QUESTIONS.filter((question) => question.category === filter);
+    filter === ALL ? QUESTIONS : QUESTIONS.filter((question) => question.category === filter);
 
-  const srs = useSpacedRepetition<WordFormationQuestion>();
+  const srs = useSpacedRepetition<OpenClozeQuestion>();
 
-  const round = useGameRound<WordFormationQuestion, string>({
+  const round = useGameRound<OpenClozeQuestion, string>({
     questions: pool,
     roundLength: ROUND_LENGTH,
-    // Cambiar de filtro arma una ronda nueva. En el componente viejo
-    // la prop `category` existía pero no hacía nada.
     roundKey: filter,
-    isCorrect: checkAnswer,
+    isCorrect,
     scheduler: srs.scheduler,
   });
 
@@ -82,26 +86,30 @@ export function WordFormationGame() {
   const changeFilter = (next: CategoryFilter) => {
     setFilter(next);
     setInput("");
-    setShowEmptyWarning(false);
+    setIssue(null);
   };
 
   const check = () => {
-    if (normalize(input) === "") {
-      setShowEmptyWarning(true);
+    // Las reglas del examen se comprueban antes de puntuar: escribir dos
+    // palabras no es equivocarse de gramática, es una jugada inválida.
+    const problem = findSubmissionIssue(input);
+    if (problem !== null) {
+      setIssue(problem);
       return;
     }
-    setShowEmptyWarning(false);
+    setIssue(null);
     round.submit(input);
   };
 
   const goNext = () => {
     setInput("");
+    setIssue(null);
     round.next();
   };
 
   const restart = () => {
     setInput("");
-    setShowEmptyWarning(false);
+    setIssue(null);
     round.restart();
   };
 
@@ -113,7 +121,7 @@ export function WordFormationGame() {
   };
 
   const filterBar = (
-    <div className={styles.filters} role="group" aria-label="Filtrar por categoría">
+    <div className={styles.filters} role="group" aria-label="Filtrar por tipo de palabra">
       {CATEGORY_FILTERS.map((value) => (
         <button
           key={value}
@@ -134,13 +142,14 @@ export function WordFormationGame() {
         {filterBar}
         <GameCard>
           <p className={styles.empty}>
-            No hay preguntas en esta categoría todavía. Sumá entradas a{" "}
-            <code>questions.json</code>.
+            No hay preguntas de este tipo todavía. Sumá entradas a <code>questions.json</code>.
           </p>
         </GameCard>
       </div>
     );
   }
+
+  const answered = status === ROUND_STATUS.ANSWERED;
 
   return (
     <div className={styles.game}>
@@ -170,9 +179,9 @@ export function WordFormationGame() {
               <ul className={styles.reviewList}>
                 {round.mistakes.map((mistake) => (
                   <li key={mistake.id} className={styles.reviewItem}>
-                    {mistake.root} →{" "}
-                    <span className={styles.reviewAnswer}>{mistake.answers[0]}</span> ·{" "}
-                    {mistake.label}
+                    {mistake.sentence.replace("___", `«${mistake.answers[0]}»`)}
+                    <br />
+                    <span className={styles.reviewAnswer}>{mistake.label}</span>
                   </li>
                 ))}
               </ul>
@@ -182,41 +191,32 @@ export function WordFormationGame() {
       ) : (
         <GameCard>
           <p className={styles.sentence}>
-            <Sentence text={question.sentence} />
+            <Sentence text={question.sentence} filledWith={answered ? question.answers[0] : null} />
           </p>
 
-          <div className={styles.rootRow}>
-            <span className={styles.rootLabel}>Palabra raíz:</span>
-            <span className={styles.root}>{question.root}</span>
-          </div>
-
-          <label htmlFor="word-formation-input" className={styles.rootLabel}>
-            Escribí la forma correcta
+          <label htmlFor="open-cloze-input" className={styles.label}>
+            Escribí UNA sola palabra
           </label>
           <input
-            id="word-formation-input"
+            id="open-cloze-input"
             ref={inputRef}
             className={styles.input}
             type="text"
             value={input}
-            // readOnly y NO disabled: un input deshabilitado pierde el foco
-            // y deja de recibir eventos de teclado, así que el Enter para
-            // avanzar a la siguiente pregunta dejaba de funcionar. readOnly
-            // bloquea la edición pero mantiene foco y teclado vivos.
-            readOnly={status === ROUND_STATUS.ANSWERED}
+            readOnly={answered}
             autoComplete="off"
             autoCapitalize="off"
             autoCorrect="off"
             spellCheck={false}
             onChange={(event) => {
               setInput(event.target.value);
-              setShowEmptyWarning(false);
+              setIssue(null);
             }}
             onKeyDown={handleKeyDown}
           />
-          {showEmptyWarning && <p className={styles.warning}>Escribí una respuesta primero.</p>}
+          {issue !== null && <p className={styles.warning}>{describeIssue(issue)}</p>}
 
-          {status === ROUND_STATUS.ANSWERED && (
+          {answered && (
             <Feedback
               tone={round.wasCorrect ? FEEDBACK_TONE.SUCCESS : FEEDBACK_TONE.ERROR}
               title={
@@ -229,20 +229,17 @@ export function WordFormationGame() {
             >
               <span className={styles.tag}>{question.label}</span>
               {question.explanation}
+              {question.answers.length > 1 && (
+                <p className={styles.alternatives}>
+                  También vale: {question.answers.slice(1).join(" · ")}
+                </p>
+              )}
             </Feedback>
           )}
 
           <div className={styles.actions}>
-            <Button
-              block
-              variant={BUTTON_VARIANT.PRIMARY}
-              onClick={status === ROUND_STATUS.ANSWERED ? goNext : check}
-            >
-              {status === ROUND_STATUS.ANSWERED
-                ? round.isLastQuestion
-                  ? "Ver resultado"
-                  : "Siguiente"
-                : "Comprobar"}
+            <Button block variant={BUTTON_VARIANT.PRIMARY} onClick={answered ? goNext : check}>
+              {answered ? (round.isLastQuestion ? "Ver resultado" : "Siguiente") : "Comprobar"}
             </Button>
           </div>
         </GameCard>
@@ -251,13 +248,14 @@ export function WordFormationGame() {
   );
 }
 
-/** Pinta la frase con el hueco como una línea, no como tres guiones bajos. */
-function Sentence({ text }: { text: string }) {
+function Sentence({ text, filledWith }: { text: string; filledWith: string | undefined | null }) {
   const [before = "", after = ""] = text.split("___");
   return (
     <>
       {before}
-      <span className={styles.blank} aria-label="espacio en blanco" />
+      <span className={clsx(styles.blank, filledWith != null && styles.blankFilled)}>
+        {filledWith ?? ""}
+      </span>
       {after}
     </>
   );

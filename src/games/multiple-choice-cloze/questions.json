@@ -1,0 +1,617 @@
+[
+  {
+    "id": "collocation-appointment-appointment",
+    "family": "collocation-appointment",
+    "category": "collocation",
+    "label": "make + appointment",
+    "level": 1,
+    "sentence": "I need to ___ an appointment with the dentist before the end of the week.",
+    "answer": "make",
+    "distractors": [
+      "do",
+      "put",
+      "hold"
+    ],
+    "explanation": "'make an appointment' es fijo. HOLD a meeting sí existe, pero no HOLD an appointment."
+  },
+  {
+    "id": "collocation-attention-attention",
+    "family": "collocation-attention",
+    "category": "collocation",
+    "label": "pay + attention",
+    "level": 1,
+    "sentence": "The teacher asked the whole class to ___ attention to the diagram on the board.",
+    "answer": "pay",
+    "distractors": [
+      "give",
+      "make",
+      "put"
+    ],
+    "explanation": "'pay attention' es una colocación fija. GIVE attention existe pero suena forzado y no es lo que pide el examen."
+  },
+  {
+    "id": "collocation-impression-impression",
+    "family": "collocation-impression",
+    "category": "collocation",
+    "label": "make + impression",
+    "level": 2,
+    "sentence": "It is important to ___ a good impression at a job interview.",
+    "answer": "make",
+    "distractors": [
+      "do",
+      "take",
+      "give"
+    ],
+    "explanation": "'make an impression': la impresión se produce en el otro. MAKE."
+  },
+  {
+    "id": "collocation-temper-temper",
+    "family": "collocation-temper",
+    "category": "collocation",
+    "label": "keep + temper",
+    "level": 3,
+    "sentence": "Try to ___ your temper even when the customer is being completely unreasonable.",
+    "answer": "keep",
+    "distractors": [
+      "hold",
+      "take",
+      "save"
+    ],
+    "explanation": "'keep your temper' = no perder la calma. HOLD your tongue existe, pero temper va con KEEP."
+  },
+  {
+    "id": "collocation-time-spend",
+    "family": "collocation-time",
+    "category": "collocation",
+    "label": "spend + time + on",
+    "level": 2,
+    "sentence": "She ___ a great deal of time on that project before finally handing it in.",
+    "answer": "spent",
+    "distractors": [
+      "passed",
+      "took",
+      "used"
+    ],
+    "explanation": "'spend time ON something'. PASS time existe pero significa entretenerse, no dedicarle esfuerzo."
+  },
+  {
+    "id": "do-vs-make-best",
+    "family": "do-vs-make",
+    "category": "collocation",
+    "label": "do + your best",
+    "level": 1,
+    "sentence": "She ___ her best to finish the report before the deadline on Friday.",
+    "answer": "did",
+    "distractors": [
+      "made",
+      "gave",
+      "put"
+    ],
+    "explanation": "'do your best' es fijo. Ojo: en español decís 'hacer lo mejor', pero acá no va MAKE."
+  },
+  {
+    "id": "do-vs-make-decision",
+    "family": "do-vs-make",
+    "category": "collocation",
+    "label": "make + decision",
+    "level": 1,
+    "sentence": "After months of discussion they finally ___ a decision to move abroad.",
+    "answer": "made",
+    "distractors": [
+      "did",
+      "held",
+      "gave"
+    ],
+    "explanation": "'make a decision': la decisión se PRODUCE, no se ejecuta. Por eso MAKE y no DO."
+  },
+  {
+    "id": "do-vs-make-favour",
+    "family": "do-vs-make",
+    "category": "collocation",
+    "label": "do + favour",
+    "level": 1,
+    "sentence": "He ___ me a favour by picking up the parcel on his way home from work.",
+    "answer": "did",
+    "distractors": [
+      "made",
+      "took",
+      "gave"
+    ],
+    "explanation": "'do someone a favour' es fijo. DO se usa para tareas y servicios; MAKE, para crear o producir algo."
+  },
+  {
+    "id": "do-vs-make-homework",
+    "family": "do-vs-make",
+    "category": "collocation",
+    "label": "do + homework",
+    "level": 1,
+    "sentence": "You must ___ your homework before you watch any television tonight.",
+    "answer": "do",
+    "distractors": [
+      "make",
+      "take",
+      "give"
+    ],
+    "explanation": "'do homework': es una tarea asignada, no algo que creás. DO."
+  },
+  {
+    "id": "do-vs-make-profit",
+    "family": "do-vs-make",
+    "category": "collocation",
+    "label": "make + profit",
+    "level": 2,
+    "sentence": "The company ___ a huge profit last year despite the recession.",
+    "answer": "made",
+    "distractors": [
+      "did",
+      "won",
+      "reached"
+    ],
+    "explanation": "'make a profit': la ganancia se genera. WIN es para competencias, no para dinero de una empresa."
+  },
+  {
+    "id": "confusable-fit-suit-fit",
+    "family": "confusable-fit-suit",
+    "category": "confusable",
+    "label": "fit = talle",
+    "level": 2,
+    "sentence": "This jacket doesn't ___ me; the shoulders are far too wide.",
+    "answer": "fit",
+    "distractors": [
+      "suit",
+      "match",
+      "serve"
+    ],
+    "explanation": "FIT es cuestión de TALLE. SUIT sería que no te queda bien de estilo o color."
+  },
+  {
+    "id": "confusable-fit-suit-suits",
+    "family": "confusable-fit-suit",
+    "category": "confusable",
+    "label": "suit = estilo",
+    "level": 2,
+    "sentence": "That colour really ___ you — you should wear it much more often.",
+    "answer": "suits",
+    "distractors": [
+      "fits",
+      "matches",
+      "serves"
+    ],
+    "explanation": "SUIT es que te favorece. FIT sería solo el talle, que en un color no aplica."
+  },
+  {
+    "id": "confusable-lend-borrow-lend",
+    "family": "confusable-lend-borrow",
+    "category": "confusable",
+    "label": "lend vs borrow",
+    "level": 1,
+    "sentence": "Could you ___ me your bike for the afternoon? Mine has a flat tyre.",
+    "answer": "lend",
+    "distractors": [
+      "borrow",
+      "hire",
+      "owe"
+    ],
+    "explanation": "LEND es dar prestado; BORROW es pedir prestado. Acá se lo pedís a él, así que él LENDS."
+  },
+  {
+    "id": "confusable-say-tell-said",
+    "family": "confusable-say-tell",
+    "category": "confusable",
+    "label": "say sin objeto",
+    "level": 1,
+    "sentence": "He ___ that he had never seen the man before in his life.",
+    "answer": "said",
+    "distractors": [
+      "told",
+      "spoke",
+      "talked"
+    ],
+    "explanation": "SAY va sin objeto de persona. TELL exigiría decir a quién."
+  },
+  {
+    "id": "confusable-say-tell-told",
+    "family": "confusable-say-tell",
+    "category": "confusable",
+    "label": "tell + objeto",
+    "level": 1,
+    "sentence": "She ___ me that she would probably be late for the meeting.",
+    "answer": "told",
+    "distractors": [
+      "said",
+      "spoke",
+      "talked"
+    ],
+    "explanation": "TELL lleva objeto directo de persona: tell ME. SAY no puede: sería 'said TO me'."
+  },
+  {
+    "id": "confusable-take-last-took",
+    "family": "confusable-take-last",
+    "category": "confusable",
+    "label": "it takes + tiempo",
+    "level": 2,
+    "sentence": "It ___ me two hours to get here this morning because of the traffic.",
+    "answer": "took",
+    "distractors": [
+      "lasted",
+      "spent",
+      "passed"
+    ],
+    "explanation": "'It takes someone + tiempo + to do something' es una estructura fija. LAST no entra en ese molde."
+  },
+  {
+    "id": "linker-contrast-although",
+    "family": "linker-contrast",
+    "category": "linker",
+    "label": "although + oración",
+    "level": 2,
+    "sentence": "The match went ahead exactly as planned ___ it was raining heavily.",
+    "answer": "although",
+    "distractors": [
+      "despite",
+      "however",
+      "whereas"
+    ],
+    "explanation": "ALTHOUGH introduce una oración con sujeto y verbo. DESPITE no puede."
+  },
+  {
+    "id": "linker-contrast-despite",
+    "family": "linker-contrast",
+    "category": "linker",
+    "label": "despite + sustantivo",
+    "level": 2,
+    "sentence": "The match went ahead exactly as planned ___ the heavy rain.",
+    "answer": "despite",
+    "distractors": [
+      "although",
+      "however",
+      "whereas"
+    ],
+    "explanation": "DESPITE va seguido de sustantivo o gerundio. ALTHOUGH necesitaría una oración con verbo."
+  },
+  {
+    "id": "linker-contrast-however",
+    "family": "linker-contrast",
+    "category": "linker",
+    "label": "however entre punto y coma",
+    "level": 2,
+    "sentence": "The hotel was extremely expensive; ___, the service was absolutely excellent.",
+    "answer": "however",
+    "distractors": [
+      "although",
+      "despite",
+      "whereas"
+    ],
+    "explanation": "HOWEVER conecta dos oraciones independientes, con punto y coma o punto delante."
+  },
+  {
+    "id": "linker-contrast-nevertheless",
+    "family": "linker-contrast",
+    "category": "linker",
+    "label": "nevertheless",
+    "level": 3,
+    "sentence": "He worked extremely hard; ___, he failed the exam by just two marks.",
+    "answer": "nevertheless",
+    "distractors": [
+      "moreover",
+      "therefore",
+      "besides"
+    ],
+    "explanation": "NEVERTHELESS marca contraste. MOREOVER y BESIDES suman, THEREFORE concluye."
+  },
+  {
+    "id": "linker-purpose-because",
+    "family": "linker-purpose",
+    "category": "linker",
+    "label": "because of + sustantivo",
+    "level": 1,
+    "sentence": "The flight was cancelled ___ of the bad weather over the Atlantic.",
+    "answer": "because",
+    "distractors": [
+      "despite",
+      "although",
+      "however"
+    ],
+    "explanation": "'because OF' + sustantivo. BECAUSE solo iría con una oración completa."
+  },
+  {
+    "id": "linker-purpose-in-case",
+    "family": "linker-purpose",
+    "category": "linker",
+    "label": "in case",
+    "level": 2,
+    "sentence": "You should take a coat ___ case it gets cold later this evening.",
+    "answer": "in",
+    "distractors": [
+      "on",
+      "at",
+      "for"
+    ],
+    "explanation": "'in case' expresa precaución y va seguido de presente, nunca de WILL."
+  },
+  {
+    "id": "linker-purpose-so-that",
+    "family": "linker-purpose",
+    "category": "linker",
+    "label": "so that",
+    "level": 2,
+    "sentence": "I took a taxi ___ that I would not be late for the interview.",
+    "answer": "so",
+    "distractors": [
+      "in",
+      "for",
+      "such"
+    ],
+    "explanation": "'so that' introduce propósito. 'such that' existe pero es otro registro y otro significado."
+  },
+  {
+    "id": "phrasal-break-down-broke",
+    "family": "phrasal-break-down",
+    "category": "phrasal",
+    "label": "break down",
+    "level": 2,
+    "sentence": "The car ___ down on the motorway and we had to call for help.",
+    "answer": "broke",
+    "distractors": [
+      "fell",
+      "went",
+      "put"
+    ],
+    "explanation": "'break down' = averiarse un vehículo o una máquina."
+  },
+  {
+    "id": "phrasal-look-after-look",
+    "family": "phrasal-look-after",
+    "category": "phrasal",
+    "label": "look after",
+    "level": 1,
+    "sentence": "Could you ___ after my cat while I am away next week?",
+    "answer": "look",
+    "distractors": [
+      "watch",
+      "care",
+      "see"
+    ],
+    "explanation": "'look after' = cuidar. CARE necesita FOR, no AFTER."
+  },
+  {
+    "id": "phrasal-off-called",
+    "family": "phrasal-off",
+    "category": "phrasal",
+    "label": "call off",
+    "level": 2,
+    "sentence": "The match was ___ off after the pitch flooded, and no new date was ever announced.",
+    "answer": "called",
+    "distractors": [
+      "turned",
+      "brought",
+      "given"
+    ],
+    "explanation": "'call off' = cancelar definitivamente. Ojo con 'put off', que sería posponer: acá nunca se reprogramó."
+  },
+  {
+    "id": "phrasal-off-took",
+    "family": "phrasal-off",
+    "category": "phrasal",
+    "label": "take off",
+    "level": 1,
+    "sentence": "The plane ___ off almost two hours late because of the storm over the Atlantic.",
+    "answer": "took",
+    "distractors": [
+      "went",
+      "got",
+      "put"
+    ],
+    "explanation": "'take off' = despegar. Es el phrasal fijo para aviones."
+  },
+  {
+    "id": "phrasal-off-turn",
+    "family": "phrasal-off",
+    "category": "phrasal",
+    "label": "turn off",
+    "level": 1,
+    "sentence": "Remember to ___ off all the lights when you are the last one to leave.",
+    "answer": "turn",
+    "distractors": [
+      "close",
+      "shut",
+      "take"
+    ],
+    "explanation": "'turn off' = apagar un aparato. CLOSE the light es un calco del español que en inglés no existe."
+  },
+  {
+    "id": "phrasal-up-came",
+    "family": "phrasal-up",
+    "category": "phrasal",
+    "label": "come up with",
+    "level": 2,
+    "sentence": "He ___ up with a brilliant solution halfway through the meeting.",
+    "answer": "came",
+    "distractors": [
+      "got",
+      "made",
+      "took"
+    ],
+    "explanation": "'come up with' = ocurrírsele a uno una idea."
+  },
+  {
+    "id": "phrasal-up-gave",
+    "family": "phrasal-up",
+    "category": "phrasal",
+    "label": "give up",
+    "level": 1,
+    "sentence": "She ___ up smoking three years ago and has never looked back since.",
+    "answer": "gave",
+    "distractors": [
+      "took",
+      "put",
+      "left"
+    ],
+    "explanation": "'give up' = abandonar un hábito. TAKE UP es lo contrario: empezar uno."
+  },
+  {
+    "id": "phrasal-up-put",
+    "family": "phrasal-up",
+    "category": "phrasal",
+    "label": "put up with",
+    "level": 3,
+    "sentence": "I cannot ___ up with that noise from the building site any longer.",
+    "answer": "put",
+    "distractors": [
+      "take",
+      "get",
+      "come"
+    ],
+    "explanation": "'put up with' = tolerar. Es un phrasal de tres partes: se memoriza entero, no por piezas."
+  },
+  {
+    "id": "phrasal-work-out-work",
+    "family": "phrasal-work-out",
+    "category": "phrasal",
+    "label": "work out",
+    "level": 2,
+    "sentence": "We need to ___ out exactly how much the trip will cost before we book anything.",
+    "answer": "work",
+    "distractors": [
+      "make",
+      "take",
+      "put"
+    ],
+    "explanation": "'work out' = calcular o resolver."
+  },
+  {
+    "id": "preposition-at-good",
+    "family": "preposition-at",
+    "category": "preposition",
+    "label": "good at",
+    "level": 1,
+    "sentence": "She is very good ___ explaining complicated ideas in simple language.",
+    "answer": "at",
+    "distractors": [
+      "in",
+      "on",
+      "with"
+    ],
+    "explanation": "'good AT something'. El calco de 'buena EN' lleva a IN."
+  },
+  {
+    "id": "preposition-for-apologised",
+    "family": "preposition-for",
+    "category": "preposition",
+    "label": "apologise for",
+    "level": 2,
+    "sentence": "He apologised ___ arriving so late to the ceremony.",
+    "answer": "for",
+    "distractors": [
+      "about",
+      "of",
+      "on"
+    ],
+    "explanation": "'apologise FOR something'."
+  },
+  {
+    "id": "preposition-in-interested",
+    "family": "preposition-in",
+    "category": "preposition",
+    "label": "interested in",
+    "level": 1,
+    "sentence": "I am not really interested ___ football, to be completely honest with you.",
+    "answer": "in",
+    "distractors": [
+      "on",
+      "at",
+      "for"
+    ],
+    "explanation": "'interested IN' es fijo."
+  },
+  {
+    "id": "preposition-in-succeeded",
+    "family": "preposition-in",
+    "category": "preposition",
+    "label": "succeed in",
+    "level": 3,
+    "sentence": "She succeeded ___ persuading the whole committee to change its mind.",
+    "answer": "in",
+    "distractors": [
+      "at",
+      "on",
+      "with"
+    ],
+    "explanation": "'succeed IN doing something'. Después de la preposición va gerundio."
+  },
+  {
+    "id": "preposition-of-accused",
+    "family": "preposition-of",
+    "category": "preposition",
+    "label": "accuse of",
+    "level": 2,
+    "sentence": "They accused him ___ taking money from the company account.",
+    "answer": "of",
+    "distractors": [
+      "for",
+      "with",
+      "about"
+    ],
+    "explanation": "'accuse someone OF something'. Ojo: 'blame someone FOR' lleva otra preposición."
+  },
+  {
+    "id": "preposition-on-based",
+    "family": "preposition-on",
+    "category": "preposition",
+    "label": "based on",
+    "level": 1,
+    "sentence": "The film was based ___ a true story that happened in the 1920s.",
+    "answer": "on",
+    "distractors": [
+      "in",
+      "at",
+      "from"
+    ],
+    "explanation": "'based ON' es fijo. En español decís 'basada EN', y ese calco es la trampa."
+  },
+  {
+    "id": "preposition-on-congratulations",
+    "family": "preposition-on",
+    "category": "preposition",
+    "label": "congratulations on",
+    "level": 2,
+    "sentence": "Congratulations ___ passing your driving test at the very first attempt.",
+    "answer": "on",
+    "distractors": [
+      "for",
+      "about",
+      "with"
+    ],
+    "explanation": "'congratulations ON something'. En español felicitás POR algo: otro calco."
+  },
+  {
+    "id": "preposition-on-depends",
+    "family": "preposition-on",
+    "category": "preposition",
+    "label": "depend on",
+    "level": 1,
+    "sentence": "The final result depends ___ how many people turn up on the day.",
+    "answer": "on",
+    "distractors": [
+      "of",
+      "from",
+      "in"
+    ],
+    "explanation": "'depend ON'. El calco de 'depender DE' lleva a poner OF, que está mal."
+  },
+  {
+    "id": "preposition-to-forward",
+    "family": "preposition-to",
+    "category": "preposition",
+    "label": "look forward to",
+    "level": 2,
+    "sentence": "I am really looking forward ___ seeing you again next summer.",
+    "answer": "to",
+    "distractors": [
+      "for",
+      "at",
+      "on"
+    ],
+    "explanation": "'look forward TO'. Ese TO es preposición, no infinitivo: le sigue gerundio."
+  }
+]

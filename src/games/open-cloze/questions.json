@@ -1,0 +1,546 @@
+[
+  {
+    "id": "article-hour-an",
+    "family": "article-hour",
+    "category": "article",
+    "label": "an + sonido vocálico",
+    "level": 2,
+    "sentence": "It took us ___ hour and a half to drive from the airport to the hotel.",
+    "answers": [
+      "an"
+    ],
+    "explanation": "AN va delante de SONIDO vocálico, no de letra vocal. La h de 'hour' es muda: suena 'our'."
+  },
+  {
+    "id": "article-only-the",
+    "family": "article-only",
+    "category": "article",
+    "label": "the + only",
+    "level": 1,
+    "sentence": "She is ___ only person in this office who knows how the old machine works.",
+    "answers": [
+      "the"
+    ],
+    "explanation": "'the only' lleva artículo definido: hay una sola persona así, es única."
+  },
+  {
+    "id": "article-superlative-the",
+    "family": "article-superlative",
+    "category": "article",
+    "label": "the + superlativo",
+    "level": 1,
+    "sentence": "That was by far ___ most difficult exam I have ever had to take.",
+    "answers": [
+      "the"
+    ],
+    "explanation": "El superlativo siempre lleva THE delante."
+  },
+  {
+    "id": "article-university-a",
+    "family": "article-university",
+    "category": "article",
+    "label": "a + sonido consonántico",
+    "level": 2,
+    "sentence": "He has ___ university degree in history from a college in the north.",
+    "answers": [
+      "a"
+    ],
+    "explanation": "'University' empieza con sonido /ju:/, que es consonántico. Por eso A y no AN."
+  },
+  {
+    "id": "auxiliary-deduction-could",
+    "family": "auxiliary-deduction",
+    "category": "auxiliary",
+    "label": "deducción negativa",
+    "level": 3,
+    "sentence": "He ___ not have taken the keys, because he was with me the whole afternoon.",
+    "answers": [
+      "could",
+      "can"
+    ],
+    "explanation": "Deducción negativa sobre el pasado: couldn't / can't + have + participio."
+  },
+  {
+    "id": "auxiliary-inversion-never-have",
+    "family": "auxiliary-inversion-never",
+    "category": "auxiliary",
+    "label": "inversión con never",
+    "level": 3,
+    "sentence": "Never ___ I seen such a beautiful sunset as the one we saw last night.",
+    "answers": [
+      "have"
+    ],
+    "explanation": "Con NEVER al principio hay inversión: auxiliar + sujeto. 'Never have I seen'."
+  },
+  {
+    "id": "auxiliary-inversion-rarely-do",
+    "family": "auxiliary-inversion-rarely",
+    "category": "auxiliary",
+    "label": "inversión con rarely",
+    "level": 3,
+    "sentence": "Rarely ___ we see such a talented young player in this league.",
+    "answers": [
+      "do"
+    ],
+    "explanation": "RARELY al principio también fuerza inversión, y con presente simple el auxiliar es DO."
+  },
+  {
+    "id": "auxiliary-negative-past-did",
+    "family": "auxiliary-negative-past",
+    "category": "auxiliary",
+    "label": "did not + infinitivo",
+    "level": 1,
+    "sentence": "She ___ not realise how late it was until the phone suddenly rang.",
+    "answers": [
+      "did"
+    ],
+    "explanation": "Negación en pasado simple: DID + not + infinitivo sin to."
+  },
+  {
+    "id": "auxiliary-passive-infinitive-have",
+    "family": "auxiliary-passive-infinitive",
+    "category": "auxiliary",
+    "label": "to have been + participio",
+    "level": 3,
+    "sentence": "The bridge is said to ___ been built more than two hundred years ago.",
+    "answers": [
+      "have"
+    ],
+    "explanation": "Infinitivo perfecto en pasiva: to HAVE been + participio."
+  },
+  {
+    "id": "auxiliary-third-conditional-had",
+    "family": "auxiliary-third-conditional",
+    "category": "auxiliary",
+    "label": "tercer condicional",
+    "level": 2,
+    "sentence": "If I ___ known you were coming, I would have made something to eat.",
+    "answers": [
+      "had"
+    ],
+    "explanation": "Tercer condicional: la parte del IF va en past perfect."
+  },
+  {
+    "id": "comparative-as-as-as",
+    "family": "comparative-as-as",
+    "category": "comparative",
+    "label": "not as ... as",
+    "level": 1,
+    "sentence": "She is not ___ tall as her older sister, but she plays much better.",
+    "answers": [
+      "as"
+    ],
+    "explanation": "'not as + adjetivo + as' para comparar igualdad."
+  },
+  {
+    "id": "comparative-than-than",
+    "family": "comparative-than",
+    "category": "comparative",
+    "label": "comparativo + than",
+    "level": 1,
+    "sentence": "The exam turned out to be much harder ___ I had expected it to be.",
+    "answers": [
+      "than"
+    ],
+    "explanation": "Después de un comparativo (harder) va THAN."
+  },
+  {
+    "id": "comparative-the-more-more",
+    "family": "comparative-the-more",
+    "category": "comparative",
+    "label": "the more ... the better",
+    "level": 3,
+    "sentence": "The ___ you practise, the better you will get at playing the piano.",
+    "answers": [
+      "more"
+    ],
+    "explanation": "'The + comparativo..., the + comparativo...' expresa proporción."
+  },
+  {
+    "id": "phrase-as-well-as-well",
+    "family": "phrase-as-well-as",
+    "category": "fixed-phrase",
+    "label": "as well as",
+    "level": 1,
+    "sentence": "She speaks French as ___ as Italian and a little bit of German.",
+    "answers": [
+      "well"
+    ],
+    "explanation": "'as well as' = además de."
+  },
+  {
+    "id": "phrase-at-least-least",
+    "family": "phrase-at-least",
+    "category": "fixed-phrase",
+    "label": "at least",
+    "level": 1,
+    "sentence": "It will take at ___ three hours to get there by train from here.",
+    "answers": [
+      "least"
+    ],
+    "explanation": "'at least' = como mínimo."
+  },
+  {
+    "id": "phrase-by-means-means",
+    "family": "phrase-by-means",
+    "category": "fixed-phrase",
+    "label": "by means of",
+    "level": 3,
+    "sentence": "The message was finally delivered by ___ of a private courier.",
+    "answers": [
+      "means"
+    ],
+    "explanation": "'by means of' = por medio de."
+  },
+  {
+    "id": "phrase-in-case-case",
+    "family": "phrase-in-case",
+    "category": "fixed-phrase",
+    "label": "in case",
+    "level": 2,
+    "sentence": "Take an umbrella with you in ___ it rains later this afternoon.",
+    "answers": [
+      "case"
+    ],
+    "explanation": "'in case' + presente expresa precaución, nunca con WILL."
+  },
+  {
+    "id": "phrase-in-order-order",
+    "family": "phrase-in-order",
+    "category": "fixed-phrase",
+    "label": "in order to",
+    "level": 2,
+    "sentence": "She stayed up all night in ___ to finish the essay before the deadline.",
+    "answers": [
+      "order"
+    ],
+    "explanation": "'in order to' + infinitivo expresa propósito."
+  },
+  {
+    "id": "phrase-in-spite-spite",
+    "family": "phrase-in-spite",
+    "category": "fixed-phrase",
+    "label": "in spite of",
+    "level": 2,
+    "sentence": "In ___ of the terrible weather, the trip went ahead exactly as planned.",
+    "answers": [
+      "spite"
+    ],
+    "explanation": "'in spite of' + sustantivo o gerundio. Equivale a DESPITE."
+  },
+  {
+    "id": "phrase-instead-of-instead",
+    "family": "phrase-instead-of",
+    "category": "fixed-phrase",
+    "label": "instead of",
+    "level": 1,
+    "sentence": "We decided to walk ___ of taking the bus, since it was such a lovely evening.",
+    "answers": [
+      "instead"
+    ],
+    "explanation": "'instead of' + sustantivo o gerundio."
+  },
+  {
+    "id": "phrase-no-matter-matter",
+    "family": "phrase-no-matter",
+    "category": "fixed-phrase",
+    "label": "no matter what",
+    "level": 2,
+    "sentence": "No ___ what you say to him, he is never going to change his mind.",
+    "answers": [
+      "matter"
+    ],
+    "explanation": "'no matter what/how/when' = da igual qué."
+  },
+  {
+    "id": "phrase-on-behalf-behalf",
+    "family": "phrase-on-behalf",
+    "category": "fixed-phrase",
+    "label": "on behalf of",
+    "level": 3,
+    "sentence": "I am speaking here today on ___ of the whole research team.",
+    "answers": [
+      "behalf"
+    ],
+    "explanation": "'on behalf of' = en nombre de."
+  },
+  {
+    "id": "linker-although-although",
+    "family": "linker-although",
+    "category": "linker",
+    "label": "although / though",
+    "level": 1,
+    "sentence": "He plays like a professional ___ he is only fourteen years old.",
+    "answers": [
+      "although",
+      "though"
+    ],
+    "explanation": "ALTHOUGH o THOUGH introducen una oración con sujeto y verbo. DESPITE no podría."
+  },
+  {
+    "id": "linker-due-to-due",
+    "family": "linker-due-to",
+    "category": "linker",
+    "label": "due to / owing to",
+    "level": 2,
+    "sentence": "The concert was cancelled ___ to the storm that hit the coast on Friday.",
+    "answers": [
+      "due",
+      "owing"
+    ],
+    "explanation": "'due to' y 'owing to' introducen la causa, seguidas de sustantivo."
+  },
+  {
+    "id": "linker-not-only-only",
+    "family": "linker-not-only",
+    "category": "linker",
+    "label": "not only ... but also",
+    "level": 3,
+    "sentence": "Not ___ did she apologise, but she also paid for all the damage.",
+    "answers": [
+      "only"
+    ],
+    "explanation": "'Not only' al principio fuerza inversión: not only DID she apologise."
+  },
+  {
+    "id": "linker-so-that-so",
+    "family": "linker-so-that",
+    "category": "linker",
+    "label": "so that",
+    "level": 2,
+    "sentence": "She left extremely early ___ that she would not get stuck in the traffic.",
+    "answers": [
+      "so"
+    ],
+    "explanation": "'so that' introduce propósito."
+  },
+  {
+    "id": "linker-unless-unless",
+    "family": "linker-unless",
+    "category": "linker",
+    "label": "unless",
+    "level": 2,
+    "sentence": "We will go ahead with the picnic ___ it rains before midday.",
+    "answers": [
+      "unless"
+    ],
+    "explanation": "UNLESS = if not. Ya es negativo, así que el verbo va en afirmativo."
+  },
+  {
+    "id": "linker-whereas-whereas",
+    "family": "linker-whereas",
+    "category": "linker",
+    "label": "whereas / while",
+    "level": 3,
+    "sentence": "My sister loves the countryside, ___ I have always preferred big cities.",
+    "answers": [
+      "whereas",
+      "while"
+    ],
+    "explanation": "WHEREAS y WHILE marcan contraste entre dos hechos paralelos."
+  },
+  {
+    "id": "preposition-apart-from",
+    "family": "preposition-apart",
+    "category": "preposition",
+    "label": "apart from",
+    "level": 2,
+    "sentence": "Apart ___ the ending, I thought the film was absolutely excellent.",
+    "answers": [
+      "from"
+    ],
+    "explanation": "'apart FROM' = excepto. También existe 'aside from', pero apart pide FROM."
+  },
+  {
+    "id": "preposition-by-by",
+    "family": "preposition-by",
+    "category": "preposition",
+    "label": "by + agente",
+    "level": 1,
+    "sentence": "The novel was written ___ a woman who had never left her village.",
+    "answers": [
+      "by"
+    ],
+    "explanation": "En pasiva, el agente va introducido por BY."
+  },
+  {
+    "id": "preposition-good-at-at",
+    "family": "preposition-good-at",
+    "category": "preposition",
+    "label": "good at + gerundio",
+    "level": 1,
+    "sentence": "She was always very good ___ persuading people to change their minds.",
+    "answers": [
+      "at"
+    ],
+    "explanation": "'good AT something'. El calco de 'buena EN' lleva a poner IN."
+  },
+  {
+    "id": "preposition-point-in",
+    "family": "preposition-point",
+    "category": "preposition",
+    "label": "no point in + gerundio",
+    "level": 2,
+    "sentence": "There is no point ___ complaining about it now that everything is over.",
+    "answers": [
+      "in"
+    ],
+    "explanation": "'there is no point IN doing something'. Después de la preposición va gerundio."
+  },
+  {
+    "id": "preposition-responsible-for",
+    "family": "preposition-responsible",
+    "category": "preposition",
+    "label": "responsible for",
+    "level": 1,
+    "sentence": "She is responsible ___ everything that happens in this department.",
+    "answers": [
+      "for"
+    ],
+    "explanation": "'responsible FOR' es fijo."
+  },
+  {
+    "id": "preposition-since-since",
+    "family": "preposition-since",
+    "category": "preposition",
+    "label": "since + momento",
+    "level": 1,
+    "sentence": "I have known her ___ we were at primary school together.",
+    "answers": [
+      "since"
+    ],
+    "explanation": "SINCE marca el punto de partida en el tiempo y va con present perfect."
+  },
+  {
+    "id": "pronoun-it-it",
+    "family": "pronoun-it",
+    "category": "pronoun",
+    "label": "it como objeto anticipado",
+    "level": 2,
+    "sentence": "I find ___ very difficult to concentrate when the radio is on.",
+    "answers": [
+      "it"
+    ],
+    "explanation": "'find IT difficult TO do something': IT anticipa el infinitivo que viene después."
+  },
+  {
+    "id": "pronoun-there-there",
+    "family": "pronoun-there",
+    "category": "pronoun",
+    "label": "there is",
+    "level": 1,
+    "sentence": "As far as I know, ___ is no reason at all to worry about the results.",
+    "answers": [
+      "there"
+    ],
+    "explanation": "'there is/are' para expresar existencia. IT sería el sujeto de otra estructura."
+  },
+  {
+    "id": "relative-what-what",
+    "family": "relative-what",
+    "category": "pronoun",
+    "label": "what = lo que",
+    "level": 2,
+    "sentence": "That is exactly ___ I was trying to explain to you yesterday afternoon.",
+    "answers": [
+      "what"
+    ],
+    "explanation": "WHAT equivale a 'lo que'. THAT necesitaría un sustantivo antes."
+  },
+  {
+    "id": "relative-which-which",
+    "family": "relative-which",
+    "category": "pronoun",
+    "label": "which comentando la oración",
+    "level": 3,
+    "sentence": "He arrived two hours late, ___ annoyed absolutely everybody at the meeting.",
+    "answers": [
+      "which"
+    ],
+    "explanation": "WHICH después de coma comenta toda la oración anterior, no un sustantivo suelto."
+  },
+  {
+    "id": "relative-whose-whose",
+    "family": "relative-whose",
+    "category": "pronoun",
+    "label": "whose = cuyo",
+    "level": 2,
+    "sentence": "The woman ___ car was stolen last night has already reported it to the police.",
+    "answers": [
+      "whose"
+    ],
+    "explanation": "WHOSE indica posesión: el auto DE la mujer."
+  },
+  {
+    "id": "quantifier-few-few",
+    "family": "quantifier-few",
+    "category": "quantifier",
+    "label": "a few of",
+    "level": 2,
+    "sentence": "Only a ___ of the guests stayed until the very end of the party.",
+    "answers": [
+      "few"
+    ],
+    "explanation": "'a few of' con contables. 'a little of' sería para incontables."
+  },
+  {
+    "id": "quantifier-hardly-any-any",
+    "family": "quantifier-hardly-any",
+    "category": "quantifier",
+    "label": "hardly any",
+    "level": 2,
+    "sentence": "We have hardly ___ time left, so we had better hurry up.",
+    "answers": [
+      "any"
+    ],
+    "explanation": "'hardly any' = casi nada. HARDLY ya es negativo, por eso ANY y no SOME."
+  },
+  {
+    "id": "quantifier-little-little",
+    "family": "quantifier-little",
+    "category": "quantifier",
+    "label": "very little + incontable",
+    "level": 2,
+    "sentence": "She has very ___ interest in politics these days, which surprises me.",
+    "answers": [
+      "little"
+    ],
+    "explanation": "'very little' con incontables: interest no se cuenta."
+  },
+  {
+    "id": "quantifier-neither-neither",
+    "family": "quantifier-neither",
+    "category": "quantifier",
+    "label": "neither of + dos",
+    "level": 2,
+    "sentence": "To be honest, ___ of the two options seemed particularly attractive to us.",
+    "answers": [
+      "neither"
+    ],
+    "explanation": "NEITHER se usa cuando son exactamente DOS. Para más de dos iría NONE."
+  },
+  {
+    "id": "quantifier-none-none",
+    "family": "quantifier-none",
+    "category": "quantifier",
+    "label": "none of",
+    "level": 2,
+    "sentence": "Unfortunately, ___ of the students had done the reading beforehand.",
+    "answers": [
+      "none"
+    ],
+    "explanation": "NONE OF + grupo. NO iría directamente con el sustantivo, sin OF."
+  },
+  {
+    "id": "quantifier-so-many-many",
+    "family": "quantifier-so-many",
+    "category": "quantifier",
+    "label": "so many + contable",
+    "level": 1,
+    "sentence": "There were so ___ people at the concert that we could hardly move.",
+    "answers": [
+      "many"
+    ],
+    "explanation": "MANY con contables en plural. MUCH sería para incontables."
+  }
+]
