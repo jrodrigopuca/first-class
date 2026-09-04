@@ -1,3 +1,4 @@
+import { buildReview } from "./review";
 import { describe, expect, it } from "vitest";
 import { QUESTIONS } from "./questions";
 import { WORD_CATEGORY } from "./types";
@@ -57,5 +58,42 @@ describe("invariante pedagógico: la raíz no puede ser una clave de diccionario
     const families = new Set(QUESTIONS.map((q) => q.family));
 
     expect(QUESTIONS.length / families.size).toBeGreaterThan(2);
+  });
+});
+
+describe("material de repaso", () => {
+  const families = buildReview();
+
+  it("agrupa todas las preguntas sin perder ninguna", () => {
+    const entries = families.flatMap((f) => f.entries);
+
+    expect(entries).toHaveLength(QUESTIONS.length);
+  });
+
+  it("usa los MISMOS ids que la repetición espaciada", () => {
+    /*
+     * Este es el invariante silencioso del repaso: si un questionId no
+     * coincidiera con el de la pregunta, la familia mostraría "sin datos"
+     * para siempre y nadie se enteraría. No crashea, no lintea mal: solo
+     * miente.
+     */
+    const real = new Set(QUESTIONS.map((q) => q.id));
+
+    for (const family of families) {
+      for (const entry of family.entries) {
+        expect(real.has(entry.questionId), `id fantasma: ${entry.questionId}`).toBe(true);
+      }
+    }
+  });
+
+  it("no deja familias vacías ni explicaciones en blanco", () => {
+    for (const family of families) {
+      expect(family.entries.length, family.id).toBeGreaterThan(0);
+      for (const entry of family.entries) {
+        expect(entry.explanation.trim(), entry.questionId).not.toBe("");
+        expect(entry.answer.trim(), entry.questionId).not.toBe("");
+        expect(entry.prompt, entry.questionId).toContain("___");
+      }
+    }
   });
 });

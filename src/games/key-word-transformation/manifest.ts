@@ -1,4 +1,5 @@
 import { EXAM_PART, type GameManifest } from "../../engine/types";
+import { buildReview } from "./review";
 import { KeyWordTransformation } from "./KeyWordTransformation";
 
 export const keyWordTransformationManifest: GameManifest = {
@@ -9,4 +10,5 @@ export const keyWordTransformationManifest: GameManifest = {
   description:
     "Reescribí la frase con la palabra clave, sin cambiarla, usando entre dos y cinco palabras.",
   Component: KeyWordTransformation,
+  buildReview,
 };

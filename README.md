@@ -90,6 +90,39 @@ No hay tests de componentes. La UI se verificó a mano en el navegador;
 el día que un flujo se vuelva crítico, va a Playwright, no a más unit
 tests contra el DOM.
 
+## Repaso
+
+`#/review` agrupa las explicaciones que ya existen y las ordena por lo
+que más fallás, cruzando `buildReview()` de cada manifest con el
+progreso que guarda la repetición espaciada.
+
+**No hay contenido nuevo:** son las mismas 228 explicaciones que ya se
+mostraban al fallar. Antes se veían una vez y se perdían; ahora se leen
+juntas y se pueden volver a buscar.
+
+Cada juego elige **su** unidad de agrupación, porque solo él sabe cuál
+forma una lección:
+
+| Juego  | Agrupa por | Motivo |
+| ------ | ---------- | ------ |
+| Part 3 | familia    | solo 1 de 38 familias tiene un ítem suelto |
+| Part 1 | categoría  | 14 de 23 familias son de un solo ítem |
+| Part 2 | categoría  | **las 45** familias son de un solo ítem |
+| Part 4 | categoría  | 28 de 34 familias son de un solo ítem |
+
+`groupIdOf()` se exporta desde `review.ts` y la usan tanto el agrupador
+como el link "Ver toda la familia" que aparece al fallar, así que no
+pueden desincronizarse.
+
+Lo nunca practicado va al FINAL, no al principio: ausencia de datos no
+es debilidad demostrada.
+
+> **Nota de diseño:** la página de repaso lee el progreso de los cuatro
+> juegos. El aislamiento que enforza el linter impide que un JUEGO
+> alcance a otro; la cáscara ya conoce el catálogo entero por el
+> registry, así que agregarlo para mostrarlo es legítimo — y es solo
+> lectura.
+
 ## Agregar un juego nuevo
 
 1. `src/games/<mi-juego>/` con:
@@ -97,7 +130,10 @@ tests contra el DOM.
    - `types.ts` — tu pregunta extiende `Question` del engine
    - `questions.json` + `questions.ts` — datos y su validación en la frontera
    - `MiJuego.tsx` + `MiJuego.module.css`
+   - `review.ts` — `groupIdOf()` y `buildReview()`
    - `manifest.ts` — id, parte del examen, título, descripción, componente
+     y `buildReview` (**obligatorio**: un juego sin material de repaso
+     desaparecería del estudio en silencio)
 
 2. Una línea en `src/registry/index.ts`.
 

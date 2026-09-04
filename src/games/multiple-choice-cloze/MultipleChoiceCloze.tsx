@@ -1,8 +1,10 @@
 import { clsx } from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { useGameId } from "../../engine/gameIdentity";
 import { ROUND_STATUS } from "../../engine/types";
 import { useGameRound } from "../../engine/useGameRound";
 import { useSpacedRepetition } from "../../engine/useSpacedRepetition";
+import { toHref } from "../../lib/router";
 import {
   Button,
   BUTTON_VARIANT,
@@ -16,6 +18,7 @@ import {
 } from "../../engine/ui";
 import { buildOptions, isCorrect } from "./options";
 import { QUESTIONS } from "./questions";
+import { groupIdOf } from "./review";
 import { CLOZE_TYPE, type ClozeQuestion, type ClozeType } from "./types";
 import styles from "./MultipleChoiceCloze.module.css";
 
@@ -47,6 +50,7 @@ export function MultipleChoiceCloze() {
   const [filter, setFilter] = useState<CategoryFilter>(ALL);
   const [selected, setSelected] = useState<string | null>(null);
   const [showWarning, setShowWarning] = useState(false);
+  const gameId = useGameId();
   const cardRef = useRef<HTMLDivElement>(null);
 
   const pool =
@@ -254,7 +258,13 @@ export function MultipleChoiceCloze() {
               >
                 <span className={styles.tag}>{question.label}</span>
                 {question.explanation}
-              </Feedback>
+                <a
+                href={toHref(`/review/${gameId}/${groupIdOf(question)}`)}
+                className={styles.reviewLink}
+              >
+                Ver toda la familia →
+              </a>
+            </Feedback>
             )}
 
             <div className={styles.actions}>

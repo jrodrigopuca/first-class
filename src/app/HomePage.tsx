@@ -22,6 +22,15 @@ export function HomePage() {
         ))}
 
       </div>
+
+      <a href={toHref("/review")} className={styles.review}>
+        <span className={styles.part}>Repaso</span>
+        <h2 className={styles.cardTitle}>Lo que más fallás</h2>
+        <p className={styles.cardText}>
+          Las explicaciones de los cuatro juegos, agrupadas por familia y ordenadas
+          por tus errores reales.
+        </p>
+      </a>
     </>
   );
 }

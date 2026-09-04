@@ -1,8 +1,10 @@
 import { clsx } from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { useGameId } from "../../engine/gameIdentity";
 import { ROUND_STATUS } from "../../engine/types";
 import { useGameRound } from "../../engine/useGameRound";
 import { useSpacedRepetition } from "../../engine/useSpacedRepetition";
+import { toHref } from "../../lib/router";
 import {
   Button,
   BUTTON_VARIANT,
@@ -22,6 +24,7 @@ import {
   type SubmissionIssue,
 } from "./grading";
 import { QUESTIONS } from "./questions";
+import { groupIdOf } from "./review";
 import {
   MAX_WORDS,
   MIN_WORDS,
@@ -78,6 +81,7 @@ export function KeyWordTransformation() {
   const [filter, setFilter] = useState<CategoryFilter>(ALL);
   const [input, setInput] = useState("");
   const [issue, setIssue] = useState<SubmissionIssue | null>(null);
+  const gameId = useGameId();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const pool =
@@ -273,6 +277,12 @@ export function KeyWordTransformation() {
                   También vale: {question.answers.slice(1).join(" · ")}
                 </p>
               )}
+              <a
+                href={toHref(`/review/${gameId}/${groupIdOf(question)}`)}
+                className={styles.reviewLink}
+              >
+                Ver toda la familia →
+              </a>
             </Feedback>
           )}
 

@@ -50,9 +50,40 @@ export interface Question {
   level: Difficulty;
 }
 
+/** Una explicación concreta, atada al ítem que la generó. */
+export interface ReviewEntry {
+  /** El mismo id que usa la repetición espaciada: así se cruza con el progreso. */
+  questionId: string;
+  /** La frase, con ___ donde iba la respuesta. */
+  prompt: string;
+  /** Pista extra que mostraba el juego: la raíz, la palabra clave. */
+  cue?: string | undefined;
+  answer: string;
+  explanation: string;
+}
+
 /**
- * La tarjeta de identidad de un juego. La home y el router leen ESTO,
- * nunca el interior del juego. Agregar un juego = un manifest más.
+ * Un grupo de explicaciones emparentadas.
+ *
+ * Es lo que convierte 228 tips sueltos en material de estudio: leídas
+ * juntas, las cinco explicaciones de "do vs make" SON la lección; por
+ * separado son cinco datos inconexos vistos en cinco días distintos.
+ */
+export interface ReviewFamily {
+  id: string;
+  title: string;
+  entries: readonly ReviewEntry[];
+}
+
+/**
+ * La tarjeta de identidad de un juego. La home, el router y el repaso
+ * leen ESTO, nunca el interior del juego.
+ *
+ * `buildReview` es obligatorio a propósito. Un juego sin material de
+ * repaso desaparecería del estudio en silencio, y "en silencio" es
+ * exactamente el tipo de bug que este proyecto viene evitando. Si algún
+ * día aparece un juego que genuinamente no tiene familias, cambiamos el
+ * tipo entonces — con el caso real en la mano, no antes.
  */
 export interface GameManifest {
   id: string;
@@ -61,6 +92,7 @@ export interface GameManifest {
   subtitle: string;
   description: string;
   Component: ComponentType;
+  buildReview: () => readonly ReviewFamily[];
 }
 
 /**

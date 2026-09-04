@@ -1,9 +1,11 @@
 import { clsx } from "clsx";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { normalize } from "../../exam/text";
+import { useGameId } from "../../engine/gameIdentity";
 import { ROUND_STATUS } from "../../engine/types";
 import { useGameRound } from "../../engine/useGameRound";
 import { useSpacedRepetition } from "../../engine/useSpacedRepetition";
+import { toHref } from "../../lib/router";
 import {
   Button,
   BUTTON_VARIANT,
@@ -16,6 +18,7 @@ import {
   Scoreboard,
 } from "../../engine/ui";
 import { QUESTIONS } from "./questions";
+import { groupIdOf } from "./review";
 import { WORD_CATEGORY, type WordCategory, type WordFormationQuestion } from "./types";
 import styles from "./WordFormationGame.module.css";
 
@@ -53,6 +56,7 @@ export function WordFormationGame() {
   const [filter, setFilter] = useState<CategoryFilter>(ALL_CATEGORIES);
   const [input, setInput] = useState("");
   const [showEmptyWarning, setShowEmptyWarning] = useState(false);
+  const gameId = useGameId();
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Sin useMemo: el React Compiler memoiza esto solo.
@@ -229,6 +233,12 @@ export function WordFormationGame() {
             >
               <span className={styles.tag}>{question.label}</span>
               {question.explanation}
+              <a
+                href={toHref(`/review/${gameId}/${groupIdOf(question)}`)}
+                className={styles.reviewLink}
+              >
+                Ver toda la familia →
+              </a>
             </Feedback>
           )}
 

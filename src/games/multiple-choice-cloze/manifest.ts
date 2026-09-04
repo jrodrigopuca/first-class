@@ -1,4 +1,5 @@
 import { EXAM_PART, type GameManifest } from "../../engine/types";
+import { buildReview } from "./review";
 import { MultipleChoiceCloze } from "./MultipleChoiceCloze";
 
 export const multipleChoiceClozeManifest: GameManifest = {
@@ -9,4 +10,5 @@ export const multipleChoiceClozeManifest: GameManifest = {
   description:
     "Cuatro opciones, una sola correcta: colocaciones, phrasal verbs, preposiciones y conectores.",
   Component: MultipleChoiceCloze,
+  buildReview,
 };

@@ -128,3 +128,17 @@
   color: var(--color-text-muted);
   padding: var(--space-6) 0;
 }
+
+.reviewLink {
+  display: inline-block;
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: inherit;
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+.reviewLink:hover {
+  opacity: 1;
+}

@@ -1,4 +1,5 @@
 import { EXAM_PART, type GameManifest } from "../../engine/types";
+import { buildReview } from "./review";
 import { WordFormationGame } from "./WordFormationGame";
 
 export const wordFormationManifest: GameManifest = {
@@ -9,4 +10,5 @@ export const wordFormationManifest: GameManifest = {
   description:
     "Transformá la palabra raíz en la forma que pide la frase: sufijos, prefijos y cambios de categoría gramatical.",
   Component: WordFormationGame,
+  buildReview,
 };
