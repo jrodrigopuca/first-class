@@ -1,5 +1,4 @@
 import { EXAM_PART, GAME_SECTION, type GameManifest } from "../../engine/types";
-import { buildReview } from "./review";
 import { OpenClozeExam } from "./OpenClozeExam";
 
 export const openClozeExamManifest: GameManifest = {
@@ -11,5 +10,4 @@ export const openClozeExamManifest: GameManifest = {
   description:
     "Un texto completo con ocho espacios: escribís UNA palabra en cada uno, sin opciones. Corregís al final.",
   Component: OpenClozeExam,
-  buildReview,
 };

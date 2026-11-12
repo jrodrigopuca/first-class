@@ -1,4 +1,4 @@
-import type { GameManifest } from "../engine/types";
+import { GAME_SECTION, type GameManifest, type PracticeManifest } from "../engine/types";
 import { openClozeManifest } from "../games/open-cloze/manifest";
 import { multipleChoiceClozeManifest } from "../games/multiple-choice-cloze/manifest";
 import { multipleChoiceClozeExamManifest } from "../games/multiple-choice-cloze-exam/manifest";
@@ -25,6 +25,14 @@ export const GAMES: readonly GameManifest[] = [
   openClozeExamManifest,
   wordFormationExamManifest,
 ];
+
+/**
+ * Los juegos con repaso: solo la pre-práctica. El type guard es lo que le
+ * deja al repaso llamar a `buildReview` sin preguntar.
+ */
+export const REVIEWABLE_GAMES: readonly PracticeManifest[] = GAMES.filter(
+  (game): game is PracticeManifest => game.section === GAME_SECTION.PRE_PRACTICE,
+);
 
 export function findGame(id: string): GameManifest | undefined {
   return GAMES.find((game) => game.id === id);

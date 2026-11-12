@@ -87,7 +87,7 @@ src/games/<juego>/
 ├── questions.json    el contenido
 ├── questions.ts      valida el dataset EN LA FRONTERA y lo exporta
 ├── grading.ts        (opcional) reglas de corrección propias
-├── review.ts         groupIdOf() + buildReview()
+├── review.ts         groupIdOf() + buildReview()  (solo pre-práctica)
 ├── <Juego>.tsx       el componente
 ├── <Juego>.module.css
 ├── manifest.ts       la tarjeta de identidad
@@ -100,8 +100,9 @@ src/games/<juego>/
 2. Una línea en `src/registry/index.ts`.
 
 La home, las rutas y el repaso se actualizan solos. El compilador te
-obliga a proveer `buildReview` y `section` (pre-práctica o práctica
-intensiva, ver [decisiones #17](decisions.md)).
+obliga a declarar la `section`, y en la pre-práctica también
+`buildReview` (ver [decisiones #15 y #17](decisions.md)). La práctica
+intensiva no tiene repaso: el campo ni siquiera existe en su tipo.
 
 Los juegos de la práctica intensiva **no usan** `useGameRound`: corrigen
 todo al final, como el examen. Se apoyan en `exam/gappedText.ts` (parser,

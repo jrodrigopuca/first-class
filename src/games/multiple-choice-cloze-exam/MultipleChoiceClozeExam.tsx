@@ -1,24 +1,22 @@
 import { clsx } from "clsx";
 import { useId, useRef, useState } from "react";
-import { useGameId } from "../../engine/gameIdentity";
 import { Button, BUTTON_VARIANT, ExamText, GameCard, GapNumber, ScoreBanner } from "../../engine/ui";
-import { toHref } from "../../lib/router";
-import { buildPaper, grade, pickText, type Paper, type PaperGap } from "./paper";
-import { groupIdOf } from "./review";
+import { buildPaper, grade, pickText, type Paper } from "./paper";
 import { TEXTS } from "./texts";
 import styles from "./MultipleChoiceClozeExam.module.css";
 
-const LETTERS = ["A", "B", "C", "D"] as const;
-
 /**
- * Part 1 en formato examen: el texto entero, el ejemplo (0) y ocho huecos.
+ * Part 1 en formato examen: el texto entero, el ejemplo (0) y ocho
+ * espacios, cada uno con un desplegable de cuatro opciones.
  *
- * No usa el motor de rondas ni la repetición espaciada, a propósito
- * (decisión #17): en el examen respondés todo en el orden que quieras y
- * corregís al final, y eso no es un ciclo pregunta → feedback → siguiente.
+ * Las opciones van DENTRO del texto (un <select> por espacio) y no en una
+ * hoja al final: así elegís sin perder el lugar de lectura. El costo es
+ * que las cuatro opciones no están a la vista hasta abrir el desplegable.
+ *
+ * No usa el motor de rondas ni la repetición espaciada (decisión #17):
+ * respondés en el orden que quieras y corregís al final.
  */
 export function MultipleChoiceClozeExam() {
-  const gameId = useGameId();
   const idPrefix = useId();
   const resultRef = useRef<HTMLDivElement>(null);
 
@@ -30,33 +28,25 @@ export function MultipleChoiceClozeExam() {
   const byIndex = new Map(paper.gaps.map((paperGap) => [paperGap.index, paperGap]));
   const missing = paper.gaps.filter((paperGap) => answers[paperGap.gap.id] === undefined);
   const result = checked ? grade(paper, answers) : undefined;
-  const correctById = new Map(result?.results.map((r) => [r.paperGap.gap.id, r.correct]));
 
-  const rowId = (number: number) => `${idPrefix}-gap-${number}`;
+  const selectId = (number: number) => `${idPrefix}-gap-${number}`;
+  const focusGap = (number: number) => document.getElementById(selectId(number))?.focus();
 
   const choose = (gapId: string, option: string) => {
-    // Corregido, el examen queda congelado. No se usa `disabled` en los
-    // radios: sacaría el foco del teclado y no dejaría leer con Tab.
-    if (checked) return;
+    // Corregido, el examen queda congelado. No se usa `disabled`: sacaría
+    // los desplegables del orden de Tab y no dejaría recorrer el texto.
+    if (checked || option === "") return;
     setAnswers((prev) => ({ ...prev, [gapId]: option }));
     setShowWarning(false);
   };
 
-  const goToGap = (number: number) => {
-    const row = document.getElementById(rowId(number));
-    const input = row?.querySelector<HTMLInputElement>("input:checked") ?? row?.querySelector("input");
-    input?.focus({ preventScroll: true });
-    row?.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
-
   const check = () => {
-    if (missing.length > 0) {
-      // Validar ANTES de corregir: un hueco vacío no es un error de
-      // vocabulario. Y en el examen no se resta, así que siempre conviene
-      // responder.
+    const first = missing[0];
+    if (first !== undefined) {
+      // Validar ANTES de corregir: un espacio vacío no es un error de
+      // vocabulario. Y en el examen no se resta: siempre conviene responder.
       setShowWarning(true);
-      const first = missing[0];
-      if (first !== undefined) goToGap(first.number);
+      focusGap(first.number);
       return;
     }
     setChecked(true);
@@ -77,13 +67,11 @@ export function MultipleChoiceClozeExam() {
   return (
     <div className={styles.game}>
       <p className={styles.instructions}>
-        Leé el texto y elegí la opción que mejor completa cada espacio. Hay un ejemplo al
-        principio (0). Respondé en el orden que quieras y corregí al final.
+        Elegí en cada espacio la opción que mejor completa el texto. Hay un ejemplo al principio
+        (0). Respondé en el orden que quieras y corregí al final.
       </p>
 
-      {result !== undefined && (
-        <ScoreBanner ref={resultRef} correct={result.correct} total={result.total} />
-      )}
+      {result !== undefined && <ScoreBanner ref={resultRef} correct={result.correct} total={result.total} />}
 
       <GameCard>
         <ExamText
@@ -103,51 +91,81 @@ export function MultipleChoiceClozeExam() {
             // Un candidato que esta vez no salió se lee como texto común.
             if (paperGap === undefined) return paper.text.gaps[index]?.answer;
 
-            const chosen = answers[paperGap.gap.id];
-            const correct = correctById.get(paperGap.gap.id);
+            const { gap, number, options } = paperGap;
+            const chosen = answers[gap.id];
+            const correct = checked ? chosen === gap.answer : undefined;
+            const invalid = showWarning && chosen === undefined;
+
             return (
-              <button
-                type="button"
-                onClick={() => goToGap(paperGap.number)}
-                aria-label={`Espacio ${paperGap.number}${chosen === undefined ? ", sin responder" : `: ${chosen}`}`}
-                className={clsx(
-                  styles.gap,
-                  chosen !== undefined && styles.gapFilled,
-                  correct === true && styles.gapCorrect,
-                  correct === false && styles.gapWrong,
-                )}
-              >
-                <GapNumber number={paperGap.number} />
-                {chosen ?? " "}
-              </button>
+              <span className={styles.gap}>
+                <GapNumber number={number} />
+                <select
+                  id={selectId(number)}
+                  value={chosen ?? ""}
+                  onChange={(event) => choose(gap.id, event.target.value)}
+                  aria-label={`Espacio ${number}`}
+                  aria-invalid={invalid || correct === false}
+                  className={clsx(
+                    styles.select,
+                    chosen === undefined && styles.selectEmpty,
+                    invalid && styles.selectInvalid,
+                    correct === true && styles.selectCorrect,
+                    correct === false && styles.selectWrong,
+                  )}
+                >
+                  {/* hidden: se muestra mientras no hay elección, pero no figura en la lista */}
+                  <option value="" disabled hidden>
+                    elegí…
+                  </option>
+                  {options.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                {correct === false && <span className={styles.fix}>{gap.answer}</span>}
+              </span>
             );
           }}
         />
       </GameCard>
 
       <GameCard>
-        <div className={styles.sheet}>
-          <ExampleRow paperGap={paper.example} />
-          {paper.gaps.map((paperGap) => (
-            <GapRow
-              key={paperGap.gap.id}
-              id={rowId(paperGap.number)}
-              name={`${idPrefix}-${paperGap.number}`}
-              paperGap={paperGap}
-              chosen={answers[paperGap.gap.id]}
-              checked={checked}
-              reviewHref={toHref(`/review/${gameId}/${groupIdOf(paperGap.gap)}`)}
-              onChoose={(option) => choose(paperGap.gap.id, option)}
-            />
-          ))}
-        </div>
-
-        {showWarning && (
-          <p className={styles.warning} role="alert">
-            {missing.length === 1
-              ? "Te falta 1 espacio. En el examen no se resta: respondé siempre."
-              : `Te faltan ${missing.length} espacios. En el examen no se resta: respondé siempre.`}
-          </p>
+        {checked ? (
+          <ol className={styles.explanations}>
+            {paper.gaps.map(({ gap, number }) => {
+              const chosen = answers[gap.id] ?? "";
+              const correct = chosen === gap.answer;
+              return (
+                <li key={gap.id} className={clsx(styles.row, correct ? styles.rowCorrect : styles.rowWrong)}>
+                  <span className={styles.rowNumber}>{number}</span>
+                  <div>
+                    <p className={styles.verdict}>
+                      {correct ? `✓ «${chosen}»` : `✗ Elegiste «${chosen}» · Era «${gap.answer}»`}
+                      <span className={styles.label}>{gap.label}</span>
+                    </p>
+                    <p className={styles.explanationText}>{gap.explanation}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        ) : (
+          showWarning &&
+          missing.length > 0 && (
+            <p className={styles.warning} role="alert">
+              {missing.length === 1 ? "Te falta 1 espacio" : `Te faltan ${missing.length} espacios`} (
+              {missing.map((paperGap, i) => (
+                <span key={paperGap.gap.id}>
+                  {i > 0 && ", "}
+                  <button type="button" className={styles.issueLink} onClick={() => focusGap(paperGap.number)}>
+                    {paperGap.number}
+                  </button>
+                </span>
+              ))}
+              ). En el examen no se resta: respondé siempre.
+            </p>
+          )
         )}
 
         <div className={styles.actions}>
@@ -168,89 +186,5 @@ export function MultipleChoiceClozeExam() {
         </div>
       </GameCard>
     </div>
-  );
-}
-
-function ExampleRow({ paperGap }: { paperGap: PaperGap }) {
-  return (
-    <div className={clsx(styles.row, styles.rowExample)}>
-      <span className={styles.rowNumber}>0</span>
-      <div className={styles.choices}>
-        {paperGap.options.map((option, i) => (
-          <span
-            key={option}
-            className={clsx(styles.choice, option === paperGap.gap.answer && styles.choiceSelected)}
-          >
-            <span className={styles.letter}>{LETTERS[i]}</span>
-            {option}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-interface GapRowProps {
-  id: string;
-  name: string;
-  paperGap: PaperGap;
-  chosen: string | undefined;
-  checked: boolean;
-  reviewHref: string;
-  onChoose: (option: string) => void;
-}
-
-function GapRow({ id, name, paperGap, chosen, checked, reviewHref, onChoose }: GapRowProps) {
-  const { gap, number, options } = paperGap;
-  const correct = chosen === gap.answer;
-
-  return (
-    <fieldset id={id} className={clsx(styles.row, checked && (correct ? styles.rowCorrect : styles.rowWrong))}>
-      <legend className={styles.rowNumber}>
-        <span className={styles.visuallyHidden}>Espacio </span>
-        {number}
-      </legend>
-
-      <div className={styles.choices}>
-        {options.map((option, i) => (
-          <label
-            key={option}
-            className={clsx(
-              styles.choice,
-              !checked && chosen === option && styles.choiceSelected,
-              checked && option === gap.answer && styles.choiceCorrect,
-              checked && chosen === option && !correct && styles.choiceWrong,
-            )}
-          >
-            <input
-              type="radio"
-              name={name}
-              value={option}
-              checked={chosen === option}
-              onChange={() => onChoose(option)}
-              aria-readonly={checked}
-              className={styles.radio}
-            />
-            <span className={styles.letter}>{LETTERS[i]}</span>
-            {option}
-          </label>
-        ))}
-      </div>
-
-      {checked && (
-        <div className={styles.explanation}>
-          <p className={styles.verdict}>
-            {correct ? "✓ Correcto" : `✗ Era «${gap.answer}»`}
-            <span className={styles.label}>{gap.label}</span>
-          </p>
-          <p className={styles.explanationText}>{gap.explanation}</p>
-          {!correct && (
-            <a href={reviewHref} className={styles.reviewLink}>
-              Repasar este tipo →
-            </a>
-          )}
-        </div>
-      )}
-    </fieldset>
   );
 }

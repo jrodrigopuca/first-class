@@ -252,13 +252,22 @@ familias dejan de ser singletons, conviene bajar la agrupación a familia.
 
 ---
 
-## 15. `buildReview` es obligatorio en el manifest
+## 15. `buildReview` es obligatorio en la pre-práctica
 
-**Por qué:** un juego sin material de repaso desaparecería del estudio en
-silencio. Con el campo obligatorio, el compilador lo frena.
+**Por qué:** un juego con repetición espaciada y sin material de repaso
+desaparecería del estudio en silencio. Con el campo obligatorio, el
+compilador lo frena.
 
-**Cuándo reconsiderarla:** con un caso real de juego sin familias en la
-mano. No antes.
+**El caso real llegó con la práctica intensiva** (#17): esos juegos no
+guardan progreso, así que el repaso no tendría nada que ordenar. En vez
+de volver opcional el campo —que dejaría pasar un juego de pre-práctica
+sin repaso—, `GameManifest` es una unión por `section`:
+`PracticeManifest` exige `buildReview` e `IntensiveManifest` no lo
+admite. Verificado rompiéndolo en los dos sentidos. La página de repaso
+usa `REVIEWABLE_GAMES` del registry.
+
+**Cuándo reconsiderarla:** si aparece una tercera sección, o si la
+práctica intensiva empieza a guardar progreso (ver #17).
 
 ---
 
@@ -327,6 +336,11 @@ prohibida por el validador.
 **Costo:** el texto se reconoce después de varias vueltas; esto retrasa
 la memorización, no la elimina. El remedio es sumar textos, que es barato
 porque cada texto es independiente.
+
+**Sin repaso, a propósito.** El repaso ordena por lo que más fallás
+según la repetición espaciada; sin progreso guardado, todo aparecía como
+"sin datos". En los textos se aprende AL CORREGIR: cada espacio muestra
+su explicación en el momento. Ver #15.
 
 **Cuándo reconsiderarla:** si se quiere que los resultados de la sección
 intensiva alimenten el repaso. Ahí conviene registrar cada hueco con un

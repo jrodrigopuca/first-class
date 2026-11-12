@@ -1,6 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildReview } from "./review";
-import { parseText, sentenceAround, TEXTS, type RawText } from "./texts";
+import { parseText, TEXTS, type RawText } from "./texts";
 import { CLOZE_TYPE, MIN_CANDIDATES } from "./types";
 
 const VALID: RawText = {
@@ -30,9 +29,6 @@ describe("parseText", () => {
     expect(text.gaps).toHaveLength(MIN_CANDIDATES + 1);
     expect(text.gaps[0]?.id).toBe("sample-take");
   });
-
-
-
 
   it("propaga los errores de forma del texto con el id del juego", () => {
     const [first = ""] = VALID.paragraphs;
@@ -89,23 +85,5 @@ describe("dataset", () => {
     const reused = [...answers].filter((answer) => asDistractor.has(answer));
 
     expect(reused.length / answers.size).toBeGreaterThanOrEqual(0.4);
-  });
-
-  it("el repaso tiene una frase con hueco por cada hueco del dataset", () => {
-    const entries = buildReview().flatMap((family) => family.entries);
-    const total = TEXTS.reduce((sum, text) => sum + text.gaps.length, 0);
-
-    expect(entries).toHaveLength(total);
-    for (const entry of entries) {
-      expect(entry.prompt.split("___"), entry.questionId).toHaveLength(2);
-    }
-  });
-});
-
-describe("sentenceAround", () => {
-  it("devuelve solo la frase del hueco, con los demás resueltos", () => {
-    const text = parseText(VALID);
-    expect(sentenceAround(text, 0)).toBe("She decided to ___ up tennis.");
-    expect(sentenceAround(text, 1)).toBe("Then the group met again and ___ on.");
   });
 });

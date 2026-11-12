@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { drawGaps, GAPS_PER_TEXT, parseGappedText, sentenceAround } from "./gappedText";
+import { drawGaps, GAPS_PER_TEXT, parseGappedText } from "./gappedText";
 
 const OK = "She decided to {take} up tennis. Then the group met again and {went} on.";
 
@@ -40,15 +40,6 @@ describe("parseGappedText", () => {
 
   it("rechaza una llave suelta", () => {
     expect(() => parseGappedText(["She decided to {take up tennis."])).toThrow(/llave suelta/);
-  });
-});
-
-describe("sentenceAround", () => {
-  it("devuelve solo la frase del hueco, con los demás resueltos", () => {
-    const { paragraphs, markers } = parseGappedText([OK]);
-    const fill = (i: number) => markers[i] ?? "";
-    expect(sentenceAround(paragraphs, 0, fill)).toBe("She decided to ___ up tennis.");
-    expect(sentenceAround(paragraphs, 1, fill)).toBe("Then the group met again and ___ on.");
   });
 });
 

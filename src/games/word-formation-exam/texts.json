@@ -145,5 +145,214 @@
       { "root": "CRITIC", "answers": ["critical"], "category": "adjective", "label": "Adjetivo (-al)", "explanation": "CRITIC → critical. 'less critical of' = menos crítico con." },
       { "root": "USE", "answers": ["useful"], "category": "adjective", "label": "Adjetivo (-ful)", "explanation": "USE → useful. 'turn out to be + adjetivo', con sentido positivo." }
     ]
+  },
+  {
+    "id": "kitchen-disaster",
+    "title": "Dinner for twelve",
+    "level": 2,
+    "paragraphs": [
+      "When my flatmate announced that he was going to cook dinner for twelve people, I was {surprised}: he had never made anything more {ambitious} than toast. Still, he had just finished a short course with a {professional} chef, and he was {unusually} calm about the whole thing.",
+      "The first hour went {smoothly}, and everything seemed fine. Then, {unfortunately}, the oven stopped working, and soon the smoke alarm was making a {frightening} noise. Most of our guests, {luckily}, found the whole situation very funny.",
+      "In the end we ordered pizza, and the evening turned out to be a {memorable} one. My flatmate has not given up, though. He says the experience taught him the {importance} of preparation, and next time he plans to use a more {reliable} oven."
+    ],
+    "gaps": [
+      { "root": "SURPRISE", "answers": ["surprised"], "category": "adjective", "label": "Adjetivo (-ed)", "explanation": "SURPRISE → surprised. Es cómo me SENTÍ yo: adjetivo en -ED." },
+      { "root": "AMBITION", "answers": ["ambitious"], "category": "adjective", "label": "Adjetivo (-ious)", "explanation": "AMBITION → ambitious. 'anything more + adjetivo'." },
+      { "root": "PROFESSION", "answers": ["professional"], "category": "adjective", "label": "Adjetivo (-al)", "explanation": "PROFESSION → professional. Delante de 'chef' va un adjetivo." },
+      { "root": "USUAL", "answers": ["unusually"], "category": "prefix", "label": "Prefijo negativo (un-) + adverbio", "explanation": "USUAL → unusually. Modifica a 'calm', y el sentido es 'más de lo normal'." },
+      { "root": "SMOOTH", "answers": ["smoothly"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "SMOOTH → smoothly. 'go smoothly' = salir bien, sin problemas." },
+      { "root": "FORTUNATE", "answers": ["unfortunately"], "category": "prefix", "label": "Prefijo negativo (un-) + adverbio", "explanation": "FORTUNATE → unfortunately. Adverbio de comentario, y negativo: el horno se rompió." },
+      { "root": "FRIGHT", "answers": ["frightening"], "category": "adjective", "label": "Adjetivo (-ening)", "explanation": "FRIGHT → frightening. El ruido CAUSA miedo: -ING. 'Frightened' es la persona que lo siente." },
+      { "root": "LUCK", "answers": ["luckily"], "category": "adverb", "label": "Adverbio (-ily)", "explanation": "LUCK → lucky → luckily. Adverbio de comentario entre comas." },
+      { "root": "MEMORY", "answers": ["memorable"], "category": "adjective", "label": "Adjetivo (-able)", "explanation": "MEMORY → memorable = que se recuerda. 'a ___ one' pide un adjetivo." },
+      { "root": "IMPORTANT", "answers": ["importance"], "category": "noun", "label": "Sustantivo (-ance)", "explanation": "IMPORTANT → importance. Después de 'the' y antes de 'of' va un sustantivo." },
+      { "root": "RELY", "answers": ["reliable"], "category": "adjective", "label": "Adjetivo (-iable)", "explanation": "RELY → reliable = confiable. 'a more + adjetivo + oven'." }
+    ]
+  },
+  {
+    "id": "country-life",
+    "title": "Goodbye, city",
+    "level": 2,
+    "paragraphs": [
+      "Three years ago, my partner and I made the {decision} to leave our flat in the city in search of {simplicity}. Our friends thought the plan was completely {unrealistic}, and to be honest, the first winter was {unbelievably} hard.",
+      "The nearest shop was a twenty-minute drive away, and the internet was so {unreliable} that working from home required a lot of {patience}. Slowly, though, we adapted. We learnt to plan our shopping {carefully}, and our neighbours turned out to be extremely {helpful}.",
+      "Today, I can't imagine living anywhere else. My stress levels have dropped {considerably}, and I sleep more {peacefully} than I have in years. Country life is not for everyone, but for us it has been a {wonderful} experience."
+    ],
+    "gaps": [
+      { "root": "DECIDE", "answers": ["decision"], "category": "noun", "label": "Sustantivo (-sion)", "explanation": "DECIDE → decision. 'make a decision' = tomar una decisión." },
+      { "root": "SIMPLE", "answers": ["simplicity"], "category": "noun", "label": "Sustantivo (-icity)", "explanation": "SIMPLE → simplicity. 'in search of + sustantivo'." },
+      { "root": "REAL", "answers": ["unrealistic"], "category": "prefix", "label": "Prefijo negativo (un-) + -istic", "explanation": "REAL → realistic → unrealistic. Los amigos creían que el plan no iba a funcionar: negativo." },
+      { "root": "BELIEVE", "answers": ["unbelievably"], "category": "prefix", "label": "Prefijo negativo (un-) + adverbio", "explanation": "BELIEVE → unbelievably. Intensifica a 'hard': increíblemente difícil." },
+      { "root": "RELY", "answers": ["unreliable"], "category": "prefix", "label": "Prefijo negativo (un-) + -iable", "explanation": "RELY → unreliable. Un internet que falla no es confiable: negativo." },
+      { "root": "PATIENT", "answers": ["patience"], "category": "noun", "label": "Sustantivo (-ence)", "explanation": "PATIENT → patience. 'a lot of + sustantivo'." },
+      { "root": "CARE", "answers": ["carefully"], "category": "adverb", "label": "Adverbio (-fully)", "explanation": "CARE → careful → carefully. Describe CÓMO planeaban." },
+      { "root": "HELP", "answers": ["helpful"], "category": "adjective", "label": "Adjetivo (-ful)", "explanation": "HELP → helpful = servicial. 'turned out to be extremely + adjetivo'." },
+      { "root": "CONSIDER", "answers": ["considerably"], "category": "adverb", "label": "Adverbio (-ably)", "explanation": "CONSIDER → considerable → considerably = bastante. Modifica a 'dropped'." },
+      { "root": "PEACE", "answers": ["peacefully"], "category": "adverb", "label": "Adverbio (-fully)", "explanation": "PEACE → peaceful → peacefully. Describe CÓMO duerme." },
+      { "root": "WONDER", "answers": ["wonderful"], "category": "adjective", "label": "Adjetivo (-ful)", "explanation": "WONDER → wonderful. Delante de 'experience' va un adjetivo." }
+    ]
+  },
+  {
+    "id": "robot-assistant",
+    "title": "A robot in the classroom",
+    "level": 3,
+    "paragraphs": [
+      "When a primary school in Yorkshire introduced a robot teaching {assistant}, many parents reacted with {suspicion}. They worried that the machine would make human teachers {unnecessary}, or that children would develop an unhealthy {dependence} on technology.",
+      "A year later, the results are {encouraging}. The robot takes care of {repetitive} tasks such as checking spelling, which allows teachers to plan their lessons more {creatively}. Shy children, in particular, seem {comfortable} asking the robot questions they would be too {embarrassed} to ask in front of the class.",
+      "Not everyone is convinced. Critics point out that the robot cost the school a {considerable} amount of money, and that it is still {unable} to cope with the {unpredictable} situations that arise in every classroom."
+    ],
+    "gaps": [
+      { "root": "ASSIST", "answers": ["assistant"], "category": "person", "label": "Persona (-ant)", "explanation": "ASSIST → assistant. 'a robot teaching ___' es quien ayuda: persona (-ANT)." },
+      { "root": "SUSPECT", "answers": ["suspicion"], "category": "noun", "label": "Sustantivo (-icion)", "explanation": "SUSPECT → suspicion = desconfianza. 'react with + sustantivo'." },
+      { "root": "NECESSARY", "answers": ["unnecessary"], "category": "prefix", "label": "Prefijo negativo (un-)", "explanation": "NECESSARY → unnecessary. El miedo era que los maestros dejaran de hacer falta. Ojo con la doble N." },
+      { "root": "DEPEND", "answers": ["dependence"], "category": "noun", "label": "Sustantivo (-ence)", "explanation": "DEPEND → dependence. 'an unhealthy + sustantivo + on'." },
+      { "root": "COURAGE", "answers": ["encouraging"], "category": "prefix", "label": "Prefijo (en-) + -ing", "explanation": "COURAGE → encourage → encouraging = alentador. Los resultados CAUSAN optimismo: -ING." },
+      { "root": "REPEAT", "answers": ["repetitive"], "category": "adjective", "label": "Adjetivo (-itive)", "explanation": "REPEAT → repetitive. Cambia la raíz: repeat → repet-itive. Delante de 'tasks' va un adjetivo." },
+      { "root": "CREATE", "answers": ["creatively"], "category": "adverb", "label": "Adverbio (-ively)", "explanation": "CREATE → creative → creatively. 'plan more + adverbio'." },
+      { "root": "COMFORT", "answers": ["comfortable"], "category": "adjective", "label": "Adjetivo (-able)", "explanation": "COMFORT → comfortable. 'seem + adjetivo'." },
+      { "root": "EMBARRASS", "answers": ["embarrassed"], "category": "adjective", "label": "Adjetivo (-ed)", "explanation": "EMBARRASS → embarrassed. Es cómo se SIENTEN los chicos: -ED. Doble R y doble S." },
+      { "root": "CONSIDER", "answers": ["considerable"], "category": "adjective", "label": "Adjetivo (-able)", "explanation": "CONSIDER → considerable = considerable, importante. 'a ___ amount of' pide un adjetivo." },
+      { "root": "ABLE", "answers": ["unable"], "category": "prefix", "label": "Prefijo negativo (un-)", "explanation": "ABLE → unable. 'be unable to' = no poder. El 'still' y el 'Critics' anuncian algo negativo." },
+      { "root": "PREDICT", "answers": ["unpredictable"], "category": "prefix", "label": "Prefijo negativo (un-) + -able", "explanation": "PREDICT → unpredictable. Lo que pasa en un aula no se puede prever." }
+    ]
+  },
+  {
+    "id": "getting-lost",
+    "title": "The joy of getting lost",
+    "level": 2,
+    "paragraphs": [
+      "On my last holiday, I tried something completely {different}: I left my phone at the hotel and explored the city {entirely} on foot, without a map. At first I felt quite {nervous}, but that feeling soon turned into a wonderful sense of {excitement}.",
+      "Without a screen to look at, I noticed details I would {usually} miss. Everywhere I looked there were {colourful} doors, tiny cafés and hidden gardens. I also had to depend on the {kindness} of strangers. Once, I got {hopelessly} lost, and an old man walked me all the way back to my hotel.",
+      "Travelling like this is not always {convenient}, and I did waste a lot of time. But it was the most {relaxing} holiday I have ever had, and I {strongly} recommend trying it at least once."
+    ],
+    "gaps": [
+      { "root": "DIFFER", "answers": ["different"], "category": "adjective", "label": "Adjetivo (-ent)", "explanation": "DIFFER → different. 'something completely + adjetivo'." },
+      { "root": "ENTIRE", "answers": ["entirely"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "ENTIRE → entirely = completamente. Modifica a 'on foot'." },
+      { "root": "NERVE", "answers": ["nervous"], "category": "adjective", "label": "Adjetivo (-ous)", "explanation": "NERVE → nervous. Ojo: se cae la E final. 'felt quite + adjetivo'." },
+      { "root": "EXCITE", "answers": ["excitement"], "category": "noun", "label": "Sustantivo (-ment)", "explanation": "EXCITE → excitement. 'a sense of + sustantivo'." },
+      { "root": "USUAL", "answers": ["usually"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "USUAL → usually. 'I would usually miss' = que normalmente me perdería." },
+      { "root": "COLOUR", "answers": ["colourful", "colorful"], "category": "adjective", "label": "Adjetivo (-ful)", "explanation": "COLOUR → colourful (británico) o colorful (americano). Delante de 'doors' va un adjetivo." },
+      { "root": "KIND", "answers": ["kindness"], "category": "noun", "label": "Sustantivo (-ness)", "explanation": "KIND → kindness. Después de 'the' y antes de 'of' va un sustantivo." },
+      { "root": "HOPE", "answers": ["hopelessly"], "category": "adverb", "label": "Adverbio (-lessly)", "explanation": "HOPE → hopeless → hopelessly. 'hopelessly lost' = perdido sin remedio." },
+      { "root": "CONVENIENCE", "answers": ["convenient"], "category": "adjective", "label": "Adjetivo (-ent)", "explanation": "CONVENIENCE → convenient = práctico, cómodo. 'not always + adjetivo'." },
+      { "root": "RELAX", "answers": ["relaxing"], "category": "adjective", "label": "Adjetivo (-ing)", "explanation": "RELAX → relaxing. Las vacaciones CAUSAN relajación: -ING." },
+      { "root": "STRONG", "answers": ["strongly"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "STRONG → strongly. 'strongly recommend' = recomendar mucho." }
+    ]
+  },
+  {
+    "id": "saying-no",
+    "title": "The power of no",
+    "level": 3,
+    "paragraphs": [
+      "For many people, turning down a request feels rude or even {unkind}. We worry that the other person will see us as {unhelpful}, so we agree to things we do not {necessarily} want to do.",
+      "The problem is that saying yes to everything is simply not {realistic}. Sooner or later, we become tired and {impatient} with the people we love. Psychologists suggest refusing {politely} but firmly, and without feeling the need to give a long {explanation}.",
+      "At first, this may cause some {discomfort}, but most people react far more {positively} than we expect. And with practice, we become more {decisive}. After all, every time you say no to something {unimportant}, you are saying yes to something that really matters."
+    ],
+    "gaps": [
+      { "root": "KIND", "answers": ["unkind"], "category": "prefix", "label": "Prefijo negativo (un-)", "explanation": "KIND → unkind = poco amable. Va con 'rude': otro adjetivo negativo." },
+      { "root": "HELP", "answers": ["unhelpful"], "category": "prefix", "label": "Prefijo negativo (un-) + -ful", "explanation": "HELP → helpful → unhelpful. Tememos que nos vean como poco serviciales." },
+      { "root": "NECESSARY", "answers": ["necessarily"], "category": "adverb", "label": "Adverbio (-ily)", "explanation": "NECESSARY → necessarily. 'not necessarily' = no necesariamente." },
+      { "root": "REAL", "answers": ["realistic"], "category": "adjective", "label": "Adjetivo (-istic)", "explanation": "REAL → realistic. El 'not' ya está en la frase: el adjetivo va en positivo." },
+      { "root": "PATIENT", "answers": ["impatient"], "category": "prefix", "label": "Prefijo negativo (im-)", "explanation": "PATIENT → impatient. Delante de P, el negativo es IM-. Va con 'tired'." },
+      { "root": "POLITE", "answers": ["politely"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "POLITE → politely. Va con 'firmly': otro adverbio." },
+      { "root": "EXPLAIN", "answers": ["explanation"], "category": "noun", "label": "Sustantivo (-ation)", "explanation": "EXPLAIN → explanation. Ojo: se cae la I (explain → explanation)." },
+      { "root": "COMFORT", "answers": ["discomfort"], "category": "prefix", "label": "Prefijo negativo (dis-)", "explanation": "COMFORT → discomfort = incomodidad. 'some + sustantivo', con sentido negativo." },
+      { "root": "POSITIVE", "answers": ["positively"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "POSITIVE → positively. 'react far more + adverbio'." },
+      { "root": "DECIDE", "answers": ["decisive"], "category": "adjective", "label": "Adjetivo (-sive)", "explanation": "DECIDE → decisive = decidido, firme. 'become more + adjetivo'." },
+      { "root": "IMPORTANT", "answers": ["unimportant"], "category": "prefix", "label": "Prefijo negativo (un-)", "explanation": "IMPORTANT → unimportant. Contrasta con 'something that really matters'." }
+    ]
+  },
+  {
+    "id": "museum-of-failure",
+    "title": "A museum of mistakes",
+    "level": 3,
+    "paragraphs": [
+      "There is a small museum in the north of England with a rather {surprising} collection. Instead of masterpieces, it displays products that were completely {unsuccessful}: drinks nobody wanted, gadgets nobody could use and toys that turned out to be {dangerous}.",
+      "The museum's {creator}, a former business consultant, says his aim is not to laugh at these products. 'Every {failure} teaches us something,' he explains. 'Companies prefer to hide their most {embarrassing} mistakes, so nobody learns from them.' In his view, many of these failures were {predictable} from the start.",
+      "Many {visitors} say they find the whole exhibition {strangely} comforting. Seeing that even huge companies make {disastrous} decisions makes their own mistakes seem more {forgivable}. Perhaps that is the museum's most {valuable} lesson."
+    ],
+    "gaps": [
+      { "root": "SURPRISE", "answers": ["surprising"], "category": "adjective", "label": "Adjetivo (-ing)", "explanation": "SURPRISE → surprising. La colección CAUSA sorpresa: -ING." },
+      { "root": "SUCCEED", "answers": ["unsuccessful"], "category": "prefix", "label": "Prefijo negativo (un-) + -ful", "explanation": "SUCCEED → successful → unsuccessful. Son productos que fracasaron." },
+      { "root": "DANGER", "answers": ["dangerous"], "category": "adjective", "label": "Adjetivo (-ous)", "explanation": "DANGER → dangerous. 'turned out to be + adjetivo'." },
+      { "root": "CREATE", "answers": ["creator"], "category": "person", "label": "Persona (-or)", "explanation": "CREATE → creator. Es una persona: 'a former business consultant'." },
+      { "root": "FAIL", "answers": ["failure"], "category": "noun", "label": "Sustantivo (-ure)", "explanation": "FAIL → failure. 'Every + sustantivo singular'." },
+      { "root": "EMBARRASS", "answers": ["embarrassing"], "category": "adjective", "label": "Adjetivo (-ing)", "explanation": "EMBARRASS → embarrassing. Los errores CAUSAN vergüenza: -ING." },
+      { "root": "PREDICT", "answers": ["predictable"], "category": "adjective", "label": "Adjetivo (-able)", "explanation": "PREDICT → predictable = previsible. 'from the start' indica que se podía ver venir." },
+      { "root": "VISIT", "answers": ["visitors"], "category": "person", "label": "Persona plural (-or)", "explanation": "VISIT → visitors. 'Many' pide plural." },
+      { "root": "STRANGE", "answers": ["strangely"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "STRANGE → strangely. Modifica al adjetivo 'comforting'." },
+      { "root": "DISASTER", "answers": ["disastrous"], "category": "adjective", "label": "Adjetivo (-rous)", "explanation": "DISASTER → disastrous. Ojo: se cae la E (disaster → disastr-ous)." },
+      { "root": "FORGIVE", "answers": ["forgivable"], "category": "adjective", "label": "Adjetivo (-able)", "explanation": "FORGIVE → forgivable = perdonable. 'seem more + adjetivo'. Se cae la E final." },
+      { "root": "VALUE", "answers": ["valuable"], "category": "adjective", "label": "Adjetivo (-able)", "explanation": "VALUE → valuable. 'the museum's most + adjetivo + lesson'." }
+    ]
+  },
+  {
+    "id": "street-food",
+    "title": "A festival of flavours",
+    "level": 1,
+    "paragraphs": [
+      "Every summer, our town holds a street food festival, and this year's was the most {exciting} yet. More than fifty stalls offered food from a huge {variety} of countries, and the streets were full of {cheerful} music.",
+      "My favourite stall was run by a Korean family whose dumplings were {absolutely} delicious. I arrived early, {fortunately}, because by midday they had sold out. Other people were {unlucky} and missed them completely. There was also a {competition} for the best dessert, which was won by a ten-year-old girl and her {wonderfully} simple apple cake.",
+      "The festival is free to enter, and the atmosphere is always {friendly}. If you live nearby, I would {definitely} recommend a visit, but make sure you arrive {hungry}!"
+    ],
+    "gaps": [
+      { "root": "EXCITE", "answers": ["exciting"], "category": "adjective", "label": "Adjetivo (-ing)", "explanation": "EXCITE → exciting. El festival CAUSA emoción: -ING." },
+      { "root": "VARY", "answers": ["variety"], "category": "noun", "label": "Sustantivo (-iety)", "explanation": "VARY → variety. 'a huge + sustantivo + of'." },
+      { "root": "CHEER", "answers": ["cheerful"], "category": "adjective", "label": "Adjetivo (-ful)", "explanation": "CHEER → cheerful = alegre. Delante de 'music' va un adjetivo." },
+      { "root": "ABSOLUTE", "answers": ["absolutely"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "ABSOLUTE → absolutely. Intensifica a 'delicious'." },
+      { "root": "FORTUNATE", "answers": ["fortunately"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "FORTUNATE → fortunately. Adverbio de comentario: por suerte llegué temprano." },
+      { "root": "LUCK", "answers": ["unlucky"], "category": "prefix", "label": "Prefijo negativo (un-) + -y", "explanation": "LUCK → lucky → unlucky. Se perdieron los dumplings: negativo." },
+      { "root": "COMPETE", "answers": ["competition"], "category": "noun", "label": "Sustantivo (-ition)", "explanation": "COMPETE → competition. 'a + sustantivo + for'." },
+      { "root": "WONDER", "answers": ["wonderfully"], "category": "adverb", "label": "Adverbio (-fully)", "explanation": "WONDER → wonderful → wonderfully. Modifica al adjetivo 'simple'." },
+      { "root": "FRIEND", "answers": ["friendly"], "category": "adjective", "label": "Adjetivo (-ly)", "explanation": "FRIEND → friendly. Es un ADJETIVO aunque termine en -LY." },
+      { "root": "DEFINITE", "answers": ["definitely"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "DEFINITE → definitely. Ojo con la ortografía: defin-I-tely." },
+      { "root": "HUNGER", "answers": ["hungry"], "category": "adjective", "label": "Adjetivo (-y)", "explanation": "HUNGER → hungry. 'arrive + adjetivo' = llegar con hambre." }
+    ]
+  },
+  {
+    "id": "grandmother-recipes",
+    "title": "A box of recipes",
+    "level": 2,
+    "paragraphs": [
+      "When my grandmother died, she left me a box of recipes, each one written in her {beautiful} handwriting. Many of them were {practically} impossible to follow. She never used exact {measurements}, and her instructions were often {frustratingly} vague: 'a little butter' or 'cook until ready'.",
+      "Still, I was {determined} to cook every dish at least once. My first attempt at her fish soup was completely {inedible}, but I kept trying {patiently}. Over the following months, the dishes {gradually} began to taste the way I remembered.",
+      "Cooking her recipes has become a {comforting} ritual, and my children now have their own {favourites}. In a way, she is still feeding her family, which I find {deeply} moving."
+    ],
+    "gaps": [
+      { "root": "BEAUTY", "answers": ["beautiful"], "category": "adjective", "label": "Adjetivo (-iful)", "explanation": "BEAUTY → beautiful. La Y pasa a I: beaut-i-ful." },
+      { "root": "PRACTICE", "answers": ["practically"], "category": "adverb", "label": "Adverbio (-ally)", "explanation": "PRACTICE → practical → practically = prácticamente, casi." },
+      { "root": "MEASURE", "answers": ["measurements"], "category": "noun", "label": "Sustantivo plural (-ment)", "explanation": "MEASURE → measurements. 'exact + sustantivo', en plural." },
+      { "root": "FRUSTRATE", "answers": ["frustratingly"], "category": "adverb", "label": "Adverbio (-ingly)", "explanation": "FRUSTRATE → frustrating → frustratingly. Modifica a 'vague'." },
+      { "root": "DETERMINATION", "answers": ["determined"], "category": "adjective", "label": "Adjetivo (-ed)", "explanation": "DETERMINATION → determined. 'be determined to' = estar decidido a." },
+      { "root": "EDIBLE", "answers": ["inedible"], "category": "prefix", "label": "Prefijo negativo (in-)", "explanation": "EDIBLE → inedible = incomible. El 'but I kept trying' anuncia que salió mal." },
+      { "root": "PATIENT", "answers": ["patiently"], "category": "adverb", "label": "Adverbio (-ently)", "explanation": "PATIENT → patiently. Describe CÓMO seguí intentando." },
+      { "root": "GRADUAL", "answers": ["gradually"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "GRADUAL → gradually = poco a poco." },
+      { "root": "COMFORT", "answers": ["comforting"], "category": "adjective", "label": "Adjetivo (-ing)", "explanation": "COMFORT → comforting = reconfortante. El ritual CAUSA consuelo: -ING." },
+      { "root": "FAVOUR", "answers": ["favourites", "favorites"], "category": "noun", "label": "Sustantivo plural (-ite)", "explanation": "FAVOUR → favourites (británico) o favorites (americano). 'their own + sustantivo plural'." },
+      { "root": "DEEP", "answers": ["deeply"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "DEEP → deeply. Modifica al adjetivo 'moving'." }
+    ]
+  },
+  {
+    "id": "cafe-office",
+    "title": "The café is my office",
+    "level": 2,
+    "paragraphs": [
+      "Walk into any café in the city centre and you will find people working {silently} on their laptops. For many {employees}, working from a café has become a {pleasant} alternative to the office. Some say the background noise helps them work more {efficiently}, while others simply enjoy feeling less {isolated}.",
+      "Café owners have {understandably} mixed feelings. Customers who stay for five hours after buying a single coffee are not exactly {profitable}, and some cafés have made their wifi {deliberately} slow.",
+      "Most remote workers, however, are {perfectly} happy to buy something every hour or so, and many say they feel a {responsibility} to support local businesses. After all, in such a {competitive} market, a café full of loyal customers is never a bad thing."
+    ],
+    "gaps": [
+      { "root": "SILENT", "answers": ["silently"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "SILENT → silently. Describe CÓMO trabajan." },
+      { "root": "EMPLOY", "answers": ["employees"], "category": "person", "label": "Persona plural (-ee)", "explanation": "EMPLOY → employees = empleados. -EE es quien RECIBE la acción; -ER (employer) es quien emplea." },
+      { "root": "PLEASE", "answers": ["pleasant"], "category": "adjective", "label": "Adjetivo (-ant)", "explanation": "PLEASE → pleasant = agradable. Delante de 'alternative' va un adjetivo." },
+      { "root": "EFFICIENT", "answers": ["efficiently"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "EFFICIENT → efficiently. 'work more + adverbio'." },
+      { "root": "ISOLATE", "answers": ["isolated"], "category": "adjective", "label": "Adjetivo (-ed)", "explanation": "ISOLATE → isolated = aislado. 'feel less + adjetivo'." },
+      { "root": "UNDERSTAND", "answers": ["understandably"], "category": "adverb", "label": "Adverbio (-ably)", "explanation": "UNDERSTAND → understandable → understandably = comprensiblemente." },
+      { "root": "PROFIT", "answers": ["profitable"], "category": "adjective", "label": "Adjetivo (-able)", "explanation": "PROFIT → profitable = rentable. 'not exactly + adjetivo'." },
+      { "root": "DELIBERATE", "answers": ["deliberately"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "DELIBERATE → deliberately = a propósito. Modifica a 'slow'." },
+      { "root": "PERFECT", "answers": ["perfectly"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "PERFECT → perfectly. 'perfectly happy' = totalmente dispuestos." },
+      { "root": "RESPONSIBLE", "answers": ["responsibility"], "category": "noun", "label": "Sustantivo (-ibility)", "explanation": "RESPONSIBLE → responsibility. 'feel a + sustantivo + to'." },
+      { "root": "COMPETE", "answers": ["competitive"], "category": "adjective", "label": "Adjetivo (-itive)", "explanation": "COMPETE → competitive. Delante de 'market' va un adjetivo." }
+    ]
   }
 ]

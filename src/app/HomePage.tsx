@@ -67,7 +67,7 @@ export function HomePage() {
         <span className={styles.part}>Repaso</span>
         <h2 className={styles.cardTitle}>Lo que más fallás</h2>
         <p className={styles.cardText}>
-          Las explicaciones de todos los juegos, agrupadas por familia y ordenadas
+          Las explicaciones de la pre-práctica, agrupadas por familia y ordenadas
           por tus errores reales.
         </p>
       </a>

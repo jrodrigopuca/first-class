@@ -1,5 +1,4 @@
 import { EXAM_PART, GAME_SECTION, type GameManifest } from "../../engine/types";
-import { buildReview } from "./review";
 import { WordFormationExam } from "./WordFormationExam";
 
 export const wordFormationExamManifest: GameManifest = {
@@ -11,5 +10,4 @@ export const wordFormationExamManifest: GameManifest = {
   description:
     "Un texto completo con ocho espacios y la raíz en mayúsculas al lado: transformala para que encaje. Corregís al final.",
   Component: WordFormationExam,
-  buildReview,
 };

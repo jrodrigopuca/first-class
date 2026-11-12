@@ -3,7 +3,7 @@ import { useState } from "react";
 import { byWeakness, type FamilyStats } from "../engine/review";
 import { loadProgress } from "../engine/storage";
 import { toHref } from "../lib/router";
-import { findGame, GAMES } from "../registry";
+import { REVIEWABLE_GAMES } from "../registry";
 import styles from "./ReviewPage.module.css";
 
 const ALL = "all";
@@ -38,8 +38,11 @@ interface Row extends FamilyStats {
 export function ReviewPage({ gameId, familyId }: ReviewPageProps) {
   const [openFamily, setOpenFamily] = useState<string | null>(familyId ?? null);
 
-  const selected = gameId !== undefined && findGame(gameId) !== undefined ? gameId : ALL;
-  const games = selected === ALL ? GAMES : GAMES.filter((game) => game.id === selected);
+  // Solo la pre-práctica tiene repaso: la práctica intensiva no guarda
+  // progreso y no habría nada que ordenar (decisión #17).
+  const selected =
+    gameId !== undefined && REVIEWABLE_GAMES.some((game) => game.id === gameId) ? gameId : ALL;
+  const games = selected === ALL ? REVIEWABLE_GAMES : REVIEWABLE_GAMES.filter((game) => game.id === selected);
 
   const rows: Row[] = games.flatMap((game) => {
     const progress = loadProgress(game.id);
@@ -82,7 +85,7 @@ export function ReviewPage({ gameId, familyId }: ReviewPageProps) {
         >
           Todo
         </a>
-        {GAMES.map((game) => (
+        {REVIEWABLE_GAMES.map((game) => (
           <a
             key={game.id}
             href={toHref(`/review/${game.id}`)}

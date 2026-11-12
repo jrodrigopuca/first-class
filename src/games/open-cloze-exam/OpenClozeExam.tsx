@@ -1,9 +1,7 @@
 import { clsx } from "clsx";
 import { useId, useRef, useState, type KeyboardEvent } from "react";
-import { useGameId } from "../../engine/gameIdentity";
 import { Button, BUTTON_VARIANT, ExamText, GameCard, GapNumber, ScoreBanner } from "../../engine/ui";
 import { normalize } from "../../exam/text";
-import { toHref } from "../../lib/router";
 import {
   buildPaper,
   findIssue,
@@ -14,7 +12,6 @@ import {
   type Paper,
   type SubmissionIssue,
 } from "./paper";
-import { groupIdOf } from "./review";
 import { TEXTS } from "./texts";
 import styles from "./OpenClozeExam.module.css";
 
@@ -29,7 +26,6 @@ const ISSUE_TEXT: Record<SubmissionIssue, string> = {
  * usa el motor de rondas (decisión #17).
  */
 export function OpenClozeExam() {
-  const gameId = useGameId();
   const idPrefix = useId();
   const resultRef = useRef<HTMLDivElement>(null);
 
@@ -173,11 +169,6 @@ export function OpenClozeExam() {
                       <span className={styles.label}>{gap.label}</span>
                     </p>
                     <p className={styles.explanationText}>{gap.explanation}</p>
-                    {!correct && (
-                      <a href={toHref(`/review/${gameId}/${groupIdOf(gap)}`)} className={styles.reviewLink}>
-                        Repasar este tipo →
-                      </a>
-                    )}
                   </div>
                 </li>
               );

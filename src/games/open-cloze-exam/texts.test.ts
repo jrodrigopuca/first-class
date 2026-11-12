@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { buildReview } from "./review";
 import { parseText, TEXTS, type RawText } from "./texts";
 import { GAP_TYPE, MIN_CANDIDATES } from "./types";
 
@@ -72,14 +71,6 @@ describe("dataset", () => {
     const gaps = TEXTS.flatMap((text) => text.gaps);
     for (const type of Object.values(GAP_TYPE)) {
       expect(gaps.some((gap) => gap.category === type), `"${type}" quedó sin huecos`).toBe(true);
-    }
-  });
-
-  it("el repaso tiene una frase con hueco por cada hueco del dataset", () => {
-    const entries = buildReview().flatMap((family) => family.entries);
-    expect(entries).toHaveLength(TEXTS.reduce((sum, text) => sum + text.gaps.length, 0));
-    for (const entry of entries) {
-      expect(entry.prompt.split("___"), entry.questionId).toHaveLength(2);
     }
   });
 });

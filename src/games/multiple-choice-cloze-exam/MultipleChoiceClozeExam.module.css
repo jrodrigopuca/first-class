@@ -10,7 +10,7 @@
   color: var(--color-text-muted);
 }
 
-/* ---------- Los huecos del texto ---------- */
+/* ---------- Los espacios del texto ---------- */
 
 .example {
   font-weight: 700;
@@ -19,67 +19,97 @@
 }
 
 .gap {
-  display: inline-flex;
-  align-items: baseline;
-  min-width: 5.5rem;
+  white-space: nowrap;
+}
+
+.select {
+  min-width: 6.5rem;
   padding: 0 var(--space-1);
   border: none;
   border-bottom: 2px solid var(--color-accent);
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  line-height: inherit;
-  cursor: pointer;
-  white-space: pre;
-}
-
-.gap:hover,
-.gap:focus-visible {
-  background: var(--color-accent-soft);
-}
-
-.gapFilled {
-  font-weight: 700;
+  border-radius: 0;
+  background-color: transparent;
   color: var(--color-accent-text);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.6;
+  cursor: pointer;
 }
 
-.gapCorrect {
+.select:focus {
+  outline: none;
+  background-color: var(--color-accent-soft);
+}
+
+/* Las opciones abiertas usan los colores del sistema: forzamos legibilidad. */
+.select option {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  font-weight: 500;
+}
+
+.selectEmpty {
+  color: var(--color-text-subtle);
+  font-weight: 500;
+}
+
+.selectInvalid {
+  border-bottom-color: var(--color-danger);
+  background-color: var(--color-danger-soft);
+}
+
+.selectCorrect {
   border-bottom-color: var(--color-success);
   color: var(--color-success);
 }
 
-.gapWrong {
+.selectWrong {
   border-bottom-color: var(--color-danger);
   color: var(--color-danger);
   text-decoration: line-through;
 }
 
-/* ---------- La hoja de respuestas ---------- */
+.fix {
+  margin-left: var(--space-1);
+  font-weight: 700;
+  color: var(--color-success);
+}
 
-.sheet {
+/* ---------- Avisos y explicaciones ---------- */
+
+.warning {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-danger);
+}
+
+.issueLink {
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.explanations {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .row {
   display: grid;
   grid-template-columns: 2rem 1fr;
-  align-items: start;
-  gap: var(--space-2) var(--space-3);
-  margin: 0;
+  gap: var(--space-3);
   padding: var(--space-2);
-  border: 1px solid transparent;
   border-radius: var(--radius-sm);
-  min-inline-size: 0;
-}
-
-.row:focus-within {
-  border-color: var(--color-accent);
-}
-
-.rowExample {
-  opacity: 0.7;
+  font-size: var(--text-sm);
 }
 
 .rowCorrect {
@@ -90,108 +120,10 @@
   background: var(--color-danger-soft);
 }
 
-/* legend dentro de un grid: float lo saca del borde del fieldset. */
 .rowNumber {
-  float: left;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2.25rem;
-  padding: 0;
-  font-weight: 700;
   font-family: var(--font-mono);
-}
-
-.choices {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-2);
-}
-
-@media (min-width: 36rem) {
-  .choices {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-.choice {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 2.25rem;
-  padding: var(--space-1) var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background: var(--color-surface);
-  font-size: var(--text-sm);
-  cursor: pointer;
-  overflow-wrap: anywhere;
-  transition: border-color var(--transition), background var(--transition);
-}
-
-.choice:hover {
-  border-color: var(--color-accent);
-}
-
-.choice:has(.radio:focus-visible) {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-}
-
-.rowExample .choice {
-  cursor: default;
-}
-
-.choiceSelected {
-  border-color: var(--color-accent);
-  background: var(--color-accent-soft);
   font-weight: 700;
-}
-
-.choiceCorrect {
-  border-color: var(--color-success-border);
-  background: var(--color-surface);
-  color: var(--color-success);
-  font-weight: 700;
-}
-
-.choiceWrong {
-  border-color: var(--color-danger-border);
-  color: var(--color-danger);
-  text-decoration: line-through;
-}
-
-/* El radio sigue en el DOM y en el orden de Tab: solo se oculta a la vista. */
-.radio {
-  position: absolute;
-  inset: 0;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.letter {
-  flex-shrink: 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  color: var(--color-text-muted);
-}
-
-.visuallyHidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
-
-.explanation {
-  grid-column: 2;
-  font-size: var(--text-sm);
+  text-align: center;
 }
 
 .verdict {
@@ -219,20 +151,6 @@
 .explanationText {
   margin: var(--space-1) 0 0;
   color: var(--color-text);
-}
-
-.reviewLink {
-  display: inline-block;
-  margin-top: var(--space-1);
-  font-weight: 600;
-  color: inherit;
-  text-decoration: underline;
-}
-
-.warning {
-  margin: var(--space-4) 0 0;
-  font-size: var(--text-sm);
-  color: var(--color-danger);
 }
 
 .actions {

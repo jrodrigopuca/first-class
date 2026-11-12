@@ -90,27 +90,43 @@ export interface ReviewFamily {
   entries: readonly ReviewEntry[];
 }
 
-/**
- * La tarjeta de identidad de un juego. La home, el router y el repaso
- * leen ESTO, nunca el interior del juego.
- *
- * `buildReview` es obligatorio a propósito. Un juego sin material de
- * repaso desaparecería del estudio en silencio, y "en silencio" es
- * exactamente el tipo de bug que este proyecto viene evitando. Si algún
- * día aparece un juego que genuinamente no tiene familias, cambiamos el
- * tipo entonces — con el caso real en la mano, no antes.
- */
-export interface GameManifest {
+/** Lo que tienen todos los juegos, de cualquier sección. */
+interface ManifestBase {
   id: string;
   part: ExamPart;
-  /** Obligatorio: un juego sin sección no aparecería en la home. */
-  section: GameSection;
   title: string;
   subtitle: string;
   description: string;
   Component: ComponentType;
+}
+
+/**
+ * Un juego de pre-práctica. `buildReview` es obligatorio a propósito: un
+ * juego con repetición espaciada y sin material de repaso desaparecería
+ * del estudio en silencio, y "en silencio" es exactamente el tipo de bug
+ * que este proyecto viene evitando.
+ */
+export interface PracticeManifest extends ManifestBase {
+  section: typeof GAME_SECTION.PRE_PRACTICE;
   buildReview: () => readonly ReviewFamily[];
 }
+
+/**
+ * Un juego de práctica intensiva. NO tiene repaso: el repaso ordena por lo
+ * que más fallás según la repetición espaciada, y estos juegos no la usan.
+ * Lo que se aprende, se aprende al corregir (decisiones #15 y #17).
+ */
+export interface IntensiveManifest extends ManifestBase {
+  section: typeof GAME_SECTION.INTENSIVE;
+}
+
+/**
+ * La tarjeta de identidad de un juego. La home, el router y el repaso
+ * leen ESTO, nunca el interior del juego. La sección decide qué campos
+ * son obligatorios: el compilador no deja un juego de pre-práctica sin
+ * repaso.
+ */
+export type GameManifest = PracticeManifest | IntensiveManifest;
 
 /**
  * Lo que se recuerda de UN ítem entre sesiones.

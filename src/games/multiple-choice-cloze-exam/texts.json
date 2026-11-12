@@ -710,5 +710,628 @@
         "explanation": "AFTER ALL = al fin y al cabo; introduce una razón que hay que tener en cuenta."
       }
     ]
+  },
+  {
+    "id": "e-scooters",
+    "title": "Scooter wars",
+    "level": 2,
+    "paragraphs": [
+      "Five years ago, electric scooters were almost unknown in our city. Today, you can hardly walk down a street without {coming} across one. Supporters say they are a cheap and {convenient} way to get around, and that they help to {take} cars off the road.",
+      "However, not everyone is {in} favour. Many pedestrians regularly complain {about} scooters being left on pavements, and several serious accidents have {raised} concerns about safety. Some cities have even {cracked} down on the companies that rent them out.",
+      "The real issue, experts say, is that our streets were not designed with scooters in {mind}. Until our cities finally {make} room for them, scooters will {continue} to cause conflict between those on wheels and those {on} foot."
+    ],
+    "gaps": [
+      {
+        "answer": "coming",
+        "distractors": ["getting", "going", "putting"],
+        "category": "phrasal",
+        "label": "come across",
+        "explanation": "COME ACROSS = encontrarse con algo por casualidad."
+      },
+      {
+        "answer": "convenient",
+        "distractors": ["capable", "actual", "eventual"],
+        "category": "confusable",
+        "label": "convenient",
+        "explanation": "CONVENIENT = práctico, cómodo. ACTUAL es 'real' y EVENTUAL es 'final': dos falsos amigos."
+      },
+      {
+        "answer": "take",
+        "distractors": ["put", "bring", "make", "set"],
+        "category": "phrasal",
+        "label": "take something off the road",
+        "explanation": "'take cars off the road' = sacar autos de circulación."
+      },
+      {
+        "answer": "in",
+        "distractors": ["on", "at", "for", "under", "beyond"],
+        "category": "preposition",
+        "label": "in favour",
+        "explanation": "'be IN favour (of)' = estar a favor."
+      },
+      {
+        "answer": "about",
+        "distractors": ["for", "on", "with", "at"],
+        "category": "preposition",
+        "label": "complain about",
+        "explanation": "'complain ABOUT something' = quejarse de algo."
+      },
+      {
+        "answer": "raised",
+        "distractors": ["risen", "arisen", "lifted", "grown"],
+        "category": "confusable",
+        "label": "raise concerns",
+        "explanation": "RAISE es transitivo: 'raise concerns'. RISE y ARISE no llevan objeto."
+      },
+      {
+        "answer": "cracked",
+        "distractors": ["broken", "shut", "knocked", "turned"],
+        "category": "phrasal",
+        "label": "crack down on",
+        "explanation": "CRACK DOWN ON = tomar medidas duras contra algo."
+      },
+      {
+        "answer": "mind",
+        "distractors": ["head", "thought", "sight", "brain", "care"],
+        "category": "collocation",
+        "label": "with something in mind",
+        "explanation": "'with X in mind' = pensando en X."
+      },
+      {
+        "answer": "make",
+        "distractors": ["do", "take", "put", "bring", "run"],
+        "category": "collocation",
+        "label": "make room for",
+        "explanation": "'make room for' = hacer lugar para."
+      },
+      {
+        "answer": "continue",
+        "distractors": ["keep", "remain", "stay", "carry"],
+        "category": "confusable",
+        "label": "continue to",
+        "explanation": "CONTINUE TO + infinitivo. KEEP va con -ing ('keep causing'), y CARRY necesita ON."
+      },
+      {
+        "answer": "on",
+        "distractors": ["with", "in", "at", "under"],
+        "category": "preposition",
+        "label": "on foot",
+        "explanation": "'ON foot' = a pie."
+      }
+    ]
+  },
+  {
+    "id": "adult-music",
+    "title": "Never too old to play",
+    "level": 2,
+    "paragraphs": [
+      "Many adults {regret} giving up music lessons when they were children. The good news is that it is never too late to {pick} up an instrument again. Although children may learn faster, adults have one big {advantage}: they actually want to learn.",
+      "The key is to {set} realistic goals. Practising for fifteen minutes every day is far more {effective} than playing for two hours once a week. It also helps to {join} a band or a choir, where you can {make} friends with people who share your interest.",
+      "Of course, progress can be slow, and many people {feel} like giving up after a few months. When that happens, it is worth {reminding} yourself why you started. After all, the aim is not to become famous, but to {enjoy} yourself and, at the same time, to {keep} your brain active."
+    ],
+    "gaps": [
+      {
+        "answer": "regret",
+        "distractors": ["repent", "mourn", "apologise"],
+        "category": "confusable",
+        "label": "regret + -ing",
+        "explanation": "REGRET + -ing = arrepentirse de haber hecho algo."
+      },
+      {
+        "answer": "pick",
+        "distractors": ["get", "make", "bring", "put"],
+        "category": "phrasal",
+        "label": "pick up",
+        "explanation": "PICK UP = retomar o empezar algo (un instrumento, un idioma)."
+      },
+      {
+        "answer": "advantage",
+        "distractors": ["profit", "interest", "favour", "credit"],
+        "category": "confusable",
+        "label": "advantage",
+        "explanation": "ADVANTAGE = ventaja. PROFIT es ganancia económica."
+      },
+      {
+        "answer": "set",
+        "distractors": ["put", "lay", "place", "do"],
+        "category": "collocation",
+        "label": "set goals",
+        "explanation": "'set goals' = fijarse metas."
+      },
+      {
+        "answer": "effective",
+        "distractors": ["affective", "actual", "eventual"],
+        "category": "confusable",
+        "label": "effective",
+        "explanation": "EFFECTIVE = eficaz, que funciona. AFFECTIVE es emocional."
+      },
+      {
+        "answer": "join",
+        "distractors": ["assist", "participate", "belong", "unite"],
+        "category": "confusable",
+        "label": "join a group",
+        "explanation": "JOIN = unirse a. PARTICIPATE necesita IN y BELONG necesita TO. ASSIST es ayudar: falso amigo."
+      },
+      {
+        "answer": "make",
+        "distractors": ["do", "have", "take", "give"],
+        "category": "collocation",
+        "label": "make friends",
+        "explanation": "'make friends' = hacerse amigos."
+      },
+      {
+        "answer": "feel",
+        "distractors": ["want", "seem", "look", "think"],
+        "category": "confusable",
+        "label": "feel like + -ing",
+        "explanation": "FEEL LIKE + -ing = tener ganas de."
+      },
+      {
+        "answer": "reminding",
+        "distractors": ["remembering", "recalling", "memorising"],
+        "category": "confusable",
+        "label": "remind yourself",
+        "explanation": "REMIND yourself = recordarte a vos mismo. REMEMBER no lleva un objeto reflexivo así."
+      },
+      {
+        "answer": "enjoy",
+        "distractors": ["fun", "have", "rejoice"],
+        "category": "collocation",
+        "label": "enjoy yourself",
+        "explanation": "'enjoy yourself' = pasarla bien. FUN es sustantivo: 'have fun', sin 'yourself'."
+      },
+      {
+        "answer": "keep",
+        "distractors": ["hold", "stay", "remain"],
+        "category": "confusable",
+        "label": "keep + objeto + adjetivo",
+        "explanation": "KEEP something ACTIVE = mantener algo activo. STAY y REMAIN no llevan objeto."
+      }
+    ]
+  },
+  {
+    "id": "multitasking-myth",
+    "title": "The multitasking myth",
+    "level": 3,
+    "paragraphs": [
+      "Many of us {pride} ourselves on being able to do several things at once. We answer emails during meetings, {check} our phones while watching films, and believe we are getting more {done}.",
+      "Research, however, {tells} a very different story. The brain cannot really concentrate {on} two demanding tasks at the same time. Instead, it switches rapidly between them, and every switch {comes} at a cost. One study found that people who were constantly interrupted made twice as many mistakes {as} those who were left alone.",
+      "The solution is simple, though not easy: do one thing {at} a time. Turn off notifications, {set} aside specific times for checking messages, and {resist} the temptation to look at your phone. You may be surprised by how much more you {achieve}."
+    ],
+    "gaps": [
+      {
+        "answer": "pride",
+        "distractors": ["praise", "boast", "value"],
+        "category": "collocation",
+        "label": "pride yourself on",
+        "explanation": "PRIDE YOURSELF ON = enorgullecerse de."
+      },
+      {
+        "answer": "check",
+        "distractors": ["control", "revise", "prove"],
+        "category": "confusable",
+        "label": "check",
+        "explanation": "CHECK = revisar, mirar. CONTROL es controlar, dominar: falso amigo."
+      },
+      {
+        "answer": "done",
+        "distractors": ["made", "worked", "achieved"],
+        "category": "collocation",
+        "label": "get things done",
+        "explanation": "'get things done' = sacar cosas adelante."
+      },
+      {
+        "answer": "tells",
+        "distractors": ["says", "speaks", "counts", "explains"],
+        "category": "collocation",
+        "label": "tell a story",
+        "explanation": "'tell a (different) story' = contar otra historia. Con 'story' va TELL, no SAY."
+      },
+      {
+        "answer": "on",
+        "distractors": ["in", "at", "to", "with"],
+        "category": "preposition",
+        "label": "concentrate on",
+        "explanation": "'concentrate ON' = concentrarse en."
+      },
+      {
+        "answer": "comes",
+        "distractors": ["goes", "arrives", "happens", "falls"],
+        "category": "collocation",
+        "label": "come at a cost",
+        "explanation": "'come at a cost' = tener un precio."
+      },
+      {
+        "answer": "as",
+        "distractors": ["than", "like", "that"],
+        "category": "preposition",
+        "label": "twice as many … as",
+        "explanation": "'twice AS many … AS' = el doble que. No va THAN: es una comparación de igualdad multiplicada."
+      },
+      {
+        "answer": "at",
+        "distractors": ["in", "by", "for", "on", "as"],
+        "category": "preposition",
+        "label": "one at a time",
+        "explanation": "'one thing AT a time' = una cosa por vez."
+      },
+      {
+        "answer": "set",
+        "distractors": ["take", "give", "bring", "make"],
+        "category": "phrasal",
+        "label": "set aside",
+        "explanation": "SET ASIDE = reservar (tiempo, dinero)."
+      },
+      {
+        "answer": "resist",
+        "distractors": ["refuse", "deny", "oppose"],
+        "category": "collocation",
+        "label": "resist the temptation",
+        "explanation": "'resist the temptation' = resistir la tentación."
+      },
+      {
+        "answer": "achieve",
+        "distractors": ["reach", "succeed", "win", "arrive"],
+        "category": "confusable",
+        "label": "achieve",
+        "explanation": "ACHIEVE = lograr. REACH necesita una meta concreta; SUCCEED va con IN."
+      }
+    ]
+  },
+  {
+    "id": "saving-the-cinema",
+    "title": "The cinema that refused to die",
+    "level": 1,
+    "paragraphs": [
+      "When our town's only cinema announced it was going to close {down}, a group of residents decided to {take} action. Within a week, they had {set} up a website asking for donations, and the response was {beyond} their wildest dreams.",
+      "In just two months, they {raised} enough money to buy the building. Volunteers now {run} the cinema, and tickets cost {less} than half the price of a big multiplex. The programme {includes} everything from classic films to new releases.",
+      "The cinema has become much more than a place to watch films. It is now the {heart} of the community, hosting quiz nights, school concerts and even weddings. 'We never expected it to be such a {success},' says one of the organisers. 'It just {goes} to show what people can do when they work together.'"
+    ],
+    "gaps": [
+      {
+        "answer": "down",
+        "distractors": ["off", "out", "away"],
+        "category": "phrasal",
+        "label": "close down",
+        "explanation": "CLOSE DOWN = cerrar definitivamente un negocio."
+      },
+      {
+        "answer": "take",
+        "distractors": ["make", "do", "have", "give"],
+        "category": "collocation",
+        "label": "take action",
+        "explanation": "'take action' = tomar medidas."
+      },
+      {
+        "answer": "set",
+        "distractors": ["put", "make", "get", "bring"],
+        "category": "phrasal",
+        "label": "set up",
+        "explanation": "SET UP = crear, armar (una web, una empresa)."
+      },
+      {
+        "answer": "beyond",
+        "distractors": ["above", "over", "across", "behind"],
+        "category": "preposition",
+        "label": "beyond your wildest dreams",
+        "explanation": "'beyond their wildest dreams' = más allá de lo que soñaban."
+      },
+      {
+        "answer": "raised",
+        "distractors": ["rose", "grew", "lifted", "arose"],
+        "category": "confusable",
+        "label": "raise money",
+        "explanation": "'raise money' = juntar dinero. RAISE es transitivo; ROSE es el pasado de RISE, que no lleva objeto."
+      },
+      {
+        "answer": "run",
+        "distractors": ["drive", "conduct", "carry"],
+        "category": "confusable",
+        "label": "run a business",
+        "explanation": "RUN = dirigir, hacer funcionar (un negocio, un cine)."
+      },
+      {
+        "answer": "less",
+        "distractors": ["fewer", "lower", "little", "smaller"],
+        "category": "confusable",
+        "label": "cost less than",
+        "explanation": "'cost LESS than' = costar menos que. FEWER es para sustantivos contables."
+      },
+      {
+        "answer": "includes",
+        "distractors": ["consists", "composes", "counts"],
+        "category": "confusable",
+        "label": "include",
+        "explanation": "INCLUDE = incluir, con objeto directo. CONSIST necesita OF."
+      },
+      {
+        "answer": "heart",
+        "distractors": ["head", "chest", "body"],
+        "category": "collocation",
+        "label": "the heart of the community",
+        "explanation": "'the heart of' = el centro, lo más vital de algo."
+      },
+      {
+        "answer": "success",
+        "distractors": ["succeed", "victory", "winner"],
+        "category": "confusable",
+        "label": "such a success",
+        "explanation": "'such a success' = un éxito tan grande. SUCCEED es verbo."
+      },
+      {
+        "answer": "goes",
+        "distractors": ["comes", "gets", "turns", "runs", "feel"],
+        "category": "collocation",
+        "label": "it goes to show",
+        "explanation": "'it (just) goes to show' = eso demuestra."
+      }
+    ]
+  },
+  {
+    "id": "buying-too-much",
+    "title": "Why we buy what we don't need",
+    "level": 3,
+    "paragraphs": [
+      "Most of us have, at some point, {given} in to the temptation to buy something we did not need. Advertisers know exactly how to {take} advantage of our weaknesses, and they are very good {at} it. Limited-time offers, for {instance}, create a sense of urgency that makes us act without thinking.",
+      "Psychologists also {point} out that shopping can be a way of dealing with stress. Buying something new gives us a pleasant feeling, but it soon {wears} off, and we are left {with} more things and less money.",
+      "So how can we {break} the habit? One simple but useful {piece} of advice is to wait 48 hours before buying anything that is not essential. In most {cases}, the desire simply disappears. Another is to ask yourself whether you would still want the item if it were not {on} sale."
+    ],
+    "gaps": [
+      {
+        "answer": "given",
+        "distractors": ["got", "put", "taken", "made"],
+        "category": "phrasal",
+        "label": "give in to",
+        "explanation": "GIVE IN TO = ceder ante algo."
+      },
+      {
+        "answer": "take",
+        "distractors": ["make", "get", "have", "do"],
+        "category": "collocation",
+        "label": "take advantage of",
+        "explanation": "'take advantage of' = aprovecharse de."
+      },
+      {
+        "answer": "at",
+        "distractors": ["in", "on", "for", "with"],
+        "category": "preposition",
+        "label": "good at",
+        "explanation": "'good AT something' = bueno para algo."
+      },
+      {
+        "answer": "instance",
+        "distractors": ["case", "sample", "model", "moment"],
+        "category": "linker",
+        "label": "for instance",
+        "explanation": "FOR INSTANCE = por ejemplo."
+      },
+      {
+        "answer": "point",
+        "distractors": ["show", "make", "bring", "mark"],
+        "category": "phrasal",
+        "label": "point out",
+        "explanation": "POINT OUT = señalar, hacer notar."
+      },
+      {
+        "answer": "wears",
+        "distractors": ["runs", "puts", "takes", "falls"],
+        "category": "phrasal",
+        "label": "wear off",
+        "explanation": "WEAR OFF = irse pasando (un efecto, una sensación)."
+      },
+      {
+        "answer": "with",
+        "distractors": ["by", "of", "for", "from", "about"],
+        "category": "preposition",
+        "label": "be left with",
+        "explanation": "'be left WITH' = quedarse con."
+      },
+      {
+        "answer": "break",
+        "distractors": ["crack", "split", "tear", "smash"],
+        "category": "collocation",
+        "label": "break a habit",
+        "explanation": "'break a habit' = dejar un hábito."
+      },
+      {
+        "answer": "piece",
+        "distractors": ["part", "slice", "item", "portion"],
+        "category": "collocation",
+        "label": "a piece of advice",
+        "explanation": "ADVICE es incontable: 'a piece of advice' = un consejo."
+      },
+      {
+        "answer": "cases",
+        "distractors": ["examples", "events", "chances"],
+        "category": "linker",
+        "label": "in most cases",
+        "explanation": "IN MOST CASES = en la mayoría de los casos."
+      },
+      {
+        "answer": "on",
+        "distractors": ["in", "at", "for", "under"],
+        "category": "preposition",
+        "label": "on sale",
+        "explanation": "'ON sale' = en oferta o a la venta."
+      }
+    ]
+  },
+  {
+    "id": "zookeeper",
+    "title": "Not just feeding the lions",
+    "level": 2,
+    "paragraphs": [
+      "Most people think zookeepers spend their days playing with animals, but nothing could be {further} from the truth. My day begins at six, when I {carry} out a health check on every animal in my {care}.",
+      "Then comes the least glamorous part of the job: cleaning enclosures, which {takes} a lot of energy. Feeding time is the {highlight} of my day, but it is far from simple. Some animals are fed {according} to strict timetables, and we have to keep a {close} eye on their weight.",
+      "The job can be physically {demanding}, and the pay is not great. But for me, there is nothing {quite} like the moment when an animal I have looked {after} for years recognises me. I wouldn't change it for the {world}."
+    ],
+    "gaps": [
+      {
+        "answer": "further",
+        "distractors": ["longer", "wider", "deeper", "less"],
+        "category": "collocation",
+        "label": "nothing could be further from the truth",
+        "explanation": "'nothing could be further from the truth' = no podría estar más lejos de la realidad."
+      },
+      {
+        "answer": "carry",
+        "distractors": ["make", "put", "take", "bring", "pick"],
+        "category": "phrasal",
+        "label": "carry out",
+        "explanation": "CARRY OUT = llevar a cabo (un control, una prueba)."
+      },
+      {
+        "answer": "care",
+        "distractors": ["hand", "attention", "guard"],
+        "category": "collocation",
+        "label": "in my care",
+        "explanation": "'in my care' = a mi cargo."
+      },
+      {
+        "answer": "takes",
+        "distractors": ["makes", "gives", "puts", "brings", "spend"],
+        "category": "collocation",
+        "label": "take energy",
+        "explanation": "'take a lot of energy/time' = llevar mucha energía o tiempo."
+      },
+      {
+        "answer": "highlight",
+        "distractors": ["spotlight", "headline", "flashlight"],
+        "category": "confusable",
+        "label": "highlight",
+        "explanation": "HIGHLIGHT = el mejor momento. SPOTLIGHT es el foco de luz; HEADLINE, un titular."
+      },
+      {
+        "answer": "according",
+        "distractors": ["regarding", "concerning", "depending"],
+        "category": "preposition",
+        "label": "according to",
+        "explanation": "ACCORDING TO = según, de acuerdo con. DEPENDING va con ON."
+      },
+      {
+        "answer": "close",
+        "distractors": ["near", "tight", "narrow", "short"],
+        "category": "collocation",
+        "label": "keep a close eye on",
+        "explanation": "'keep a close eye on' = vigilar de cerca."
+      },
+      {
+        "answer": "demanding",
+        "distractors": ["requiring", "asking", "claiming", "insisting"],
+        "category": "confusable",
+        "label": "demanding",
+        "explanation": "DEMANDING = exigente. Es el único que funciona como adjetivo."
+      },
+      {
+        "answer": "quite",
+        "distractors": ["very", "so", "too", "rather"],
+        "category": "confusable",
+        "label": "nothing quite like",
+        "explanation": "'nothing quite like' = nada se compara con."
+      },
+      {
+        "answer": "after",
+        "distractors": ["for", "up", "out", "into"],
+        "category": "phrasal",
+        "label": "look after",
+        "explanation": "LOOK AFTER = cuidar. LOOK FOR es buscar."
+      },
+      {
+        "answer": "world",
+        "distractors": ["earth", "planet", "universe", "globe", "heart"],
+        "category": "collocation",
+        "label": "not for the world",
+        "explanation": "'not … for the world' = por nada del mundo."
+      }
+    ]
+  },
+  {
+    "id": "free-apps",
+    "title": "Nothing is really free",
+    "level": 3,
+    "paragraphs": [
+      "Most of the apps on our phones cost nothing to download. But, as the saying goes, there is no {such} thing as a free lunch. In {exchange} for using them, we give away information about ourselves: where we go, what we buy and even who we {spend} time with.",
+      "This data is {worth} a fortune to advertisers, who can then {target} us with ads. Most users {agree} to this without realising it, because very few people {bother} to read the terms and conditions.",
+      "Experts are not saying that we should {give} up our phones. But they do recommend {checking} which permissions each app asks for and {turning} off location tracking when it is not needed. After all, if you are not paying for the product, there is a good {chance} that you are the product."
+    ],
+    "gaps": [
+      {
+        "answer": "such",
+        "distractors": ["so", "like", "same", "all"],
+        "category": "collocation",
+        "label": "no such thing as",
+        "explanation": "'there is no such thing as' = no existe tal cosa como."
+      },
+      {
+        "answer": "exchange",
+        "distractors": ["change", "swap", "turn"],
+        "category": "linker",
+        "label": "in exchange for",
+        "explanation": "IN EXCHANGE FOR = a cambio de."
+      },
+      {
+        "answer": "spend",
+        "distractors": ["pass", "take", "use"],
+        "category": "confusable",
+        "label": "spend time",
+        "explanation": "'spend time' = pasar tiempo. PASS es falso amigo en este sentido."
+      },
+      {
+        "answer": "worth",
+        "distractors": ["value", "price", "cost"],
+        "category": "confusable",
+        "label": "be worth",
+        "explanation": "'be worth + cantidad' = valer. VALUE y PRICE son sustantivos acá."
+      },
+      {
+        "answer": "target",
+        "distractors": ["aim", "point", "direct"],
+        "category": "confusable",
+        "label": "target someone with",
+        "explanation": "TARGET someone WITH = apuntar a alguien con. AIM necesita AT."
+      },
+      {
+        "answer": "agree",
+        "distractors": ["accept", "admit", "approve"],
+        "category": "confusable",
+        "label": "agree to",
+        "explanation": "AGREE TO something = aceptar algo. ACCEPT no lleva TO; APPROVE va con OF."
+      },
+      {
+        "answer": "bother",
+        "distractors": ["mind", "worry", "disturb"],
+        "category": "confusable",
+        "label": "bother to",
+        "explanation": "BOTHER TO + infinitivo = molestarse en hacer algo."
+      },
+      {
+        "answer": "give",
+        "distractors": ["take", "put", "make", "get"],
+        "category": "phrasal",
+        "label": "give up",
+        "explanation": "GIVE UP = dejar, renunciar a algo."
+      },
+      {
+        "answer": "checking",
+        "distractors": ["controlling", "revising", "proving"],
+        "category": "confusable",
+        "label": "check",
+        "explanation": "CHECK = revisar. CONTROL es dominar: falso amigo."
+      },
+      {
+        "answer": "turning",
+        "distractors": ["putting", "taking", "getting", "closing"],
+        "category": "phrasal",
+        "label": "turn off",
+        "explanation": "TURN OFF = apagar, desactivar."
+      },
+      {
+        "answer": "chance",
+        "distractors": ["opportunity", "luck", "occasion", "fortune"],
+        "category": "confusable",
+        "label": "a good chance",
+        "explanation": "'there's a good chance (that)' = es muy probable que. OPPORTUNITY es una ocasión favorable, no una probabilidad."
+      }
+    ]
   }
 ]

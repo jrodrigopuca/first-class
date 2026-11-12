@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { buildReview } from "./review";
 import { parseText, TEXTS, type RawText } from "./texts";
 import { MIN_CANDIDATES, ROOT_REUSE_FLOOR, WORD_CATEGORY } from "./types";
 
@@ -83,13 +82,5 @@ describe("dataset", () => {
     const reused = gaps.filter((gap) => (forms.get(gap.root)?.size ?? 0) > 1).length;
 
     expect(reused / gaps.length).toBeGreaterThanOrEqual(ROOT_REUSE_FLOOR);
-  });
-
-  it("el repaso tiene una frase con hueco por cada hueco del dataset", () => {
-    const entries = buildReview().flatMap((family) => family.entries);
-    expect(entries).toHaveLength(TEXTS.reduce((sum, text) => sum + text.gaps.length, 0));
-    for (const entry of entries) {
-      expect(entry.prompt.split("___"), entry.questionId).toHaveLength(2);
-    }
   });
 });

@@ -1,5 +1,4 @@
 import { EXAM_PART, GAME_SECTION, type GameManifest } from "../../engine/types";
-import { buildReview } from "./review";
 import { MultipleChoiceClozeExam } from "./MultipleChoiceClozeExam";
 
 export const multipleChoiceClozeExamManifest: GameManifest = {
@@ -11,5 +10,4 @@ export const multipleChoiceClozeExamManifest: GameManifest = {
   description:
     "Un texto completo con el ejemplo y ocho espacios, como en el examen. Respondés todo y corregís al final.",
   Component: MultipleChoiceClozeExam,
-  buildReview,
 };

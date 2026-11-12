@@ -1,5 +1,5 @@
 import { DIFFICULTY, type Difficulty } from "../../engine/types";
-import { parseGappedText, sentenceAround as sentenceIn } from "../../exam/gappedText";
+import { parseGappedText } from "../../exam/gappedText";
 import { countWords, normalize } from "../../exam/text";
 import {
   GAP_TYPE,
@@ -123,8 +123,3 @@ const RAW_TEXTS: readonly RawText[] = rawTexts;
 export const TEXTS: readonly ClozeText[] = RAW_TEXTS.map(parseText);
 
 assertDatasetIsSane(TEXTS);
-
-/** La frase del hueco, con los demás resueltos. Para el repaso. */
-export function sentenceAround(text: ClozeText, gapIndex: number): string {
-  return sentenceIn(text.paragraphs, gapIndex, (i) => text.gaps[i]?.answers[0] ?? "");
-}

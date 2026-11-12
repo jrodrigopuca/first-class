@@ -91,32 +91,6 @@ export function parseGappedText(raw: readonly string[]): GappedText {
 }
 
 /**
- * La frase que contiene el hueco, con `___` en su lugar y los demás
- * huecos resueltos con `fill`. Es lo que muestra el repaso.
- */
-export function sentenceAround(
-  paragraphs: Paragraphs,
-  gapIndex: number,
-  fill: (index: number) => string,
-): string {
-  for (const paragraph of paragraphs) {
-    if (!paragraph.some((segment) => typeof segment !== "string" && segment.gap === gapIndex)) {
-      continue;
-    }
-
-    const filled = paragraph
-      .map((segment) => {
-        if (typeof segment === "string") return segment;
-        return segment.gap === gapIndex ? "___" : fill(segment.gap);
-      })
-      .join("");
-
-    return filled.split(/(?<=[.!?])\s+/).find((sentence) => sentence.includes("___")) ?? filled;
-  }
-  return "";
-}
-
-/**
  * Sortea qué huecos salen en este intento: `count` posiciones entre 1 y
  * `totalGaps - 1` (la 0 es siempre el ejemplo), ORDENADAS. Al azar para
  * que no te sepas el texto; en orden para que el hueco 3 esté siempre
