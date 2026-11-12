@@ -1,12 +1,6 @@
 import { DIFFICULTY, type Difficulty } from "../../engine/types";
-import { countWords, normalize } from "./grading";
-import {
-  MAX_WORDS,
-  MIN_WORDS,
-  TRANSFORMATION,
-  type KeyWordQuestion,
-  type Transformation,
-} from "./types";
+import { parseMarkedAnswer } from "../../exam/keyWord";
+import { TRANSFORMATION, type KeyWordQuestion, type Transformation } from "./types";
 
 import rawQuestions from "./questions.json";
 
@@ -51,21 +45,21 @@ function parseQuestion(raw: RawQuestion): KeyWordQuestion {
   }
   if (raw.answers.length === 0) fail(raw, "sin respuestas");
 
-  const key = raw.keyWord.toLowerCase();
-  for (const answer of raw.answers) {
-    if (answer !== normalize(answer)) {
-      fail(raw, `la respuesta "${answer}" no está normalizada`);
+  // En el JSON cada respuesta marca dónde se parte: "is said | to be".
+  // Se separa acá, en la frontera: el resto del juego recibe la respuesta
+  // entera en `answers` y las mitades en `halves`, y nunca ve la barra.
+  // Las reglas (2-5 palabras, clave dentro, normalizada) son de exam.
+  const parsed = raw.answers.map((marked) => {
+    try {
+      return parseMarkedAnswer(raw.keyWord, marked);
+    } catch (error) {
+      return fail(raw, error instanceof Error ? error.message : String(error));
     }
-    const words = countWords(answer);
-    if (words < MIN_WORDS || words > MAX_WORDS) {
-      fail(raw, `"${answer}" tiene ${words} palabras; Cambridge exige ${MIN_WORDS}-${MAX_WORDS}`);
-    }
-    if (!answer.split(" ").includes(key)) {
-      fail(raw, `"${answer}" no contiene la palabra clave ${raw.keyWord}`);
-    }
-  }
+  });
+  const answers = parsed.map(({ full }) => full);
+  const halves = parsed.map(({ halves }) => halves);
 
-  return { ...raw, category: raw.category, level: raw.level };
+  return { ...raw, category: raw.category, level: raw.level, answers, halves };
 }
 
 function assertDatasetIsSane(questions: readonly KeyWordQuestion[]): void {

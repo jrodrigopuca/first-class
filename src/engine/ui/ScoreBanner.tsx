@@ -12,9 +12,11 @@ interface ScoreBannerProps {
 
 function messageFor(correct: number, total: number): string {
   const ratio = total === 0 ? 0 : correct / total;
-  if (ratio >= MASTERY_RATIO) return "Nivel examen. Probá con otro texto.";
-  if (ratio >= PASSING_RATIO) return "Bien. Leé las explicaciones de los que fallaste.";
-  return "Leé las explicaciones con calma y probá este mismo texto con otros espacios.";
+  // Genérico a propósito: lo usan los cuatro juegos de práctica intensiva,
+  // con textos o con frases sueltas.
+  if (ratio >= MASTERY_RATIO) return "Nivel examen.";
+  if (ratio >= PASSING_RATIO) return "Bien. Leé las explicaciones de lo que fallaste.";
+  return "Leé las explicaciones con calma y volvé a intentarlo.";
 }
 
 /**

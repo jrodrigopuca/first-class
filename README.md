@@ -25,9 +25,10 @@ Por separado: `npm run typecheck`, `npm run lint`, `npm test`,
 | Part 1 · texto | Multiple-choice Cloze, formato examen | 15 textos · 165 espacios |
 | Part 2 · texto | Open Cloze, formato examen | 15 textos · 171 espacios |
 | Part 3 · texto | Word Formation, formato examen | 15 textos · 176 espacios |
+| Part 4 · hoja | Key Word Transformation, formato examen | 60 frases propias |
 | — | **Repaso** (`#/review`) | agrupa todas las explicaciones |
 
-228 ítems de pre-práctica · 45 textos de práctica intensiva · 182 tests.
+228 ítems de pre-práctica · 45 textos y 60 frases de práctica intensiva · 197 tests.
 
 ## Cómo funciona, en tres frases
 

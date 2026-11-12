@@ -10,7 +10,8 @@ registry/  la única capa que conoce a TODOS los juegos
 games/     un juego = una carpeta. Aislados entre sí.
   ↓
 engine/    ronda, puntaje, repetición espaciada, UI compartida
-exam/      reglas del B2 First: normalizar, contar palabras, texto con huecos
+exam/      reglas del B2 First: normalizar, contar palabras, texto con huecos,
+           puntaje del Part 4
   ↓
 lib/       utilidades puras: shuffle, router
 ```
@@ -129,7 +130,7 @@ no cambiara al sumar juegos con reglas muy distintas.
 
 ## Tests
 
-182 tests, ~1 segundo. Puestos donde cazan el bug al menor costo:
+197 tests, ~1 segundo. Puestos donde cazan el bug al menor costo:
 
 | Archivo | Qué protege |
 | ------- | ----------- |
@@ -148,7 +149,8 @@ Los **invariantes pedagógicos** son los que ningún compilador ve:
 - Part 3: ≥85% de los ítems con raíz ambigua
 - Part 1 (frases y texto): ≥40% de las respuestas aparecen también como distractor
 - Part 3 en texto: ≥50% de los huecos con una raíz que pide otra forma en otro hueco
-- Part 4: palabras clave reutilizadas entre estructuras
+- Part 4: palabras clave reutilizadas entre estructuras, y cada respuesta
+  partida en las dos mitades que puntúan
 - Repaso: los `questionId` coinciden con los ids reales
 
 Si uno de estos falla, **no bajes el umbral**: el contenido nuevo

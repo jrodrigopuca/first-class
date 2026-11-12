@@ -294,8 +294,12 @@ obligatorio `section` del manifest:
   SRS. Sirven para APRENDER cada punto.
 - **Práctica intensiva · formato examen:** el texto completo, como en el
   Part real. Sirve para ENSAYAR: `multiple-choice-cloze-exam`,
-  `open-cloze-exam` y `word-formation-exam`. El Part 4 no tiene versión en
-  texto porque el examen real ya usa frases sueltas.
+  `open-cloze-exam`, `word-formation-exam` y
+  `key-word-transformation-exam`. El Part 4 del examen ya usa frases
+  sueltas; su versión intensiva no cambia el formato sino el ritmo —seis
+  frases en una hoja, corrección al final— y tiene **su propio set de
+  frases**, distinto del de la pre-práctica: una es para aprender (con
+  repaso), la otra para practicar con material que no viste.
 
 **Por qué:** las frases sueltas tienen dos límites. No entrenan a leer el
 texto entero (#10), y con un pool fijo llega un momento en que te sabés
@@ -345,3 +349,39 @@ su explicación en el momento. Ver #15.
 **Cuándo reconsiderarla:** si se quiere que los resultados de la sección
 intensiva alimenten el repaso. Ahí conviene registrar cada hueco con un
 scheduler propio, no mezclarlo con el SRS de la pre-práctica.
+
+---
+
+## 18. El puntaje parcial del Part 4 vive en el juego, no en el motor
+
+**Qué:** el Part 4 puntúa como el examen: 2 puntos por ítem, uno por cada
+mitad de la respuesta (`"is said | to be"`). Las rondas son de 6, como en
+el examen. Pero para el motor, "correcto" sigue siendo booleano: solo
+2 de 2 cuenta como acierto.
+
+**Por qué:** cambiar `isCorrect` a un número habría torcido el motor para
+un solo juego (#1). Y el booleano es lo que conviene para aprender: si te
+salió a medias, la repetición espaciada te lo vuelve a mostrar. Los
+puntos de examen (0–2) los lleva el juego en su propio estado y los
+muestra en el feedback ("1 de 2", con qué mitad faltó) y en el resultado
+("9 de 12").
+
+**Cómo se puntúa:** respuesta exacta → 2. Empieza con la primera mitad o
+termina con la segunda → 1 cada una. Las dos mitades presentes con algo de
+más en el medio → 1. Las contracciones se expanden antes de comparar:
+"wasn't light enough" vale lo mismo que "was not light enough" (antes se
+marcaba mal).
+
+**Costo:** el racha y los puntos del motor ignoran el punto parcial: un
+1 de 2 corta la racha.
+
+**Las reglas viven en `exam/keyWord.ts`** desde que apareció el Part 4
+intensivo: la validación previa, el formato con barra y el puntaje en dos
+mitades son de Cambridge y el MISMO algoritmo en los dos juegos.
+Duplicarlo permitiría que una respuesta valga 2 en un juego y 1 en el
+otro. No es adivinar la abstracción (#12): es el mismo código dos veces.
+
+**Cuándo reconsiderarla:** si otro juego necesita puntaje parcial. Ahí sí
+conviene que el motor acepte un puntaje en vez de un booleano, con el
+caso medido en la mano.
+

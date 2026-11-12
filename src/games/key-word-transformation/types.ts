@@ -1,3 +1,4 @@
+import type { AnswerHalves } from "../../exam/keyWord";
 import type { Question } from "../../engine/types";
 
 /**
@@ -17,9 +18,8 @@ export const TRANSFORMATION = {
 
 export type Transformation = (typeof TRANSFORMATION)[keyof typeof TRANSFORMATION];
 
-/** Cambridge exige entre 2 y 5 palabras, palabra clave incluida. */
-export const MIN_WORDS = 2;
-export const MAX_WORDS = 5;
+/** Las reglas del Part 4 son de Cambridge: viven en exam/keyWord. */
+export { MARKS_PER_ITEM, MAX_WORDS, MIN_WORDS, type AnswerHalves } from "../../exam/keyWord";
 
 export interface KeyWordQuestion extends Question {
   /** Estructura gramatical que agrupa ítems emparentados. */
@@ -35,5 +35,10 @@ export interface KeyWordQuestion extends Question {
   gapped: string;
   /** Todas las respuestas aceptadas, normalizadas y en minúscula. */
   answers: readonly string[];
+  /**
+   * Las mismas respuestas, partidas en las dos mitades que puntúan. En el
+   * JSON se escriben juntas con una barra: "is said | to be".
+   */
+  halves: readonly AnswerHalves[];
   explanation: string;
 }

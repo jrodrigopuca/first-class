@@ -46,6 +46,19 @@ describe("reglas del examen", () => {
   });
 });
 
+describe("puntaje en dos mitades", () => {
+  it("cada respuesta aceptada se parte en dos mitades que, juntas, son la respuesta", () => {
+    for (const question of QUESTIONS) {
+      expect(question.halves, question.id).toHaveLength(question.answers.length);
+      question.halves.forEach(([first, second], i) => {
+        expect(first, question.id).not.toBe("");
+        expect(second, question.id).not.toBe("");
+        expect(`${first} ${second}`, question.id).toBe(question.answers[i]);
+      });
+    }
+  });
+});
+
 describe("invariante pedagógico: la clave no puede ser una clave de diccionario", () => {
   it("reutiliza palabras clave en estructuras distintas", () => {
     const perKeyWord = new Map<string, Set<string>>();

@@ -9,7 +9,7 @@
     "keyWord": "BETTER",
     "gapped": "The book ___ the film.",
     "answers": [
-      "is better than"
+      "is better | than"
     ],
     "explanation": "Se invierte la comparación: si A no es tan bueno como B, entonces B es mejor que A."
   },
@@ -23,7 +23,7 @@
     "keyWord": "SHORTER",
     "gapped": "The journey ___ I expected.",
     "answers": [
-      "was much shorter than"
+      "was | much shorter than"
     ],
     "explanation": "Se invierte el adjetivo y se mantiene el intensificador 'much'."
   },
@@ -37,7 +37,7 @@
     "keyWord": "SAME",
     "gapped": "Tom is ___ Ana.",
     "answers": [
-      "the same age as"
+      "the same | age as"
     ],
     "explanation": "Igualdad con sustantivo: the same + sustantivo + as."
   },
@@ -51,7 +51,7 @@
     "keyWord": "MOST",
     "gapped": "This is ___ meal I have ever eaten.",
     "answers": [
-      "the most delicious"
+      "the most | delicious"
     ],
     "explanation": "'Nunca comí algo tan rico' equivale al superlativo: the most + adjetivo largo."
   },
@@ -65,7 +65,7 @@
     "keyWord": "CASE",
     "gapped": "Take an umbrella ___ later.",
     "answers": [
-      "in case it rains"
+      "in case | it rains"
     ],
     "explanation": "'in case' expresa precaución y va seguido de presente, nunca de 'will'."
   },
@@ -79,7 +79,7 @@
     "keyWord": "IF",
     "gapped": "I could give you a lift ___ a car.",
     "answers": [
-      "if i had"
+      "if | i had"
     ],
     "explanation": "Situación irreal en presente: segundo condicional, con past simple después de 'if'."
   },
@@ -93,7 +93,7 @@
     "keyWord": "NOT",
     "gapped": "If you ___ helped me, I would never have finished the project.",
     "answers": [
-      "had not"
+      "had | not"
     ],
     "explanation": "'Without your help' equivale a 'if you had not helped me'. Ojo: 'hadn't' cuenta como DOS palabras."
   },
@@ -107,7 +107,7 @@
     "keyWord": "HAD",
     "gapped": "If I ___ harder, I would have passed the exam.",
     "answers": [
-      "had studied"
+      "had | studied"
     ],
     "explanation": "Tercer condicional: la parte del 'if' va en past perfect."
   },
@@ -121,7 +121,7 @@
     "keyWord": "UNLESS",
     "gapped": "You will miss the train ___ now.",
     "answers": [
-      "unless you leave"
+      "unless | you leave"
     ],
     "explanation": "'unless' ya es negativo: significa 'if not'. Por eso el verbo va en afirmativo."
   },
@@ -135,7 +135,7 @@
     "keyWord": "ENOUGH",
     "gapped": "The box ___ for me to lift.",
     "answers": [
-      "was not light enough"
+      "was not | light enough"
     ],
     "explanation": "'too heavy' se reformula con el adjetivo opuesto: not + light + enough."
   },
@@ -149,7 +149,7 @@
     "keyWord": "FIRST",
     "gapped": "This is ___ have visited Rome.",
     "answers": [
-      "the first time i"
+      "the first time | i"
     ],
     "explanation": "'Nunca antes' equivale a 'es la primera vez que'."
   },
@@ -163,8 +163,8 @@
     "keyWord": "FOR",
     "gapped": "He ___ five years.",
     "answers": [
-      "has worked here for",
-      "has been working here for"
+      "has worked | here for",
+      "has been working | here for"
     ],
     "explanation": "Acción que sigue ocurriendo: present perfect + FOR + duración."
   },
@@ -178,7 +178,7 @@
     "keyWord": "TIME",
     "gapped": "The ___ him was ages ago.",
     "answers": [
-      "last time i saw"
+      "last time | i saw"
     ],
     "explanation": "Estructura 'the last time + sujeto + pasado simple'."
   },
@@ -192,7 +192,7 @@
     "keyWord": "MIND",
     "gapped": "Would ___ the window?",
     "answers": [
-      "you mind closing"
+      "you mind | closing"
     ],
     "explanation": "Pedido cortés: 'Would you mind' + gerundio."
   },
@@ -206,7 +206,7 @@
     "keyWord": "BEEN",
     "gapped": "I ___ the cinema since March.",
     "answers": [
-      "have not been to"
+      "have not been | to"
     ],
     "explanation": "'La última vez fue en marzo' equivale a 'no he ido desde marzo': present perfect negativo + since."
   },
@@ -220,7 +220,7 @@
     "keyWord": "SUCH",
     "gapped": "It ___ music that we could not talk.",
     "answers": [
-      "was such loud"
+      "was | such loud"
     ],
     "explanation": "'so' va con adjetivo solo; 'such' va con sustantivo (loud music)."
   },
@@ -234,9 +234,9 @@
     "keyWord": "HAVE",
     "gapped": "Ana ___ your keys.",
     "answers": [
-      "cannot have taken",
-      "can not have taken",
-      "could not have taken"
+      "cannot | have taken",
+      "can not | have taken",
+      "could not | have taken"
     ],
     "explanation": "Deducción negativa sobre el pasado: can't / couldn't + have + participio."
   },
@@ -250,7 +250,7 @@
     "keyWord": "MUST",
     "gapped": "He ___ about the meeting.",
     "answers": [
-      "must have forgotten"
+      "must | have forgotten"
     ],
     "explanation": "Deducción sobre el pasado: must + have + participio."
   },
@@ -264,8 +264,8 @@
     "keyWord": "NEED",
     "gapped": "You ___ a table.",
     "answers": [
-      "do not need to book",
-      "need not book"
+      "do not need | to book",
+      "need not | book"
     ],
     "explanation": "Falta de necesidad: 'don't need to' + infinitivo, o 'needn't' + infinitivo sin to."
   },
@@ -279,7 +279,7 @@
     "keyWord": "ALLOWED",
     "gapped": "You ___ smoke anywhere inside the building.",
     "answers": [
-      "are not allowed to"
+      "are not | allowed to"
     ],
     "explanation": "Prohibición: be + not allowed + to + infinitivo."
   },
@@ -293,7 +293,7 @@
     "keyWord": "SHOULD",
     "gapped": "I ___ him so much money.",
     "answers": [
-      "should not have lent"
+      "should not | have lent"
     ],
     "explanation": "Crítica de una acción pasada: should + not + have + participio."
   },
@@ -307,7 +307,7 @@
     "keyWord": "BEING",
     "gapped": "A new hospital ___ on the edge of town.",
     "answers": [
-      "is being built"
+      "is being | built"
     ],
     "explanation": "Presente continuo en pasiva: is/are + being + participio."
   },
@@ -321,7 +321,7 @@
     "keyWord": "BEEN",
     "gapped": "My umbrella ___ by mistake.",
     "answers": [
-      "must have been taken"
+      "must have | been taken"
     ],
     "explanation": "Deducción en pasado + pasiva: must + have + been + participio."
   },
@@ -335,7 +335,7 @@
     "keyWord": "SAID",
     "gapped": "He ___ extremely wealthy.",
     "answers": [
-      "is said to be"
+      "is said | to be"
     ],
     "explanation": "Estructura impersonal: sujeto + is said + to + infinitivo. Muy frecuente en el Part 4."
   },
@@ -349,7 +349,7 @@
     "keyWord": "DESIGNED",
     "gapped": "This building ___ a famous architect in 1930.",
     "answers": [
-      "was designed by"
+      "was designed | by"
     ],
     "explanation": "Pasiva en pasado simple. Como el agente importa, aparece con 'by'."
   },
@@ -363,7 +363,7 @@
     "keyWord": "STOLEN",
     "gapped": "My bicycle ___ from outside the library last night.",
     "answers": [
-      "was stolen"
+      "was | stolen"
     ],
     "explanation": "Activa → pasiva. El objeto ('my bicycle') pasa a sujeto y el verbo va a 'was' + participio."
   },
@@ -377,7 +377,7 @@
     "keyWord": "CALLED",
     "gapped": "The concert ___ because of the storm.",
     "answers": [
-      "was called off"
+      "was | called off"
     ],
     "explanation": "'call off' = cancelar. Acá además va en pasiva."
   },
@@ -391,7 +391,7 @@
     "keyWord": "GAVE",
     "gapped": "She ___ three years ago.",
     "answers": [
-      "gave up smoking"
+      "gave up | smoking"
     ],
     "explanation": "'give up' = dejar (un hábito), y va seguido de gerundio."
   },
@@ -405,7 +405,7 @@
     "keyWord": "LOOKS",
     "gapped": "Who ___ your dog when you travel?",
     "answers": [
-      "looks after"
+      "looks | after"
     ],
     "explanation": "'look after' = cuidar. Ojo con la -s: el sujeto es 'who' en tercera persona."
   },
@@ -419,7 +419,7 @@
     "keyWord": "PUT",
     "gapped": "I am not prepared to ___ that kind of behaviour.",
     "answers": [
-      "put up with"
+      "put up | with"
     ],
     "explanation": "'put up with' = tolerar. Es un phrasal de tres partes: se aprende entero."
   },
@@ -433,7 +433,7 @@
     "keyWord": "APOLOGISED",
     "gapped": "Leo ___ my window.",
     "answers": [
-      "apologised for breaking"
+      "apologised | for breaking"
     ],
     "explanation": "apologise FOR + gerundio. Después de preposición siempre va -ing."
   },
@@ -447,7 +447,7 @@
     "keyWord": "NOT",
     "gapped": "The guard warned us ___ the paintings.",
     "answers": [
-      "not to touch"
+      "not | to touch"
     ],
     "explanation": "Órdenes negativas reportadas: verbo + objeto + NOT + to + infinitivo."
   },
@@ -461,7 +461,7 @@
     "keyWord": "HAD",
     "gapped": "Marta said that she ___ to Japan.",
     "answers": [
-      "had never been"
+      "had | never been"
     ],
     "explanation": "El present perfect retrocede a past perfect: have been → had been."
   },
@@ -475,7 +475,7 @@
     "keyWord": "WOULD",
     "gapped": "Ana told me that she ___ the following day.",
     "answers": [
-      "would call me"
+      "would call | me"
     ],
     "explanation": "En estilo indirecto 'will' retrocede a 'would', y 'you' pasa a 'me'."
   },
@@ -489,10 +489,10 @@
     "keyWord": "SUGGESTED",
     "gapped": "Tom ___ by train.",
     "answers": [
-      "suggested travelling",
-      "suggested traveling",
-      "suggested we travel",
-      "suggested that we travel"
+      "suggested | travelling",
+      "suggested | traveling",
+      "suggested | we travel",
+      "suggested | that we travel"
     ],
     "explanation": "'suggest' NO lleva to + infinitivo. Va con gerundio o con '(that) we + verbo'."
   },
@@ -506,7 +506,7 @@
     "keyWord": "AVOIDS",
     "gapped": "She always ___ late.",
     "answers": [
-      "avoids arriving"
+      "avoids | arriving"
     ],
     "explanation": "'avoid' siempre va seguido de gerundio."
   },
@@ -520,7 +520,7 @@
     "keyWord": "FORWARD",
     "gapped": "I am ___ you next week.",
     "answers": [
-      "looking forward to seeing"
+      "looking forward to | seeing"
     ],
     "explanation": "En 'look forward to', el 'to' es preposición: le sigue gerundio, no infinitivo."
   },
@@ -534,7 +534,7 @@
     "keyWord": "SUCCEED",
     "gapped": "He ___ the report on time.",
     "answers": [
-      "did not succeed in finishing"
+      "did not succeed | in finishing"
     ],
     "explanation": "'succeed' va con IN + gerundio, no con to + infinitivo."
   },
@@ -548,7 +548,7 @@
     "keyWord": "WISH",
     "gapped": "I ___ drive.",
     "answers": [
-      "wish i could"
+      "wish | i could"
     ],
     "explanation": "Deseo sobre una capacidad presente: wish + could + infinitivo sin to."
   },
@@ -562,7 +562,7 @@
     "keyWord": "WISH",
     "gapped": "I ___ her the truth.",
     "answers": [
-      "wish i had told"
+      "wish | i had told"
     ],
     "explanation": "Arrepentimiento sobre el pasado: wish + past perfect."
   }

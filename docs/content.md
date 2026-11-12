@@ -78,11 +78,18 @@ validador lo caza.
   "original": "People say that he is extremely wealthy.",
   "keyWord": "SAID",
   "gapped": "He ___ extremely wealthy.",
-  "answers": ["is said to be"],
+  "answers": ["is said | to be"],
   "explanation": "Estructura impersonal: sujeto + is said + to + infinitivo."
 }
 ```
 
+- **Cada respuesta se parte en dos mitades con una barra** (`"is said |
+  to be"`): cada mitad vale un punto, como en el examen. Partí por
+  unidades con sentido: la estructura de un lado, el resto del otro
+  (`"must | have forgotten"`, `"looking forward to | seeing"`). El
+  validador rechaza una respuesta sin barra.
+- Guardá las respuestas **expandidas** (`was not`, no `wasn't`): la
+  corrección expande las contracciones del alumno antes de comparar.
 - Entre **2 y 5 palabras**, contadas como Cambridge: `aren't` = 2.
 - La respuesta debe **contener la palabra clave sin modificarla**.
 - Reutilizá palabras clave entre estructuras distintas, para que no se
@@ -190,6 +197,14 @@ entraría: si entra, va en la lista o el hueco se reescribe.
 unexpected / expectations / unexpectedly): el test exige ≥50% de huecos
 con raíz repetida. La misma raíz con la misma forma en dos textos está
 prohibida. Grafías británica y americana van juntas en `answers`.
+
+### Part 4 · hoja
+
+`src/games/key-word-transformation-exam/questions.json`: el mismo formato
+que la pre-práctica del Part 4 (respuestas con barra entre las mitades),
+sin `family`. **Frases propias**: no copies las de la pre-práctica; la
+gracia de este juego es practicar con material que no viste. Cada intento
+sortea 6 y evita las del intento anterior.
 
 ### Part 1 · texto
 

@@ -20,12 +20,15 @@ import {
   countWords,
   findSubmissionIssue,
   isCorrect,
+  markAnswer,
   SUBMISSION_ISSUE,
+  type Marking,
   type SubmissionIssue,
 } from "./grading";
 import { QUESTIONS } from "./questions";
 import { groupIdOf } from "./review";
 import {
+  MARKS_PER_ITEM,
   MAX_WORDS,
   MIN_WORDS,
   TRANSFORMATION,
@@ -34,7 +37,8 @@ import {
 } from "./types";
 import styles from "./KeyWordTransformation.module.css";
 
-const ROUND_LENGTH = 10;
+/** Como en el examen: seis transformaciones por Part 4. */
+const ROUND_LENGTH = 6;
 const ALL = "all";
 const STREAK_BONUS_FROM = 4;
 
@@ -81,6 +85,12 @@ export function KeyWordTransformation() {
   const [filter, setFilter] = useState<CategoryFilter>(ALL);
   const [input, setInput] = useState("");
   const [issue, setIssue] = useState<SubmissionIssue | null>(null);
+  /**
+   * Puntos de examen (0–2) por pregunta de ESTA ronda. El motor no los
+   * conoce: para él una respuesta es correcta o no. Se vacían en cada
+   * punto donde el motor arma una ronda nueva (filtro y reinicio).
+   */
+  const [marks, setMarks] = useState<Readonly<Record<string, Marking>>>({});
   const gameId = useGameId();
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -107,6 +117,7 @@ export function KeyWordTransformation() {
     setFilter(next);
     setInput("");
     setIssue(null);
+    setMarks({});
   };
 
   const check = () => {
@@ -120,6 +131,7 @@ export function KeyWordTransformation() {
       return;
     }
     setIssue(null);
+    setMarks((prev) => ({ ...prev, [question.id]: markAnswer(question, input) }));
     round.submit(input);
   };
 
@@ -132,6 +144,7 @@ export function KeyWordTransformation() {
   const restart = () => {
     setInput("");
     setIssue(null);
+    setMarks({});
     round.restart();
   };
 
@@ -171,6 +184,9 @@ export function KeyWordTransformation() {
     );
   }
 
+  const totalMarks = Object.values(marks).reduce((sum, marking) => sum + marking.marks, 0);
+  const current = question === undefined ? undefined : marks[question.id];
+
   const words = countWords(input);
   const countIsBad = input.trim() !== "" && (words < MIN_WORDS || words > MAX_WORDS);
 
@@ -198,17 +214,24 @@ export function KeyWordTransformation() {
           bestStreak={round.bestStreak}
           onRestart={restart}
           review={
-            round.mistakes.length > 0 ? (
-              <ul className={styles.reviewList}>
-                {round.mistakes.map((mistake) => (
-                  <li key={mistake.id} className={styles.reviewItem}>
-                    {mistake.gapped.replace("___", `«${mistake.answers[0]}»`)}
-                    <br />
-                    <span className={styles.reviewAnswer}>{mistake.keyWord}</span> · {mistake.label}
-                  </li>
-                ))}
-              </ul>
-            ) : undefined
+            <>
+              <p className={styles.examScore}>
+                Puntaje de examen: <strong>{totalMarks} de {round.total * MARKS_PER_ITEM}</strong>
+              </p>
+              {round.mistakes.length > 0 && (
+                <ul className={styles.reviewList}>
+                  {round.mistakes.map((mistake) => (
+                    <li key={mistake.id} className={styles.reviewItem}>
+                      {mistake.gapped.replace("___", `«${mistake.answers[0]}»`)}
+                      <br />
+                      <span className={styles.reviewAnswer}>{mistake.keyWord}</span> · {mistake.label}
+                      {" · "}
+                      {marks[mistake.id]?.marks ?? 0} de {MARKS_PER_ITEM}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
           }
         />
       ) : (
@@ -265,11 +288,12 @@ export function KeyWordTransformation() {
               title={
                 round.wasCorrect
                   ? round.streak >= STREAK_BONUS_FROM
-                    ? `¡Correcto! Racha x${round.streak} (+15)`
-                    : "¡Correcto! (+10)"
-                  : `La respuesta era: ${question.answers[0]}`
+                    ? `¡Correcto! 2 de 2 · Racha x${round.streak} (+15)`
+                    : "¡Correcto! 2 de 2 (+10)"
+                  : `${current?.marks ?? 0} de ${MARKS_PER_ITEM} · La respuesta era: ${question.answers[0]}`
               }
             >
+              {current !== undefined && !round.wasCorrect && <HalvesBreakdown marking={current} />}
               <span className={styles.tag}>{question.label}</span>
               {question.explanation}
               {question.answers.length > 1 && (
@@ -312,6 +336,35 @@ function Gapped({ text }: { text: string }) {
       {before}
       <span className={styles.blank} aria-label="espacio en blanco" />
       {after}
+    </>
+  );
+}
+
+/**
+ * Qué mitad estuvo bien y cuál no. Es lo que convierte "1 de 2" en algo
+ * que se puede corregir: sabés si fallaste la estructura o el detalle.
+ */
+function HalvesBreakdown({ marking }: { marking: Marking }) {
+  const [first, second] = marking.closest;
+  // Las dos mitades bien y aun así 1 punto: sobra algo entre ellas. Sin
+  // decirlo, dos ✓ con "1 de 2" parece un error del corrector.
+  const extraWords = marking.firstHalf && marking.secondHalf;
+  return (
+    <>
+      {extraWords && (
+        <p className={styles.halvesNote}>
+          Las dos partes están, pero sobran palabras entre ellas: un error en cualquier parte cuesta
+          un punto.
+        </p>
+      )}
+      <p className={styles.halves}>
+        <span className={marking.firstHalf ? styles.halfOk : styles.halfBad}>
+          {marking.firstHalf ? "✓" : "✗"} {first}
+        </span>
+        <span className={marking.secondHalf ? styles.halfOk : styles.halfBad}>
+          {marking.secondHalf ? "✓" : "✗"} {second}
+        </span>
+      </p>
     </>
   );
 }

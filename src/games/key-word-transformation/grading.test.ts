@@ -3,6 +3,7 @@ import {
   countWords,
   findSubmissionIssue,
   isCorrect,
+  markAnswer,
   normalize,
   SUBMISSION_ISSUE,
 } from "./grading";
@@ -18,6 +19,10 @@ const question: KeyWordQuestion = {
   keyWord: "NEED",
   gapped: "You ___ a table.",
   answers: ["do not need to book", "need not book"],
+  halves: [
+    ["do not need", "to book"],
+    ["need not", "book"],
+  ],
   explanation: "",
 };
 
@@ -90,7 +95,12 @@ describe("findSubmissionIssue", () => {
   });
 
   it("reconoce la palabra clave escondida dentro de una contracción", () => {
-    const withNot: KeyWordQuestion = { ...question, keyWord: "NOT", answers: ["had not"] };
+    const withNot: KeyWordQuestion = {
+      ...question,
+      keyWord: "NOT",
+      answers: ["had not"],
+      halves: [["had", "not"]],
+    };
 
     expect(findSubmissionIssue(withNot, "hadn't studied")).toBeNull();
   });
@@ -117,5 +127,51 @@ describe("isCorrect", () => {
 
   it("rechaza una respuesta que no está en la lista", () => {
     expect(isCorrect(question, "need not to book")).toBe(false);
+  });
+});
+
+describe("isCorrect con contracciones", () => {
+  it("acepta la forma contraída de una respuesta guardada expandida", () => {
+    // Bug real: "don't need to book" se marcaba mal porque la respuesta
+    // guardada es "do not need to book". Para Cambridge son la misma.
+    expect(isCorrect(question, "don't need to book")).toBe(true);
+    expect(isCorrect(question, "needn't book")).toBe(true);
+  });
+});
+
+describe("markAnswer: dos puntos por ítem, como en el examen", () => {
+  it("da 2 a la respuesta exacta, con cualquiera de las válidas", () => {
+    expect(markAnswer(question, "do not need to book").marks).toBe(2);
+    expect(markAnswer(question, "need not book").marks).toBe(2);
+  });
+
+  it("da 1 si solo la primera mitad está bien", () => {
+    const marking = markAnswer(question, "do not need booking");
+    expect(marking.marks).toBe(1);
+    expect(marking.firstHalf).toBe(true);
+    expect(marking.secondHalf).toBe(false);
+  });
+
+  it("da 1 si solo la segunda mitad está bien", () => {
+    const marking = markAnswer(question, "did not need to book");
+    expect(marking.marks).toBe(1);
+    expect(marking.firstHalf).toBe(false);
+    expect(marking.secondHalf).toBe(true);
+  });
+
+  it("da 1, no 2, si las dos mitades están pero sobra algo en el medio", () => {
+    expect(markAnswer(question, "do not need really to book").marks).toBe(1);
+  });
+
+  it("da 0 si no acierta ninguna mitad", () => {
+    expect(markAnswer(question, "must not book it").marks).toBe(0);
+  });
+
+  it("devuelve la respuesta aceptada más cercana, para explicar qué faltó", () => {
+    expect(markAnswer(question, "need not booking").closest).toEqual(["need not", "book"]);
+  });
+
+  it("isCorrect solo es verdadero con 2 de 2: lo parcial vuelve en el repaso espaciado", () => {
+    expect(isCorrect(question, "do not need booking")).toBe(false);
   });
 });

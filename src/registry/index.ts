@@ -4,6 +4,7 @@ import { multipleChoiceClozeManifest } from "../games/multiple-choice-cloze/mani
 import { multipleChoiceClozeExamManifest } from "../games/multiple-choice-cloze-exam/manifest";
 import { openClozeExamManifest } from "../games/open-cloze-exam/manifest";
 import { wordFormationExamManifest } from "../games/word-formation-exam/manifest";
+import { keyWordTransformationExamManifest } from "../games/key-word-transformation-exam/manifest";
 import { keyWordTransformationManifest } from "../games/key-word-transformation/manifest";
 import { wordFormationManifest } from "../games/word-formation/manifest";
 
@@ -24,6 +25,7 @@ export const GAMES: readonly GameManifest[] = [
   multipleChoiceClozeExamManifest,
   openClozeExamManifest,
   wordFormationExamManifest,
+  keyWordTransformationExamManifest,
 ];
 
 /**

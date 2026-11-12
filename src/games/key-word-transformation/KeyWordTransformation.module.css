@@ -183,3 +183,40 @@
 .reviewLink:hover {
   opacity: 1;
 }
+
+/* ---------- Puntaje de examen: dos mitades por ítem ---------- */
+
+.examScore {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.halves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.halvesNote {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.halfOk,
+.halfBad {
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid currentColor;
+}
+
+.halfOk {
+  color: var(--color-success);
+}
+
+.halfBad {
+  color: var(--color-danger);
+  text-decoration: line-through;
+}
