@@ -22,12 +22,12 @@ Por separado: `npm run typecheck`, `npm run lint`, `npm test`,
 | Part 2 | Open Cloze | 45 |
 | Part 3 | Word Formation | 102 |
 | Part 4 | Key Word Transformation | 40 |
-| Part 1 · texto | Multiple-choice Cloze, formato examen | 8 textos · 88 huecos |
-| Part 2 · texto | Open Cloze, formato examen | 6 textos · 69 huecos |
-| Part 3 · texto | Word Formation, formato examen | 6 textos · 75 huecos |
+| Part 1 · texto | Multiple-choice Cloze, formato examen | 15 textos · 165 espacios |
+| Part 2 · texto | Open Cloze, formato examen | 15 textos · 171 espacios |
+| Part 3 · texto | Word Formation, formato examen | 15 textos · 176 espacios |
 | — | **Repaso** (`#/review`) | agrupa todas las explicaciones |
 
-228 ítems de pre-práctica · 20 textos de práctica intensiva · 182 tests.
+228 ítems de pre-práctica · 45 textos de práctica intensiva · 182 tests.
 
 ## Cómo funciona, en tres frases
 

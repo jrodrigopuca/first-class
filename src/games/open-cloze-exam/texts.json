@@ -484,5 +484,725 @@
         "explanation": "LIKE THIS = como esta. SUCH no puede ir en esa posición."
       }
     ]
+  },
+  {
+    "id": "night-owls",
+    "title": "Are you a morning person?",
+    "level": 2,
+    "paragraphs": [
+      "Some people jump out of bed {at} six o'clock full of energy, while others can barely open their eyes before ten. Scientists now believe that {this} difference is not simply a matter of discipline. It is largely determined by our genes, {which} explains why it is so hard to change.",
+      "For night owls, the modern working day can be a real struggle. Being forced to start early means that many {of} them are permanently tired. Some researchers argue that schools, in particular, should start later, {since} teenagers' body clocks shift during adolescence. Experiments {in} which classes began an hour later found that students not only slept more {but} also got better grades.",
+      "If you are a night owl, there are a few things you {can} do to make mornings easier. Exposure to bright light as {soon} as you wake up helps your body adjust. Avoiding screens late at night also helps, {although} it is easier said than done. Above {all}, experts say, stop feeling guilty: being a night owl is {neither} good nor bad."
+    ],
+    "gaps": [
+      {
+        "answers": ["at"],
+        "category": "preposition",
+        "label": "at + hora",
+        "explanation": "Con la hora exacta va AT: 'at six o'clock'."
+      },
+      {
+        "answers": ["this", "the", "that"],
+        "category": "article",
+        "label": "this / the / that + sustantivo ya mencionado",
+        "explanation": "La diferencia ya se describió en la frase anterior: THIS, THAT o THE la retoman."
+      },
+      {
+        "answers": ["which"],
+        "category": "pronoun",
+        "label": ", which (retoma la oración)",
+        "explanation": "', WHICH explains…' se refiere a toda la idea anterior. THAT no puede ir después de coma."
+      },
+      {
+        "answers": ["of"],
+        "category": "quantifier",
+        "label": "many of them",
+        "explanation": "Delante de un pronombre, MANY necesita OF: 'many of them'."
+      },
+      {
+        "answers": ["since", "as", "because"],
+        "category": "linker",
+        "label": "since / as / because",
+        "explanation": "Las tres introducen la causa: los relojes biológicos de los adolescentes cambian."
+      },
+      {
+        "answers": ["in"],
+        "category": "preposition",
+        "label": "in which",
+        "explanation": "'experiments IN which…' = experimentos en los que. La preposición va delante del relativo."
+      },
+      {
+        "answers": ["but"],
+        "category": "linker",
+        "label": "not only … but also",
+        "explanation": "NOT ONLY … BUT ALSO = no solo … sino también."
+      },
+      {
+        "answers": ["can", "could", "might", "should"],
+        "category": "auxiliary",
+        "label": "modal + infinitivo",
+        "explanation": "Un modal antes de 'do': CAN, COULD, MIGHT o SHOULD funcionan."
+      },
+      {
+        "answers": ["soon"],
+        "category": "fixed-phrase",
+        "label": "as soon as",
+        "explanation": "AS SOON AS = apenas, en cuanto."
+      },
+      {
+        "answers": ["although", "though"],
+        "category": "linker",
+        "label": "although + oración",
+        "explanation": "ALTHOUGH / THOUGH introduce la objeción: ayuda, pero cuesta hacerlo."
+      },
+      {
+        "answers": ["all"],
+        "category": "fixed-phrase",
+        "label": "above all",
+        "explanation": "ABOVE ALL = sobre todo. Es fija."
+      },
+      {
+        "answers": ["neither"],
+        "category": "quantifier",
+        "label": "neither … nor",
+        "explanation": "NEITHER … NOR = ni … ni. El 'nor' que viene después lo exige."
+      }
+    ]
+  },
+  {
+    "id": "volunteer-travel",
+    "title": "Holidays with a purpose",
+    "level": 3,
+    "paragraphs": [
+      "Every year, thousands of young travellers pay to spend {their} holidays working on volunteer projects abroad. Some build schools, others teach English, and {a} growing number work with animals. It sounds like the perfect combination of travel and doing good, but critics are not {so} sure.",
+      "The main problem, according {to} experts, is that many volunteers have no relevant skills. A teenager with no training is unlikely to build a wall as well {as} a local builder would. And {when} volunteers leave after just two weeks, the children they have been teaching are left {with} yet another goodbye.",
+      "This does not mean that volunteering is always a bad idea. The key is to choose projects {that} genuinely need outside help and to stay long {enough} to make a real difference. Above all, volunteers should ask {themselves} honestly whether the trip is for the benefit of others or for the sake {of} their own CV."
+    ],
+    "gaps": [
+      {
+        "answers": ["their"],
+        "category": "pronoun",
+        "label": "posesivo their",
+        "explanation": "THEIR = de ellos: las vacaciones de los viajeros."
+      },
+      {
+        "answers": ["a"],
+        "category": "article",
+        "label": "a growing number of",
+        "explanation": "'A growing number of + plural' = cada vez más. Lleva A, no THE."
+      },
+      {
+        "answers": ["so"],
+        "category": "fixed-phrase",
+        "label": "not so sure",
+        "explanation": "'not so sure' = no tan seguros. Expresa duda."
+      },
+      {
+        "answers": ["to"],
+        "category": "preposition",
+        "label": "according to",
+        "explanation": "ACCORDING TO = según. Es fija."
+      },
+      {
+        "answers": ["as"],
+        "category": "comparative",
+        "label": "as well as",
+        "explanation": "Comparación de igualdad con adverbio: 'as well AS a local builder'."
+      },
+      {
+        "answers": ["when", "once", "after", "as", "if"],
+        "category": "linker",
+        "label": "conector temporal",
+        "explanation": "WHEN, ONCE, AFTER, AS o IF introducen el momento en que se van."
+      },
+      {
+        "answers": ["with"],
+        "category": "preposition",
+        "label": "be left with",
+        "explanation": "'be left WITH something' = quedarse con algo (generalmente indeseado)."
+      },
+      {
+        "answers": ["that", "which"],
+        "category": "pronoun",
+        "label": "relativo that / which",
+        "explanation": "Relativo para cosas en una oración especificativa."
+      },
+      {
+        "answers": ["enough"],
+        "category": "quantifier",
+        "label": "adjetivo + enough",
+        "explanation": "ENOUGH va DESPUÉS del adjetivo o adverbio: 'long enough'."
+      },
+      {
+        "answers": ["themselves"],
+        "category": "pronoun",
+        "label": "reflexivo",
+        "explanation": "'ask THEMSELVES' = preguntarse a sí mismos. El sujeto y el objeto son la misma persona."
+      },
+      {
+        "answers": ["of"],
+        "category": "fixed-phrase",
+        "label": "for the sake of",
+        "explanation": "FOR THE SAKE OF = por el bien de, en beneficio de."
+      }
+    ]
+  },
+  {
+    "id": "talking-to-plants",
+    "title": "Do plants like conversation?",
+    "level": 1,
+    "paragraphs": [
+      "My grandmother talks to her plants every morning, and she is convinced {that} it helps them grow. For years I thought this was just {an} old wives' tale. But {there} is actually some scientific research on the subject.",
+      "In one experiment, scientists played recordings of people reading {to} tomato plants. The plants that 'listened' grew faster {than} those kept in silence. Interestingly, the plants responded best {of} all to female voices. Nobody knows exactly {why} this happens, but one theory is that plants react to the vibrations caused {by} sound.",
+      "Of course, not {all} scientists are convinced. Some argue that people who talk to their plants simply look after them {more} carefully. Whatever the reason, my grandmother's plants are healthier than {any} others I know. So I have started talking to mine, {too}."
+    ],
+    "gaps": [
+      {
+        "answers": ["that"],
+        "category": "pronoun",
+        "label": "convinced that",
+        "explanation": "'be convinced THAT + oración' = estar convencido de que."
+      },
+      {
+        "answers": ["an"],
+        "category": "article",
+        "label": "an + sonido vocálico",
+        "explanation": "'old' empieza con sonido vocálico: AN."
+      },
+      {
+        "answers": ["there"],
+        "category": "pronoun",
+        "label": "there is",
+        "explanation": "THERE IS = hay. 'It is some research' no tiene sentido."
+      },
+      {
+        "answers": ["to"],
+        "category": "preposition",
+        "label": "read to someone",
+        "explanation": "'read TO someone' = leerle a alguien."
+      },
+      {
+        "answers": ["than"],
+        "category": "comparative",
+        "label": "faster than",
+        "explanation": "Después del comparativo 'faster' viene THAN."
+      },
+      {
+        "answers": ["of"],
+        "category": "comparative",
+        "label": "best of all",
+        "explanation": "'best OF all' = mejor que nada, más que con cualquier otra cosa."
+      },
+      {
+        "answers": ["why", "how"],
+        "category": "pronoun",
+        "label": "why / how + oración",
+        "explanation": "Interrogativo indirecto: nadie sabe POR QUÉ (o CÓMO) pasa."
+      },
+      {
+        "answers": ["by"],
+        "category": "preposition",
+        "label": "caused by",
+        "explanation": "En pasiva, la causa va con BY: 'caused by sound'."
+      },
+      {
+        "answers": ["all", "many", "most"],
+        "category": "quantifier",
+        "label": "not all / many / most",
+        "explanation": "'not ALL / MANY / MOST scientists' = no todos (o no muchos) están convencidos."
+      },
+      {
+        "answers": ["more"],
+        "category": "comparative",
+        "label": "more + adverbio",
+        "explanation": "Comparativo de un adverbio largo: 'MORE carefully'."
+      },
+      {
+        "answers": ["any", "all"],
+        "category": "quantifier",
+        "label": "than any others",
+        "explanation": "'healthier than ANY others' = más sanas que cualquier otra. ALL también vale."
+      },
+      {
+        "answers": ["too"],
+        "category": "fixed-phrase",
+        "label": "too (al final)",
+        "explanation": "TOO al final, después de coma = también. ALSO no va en esa posición."
+      }
+    ]
+  },
+  {
+    "id": "first-job",
+    "title": "Lessons from a bakery",
+    "level": 2,
+    "paragraphs": [
+      "I got my first job when I was sixteen, working {in} a small bakery near my house. I had to be there {by} five o'clock in the morning, which was a real shock for someone {who} had never been an early riser.",
+      "The owner, Mr Patel, was strict {but} fair. He never raised his voice, {even} when I dropped a whole tray of cakes on the floor. Instead, he calmly showed me how to carry them and told me not to worry {about} it. I learnt more from him {than} from any teacher at school.",
+      "The money was not much, but it was the first time I had earned money of my {own}. Like most teenagers, I spent most {of} it on books and concert tickets. Looking back, I realise that job taught me {how} to work hard and take responsibility. I still pass the bakery from time {to} time, and Mr Patel always waves."
+    ],
+    "gaps": [
+      {
+        "answers": ["in", "at"],
+        "category": "preposition",
+        "label": "work in / at",
+        "explanation": "'work IN / AT a bakery': las dos son correctas."
+      },
+      {
+        "answers": ["by", "at", "before"],
+        "category": "preposition",
+        "label": "by + hora",
+        "explanation": "BY = a más tardar. AT (a esa hora) y BEFORE (antes) también funcionan."
+      },
+      {
+        "answers": ["who", "that"],
+        "category": "pronoun",
+        "label": "relativo para personas",
+        "explanation": "'someone WHO / THAT…' = alguien que…"
+      },
+      {
+        "answers": ["but", "yet"],
+        "category": "linker",
+        "label": "strict but fair",
+        "explanation": "BUT / YET unen dos adjetivos que contrastan."
+      },
+      {
+        "answers": ["even"],
+        "category": "linker",
+        "label": "even when",
+        "explanation": "EVEN WHEN = incluso cuando. Marca que era el caso más difícil."
+      },
+      {
+        "answers": ["about"],
+        "category": "preposition",
+        "label": "worry about",
+        "explanation": "'worry ABOUT something' = preocuparse por algo."
+      },
+      {
+        "answers": ["than"],
+        "category": "comparative",
+        "label": "more … than",
+        "explanation": "Después de 'more' viene THAN."
+      },
+      {
+        "answers": ["own"],
+        "category": "fixed-phrase",
+        "label": "of my own",
+        "explanation": "'of my OWN' = propio, mío."
+      },
+      {
+        "answers": ["of"],
+        "category": "quantifier",
+        "label": "most of it",
+        "explanation": "Delante de un pronombre, MOST necesita OF: 'most of it'."
+      },
+      {
+        "answers": ["how"],
+        "category": "pronoun",
+        "label": "teach someone how to",
+        "explanation": "'teach someone HOW to do something' = enseñarle a alguien a hacer algo."
+      },
+      {
+        "answers": ["to"],
+        "category": "fixed-phrase",
+        "label": "from time to time",
+        "explanation": "FROM TIME TO TIME = de vez en cuando."
+      }
+    ]
+  },
+  {
+    "id": "river-of-plastic",
+    "title": "Stopping plastic at the source",
+    "level": 3,
+    "paragraphs": [
+      "Every minute, the equivalent {of} a truckload of plastic ends up in the ocean. Most of this waste does not come from ships, {as} many people assume, but from rivers. Once in the sea, plastic {can} take hundreds of years to break down, and in the meantime it is swallowed {by} fish, birds and turtles.",
+      "A young engineer called Lena Visser became famous {for} her plan to clean the oceans with floating barriers. Many experts said it would never work, {but} after years of testing, her team has removed thousands of tonnes of rubbish. They now concentrate {on} rivers, because it is much easier to catch rubbish there {than} in the open ocean.",
+      "Still, Visser admits that technology alone will not solve the problem. 'Cleaning up is important, but {unless} we stop producing so much plastic, we will be cleaning forever,' she says. The real solution, she believes, lies {in} using less, and that is something {every} one of us can do."
+    ],
+    "gaps": [
+      {
+        "answers": ["of"],
+        "category": "preposition",
+        "label": "the equivalent of",
+        "explanation": "'the equivalent OF' = el equivalente a."
+      },
+      {
+        "answers": ["as"],
+        "category": "linker",
+        "label": "as many people assume",
+        "explanation": "AS = como. 'as many people assume' = como mucha gente cree."
+      },
+      {
+        "answers": ["can", "may", "might", "could"],
+        "category": "auxiliary",
+        "label": "modal de posibilidad",
+        "explanation": "CAN, MAY, MIGHT o COULD: puede tardar cientos de años."
+      },
+      {
+        "answers": ["by"],
+        "category": "preposition",
+        "label": "pasiva + by",
+        "explanation": "En pasiva, quien hace la acción va con BY."
+      },
+      {
+        "answers": ["for"],
+        "category": "preposition",
+        "label": "famous for",
+        "explanation": "'famous FOR something' = famoso por algo."
+      },
+      {
+        "answers": ["but", "yet"],
+        "category": "linker",
+        "label": "but / yet",
+        "explanation": "BUT / YET: decían que no funcionaría, y sin embargo funcionó."
+      },
+      {
+        "answers": ["on"],
+        "category": "preposition",
+        "label": "concentrate on",
+        "explanation": "'concentrate ON something' = concentrarse en algo."
+      },
+      {
+        "answers": ["than"],
+        "category": "comparative",
+        "label": "easier than",
+        "explanation": "Después del comparativo 'easier' viene THAN."
+      },
+      {
+        "answers": ["unless"],
+        "category": "linker",
+        "label": "unless",
+        "explanation": "UNLESS = a menos que. Con IF el sentido se invertiría."
+      },
+      {
+        "answers": ["in"],
+        "category": "preposition",
+        "label": "lie in",
+        "explanation": "'the solution lies IN …' = la solución está en…"
+      },
+      {
+        "answers": ["every", "each"],
+        "category": "quantifier",
+        "label": "every / each one of us",
+        "explanation": "'EVERY / EACH one of us' = cada uno de nosotros."
+      }
+    ]
+  },
+  {
+    "id": "board-games",
+    "title": "The return of board games",
+    "level": 2,
+    "paragraphs": [
+      "Not long ago, many people believed that video games {would} make board games disappear. Yet today, board game cafés are opening {all} over the world, and sales {have} been rising for more than a decade.",
+      "So why are people going back to cardboard and dice? According {to} the owners of these cafés, the answer is simple: people want to spend time together. Playing a board game means sitting {around} a table, talking and laughing, which is very different {from} staring at a screen alone. Board games also appeal to people {who} want a break from technology.",
+      "The games themselves have changed, {too}. Modern board games are often far more complex than the classics, and some take {as} long as four hours to finish. Despite {this}, they are surprisingly popular with families. For {many} people, a weekly games night has become a tradition {that} nobody wants to miss."
+    ],
+    "gaps": [
+      {
+        "answers": ["would", "could"],
+        "category": "auxiliary",
+        "label": "would en estilo indirecto",
+        "explanation": "WILL pasa a WOULD después de un verbo en pasado ('believed'). COULD también vale."
+      },
+      {
+        "answers": ["all"],
+        "category": "fixed-phrase",
+        "label": "all over the world",
+        "explanation": "ALL OVER THE WORLD = en todo el mundo."
+      },
+      {
+        "answers": ["have"],
+        "category": "auxiliary",
+        "label": "present perfect continuous",
+        "explanation": "'sales HAVE been rising' = vienen subiendo. Sujeto plural: HAVE."
+      },
+      {
+        "answers": ["to"],
+        "category": "preposition",
+        "label": "according to",
+        "explanation": "ACCORDING TO = según."
+      },
+      {
+        "answers": ["around", "round", "at"],
+        "category": "preposition",
+        "label": "sit around / at a table",
+        "explanation": "'sit AROUND / ROUND / AT a table': las tres son correctas."
+      },
+      {
+        "answers": ["from", "to"],
+        "category": "preposition",
+        "label": "different from / to",
+        "explanation": "'different FROM' es lo estándar; 'different TO' es común en inglés británico."
+      },
+      {
+        "answers": ["who", "that"],
+        "category": "pronoun",
+        "label": "relativo para personas",
+        "explanation": "'people WHO / THAT want…'."
+      },
+      {
+        "answers": ["too"],
+        "category": "fixed-phrase",
+        "label": "too (al final)",
+        "explanation": "TOO al final = también."
+      },
+      {
+        "answers": ["as"],
+        "category": "comparative",
+        "label": "as long as + cantidad",
+        "explanation": "'AS long as four hours' remarca que es mucho tiempo."
+      },
+      {
+        "answers": ["this", "that"],
+        "category": "pronoun",
+        "label": "despite this",
+        "explanation": "'Despite THIS / THAT' retoma lo anterior: aunque son complejos."
+      },
+      {
+        "answers": ["many", "some", "most"],
+        "category": "quantifier",
+        "label": "for many people",
+        "explanation": "MANY, SOME o MOST + plural."
+      },
+      {
+        "answers": ["that", "which"],
+        "category": "pronoun",
+        "label": "relativo that / which",
+        "explanation": "Relativo para cosas."
+      }
+    ]
+  },
+  {
+    "id": "honest-stranger",
+    "title": "An honest stranger",
+    "level": 1,
+    "paragraphs": [
+      "Last month I lost my wallet on the bus {on} my way to work. I didn't realise until I tried to pay {for} my coffee. I felt sick: it had all my cards in it, {as} well as some photos of my children that I could never replace.",
+      "I phoned the bus company, but nobody had handed {it} in, and I was sure I would never see it {again}. Then, two days later, a letter arrived. A man had found my wallet {under} a seat and had looked up my address {so} that he could return it.",
+      "He refused to accept any money, so I sent him a box {of} chocolates instead. Since then, I have tried to be a little {more} like him. It is easy to believe that nobody can be trusted these days, but there are still people {who} do the right thing, even {when} nobody is watching."
+    ],
+    "gaps": [
+      {
+        "answers": ["on"],
+        "category": "fixed-phrase",
+        "label": "on my way to",
+        "explanation": "'ON my way to …' = camino a…"
+      },
+      {
+        "answers": ["for"],
+        "category": "preposition",
+        "label": "pay for",
+        "explanation": "'pay FOR something' = pagar algo."
+      },
+      {
+        "answers": ["as"],
+        "category": "fixed-phrase",
+        "label": "as well as",
+        "explanation": "AS WELL AS = además de."
+      },
+      {
+        "answers": ["it"],
+        "category": "pronoun",
+        "label": "hand it in",
+        "explanation": "'hand IT in': el pronombre va entre el verbo y la partícula."
+      },
+      {
+        "answers": ["again"],
+        "category": "fixed-phrase",
+        "label": "never … again",
+        "explanation": "NEVER … AGAIN = nunca más."
+      },
+      {
+        "answers": ["under", "beneath", "on"],
+        "category": "preposition",
+        "label": "under / on a seat",
+        "explanation": "UNDER / BENEATH (debajo) u ON (encima del asiento)."
+      },
+      {
+        "answers": ["so"],
+        "category": "linker",
+        "label": "so that",
+        "explanation": "SO THAT + oración = para que."
+      },
+      {
+        "answers": ["of"],
+        "category": "preposition",
+        "label": "a box of",
+        "explanation": "'a box OF chocolates' = una caja de bombones."
+      },
+      {
+        "answers": ["more"],
+        "category": "comparative",
+        "label": "a little more",
+        "explanation": "'a little MORE like him' = un poco más parecido a él."
+      },
+      {
+        "answers": ["who", "that"],
+        "category": "pronoun",
+        "label": "relativo para personas",
+        "explanation": "'people WHO / THAT do…'."
+      },
+      {
+        "answers": ["when", "if"],
+        "category": "linker",
+        "label": "even when / if",
+        "explanation": "EVEN WHEN / EVEN IF = incluso cuando / aunque."
+      }
+    ]
+  },
+  {
+    "id": "city-cycling",
+    "title": "On two wheels",
+    "level": 2,
+    "paragraphs": [
+      "Twenty years ago, hardly anybody in our city cycled to work. The roads were dangerous, and {there} were no cycle lanes {at} all. Today, more than a quarter of commuters travel {by} bike.",
+      "The change did not happen overnight. It was the result {of} years of campaigning by local residents. At first, shop owners were strongly opposed {to} the plans, because they were afraid {that} fewer cars would mean fewer customers. In fact, the opposite happened: people on bikes stop more often {than} drivers do, and they spend more money {in} local shops.",
+      "There are still problems, {such} as stolen bikes and arguments between cyclists and pedestrians. But {few} people would want to go back to the old days. As one resident put {it}, the city finally feels like it belongs to people again."
+    ],
+    "gaps": [
+      {
+        "answers": ["there"],
+        "category": "pronoun",
+        "label": "there were",
+        "explanation": "THERE WERE = había (plural)."
+      },
+      {
+        "answers": ["at"],
+        "category": "fixed-phrase",
+        "label": "no … at all",
+        "explanation": "AT ALL refuerza la negación: no había ninguno."
+      },
+      {
+        "answers": ["by"],
+        "category": "preposition",
+        "label": "by bike",
+        "explanation": "Medio de transporte sin artículo: BY bike, BY car, BY train."
+      },
+      {
+        "answers": ["of"],
+        "category": "preposition",
+        "label": "the result of",
+        "explanation": "'the result OF' = el resultado de."
+      },
+      {
+        "answers": ["to"],
+        "category": "preposition",
+        "label": "opposed to",
+        "explanation": "'be opposed TO something' = oponerse a algo."
+      },
+      {
+        "answers": ["that"],
+        "category": "pronoun",
+        "label": "afraid that",
+        "explanation": "'afraid THAT + oración' = temer que."
+      },
+      {
+        "answers": ["than"],
+        "category": "comparative",
+        "label": "more often than",
+        "explanation": "Después de 'more often' viene THAN."
+      },
+      {
+        "answers": ["in", "at"],
+        "category": "preposition",
+        "label": "spend money in / at",
+        "explanation": "'spend money IN / AT local shops'."
+      },
+      {
+        "answers": ["such"],
+        "category": "fixed-phrase",
+        "label": "such as",
+        "explanation": "SUCH AS = como, por ejemplo."
+      },
+      {
+        "answers": ["few"],
+        "category": "quantifier",
+        "label": "few (casi ninguno)",
+        "explanation": "FEW sin A = pocos, casi nadie. El 'But' anuncia que casi nadie quiere volver atrás."
+      },
+      {
+        "answers": ["it"],
+        "category": "pronoun",
+        "label": "as someone put it",
+        "explanation": "'as X put IT' = como dijo X."
+      }
+    ]
+  },
+  {
+    "id": "memory-palace",
+    "title": "How memory champions do it",
+    "level": 3,
+    "paragraphs": [
+      "Memory champions can remember the order of a shuffled deck of cards in {less} than thirty seconds. You might think they were born with an extraordinary brain, but most of them insist {that} their memory was perfectly ordinary {until} they started training.",
+      "Most of {them} use a technique called the 'memory palace'. You imagine a building you know well, {such} as your home, and place each thing you want to remember {in} a different room. To recall the information, you simply walk {through} the building in your mind.",
+      "The technique works because our brains are much better {at} remembering places and images than lists of words. What is {more}, anyone can learn it. Studies have shown that ordinary people {who} practise for six weeks can double their scores, and that the effect lasts for months {after} the training ends."
+    ],
+    "gaps": [
+      {
+        "answers": ["less"],
+        "category": "comparative",
+        "label": "in less than",
+        "explanation": "'in LESS than thirty seconds' = en menos de treinta segundos."
+      },
+      {
+        "answers": ["that"],
+        "category": "pronoun",
+        "label": "insist that",
+        "explanation": "'insist THAT + oración' = insistir en que."
+      },
+      {
+        "answers": ["until", "till", "before"],
+        "category": "linker",
+        "label": "until",
+        "explanation": "UNTIL / TILL = hasta que. BEFORE también funciona."
+      },
+      {
+        "answers": ["them"],
+        "category": "pronoun",
+        "label": "most of them",
+        "explanation": "'Most of THEM' = la mayoría de ellos (los campeones)."
+      },
+      {
+        "answers": ["such"],
+        "category": "fixed-phrase",
+        "label": "such as",
+        "explanation": "SUCH AS = como, por ejemplo."
+      },
+      {
+        "answers": ["in"],
+        "category": "preposition",
+        "label": "in a room",
+        "explanation": "Dentro de un espacio cerrado: IN."
+      },
+      {
+        "answers": ["through", "around", "round"],
+        "category": "preposition",
+        "label": "walk through / around",
+        "explanation": "THROUGH (de punta a punta) o AROUND / ROUND (por el edificio)."
+      },
+      {
+        "answers": ["at"],
+        "category": "preposition",
+        "label": "good / better at",
+        "explanation": "'better AT + -ing' = mejor para hacer algo."
+      },
+      {
+        "answers": ["more"],
+        "category": "fixed-phrase",
+        "label": "what is more",
+        "explanation": "WHAT IS MORE = además, encima."
+      },
+      {
+        "answers": ["who", "that"],
+        "category": "pronoun",
+        "label": "relativo para personas",
+        "explanation": "'people WHO / THAT practise…'."
+      },
+      {
+        "answers": ["after"],
+        "category": "preposition",
+        "label": "after + oración",
+        "explanation": "AFTER = después de que. El efecto dura meses después del entrenamiento."
+      }
+    ]
   }
 ]
