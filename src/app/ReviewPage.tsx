@@ -18,6 +18,19 @@ interface ReviewPageProps {
   familyId?: string | undefined;
 }
 
+/**
+ * Identidad de un grupo en esta página: JUEGO + grupo.
+ *
+ * El id del grupo solo es único dentro de su juego: la pre-práctica del
+ * Part 1 y la del Part 2 tienen las dos un grupo "linker". Con el id solo,
+ * abrir los conectores de uno abría también los del otro en la pestaña
+ * Todo. No se arregla cambiando los ids de grupo: los links "Ver toda la
+ * familia" de cada juego ya los usan.
+ */
+function groupKey(gameId: string, familyId: string): string {
+  return `${gameId}:${familyId}`;
+}
+
 interface Row extends FamilyStats {
   gameId: string;
   gameTitle: string;
@@ -36,7 +49,10 @@ interface Row extends FamilyStats {
  * es legítimo — y es solo lectura.
  */
 export function ReviewPage({ gameId, familyId }: ReviewPageProps) {
-  const [openFamily, setOpenFamily] = useState<string | null>(familyId ?? null);
+  // La URL de una familia siempre trae su juego: /review/<gameId>/<familyId>.
+  const [openGroup, setOpenGroup] = useState<string | null>(
+    gameId !== undefined && familyId !== undefined ? groupKey(gameId, familyId) : null,
+  );
 
   // Solo la pre-práctica tiene repaso: la práctica intensiva no guarda
   // progreso y no habría nada que ordenar (decisión #17).
@@ -100,16 +116,17 @@ export function ReviewPage({ gameId, familyId }: ReviewPageProps) {
         <p className={styles.empty}>No hay material de repaso para este juego.</p>
       ) : (
         <div className={styles.groups}>
-          {rows.map((row) => (
-            <FamilyGroup
-              key={`${row.gameId}:${row.family.id}`}
-              row={row}
-              open={openFamily === row.family.id}
-              onToggle={() =>
-                setOpenFamily(openFamily === row.family.id ? null : row.family.id)
-              }
-            />
-          ))}
+          {rows.map((row) => {
+            const key = groupKey(row.gameId, row.family.id);
+            return (
+              <FamilyGroup
+                key={key}
+                row={row}
+                open={openGroup === key}
+                onToggle={() => setOpenGroup(openGroup === key ? null : key)}
+              />
+            );
+          })}
         </div>
       )}
     </>
