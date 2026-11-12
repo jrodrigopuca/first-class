@@ -27,6 +27,21 @@ export const EXAM_PART = {
 
 export type ExamPart = (typeof EXAM_PART)[keyof typeof EXAM_PART];
 
+/**
+ * En qué sección de la home aparece un juego.
+ *
+ * PRE_PRACTICE: frase por frase, con repetición espaciada. Para aprender
+ * cada punto.
+ * INTENSIVE: el formato del examen, texto completo. Para ensayar. Ver
+ * decisión #17.
+ */
+export const GAME_SECTION = {
+  PRE_PRACTICE: "pre-practice",
+  INTENSIVE: "intensive",
+} as const;
+
+export type GameSection = (typeof GAME_SECTION)[keyof typeof GAME_SECTION];
+
 export const DIFFICULTY = {
   EASY: 1,
   MEDIUM: 2,
@@ -88,6 +103,8 @@ export interface ReviewFamily {
 export interface GameManifest {
   id: string;
   part: ExamPart;
+  /** Obligatorio: un juego sin sección no aparecería en la home. */
+  section: GameSection;
   title: string;
   subtitle: string;
   description: string;

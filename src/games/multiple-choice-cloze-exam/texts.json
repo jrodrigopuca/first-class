@@ -1,0 +1,714 @@
+[
+  {
+    "id": "rooftop-bees",
+    "title": "Bees on the rooftops",
+    "level": 2,
+    "paragraphs": [
+      "Ten years ago, very few city dwellers would have {taken} up beekeeping as a hobby. Today, however, hives have become a familiar {sight} on the roofs of offices, hotels and even schools. The trend {gathered} pace when the public became increasingly {aware} of the dramatic fall in bee populations across Europe.",
+      "Keeping bees in a city {makes} more sense than you might think. Parks and private gardens offer a wide {range} of flowers, and because pesticides are rarely used there, urban bees are often healthier than their country cousins. In {fact}, some city hives produce more honey than those in the countryside.",
+      "Not everyone is enthusiastic, though. Some experts {warn} that too many hives could harm wild bees, which have to {compete} with honeybees for food. They argue that planting more flowers would do far more {good} than adding yet another hive. Beekeepers, for their {part}, insist that the two approaches are not in conflict."
+    ],
+    "gaps": [
+      {
+        "answer": "taken",
+        "distractors": ["got", "made", "put"],
+        "category": "phrasal",
+        "label": "take up (un hobby)",
+        "explanation": "TAKE UP = empezar una actividad o un hobby."
+      },
+      {
+        "answer": "sight",
+        "distractors": ["view", "look", "vision", "appearance", "range"],
+        "category": "collocation",
+        "label": "a familiar sight",
+        "explanation": "'a familiar/common sight' = algo que se ve seguido. VIEW es un paisaje o una opinión, no una cosa que se ve."
+      },
+      {
+        "answer": "gathered",
+        "distractors": ["earned", "won", "collected", "raised"],
+        "category": "collocation",
+        "label": "gather pace",
+        "explanation": "'gather pace' = acelerarse, tomar impulso. Es una colocación fija: no se dice COLLECT pace."
+      },
+      {
+        "answer": "aware",
+        "distractors": ["careful", "known", "alert", "sensible"],
+        "category": "preposition",
+        "label": "aware of",
+        "explanation": "'become aware OF something' = darse cuenta. ALERT va con TO, y SENSIBLE es un falso amigo: significa 'sensato'."
+      },
+      {
+        "answer": "makes",
+        "distractors": ["does", "gives", "has", "brings"],
+        "category": "collocation",
+        "label": "make sense",
+        "explanation": "'make sense' = tener sentido. Siempre con MAKE."
+      },
+      {
+        "answer": "range",
+        "distractors": ["scale", "scope", "field", "area"],
+        "category": "collocation",
+        "label": "a wide range of",
+        "explanation": "'a wide range of' = una gran variedad de. SCALE y SCOPE hablan de tamaño o alcance, no de variedad."
+      },
+      {
+        "answer": "fact",
+        "distractors": ["case", "point", "deed", "matter", "course"],
+        "category": "linker",
+        "label": "in fact",
+        "explanation": "IN FACT refuerza o amplía lo anterior con un dato. 'In case' significa 'por si acaso'."
+      },
+      {
+        "answer": "warn",
+        "distractors": ["threaten", "alert", "remind", "prevent"],
+        "category": "confusable",
+        "label": "warn that",
+        "explanation": "WARN THAT = advertir sobre un peligro. ALERT y REMIND necesitan un objeto ('alert someone', 'remind someone')."
+      },
+      {
+        "answer": "compete",
+        "distractors": ["contest", "race", "rival", "oppose"],
+        "category": "preposition",
+        "label": "compete with … for",
+        "explanation": "'compete WITH someone FOR something' = competir con alguien por algo. RIVAL es transitivo y no lleva WITH."
+      },
+      {
+        "answer": "good",
+        "distractors": ["benefit", "help", "profit", "use"],
+        "category": "collocation",
+        "label": "do (more) good",
+        "explanation": "'do good' = hacer bien. Va con DO, y es la frase opuesta a 'do harm'."
+      },
+      {
+        "answer": "part",
+        "distractors": ["side", "role", "share", "piece"],
+        "category": "linker",
+        "label": "for their part",
+        "explanation": "'for my/their part' = por su parte. Es fija: no se dice 'for their side' (sería 'on their side')."
+      }
+    ]
+  },
+  {
+    "id": "doing-nothing",
+    "title": "The art of doing nothing",
+    "level": 2,
+    "paragraphs": [
+      "Most of us feel guilty when we spend an afternoon doing nothing at {all}. We have been taught that every minute should be used productively, so we fill our free time with exercise classes, online courses and endless household {chores}. Yet a growing number of psychologists believe that this constant activity may be doing us more {harm} than good.",
+      "According to their research, the brain does not simply switch {off} when we stop concentrating. On the {contrary}, periods of rest allow it to process memories and make connections between ideas. This may explain why so many people come {up} with their best ideas in the shower or on a long walk.",
+      "Of {course}, doing nothing is harder than it sounds. Many people find that, within minutes, they {reach} for their phones. The experts' advice is to start small: ten minutes a day without music or screens can {make} a real difference. It may feel strange at {first}, but most people soon begin to look {forward} to these quiet moments."
+    ],
+    "gaps": [
+      {
+        "answer": "all",
+        "distractors": ["whole", "every", "total"],
+        "category": "collocation",
+        "label": "nothing at all",
+        "explanation": "'nothing at all' = absolutamente nada. AT ALL refuerza una negación."
+      },
+      {
+        "answer": "chores",
+        "distractors": ["works", "labours", "efforts", "careers"],
+        "category": "confusable",
+        "label": "household chores",
+        "explanation": "CHORES son las tareas de la casa. WORK es incontable en este sentido: 'works' es otra cosa (obras, fábrica)."
+      },
+      {
+        "answer": "harm",
+        "distractors": ["hurt", "injury", "pain", "loss"],
+        "category": "collocation",
+        "label": "do more harm than good",
+        "explanation": "'do more harm than good' = hacer más mal que bien. Es una expresión fija con HARM."
+      },
+      {
+        "answer": "off",
+        "distractors": ["out", "down", "away", "back"],
+        "category": "phrasal",
+        "label": "switch off",
+        "explanation": "SWITCH OFF = apagarse; también, desconectarse mentalmente."
+      },
+      {
+        "answer": "contrary",
+        "distractors": ["opposite", "reverse", "contrast", "inverse"],
+        "category": "linker",
+        "label": "on the contrary",
+        "explanation": "ON THE CONTRARY niega lo anterior y dice lo opuesto. Con CONTRAST la frase es 'in contrast', no 'on the'."
+      },
+      {
+        "answer": "up",
+        "distractors": ["across", "over", "round", "along"],
+        "category": "phrasal",
+        "label": "come up with",
+        "explanation": "COME UP WITH = ocurrírsele algo (una idea, un plan). COME ACROSS = encontrarse algo por casualidad."
+      },
+      {
+        "answer": "course",
+        "distractors": ["way", "matter", "sure", "deed", "fact"],
+        "category": "linker",
+        "label": "of course",
+        "explanation": "OF COURSE = por supuesto. Ninguna otra palabra entra en 'of ___' con ese sentido."
+      },
+      {
+        "answer": "reach",
+        "distractors": ["arrive", "achieve", "catch", "attain"],
+        "category": "confusable",
+        "label": "reach for",
+        "explanation": "REACH FOR something = estirar la mano para agarrar algo. ACHIEVE y ATTAIN son 'lograr' y no llevan FOR."
+      },
+      {
+        "answer": "make",
+        "distractors": ["do", "take", "give", "put", "form"],
+        "category": "collocation",
+        "label": "make a difference",
+        "explanation": "'make a difference' = marcar una diferencia. Siempre con MAKE."
+      },
+      {
+        "answer": "first",
+        "distractors": ["start", "beginning", "early", "front"],
+        "category": "linker",
+        "label": "at first",
+        "explanation": "AT FIRST = al principio, para contrastar con lo que pasa después. 'At the beginning' necesita THE."
+      },
+      {
+        "answer": "forward",
+        "distractors": ["after", "up", "out", "onward"],
+        "category": "phrasal",
+        "label": "look forward to",
+        "explanation": "LOOK FORWARD TO = esperar algo con ganas. LOOK AFTER es cuidar; LOOK UP TO, admirar."
+      }
+    ]
+  },
+  {
+    "id": "second-hand-clothes",
+    "title": "A second life for old clothes",
+    "level": 2,
+    "paragraphs": [
+      "Shoppers are finally starting to {pay} attention to the environmental cost of fashion, an industry that is {responsible} for a large share of global carbon emissions. Rather than buying new clothes every season, more and more people are {opting} for second-hand shops and online platforms where they can buy and sell used items. What was once seen as a sign of poverty has become something to be proud {of}.",
+      "Repairing clothes is also {making} a comeback. In many cities, volunteers run free workshops where people can learn to fix a torn jacket {instead} of throwing it away. Organisers say that participants {take} enormous pride in wearing something they have repaired with their own hands.",
+      "Of course, second-hand shopping is not a perfect solution. Critics {point} out that some people simply buy more because the prices are so {low}. Even so, most environmental experts {agree} that wearing what already exists is better than producing more. As one designer {put} it, the greenest garment is the one already in your wardrobe."
+    ],
+    "gaps": [
+      {
+        "answer": "pay",
+        "distractors": ["give", "make", "take"],
+        "category": "collocation",
+        "label": "pay attention",
+        "explanation": "'pay attention to' = prestar atención. Siempre con PAY."
+      },
+      {
+        "answer": "responsible",
+        "distractors": ["guilty", "faulty", "accused"],
+        "category": "preposition",
+        "label": "responsible for",
+        "explanation": "'be responsible FOR' = ser responsable de algo. GUILTY y ACCUSED van con OF."
+      },
+      {
+        "answer": "opting",
+        "distractors": ["choosing", "selecting", "preferring", "picking"],
+        "category": "preposition",
+        "label": "opt for",
+        "explanation": "OPT FOR = optar por. CHOOSE y SELECT son transitivos: no llevan FOR delante del objeto."
+      },
+      {
+        "answer": "of",
+        "distractors": ["for", "with", "at", "by", "on"],
+        "category": "preposition",
+        "label": "proud of",
+        "explanation": "'proud OF something' = orgulloso de algo. Es la preposición dependiente de PROUD."
+      },
+      {
+        "answer": "making",
+        "distractors": ["doing", "taking", "having", "getting"],
+        "category": "collocation",
+        "label": "make a comeback",
+        "explanation": "'make a comeback' = volver a estar de moda o en uso. Siempre con MAKE."
+      },
+      {
+        "answer": "instead",
+        "distractors": ["rather", "apart", "despite", "regardless"],
+        "category": "linker",
+        "label": "instead of",
+        "explanation": "INSTEAD OF + -ing = en lugar de. RATHER va con THAN; DESPITE no lleva OF."
+      },
+      {
+        "answer": "take",
+        "distractors": ["make", "give", "bring", "put"],
+        "category": "collocation",
+        "label": "take pride in",
+        "explanation": "'take pride in something' = enorgullecerse de algo. La colocación es con TAKE."
+      },
+      {
+        "answer": "point",
+        "distractors": ["show", "make", "bring", "mark", "cut"],
+        "category": "phrasal",
+        "label": "point out",
+        "explanation": "POINT OUT = señalar, hacer notar. 'Show out' y 'mark out' no tienen ese sentido."
+      },
+      {
+        "answer": "low",
+        "distractors": ["small", "short", "little"],
+        "category": "collocation",
+        "label": "low prices",
+        "explanation": "Los precios son HIGH o LOW. 'Cheap' se usa para el producto, no para el precio."
+      },
+      {
+        "answer": "agree",
+        "distractors": ["approve", "consent", "permit", "suit"],
+        "category": "confusable",
+        "label": "agree that",
+        "explanation": "AGREE THAT + oración = coincidir en algo. APPROVE va con OF, y CONSENT con TO."
+      },
+      {
+        "answer": "put",
+        "distractors": ["told", "made", "set", "laid"],
+        "category": "collocation",
+        "label": "as someone put it",
+        "explanation": "'as X put it' = como dijo X. Es una fórmula fija para citar a alguien."
+      }
+    ]
+  },
+  {
+    "id": "driving-at-sixty",
+    "title": "Never too late",
+    "level": 2,
+    "paragraphs": [
+      "When my grandmother announced that she was going to learn to drive at the {age} of sixty-two, the whole family thought she was joking. She had always {relied} on my grandfather to take her everywhere, but after he became ill, she realised she had no choice.",
+      "Her first lessons did not go {well}. She practised every evening in an empty car park, {despite} feeling terribly nervous, but she {kept} confusing the brake with the accelerator, and once she drove straight into a hedge. Most people would have given {up} at that point, but she refused to let one bad experience put her {off}.",
+      "Six months and thirty lessons later, she {passed} her test at the first {attempt}. The examiner told her that she was one of the most careful drivers he had ever {come} across. Now she drives herself to her dance class every week and, as she likes to {remind} us, she has never had a single accident."
+    ],
+    "gaps": [
+      {
+        "answer": "age",
+        "distractors": ["time", "year", "point"],
+        "category": "collocation",
+        "label": "at the age of",
+        "explanation": "'at the age of + número' = a los … años."
+      },
+      {
+        "answer": "relied",
+        "distractors": ["trusted", "believed", "hoped", "waited"],
+        "category": "preposition",
+        "label": "rely on",
+        "explanation": "RELY ON = depender de alguien. TRUST no lleva preposición; BELIEVE IN es creer en."
+      },
+      {
+        "answer": "well",
+        "distractors": ["good", "nice", "kind", "pleasant"],
+        "category": "confusable",
+        "label": "go well",
+        "explanation": "Después de GO hace falta un adverbio: 'go well'. GOOD es un adjetivo."
+      },
+      {
+        "answer": "despite",
+        "distractors": ["however", "even", "nevertheless", "unless"],
+        "category": "linker",
+        "label": "despite + -ing",
+        "explanation": "DESPITE + -ing o + sustantivo = a pesar de. HOWEVER y NEVERTHELESS conectan oraciones; no van delante de un -ing."
+      },
+      {
+        "answer": "kept",
+        "distractors": ["stayed", "remained", "held", "carried"],
+        "category": "confusable",
+        "label": "keep + -ing",
+        "explanation": "KEEP + -ing = seguir haciendo algo una y otra vez. STAY y REMAIN van con adjetivos, no con -ing."
+      },
+      {
+        "answer": "up",
+        "distractors": ["away", "over", "off", "back"],
+        "category": "phrasal",
+        "label": "give up",
+        "explanation": "GIVE UP = rendirse, abandonar. GIVE AWAY es regalar; GIVE BACK, devolver."
+      },
+      {
+        "answer": "off",
+        "distractors": ["out", "away", "back", "aside"],
+        "category": "phrasal",
+        "label": "put someone off",
+        "explanation": "PUT SOMEONE OFF = quitarle las ganas a alguien. PUT AWAY es guardar; PUT BACK, devolver a su lugar."
+      },
+      {
+        "answer": "passed",
+        "distractors": ["succeeded", "approved", "won", "achieved"],
+        "category": "confusable",
+        "label": "pass a test",
+        "explanation": "Un examen se PASS. APPROVE es falso amigo: significa 'aprobar' una propuesta, no un examen. SUCCEED va con IN."
+      },
+      {
+        "answer": "attempt",
+        "distractors": ["intent", "effort", "trial", "essay"],
+        "category": "collocation",
+        "label": "at the first attempt",
+        "explanation": "'at the first attempt' = al primer intento. INTENT es intención; EFFORT, esfuerzo."
+      },
+      {
+        "answer": "come",
+        "distractors": ["got", "met", "seen", "been"],
+        "category": "phrasal",
+        "label": "come across",
+        "explanation": "COME ACROSS someone = encontrarse con alguien, conocer a alguien. 'Meet' no lleva ACROSS."
+      },
+      {
+        "answer": "remind",
+        "distractors": ["remember", "recall", "memorise", "recognise"],
+        "category": "confusable",
+        "label": "remind vs remember",
+        "explanation": "REMIND SOMEONE = hacerle acordar algo a otro. REMEMBER es acordarse uno mismo y no lleva a otra persona como objeto."
+      }
+    ]
+  },
+  {
+    "id": "disaster-films",
+    "title": "Why we love disaster films",
+    "level": 3,
+    "paragraphs": [
+      "Earthquakes, alien invasions, giant waves: disaster films have been popular for decades, and they show no {sign} of going out of fashion. Critics often {dismiss} them as noisy and predictable, yet many of them {make} a fortune at the box office.",
+      "Psychologists believe that the appeal {lies} in the safety of the experience. We can {face} our worst fears from the comfort of a cinema seat, knowing that nothing can actually harm us. Experts {refer} to this as 'safe fear'. In this {sense}, watching a disaster film is a kind of rehearsal for real life.",
+      "These films also {tend} to celebrate ordinary people. The heroes are rarely superheroes but teachers, nurses and bus drivers who {rise} to the challenge, and they {remind} us of what really matters. In the {end}, the family is reunited and the city is rebuilt, which is perhaps the most comforting message of all."
+    ],
+    "gaps": [
+      {
+        "answer": "sign",
+        "distractors": ["signal", "mark", "symptom"],
+        "category": "collocation",
+        "label": "show no sign of",
+        "explanation": "'show no sign of + -ing' = no dar señales de algo."
+      },
+      {
+        "answer": "dismiss",
+        "distractors": ["refuse", "deny", "ignore"],
+        "category": "confusable",
+        "label": "dismiss as",
+        "explanation": "DISMISS something AS … = descartarlo por considerarlo algo. Solo DISMISS admite la estructura con AS."
+      },
+      {
+        "answer": "make",
+        "distractors": ["do", "take", "bring", "give"],
+        "category": "collocation",
+        "label": "make a fortune",
+        "explanation": "'make a fortune' = hacer una fortuna. Con plata, la colocación es MAKE: make money, make a profit."
+      },
+      {
+        "answer": "lies",
+        "distractors": ["stays", "keeps", "holds", "puts", "comes"],
+        "category": "collocation",
+        "label": "lie in",
+        "explanation": "'the appeal/problem lies IN …' = el atractivo está en… Es el verbo LIE (estar, residir)."
+      },
+      {
+        "answer": "face",
+        "distractors": ["front", "oppose", "cross"],
+        "category": "confusable",
+        "label": "face your fears",
+        "explanation": "FACE a fear = enfrentar un miedo. FRONT no es verbo en este sentido; OPPOSE es oponerse a una idea."
+      },
+      {
+        "answer": "refer",
+        "distractors": ["call", "name", "mention", "relate"],
+        "category": "preposition",
+        "label": "refer to … as",
+        "explanation": "REFER TO something AS … = llamar a algo de cierta forma. CALL y NAME no llevan TO: 'call this safe fear'."
+      },
+      {
+        "answer": "sense",
+        "distractors": ["meaning", "feeling", "idea"],
+        "category": "linker",
+        "label": "in this sense",
+        "explanation": "'in this sense' = en este sentido. Es fija: no se dice 'in this meaning'."
+      },
+      {
+        "answer": "tend",
+        "distractors": ["incline", "lean", "intend"],
+        "category": "confusable",
+        "label": "tend to",
+        "explanation": "TEND TO + infinitivo = soler, tender a. INTEND es tener intención, y una película no tiene intenciones."
+      },
+      {
+        "answer": "rise",
+        "distractors": ["raise", "arise", "grow", "lift"],
+        "category": "confusable",
+        "label": "rise to the challenge",
+        "explanation": "'rise to the challenge' = estar a la altura. RISE es intransitivo; RAISE necesita objeto: 'raise your hand'."
+      },
+      {
+        "answer": "remind",
+        "distractors": ["remember", "recall", "memorise"],
+        "category": "confusable",
+        "label": "remind someone of",
+        "explanation": "REMIND SOMEONE OF something = hacerle recordar algo a alguien. REMEMBER no lleva a otra persona como objeto."
+      },
+      {
+        "answer": "end",
+        "distractors": ["finish", "last", "final", "close", "first"],
+        "category": "linker",
+        "label": "in the end",
+        "explanation": "IN THE END = al final, finalmente. 'At last' existe, pero sin THE y con otro sentido: por fin."
+      }
+    ]
+  },
+  {
+    "id": "four-day-week",
+    "title": "Thank goodness it's Thursday",
+    "level": 3,
+    "paragraphs": [
+      "When a software company in Glasgow decided to {give} its staff every Friday off, many people expected productivity to fall. Instead, the opposite happened: output rose, fewer people called in sick and the company found it far easier to {attract} new employees.",
+      "The idea is not new, but it has {gained} popularity since the pandemic, when millions of people were forced to rethink the {way} they work. Supporters argue that when staff know they only have four days, they {cut} down on pointless meetings and concentrate on what really matters. They also {point} to the benefits for family life and mental health.",
+      "However, the model does not {suit} every business. Hospitals and shops cannot simply close for an extra day, so they would need to {take} on more staff, which could {prove} expensive. The workers themselves, {on} the other hand, are almost always in favour, and the number of companies {carrying} out trials is growing every year."
+    ],
+    "gaps": [
+      {
+        "answer": "give",
+        "distractors": ["let", "allow", "permit"],
+        "category": "collocation",
+        "label": "give someone a day off",
+        "explanation": "'give someone a day off' = darle a alguien el día libre. LET y ALLOW necesitan otro verbo: 'let them have'."
+      },
+      {
+        "answer": "attract",
+        "distractors": ["pull", "catch", "appeal"],
+        "category": "confusable",
+        "label": "attract employees",
+        "explanation": "ATTRACT = atraer, con objeto directo. APPEAL necesita TO: 'appeal to new employees'."
+      },
+      {
+        "answer": "gained",
+        "distractors": ["earned", "raised", "grown", "increased"],
+        "category": "collocation",
+        "label": "gain popularity",
+        "explanation": "'gain popularity' = ganar popularidad. Con GROW sería 'grown IN popularity'."
+      },
+      {
+        "answer": "way",
+        "distractors": ["manner", "mode", "method", "sense"],
+        "category": "confusable",
+        "label": "the way they work",
+        "explanation": "'the way + oración' = la forma en que… Solo WAY entra sin preposición; con MANNER sería 'the manner in which'."
+      },
+      {
+        "answer": "cut",
+        "distractors": ["put", "take", "break"],
+        "category": "phrasal",
+        "label": "cut down on",
+        "explanation": "CUT DOWN ON something = reducir algo. PUT DOWN, TAKE DOWN y BREAK DOWN no llevan ON."
+      },
+      {
+        "answer": "point",
+        "distractors": ["show", "signal", "mark"],
+        "category": "preposition",
+        "label": "point to",
+        "explanation": "POINT TO something = señalar algo como prueba o argumento. SHOW no lleva TO."
+      },
+      {
+        "answer": "suit",
+        "distractors": ["match", "agree", "adapt"],
+        "category": "confusable",
+        "label": "suit",
+        "explanation": "SUIT = convenirle a alguien, ser adecuado para él. MATCH es combinar con algo; AGREE va con WITH."
+      },
+      {
+        "answer": "take",
+        "distractors": ["get", "put", "bring", "hold"],
+        "category": "phrasal",
+        "label": "take on staff",
+        "explanation": "TAKE ON = contratar gente. PUT ON es ponerse ropa; BRING ON, provocar."
+      },
+      {
+        "answer": "prove",
+        "distractors": ["result", "show", "end"],
+        "category": "confusable",
+        "label": "prove + adjetivo",
+        "explanation": "PROVE + adjetivo = resultar ser. RESULT va con IN: 'result in high costs'."
+      },
+      {
+        "answer": "on",
+        "distractors": ["in", "at", "by", "of"],
+        "category": "linker",
+        "label": "on the other hand",
+        "explanation": "ON THE OTHER HAND = por otro lado. La preposición es siempre ON."
+      },
+      {
+        "answer": "carrying",
+        "distractors": ["doing", "making", "taking", "putting"],
+        "category": "phrasal",
+        "label": "carry out",
+        "explanation": "CARRY OUT = llevar a cabo (una prueba, un estudio, un experimento)."
+      }
+    ]
+  },
+  {
+    "id": "car-free-village",
+    "title": "The village without cars",
+    "level": 1,
+    "paragraphs": [
+      "Brenno, a small village at the {foot} of a mountain in the Swiss Alps, has banned petrol cars {since} the 1970s. Today, visitors {arrive} by train and then walk, cycle or take one of the small electric taxis that move silently through the streets. Originally, the ban was introduced to {protect} the clean mountain air.",
+      "In fact, many tourists choose Brenno precisely {because} of its car-free streets, which {make} it feel like a place from another century. Children play safely outside, and the only noise at night {comes} from the river. Many visitors say it takes a day or two to get {used} to the silence.",
+      "Life without cars has its difficulties, of course. Residents who need to travel {further} afield have to keep their vehicles in a car park outside the village. Nevertheless, when locals were asked in a recent survey whether they would {bring} back cars, almost nobody was {keen} on the idea."
+    ],
+    "gaps": [
+      {
+        "answer": "foot",
+        "distractors": ["toe", "heel", "root"],
+        "category": "collocation",
+        "label": "at the foot of",
+        "explanation": "'at the foot of a mountain' = al pie de una montaña."
+      },
+      {
+        "answer": "since",
+        "distractors": ["for", "during", "before"],
+        "category": "preposition",
+        "label": "since + momento",
+        "explanation": "Con present perfect: SINCE + un momento ('since the 1970s'), FOR + un período ('for fifty years')."
+      },
+      {
+        "answer": "arrive",
+        "distractors": ["reach", "approach", "attain"],
+        "category": "confusable",
+        "label": "arrive vs reach",
+        "explanation": "ARRIVE es intransitivo: 'arrive by train'. REACH necesita objeto: 'reach the village'."
+      },
+      {
+        "answer": "protect",
+        "distractors": ["defend", "cover", "shelter"],
+        "category": "confusable",
+        "label": "protect",
+        "explanation": "PROTECT = cuidar algo para que no se dañe. DEFEND es contra un ataque; COVER, tapar."
+      },
+      {
+        "answer": "because",
+        "distractors": ["due", "owing", "thanks", "since"],
+        "category": "linker",
+        "label": "because of",
+        "explanation": "BECAUSE OF + sustantivo. DUE y OWING van con TO; THANKS, también: 'thanks to'."
+      },
+      {
+        "answer": "make",
+        "distractors": ["do", "cause", "give"],
+        "category": "confusable",
+        "label": "make + objeto + infinitivo",
+        "explanation": "MAKE something FEEL/LOOK = hacer que algo parezca. CAUSE necesita TO: 'cause it to feel'."
+      },
+      {
+        "answer": "comes",
+        "distractors": ["arrives", "goes", "gets", "takes"],
+        "category": "preposition",
+        "label": "come from",
+        "explanation": "COME FROM = venir de, provenir de. ARRIVE FROM habla de personas que llegan de un viaje."
+      },
+      {
+        "answer": "used",
+        "distractors": ["usual", "familiar", "habitual"],
+        "category": "confusable",
+        "label": "get used to",
+        "explanation": "GET USED TO something = acostumbrarse a algo. FAMILIAR va con WITH."
+      },
+      {
+        "answer": "further",
+        "distractors": ["longer", "wider", "more"],
+        "category": "collocation",
+        "label": "further afield",
+        "explanation": "'further afield' = más lejos, fuera del entorno cercano. Es fija."
+      },
+      {
+        "answer": "bring",
+        "distractors": ["give", "carry", "set"],
+        "category": "phrasal",
+        "label": "bring back",
+        "explanation": "BRING BACK = volver a traer algo, reinstaurarlo. GIVE BACK es devolver algo a su dueño."
+      },
+      {
+        "answer": "keen",
+        "distractors": ["fond", "interested", "eager", "excited"],
+        "category": "preposition",
+        "label": "keen on",
+        "explanation": "'keen ON something' = entusiasmado con algo. FOND va con OF; INTERESTED, con IN; EXCITED, con ABOUT."
+      }
+    ]
+  },
+  {
+    "id": "first-impressions",
+    "title": "You never get a second chance",
+    "level": 3,
+    "paragraphs": [
+      "It {takes} us less than a second to {form} an opinion of someone we have just met. In one well-known study, volunteers were shown photographs of strangers for just a tenth of a second. When they were given more time, they rarely {changed} their minds.",
+      "Once we have {made} up our minds about a person, we tend to notice only the information that supports our view and pay {little} attention to anything else. Psychologists call this 'confirmation bias', and it explains why it is so hard to {recover} from a bad first meeting.",
+      "There is good news, {however}. First impressions are not completely {out} of our control. Smiling, making eye {contact} and using someone's name all make a positive difference. Most importantly, experts {urge} us to give others a second chance, because, after {all}, they might be judging us just as quickly."
+    ],
+    "gaps": [
+      {
+        "answer": "takes",
+        "distractors": ["needs", "lasts", "spends", "makes"],
+        "category": "collocation",
+        "label": "it takes (someone) + tiempo",
+        "explanation": "'it takes someone + tiempo + to do' = a alguien le lleva tanto tiempo hacer algo."
+      },
+      {
+        "answer": "form",
+        "distractors": ["do", "build", "create"],
+        "category": "collocation",
+        "label": "form an opinion",
+        "explanation": "'form an opinion' = formarse una opinión. Es la colocación estándar."
+      },
+      {
+        "answer": "changed",
+        "distractors": ["moved", "turned", "switched", "exchanged"],
+        "category": "collocation",
+        "label": "change your mind",
+        "explanation": "'change your mind' = cambiar de opinión. Es fija: no admite otro verbo."
+      },
+      {
+        "answer": "made",
+        "distractors": ["put", "taken", "done", "set"],
+        "category": "collocation",
+        "label": "make up your mind",
+        "explanation": "'make up your mind' = decidirse. Siempre con MAKE."
+      },
+      {
+        "answer": "little",
+        "distractors": ["few", "small", "short", "low"],
+        "category": "confusable",
+        "label": "little vs few",
+        "explanation": "ATTENTION es incontable: va con LITTLE. FEW es para contables ('few people')."
+      },
+      {
+        "answer": "recover",
+        "distractors": ["cure", "restore", "revive", "repair"],
+        "category": "confusable",
+        "label": "recover from",
+        "explanation": "RECOVER FROM = recuperarse de algo. CURE, RESTORE y REPAIR necesitan objeto y no llevan FROM."
+      },
+      {
+        "answer": "however",
+        "distractors": ["although", "despite", "whereas", "unless"],
+        "category": "linker",
+        "label": "however (al final)",
+        "explanation": "HOWEVER puede cerrar la oración, entre comas. ALTHOUGH, WHEREAS y UNLESS necesitan una oración después."
+      },
+      {
+        "answer": "out",
+        "distractors": ["off", "over", "apart", "away"],
+        "category": "preposition",
+        "label": "out of control",
+        "explanation": "'out of (our) control' = fuera de nuestro control. Es fija."
+      },
+      {
+        "answer": "contact",
+        "distractors": ["touch", "sight", "look", "view"],
+        "category": "collocation",
+        "label": "make eye contact",
+        "explanation": "'make eye contact' = mirar a los ojos. Es fija."
+      },
+      {
+        "answer": "urge",
+        "distractors": ["suggest", "propose", "insist", "demand", "face"],
+        "category": "confusable",
+        "label": "urge someone to",
+        "explanation": "URGE SOMEONE TO do = instar a alguien a algo. SUGGEST nunca lleva 'someone to': se dice 'suggest giving' o 'suggest that we give'."
+      },
+      {
+        "answer": "all",
+        "distractors": ["last", "least", "most"],
+        "category": "linker",
+        "label": "after all",
+        "explanation": "AFTER ALL = al fin y al cabo; introduce una razón que hay que tener en cuenta."
+      }
+    ]
+  }
+]

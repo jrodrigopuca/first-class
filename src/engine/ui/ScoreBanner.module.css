@@ -1,0 +1,19 @@
+.banner {
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-accent-soft);
+  outline: none;
+}
+
+.score {
+  margin: 0;
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-accent-text);
+}
+
+.message {
+  margin: var(--space-1) 0 0;
+  color: var(--color-text);
+}

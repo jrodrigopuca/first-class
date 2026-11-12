@@ -1,0 +1,488 @@
+[
+  {
+    "id": "walk-across-america",
+    "title": "Coast to coast on foot",
+    "level": 2,
+    "paragraphs": [
+      "In 2015, a retired teacher called Tom Hale set {off} from New York with nothing {but} a backpack and a pair of comfortable boots. His plan was to walk all the way to San Francisco, a journey {of} more than 4,000 kilometres. Hardly {anyone} believed he would make it.",
+      "The first weeks were the hardest. Tom had never walked {such} long distances before, and his feet were soon covered {in} blisters. But he grew stronger, and strangers began to recognise him thanks {to} the photos he posted online. One family in Kansas even invited him to stay {for} a whole week.",
+      "Tom finally reached San Francisco eight months later, {having} raised over $50,000 for a children's hospital. When journalists asked him about the hardest part, he said it was not the walking {itself} but the loneliness. 'I have never felt as tired, or as happy, {as} I did on that last day,' he said. He is now planning to walk across Australia, although his wife says he will have to do it {without} her."
+    ],
+    "gaps": [
+      {
+        "answers": ["off", "out"],
+        "category": "fixed-phrase",
+        "label": "set off / set out",
+        "explanation": "SET OFF y SET OUT = salir, emprender un viaje."
+      },
+      {
+        "answers": ["but", "except"],
+        "category": "preposition",
+        "label": "nothing but",
+        "explanation": "NOTHING BUT = nada más que. EXCEPT también sirve: nada excepto."
+      },
+      {
+        "answers": ["of"],
+        "category": "preposition",
+        "label": "a journey of + distancia",
+        "explanation": "Con una medida, el sustantivo lleva OF: 'a journey of 4,000 km', 'a delay of two hours'."
+      },
+      {
+        "answers": ["anyone", "anybody"],
+        "category": "pronoun",
+        "label": "hardly anyone",
+        "explanation": "HARDLY ya es negativo, así que va con ANYONE/ANYBODY, no con NOBODY ni SOMEBODY."
+      },
+      {
+        "answers": ["such"],
+        "category": "comparative",
+        "label": "such + adjetivo + sustantivo",
+        "explanation": "SUCH va delante de adjetivo + sustantivo: 'such long distances'. SO va solo con el adjetivo: 'so long'."
+      },
+      {
+        "answers": ["in", "with"],
+        "category": "preposition",
+        "label": "covered in / with",
+        "explanation": "'covered IN' o 'covered WITH' = cubierto de. Las dos son correctas."
+      },
+      {
+        "answers": ["to"],
+        "category": "fixed-phrase",
+        "label": "thanks to",
+        "explanation": "THANKS TO + sustantivo = gracias a. Es fija."
+      },
+      {
+        "answers": ["for"],
+        "category": "preposition",
+        "label": "for + período",
+        "explanation": "FOR + un período de tiempo: 'stay for a week'."
+      },
+      {
+        "answers": ["having"],
+        "category": "auxiliary",
+        "label": "having + participio",
+        "explanation": "HAVING + participio expresa una acción anterior a la principal: primero juntó el dinero, después llegó."
+      },
+      {
+        "answers": ["itself"],
+        "category": "pronoun",
+        "label": "pronombre enfático",
+        "explanation": "ITSELF enfatiza el sustantivo: 'not the walking itself' = no la caminata en sí."
+      },
+      {
+        "answers": ["as"],
+        "category": "comparative",
+        "label": "as … as",
+        "explanation": "La comparación de igualdad es AS + adjetivo + AS. La frase ya tiene el primer AS: 'as happy as'."
+      },
+      {
+        "answers": ["without"],
+        "category": "preposition",
+        "label": "without",
+        "explanation": "WITHOUT = sin. El 'although' anuncia que la esposa no piensa acompañarlo."
+      }
+    ]
+  },
+  {
+    "id": "learning-in-your-sleep",
+    "title": "Can you learn while you sleep?",
+    "level": 3,
+    "paragraphs": [
+      "Wouldn't it be wonderful {if} you could learn a new language while you slept? For years, companies have sold recordings {that} claim to do exactly this. Unfortunately, there is very {little} evidence that they work. Most studies have found that the brain is simply not able {to} store new words during deep sleep.",
+      "However, a recent experiment suggests that sleep can still play an important role. Volunteers studied a list of Dutch words in the evening and then went to bed. Half {of} them heard the words again, very quietly, {during} the night. The next morning, this group remembered far more words {than} the others.",
+      "The researchers stress, {however}, that the volunteers had already learnt the words {before} going to sleep. In {other} words, sleep can help you to remember, but it cannot do the learning {for} you. So if you are hoping to become fluent in Spanish without opening a book, you will be disappointed, {no} matter how many recordings you buy."
+    ],
+    "gaps": [
+      {
+        "answers": ["if"],
+        "category": "linker",
+        "label": "if (condicional)",
+        "explanation": "IF introduce la condición imaginaria: 'it would be wonderful if you could…'."
+      },
+      {
+        "answers": ["that", "which"],
+        "category": "pronoun",
+        "label": "relativo that / which",
+        "explanation": "Relativo para cosas en una oración especificativa: THAT o WHICH."
+      },
+      {
+        "answers": ["little"],
+        "category": "quantifier",
+        "label": "little + incontable",
+        "explanation": "EVIDENCE es incontable: va con LITTLE. 'Very little evidence' = casi ninguna prueba."
+      },
+      {
+        "answers": ["to"],
+        "category": "fixed-phrase",
+        "label": "be able to",
+        "explanation": "BE ABLE TO + infinitivo = ser capaz de."
+      },
+      {
+        "answers": ["of"],
+        "category": "quantifier",
+        "label": "half of them",
+        "explanation": "Delante de un pronombre, HALF necesita OF: 'half of them', nunca 'half them'."
+      },
+      {
+        "answers": ["during", "in", "through"],
+        "category": "preposition",
+        "label": "during the night",
+        "explanation": "DURING, IN o THROUGH THE NIGHT: en algún momento, o a lo largo, de la noche."
+      },
+      {
+        "answers": ["than"],
+        "category": "comparative",
+        "label": "more … than",
+        "explanation": "Después de un comparativo ('far more words') viene THAN."
+      },
+      {
+        "answers": ["however", "though"],
+        "category": "linker",
+        "label": "however entre comas",
+        "explanation": "HOWEVER (o THOUGH) entre comas marca el contraste con lo anterior."
+      },
+      {
+        "answers": ["before"],
+        "category": "preposition",
+        "label": "before + -ing",
+        "explanation": "BEFORE + -ing = antes de hacer algo. El 'already' confirma que el aprendizaje fue previo."
+      },
+      {
+        "answers": ["other"],
+        "category": "fixed-phrase",
+        "label": "in other words",
+        "explanation": "IN OTHER WORDS = dicho de otro modo. Es fija."
+      },
+      {
+        "answers": ["for"],
+        "category": "preposition",
+        "label": "do something for someone",
+        "explanation": "'do the learning FOR you' = hacerlo en tu lugar."
+      },
+      {
+        "answers": ["no"],
+        "category": "fixed-phrase",
+        "label": "no matter how",
+        "explanation": "NO MATTER HOW/WHAT = no importa cuánto/qué. Es fija."
+      }
+    ]
+  },
+  {
+    "id": "pay-what-you-want",
+    "title": "The café with no prices",
+    "level": 2,
+    "paragraphs": [
+      "When Ana Ruiz opened her café in Valencia three years {ago}, she made a decision that surprised everyone: there would be no prices on the menu. Customers would simply pay {whatever} they thought the food was worth. Her friends warned her that people would take advantage {of} her generosity and that she would be out of business {within} a year.",
+      "The opposite turned out to be true. Most customers pay more than the usual price, and some leave {as} much as double. Ana believes this is {because} people appreciate being trusted. 'When you treat people {like} adults, they behave like adults,' she explains. Of course, there are a {few} customers who pay almost nothing, but Ana does not mind.",
+      "The café has become {so} popular that there is often a queue outside the door. Several other restaurants in the city have tried the same idea, {although} not all of them have been as successful. Ana thinks that the secret is not the prices {but} the atmosphere. 'People come back because they feel at home here, not because they can eat {for} free.'"
+    ],
+    "gaps": [
+      {
+        "answers": ["ago"],
+        "category": "preposition",
+        "label": "tiempo + ago",
+        "explanation": "AGO va DESPUÉS del período y con pasado simple: 'three years ago'."
+      },
+      {
+        "answers": ["whatever", "what"],
+        "category": "pronoun",
+        "label": "whatever / what",
+        "explanation": "WHATEVER (o WHAT) = lo que sea que. Introduce la cantidad que cada cliente decide."
+      },
+      {
+        "answers": ["of"],
+        "category": "fixed-phrase",
+        "label": "take advantage of",
+        "explanation": "TAKE ADVANTAGE OF = aprovecharse de. Es fija."
+      },
+      {
+        "answers": ["within", "in"],
+        "category": "preposition",
+        "label": "within a year",
+        "explanation": "WITHIN o IN + período = antes de que pase ese tiempo."
+      },
+      {
+        "answers": ["as"],
+        "category": "comparative",
+        "label": "as much as",
+        "explanation": "AS MUCH AS + cantidad remarca que es mucho: 'as much as double'."
+      },
+      {
+        "answers": ["because"],
+        "category": "linker",
+        "label": "this is because",
+        "explanation": "'This is because' + oración explica la causa de lo anterior."
+      },
+      {
+        "answers": ["like", "as"],
+        "category": "comparative",
+        "label": "treat someone like / as",
+        "explanation": "'treat someone LIKE / AS an adult' = tratar a alguien como a un adulto."
+      },
+      {
+        "answers": ["few"],
+        "category": "quantifier",
+        "label": "a few + contable",
+        "explanation": "CUSTOMERS es contable plural: 'a few customers' = algunos clientes."
+      },
+      {
+        "answers": ["so"],
+        "category": "linker",
+        "label": "so … that",
+        "explanation": "SO + adjetivo + THAT = tan… que. Con sustantivo sería SUCH."
+      },
+      {
+        "answers": ["although", "though"],
+        "category": "linker",
+        "label": "although + frase reducida",
+        "explanation": "ALTHOUGH / THOUGH introduce un contraste: probaron la idea, pero no a todos les fue bien."
+      },
+      {
+        "answers": ["but"],
+        "category": "fixed-phrase",
+        "label": "not … but",
+        "explanation": "NOT X BUT Y = no X sino Y."
+      },
+      {
+        "answers": ["for"],
+        "category": "fixed-phrase",
+        "label": "for free",
+        "explanation": "FOR FREE = gratis. Es fija."
+      }
+    ]
+  },
+  {
+    "id": "internet-blackout",
+    "title": "The day the internet stopped",
+    "level": 2,
+    "paragraphs": [
+      "Last Tuesday, the internet in our town went down {for} almost twelve hours. At first, nobody knew {what} to do. My brother spent the first hour restarting the router again and again, {as} if that would make any difference, while my parents kept checking their phones {in} case the connection had come back.",
+      "By lunchtime, {however}, something strange had started to happen. People who had lived next door to each {other} for years started talking in the street. My mother discovered that our neighbour, {whose} garden she had admired for years, was a retired botanist. Children who normally spent their afternoons in front of a screen were playing football in the park {instead}.",
+      "When the connection was restored that evening, most people went back {to} their screens immediately. But not everyone. Our street has decided to hold a party once {a} month, with or without the internet. It took a broken cable to remind us {how} much we were missing."
+    ],
+    "gaps": [
+      {
+        "answers": ["for"],
+        "category": "preposition",
+        "label": "for + período",
+        "explanation": "FOR + duración: 'for almost twelve hours'."
+      },
+      {
+        "answers": ["what"],
+        "category": "pronoun",
+        "label": "know what to do",
+        "explanation": "'know WHAT to do' = saber qué hacer. Es pronombre interrogativo + infinitivo."
+      },
+      {
+        "answers": ["as"],
+        "category": "fixed-phrase",
+        "label": "as if",
+        "explanation": "AS IF = como si. Describe algo que no es real: reiniciar el router no cambiaba nada."
+      },
+      {
+        "answers": ["in"],
+        "category": "fixed-phrase",
+        "label": "in case",
+        "explanation": "IN CASE = por si acaso. Es fija."
+      },
+      {
+        "answers": ["however", "though"],
+        "category": "linker",
+        "label": "however entre comas",
+        "explanation": "HOWEVER (o THOUGH) entre comas marca el contraste con lo anterior."
+      },
+      {
+        "answers": ["other"],
+        "category": "pronoun",
+        "label": "each other",
+        "explanation": "EACH OTHER = el uno al otro."
+      },
+      {
+        "answers": ["whose"],
+        "category": "pronoun",
+        "label": "whose (posesivo)",
+        "explanation": "WHOSE = cuyo. El jardín es DEL vecino."
+      },
+      {
+        "answers": ["instead"],
+        "category": "fixed-phrase",
+        "label": "instead (al final)",
+        "explanation": "INSTEAD al final de la oración = en cambio, en lugar de eso."
+      },
+      {
+        "answers": ["to"],
+        "category": "preposition",
+        "label": "go back to",
+        "explanation": "GO BACK TO something = volver a algo."
+      },
+      {
+        "answers": ["a", "every"],
+        "category": "article",
+        "label": "once a month",
+        "explanation": "Para frecuencias: 'once A month' o 'once EVERY month'."
+      },
+      {
+        "answers": ["how"],
+        "category": "pronoun",
+        "label": "how much",
+        "explanation": "HOW MUCH = cuánto. Introduce una exclamación indirecta."
+      }
+    ]
+  },
+  {
+    "id": "studying-abroad",
+    "title": "A year abroad",
+    "level": 1,
+    "paragraphs": [
+      "Every year, thousands {of} students decide to spend a year studying in another country. For many of them, it is the first time they have lived away {from} home. Living abroad is not always easy. Students have to get used {to} a different culture, and many of them find it hard to make friends {at} first.",
+      "However, most students agree that the benefits are greater {than} the difficulties they face at the start. Not {only} do they improve their language skills, but they also become more independent. They learn to solve problems {by} themselves and to look after their own money.",
+      "Many students say that the experience changed the {way} they see the world. Some even decide to stay {in} the country after they finish their studies. Employers also value international experience, {which} is why students who have studied abroad often find work more quickly. So if you ever {have} the chance, don't think twice!"
+    ],
+    "gaps": [
+      {
+        "answers": ["of"],
+        "category": "quantifier",
+        "label": "thousands of",
+        "explanation": "THOUSANDS / HUNDREDS / MILLIONS llevan OF delante del sustantivo."
+      },
+      {
+        "answers": ["from"],
+        "category": "preposition",
+        "label": "away from",
+        "explanation": "AWAY FROM = lejos de: 'away from home'."
+      },
+      {
+        "answers": ["to"],
+        "category": "fixed-phrase",
+        "label": "get used to",
+        "explanation": "GET USED TO + sustantivo o -ing = acostumbrarse a."
+      },
+      {
+        "answers": ["at"],
+        "category": "fixed-phrase",
+        "label": "at first",
+        "explanation": "AT FIRST = al principio."
+      },
+      {
+        "answers": ["than"],
+        "category": "comparative",
+        "label": "greater than",
+        "explanation": "Después del comparativo 'greater' viene THAN."
+      },
+      {
+        "answers": ["only"],
+        "category": "linker",
+        "label": "not only … but also",
+        "explanation": "NOT ONLY + inversión (do they improve) … BUT ALSO."
+      },
+      {
+        "answers": ["by", "for"],
+        "category": "preposition",
+        "label": "by / for themselves",
+        "explanation": "BY THEMSELVES = solos, sin ayuda. FOR THEMSELVES = por su cuenta. Las dos valen acá."
+      },
+      {
+        "answers": ["way"],
+        "category": "fixed-phrase",
+        "label": "the way + oración",
+        "explanation": "'the WAY they see the world' = la forma en que ven el mundo."
+      },
+      {
+        "answers": ["in"],
+        "category": "preposition",
+        "label": "stay in a country",
+        "explanation": "Con países y ciudades: 'stay IN the country'."
+      },
+      {
+        "answers": ["which"],
+        "category": "pronoun",
+        "label": "which is why",
+        "explanation": "', WHICH is why' retoma toda la oración anterior. THAT no puede ir después de coma."
+      },
+      {
+        "answers": ["have", "get"],
+        "category": "auxiliary",
+        "label": "have / get the chance",
+        "explanation": "'have the chance' o 'get the chance' = tener la oportunidad."
+      }
+    ]
+  },
+  {
+    "id": "library-of-things",
+    "title": "Borrow a drill, not a book",
+    "level": 2,
+    "paragraphs": [
+      "Why buy a drill {that} you will only use twice a year? This is the question behind 'libraries of things', {where} people borrow tools instead of books. Members pay a small fee and can borrow anything {from} a sewing machine to a tent.",
+      "The idea is simple, but it has {been} remarkably successful. The first library of this kind in our city now has more than 600 members, and it is run entirely {by} volunteers. Its founder, Kate Morris, came up {with} the idea after moving into a small flat. 'I had no space for things I rarely used, and I realised I couldn't {be} the only one,' she says.",
+      "Supporters say these libraries are good not just for people's wallets {but} also for the planet. Every item that is shared means one {less} product needs to be made. Some members also say that the library has helped them get to know their neighbours, {something} they had never managed before. Kate hopes that, one day, there will be a library {like} this in every town."
+    ],
+    "gaps": [
+      {
+        "answers": ["that", "which"],
+        "category": "pronoun",
+        "label": "relativo that / which",
+        "explanation": "Relativo para cosas: THAT o WHICH."
+      },
+      {
+        "answers": ["where"],
+        "category": "pronoun",
+        "label": "where (relativo de lugar)",
+        "explanation": "WHERE = donde. Introduce lo que pasa en esas bibliotecas."
+      },
+      {
+        "answers": ["from"],
+        "category": "preposition",
+        "label": "from … to",
+        "explanation": "'anything FROM X TO Y' = cualquier cosa, desde X hasta Y."
+      },
+      {
+        "answers": ["been", "proved", "proven"],
+        "category": "auxiliary",
+        "label": "has been + adjetivo",
+        "explanation": "Present perfect de BE: 'has BEEN successful'. 'Has proved / proven successful' también es correcto."
+      },
+      {
+        "answers": ["by"],
+        "category": "preposition",
+        "label": "pasiva + by",
+        "explanation": "En pasiva, quien hace la acción va con BY: 'run by volunteers'."
+      },
+      {
+        "answers": ["with"],
+        "category": "fixed-phrase",
+        "label": "come up with",
+        "explanation": "COME UP WITH = ocurrírsele algo."
+      },
+      {
+        "answers": ["be"],
+        "category": "auxiliary",
+        "label": "modal + be",
+        "explanation": "Después de un modal va el infinitivo sin TO: 'couldn't BE'."
+      },
+      {
+        "answers": ["but"],
+        "category": "linker",
+        "label": "not just … but also",
+        "explanation": "NOT JUST / NOT ONLY … BUT ALSO."
+      },
+      {
+        "answers": ["less", "fewer"],
+        "category": "quantifier",
+        "label": "one less / one fewer",
+        "explanation": "'one LESS product' es lo más común; 'one FEWER' es la forma más formal."
+      },
+      {
+        "answers": ["something", "which"],
+        "category": "pronoun",
+        "label": "aposición con something",
+        "explanation": "', SOMETHING they had never managed' resume lo anterior. ', WHICH they had never managed' también vale."
+      },
+      {
+        "answers": ["like"],
+        "category": "comparative",
+        "label": "like this",
+        "explanation": "LIKE THIS = como esta. SUCH no puede ir en esa posición."
+      }
+    ]
+  }
+]

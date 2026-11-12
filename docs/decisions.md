@@ -181,6 +181,11 @@ cubre con exámenes de práctica reales.
 **Cuándo reconsiderarla:** si aparece un modo "simulacro" que no use SRS.
 Ahí el texto continuo sí tiene sentido, como modo aparte.
 
+**Estado:** el gatillo se activó y se resolvió SIN revertirla. Ver la
+[#17](#17-dos-secciones-pre-práctica-y-práctica-intensiva): las frases
+sueltas siguen siendo la pre-práctica, y el texto continuo es una sección
+aparte.
+
 ---
 
 ## 11. Las opciones del Part 1 se barajan en cada presentación
@@ -268,3 +273,61 @@ hubiera cazado ninguno de los 126 tests**. Lo encontró jugar sin mouse.
 
 **Cuándo reconsiderarla:** cuando un flujo se vuelva crítico. Ahí va a
 Playwright, no a más unit tests contra el DOM.
+
+---
+
+## 17. Dos secciones: pre-práctica y práctica intensiva
+
+**Qué:** la home separa los juegos en dos secciones, por el campo
+obligatorio `section` del manifest:
+
+- **Pre-práctica · frase por frase:** los cuatro juegos originales, con
+  SRS. Sirven para APRENDER cada punto.
+- **Práctica intensiva · formato examen:** el texto completo, como en el
+  Part real. Sirve para ENSAYAR: `multiple-choice-cloze-exam`,
+  `open-cloze-exam` y `word-formation-exam`. El Part 4 no tiene versión en
+  texto porque el examen real ya usa frases sueltas.
+
+**Por qué:** las frases sueltas tienen dos límites. No entrenan a leer el
+texto entero (#10), y con un pool fijo llega un momento en que te sabés
+todas las posibilidades. Reemplazarlas rompería la granularidad del SRS.
+Sumar una sección aparte resuelve los dos sin tocar lo que ya funciona.
+
+**Cómo se mantiene variado sin generar contenido en vivo:** cada texto
+trae al menos 10 huecos candidatos (más el ejemplo) y cada intento elige
+8. Cada hueco trae de 3 a 5 distractores y muestra 3. Un candidato que
+no sale se lee como texto común.
+
+**Descartado: generar los textos con IA en el navegador** (Prompt API /
+Gemini Nano). Exige hardware al límite (8 GB en un M1), no anda en el
+celular, y un modelo chico produce justo los errores que el validador no
+ve: distractores que también son correctos. El contenido curado y
+validado gana.
+
+**La sección intensiva no usa `useGameRound` ni SRS.** El examen es
+"respondé todo en cualquier orden y corregí al final", que no es el ciclo
+pregunta → feedback → siguiente del motor. Torcer el motor para eso
+violaría la #1. Los huecos igual llevan ids estables
+(`<texto>-<respuesta>`), por si algún día se quieren registrar.
+
+**Lo compartido se extrajo al tercer consumidor** (#12): el formato
+"texto con huecos" vive en `exam/gappedText.ts` (marcadores, reglas de
+forma, sorteo de 8 en orden de lectura), y el texto y el banner de
+resultado en `engine/ui` (`ExamText`, `GapNumber`, `ScoreBanner`), sin
+saber inglés. Los componentes de los Parts 2 y 3 se parecen mucho pero
+siguen separados: son dos consumidores, y difieren en la raíz y sus
+reglas.
+
+**Part 3 en texto: raíces repetidas ≥50%, no 85%.** La mecánica de la #4
+vale igual: una raíz tiene que pedir otra forma en otro hueco. Pero cada
+raíz tiene que entrar en un texto con tema propio, y forzarlas degrada los
+textos. Además, la misma raíz con la misma forma en dos textos está
+prohibida por el validador.
+
+**Costo:** el texto se reconoce después de varias vueltas; esto retrasa
+la memorización, no la elimina. El remedio es sumar textos, que es barato
+porque cada texto es independiente.
+
+**Cuándo reconsiderarla:** si se quiere que los resultados de la sección
+intensiva alimenten el repaso. Ahí conviene registrar cada hueco con un
+scheduler propio, no mezclarlo con el SRS de la pre-práctica.

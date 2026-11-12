@@ -1,10 +1,11 @@
-import { EXAM_PART, type GameManifest } from "../../engine/types";
+import { EXAM_PART, GAME_SECTION, type GameManifest } from "../../engine/types";
 import { buildReview } from "./review";
 import { MultipleChoiceCloze } from "./MultipleChoiceCloze";
 
 export const multipleChoiceClozeManifest: GameManifest = {
   id: "multiple-choice-cloze",
   part: EXAM_PART.MULTIPLE_CHOICE_CLOZE,
+  section: GAME_SECTION.PRE_PRACTICE,
   title: "Multiple-choice Cloze",
   subtitle: "Part 1",
   description:

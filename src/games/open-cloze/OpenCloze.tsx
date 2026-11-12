@@ -57,7 +57,7 @@ function describeIssue(issue: SubmissionIssue): string {
     case SUBMISSION_ISSUE.EMPTY:
       return "Escribí una palabra primero.";
     case SUBMISSION_ISSUE.TOO_MANY:
-      return "Solo UNA palabra por hueco. Ojo: una contracción como \"don't\" cuenta como dos.";
+      return "Solo UNA palabra por espacio. Ojo: una contracción como \"don't\" cuenta como dos.";
   }
 }
 

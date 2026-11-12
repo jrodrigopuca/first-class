@@ -10,7 +10,7 @@ registry/  la única capa que conoce a TODOS los juegos
 games/     un juego = una carpeta. Aislados entre sí.
   ↓
 engine/    ronda, puntaje, repetición espaciada, UI compartida
-exam/      reglas del B2 First: normalizar, contar palabras
+exam/      reglas del B2 First: normalizar, contar palabras, texto con huecos
   ↓
 lib/       utilidades puras: shuffle, router
 ```
@@ -100,7 +100,13 @@ src/games/<juego>/
 2. Una línea en `src/registry/index.ts`.
 
 La home, las rutas y el repaso se actualizan solos. El compilador te
-obliga a proveer `buildReview`.
+obliga a proveer `buildReview` y `section` (pre-práctica o práctica
+intensiva, ver [decisiones #17](decisions.md)).
+
+Los juegos de la práctica intensiva **no usan** `useGameRound`: corrigen
+todo al final, como el examen. Se apoyan en `exam/gappedText.ts` (parser,
+reglas de forma, sorteo) y en `ExamText` / `GapNumber` / `ScoreBanner` de
+`engine/ui`. Ver `games/open-cloze-exam/` como el ejemplo más chico.
 
 ```tsx
 const srs = useSpacedRepetition<MiPregunta>();
@@ -122,7 +128,7 @@ no cambiara al sumar juegos con reglas muy distintas.
 
 ## Tests
 
-126 tests, ~1 segundo. Puestos donde cazan el bug al menor costo:
+182 tests, ~1 segundo. Puestos donde cazan el bug al menor costo:
 
 | Archivo | Qué protege |
 | ------- | ----------- |
@@ -132,11 +138,15 @@ no cambiara al sumar juegos con reglas muy distintas.
 | `engine/useGameRound.test.tsx` | Regresión: la ronda no se rearmaba al cambiar de filtro |
 | `exam/text.test.ts` | Contar palabras como Cambridge. Lo comparten tres juegos |
 | `games/*/questions.test.ts` | Importar el dataset corre su validación entera **en CI** |
+| `exam/gappedText.test.ts` | Las reglas de forma de un texto con huecos y el sorteo de 8 en orden |
+| `games/*-exam/texts.test.ts` | Las reglas propias de cada Part, con un caso que rompe cada una |
+| `games/*-exam/paper.test.ts` | El intento: ocho huecos, validación previa (una palabra, raíz copiada), corrección |
 
 Los **invariantes pedagógicos** son los que ningún compilador ve:
 
 - Part 3: ≥85% de los ítems con raíz ambigua
-- Part 1: ≥40% de las respuestas aparecen también como distractor
+- Part 1 (frases y texto): ≥40% de las respuestas aparecen también como distractor
+- Part 3 en texto: ≥50% de los huecos con una raíz que pide otra forma en otro hueco
 - Part 4: palabras clave reutilizadas entre estructuras
 - Repaso: los `questionId` coinciden con los ids reales
 

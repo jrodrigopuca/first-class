@@ -1,0 +1,149 @@
+[
+  {
+    "id": "unusual-interview",
+    "title": "The interview that wasn't",
+    "level": 2,
+    "paragraphs": [
+      "When Laura applied for a job at a small games company, she was {confident} that she would be asked the usual questions. Instead, the {interviewer} handed her a box of building blocks and asked her to make something in ten minutes. Laura was {completely} confused, but she decided to make the most of this {unexpected} challenge.",
+      "Ten minutes later she had built a small bridge, which she {proudly} presented to the panel. The company later explained that the test had nothing to do with {creativity}. What really interested them was how candidates behaved under {pressure}. Some people panicked, some complained that the task was {useless}, and a few simply walked out.",
+      "The team found Laura's calm response {impressive}, and she was offered the job the following day. Today, she is responsible for the {selection} of new staff herself and, {unsurprisingly}, she uses exactly the same test."
+    ],
+    "gaps": [
+      { "root": "CONFIDENCE", "answers": ["confident"], "category": "adjective", "label": "Adjetivo (-ent)", "explanation": "CONFIDENCE → confident. Después de 'was' y antes de 'that' va un adjetivo." },
+      { "root": "INTERVIEW", "answers": ["interviewer"], "category": "person", "label": "Persona (-er)", "explanation": "INTERVIEW → interviewer. Quien 'handed her a box' es una persona: -er." },
+      { "root": "COMPLETE", "answers": ["completely"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "COMPLETE → completely. Modifica al adjetivo 'confused': va un adverbio." },
+      { "root": "EXPECT", "answers": ["unexpected"], "category": "prefix", "label": "Prefijo negativo (un-) + -ed", "explanation": "EXPECT → unexpected. Delante de 'challenge' va un adjetivo, y el sentido es negativo: no se lo esperaba." },
+      { "root": "PROUD", "answers": ["proudly"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "PROUD → proudly. Describe CÓMO presentó el puente: adverbio." },
+      { "root": "CREATE", "answers": ["creativity"], "category": "noun", "label": "Sustantivo (-ivity)", "explanation": "CREATE → creativity. Después de 'to do with' va un sustantivo." },
+      { "root": "PRESS", "answers": ["pressure"], "category": "noun", "label": "Sustantivo (-ure)", "explanation": "PRESS → pressure. 'under pressure' = bajo presión." },
+      { "root": "USE", "answers": ["useless"], "category": "adjective", "label": "Adjetivo negativo (-less)", "explanation": "USE → useless. 'complained' anuncia algo negativo: -LESS = sin." },
+      { "root": "IMPRESS", "answers": ["impressive"], "category": "adjective", "label": "Adjetivo (-ive)", "explanation": "IMPRESS → impressive. 'found something + adjetivo'." },
+      { "root": "SELECT", "answers": ["selection"], "category": "noun", "label": "Sustantivo (-ion)", "explanation": "SELECT → selection. Después de 'the' y antes de 'of' va un sustantivo." },
+      { "root": "SURPRISE", "answers": ["unsurprisingly"], "category": "prefix", "label": "Prefijo negativo (un-) + adverbio", "explanation": "SURPRISE → unsurprisingly. Adverbio de oración, y negativo: era lo esperable que usara el mismo test." }
+    ]
+  },
+  {
+    "id": "marathon-at-seventy",
+    "title": "Still running at seventy",
+    "level": 2,
+    "paragraphs": [
+      "Most people of seventy would find the idea of running a marathon {unbelievable}. But for Margaret Hill, who only took up running in her sixties, it has become a {yearly} tradition. The first time, her family watched {anxiously} as she crossed the finish line, but her doctor now admits that her {fitness} is better than that of many of his younger patients.",
+      "Margaret's {training} is simple: she runs five days a week, whatever the weather. She says the hardest part is not the running itself but learning to rest: she finds {relaxation} far more difficult than exercise. Without her running club, she adds, her life would feel {incomplete}.",
+      "Her {expectations} have changed over the years. She no longer worries about her time; she simply wants to finish {comfortably}. Last year she finished, {surprisingly}, ahead of runners half her age, and she talks {confidently} about running another ten marathons."
+    ],
+    "gaps": [
+      { "root": "BELIEVE", "answers": ["unbelievable"], "category": "prefix", "label": "Prefijo negativo (un-) + -able", "explanation": "BELIEVE → unbelievable. 'find something + adjetivo', con sentido negativo." },
+      { "root": "YEAR", "answers": ["yearly"], "category": "adjective", "label": "Adjetivo (-ly)", "explanation": "YEAR → yearly. Algunos adjetivos terminan en -LY: yearly, daily, friendly." },
+      { "root": "ANXIETY", "answers": ["anxiously"], "category": "adverb", "label": "Adverbio (-ously)", "explanation": "ANXIETY → anxious → anxiously. Describe CÓMO miraba la familia." },
+      { "root": "FIT", "answers": ["fitness"], "category": "noun", "label": "Sustantivo (-ness)", "explanation": "FIT → fitness. Después de 'her' va un sustantivo. Ojo: no se duplica la T." },
+      { "root": "TRAIN", "answers": ["training"], "category": "noun", "label": "Sustantivo (-ing)", "explanation": "TRAIN → training. Después del posesivo 'Margaret's' va un sustantivo." },
+      { "root": "RELAX", "answers": ["relaxation"], "category": "noun", "label": "Sustantivo (-ation)", "explanation": "RELAX → relaxation. Es el objeto de 'finds': un sustantivo." },
+      { "root": "COMPLETE", "answers": ["incomplete"], "category": "prefix", "label": "Prefijo negativo (in-)", "explanation": "COMPLETE → incomplete. Sin el club, a su vida le faltaría algo. El negativo de COMPLETE es con IN-." },
+      { "root": "EXPECT", "answers": ["expectations"], "category": "noun", "label": "Sustantivo plural (-ation)", "explanation": "EXPECT → expectations. Va plural: 'have changed' concuerda con un sujeto plural." },
+      { "root": "COMFORT", "answers": ["comfortably"], "category": "adverb", "label": "Adverbio (-ably)", "explanation": "COMFORT → comfortable → comfortably. Describe CÓMO quiere terminar." },
+      { "root": "SURPRISE", "answers": ["surprisingly"], "category": "adverb", "label": "Adverbio (-ingly)", "explanation": "SURPRISE → surprisingly. Adverbio de comentario entre comas: fue sorprendente." },
+      { "root": "CONFIDENCE", "answers": ["confidently"], "category": "adverb", "label": "Adverbio (-ently)", "explanation": "CONFIDENCE → confident → confidently. Describe CÓMO habla." }
+    ]
+  },
+  {
+    "id": "dogs-at-work",
+    "title": "Dogs at the office",
+    "level": 2,
+    "paragraphs": [
+      "A growing number of companies now allow staff to bring their dogs to work, and the idea is becoming {increasingly} popular. Supporters claim that having animals around creates a more {relaxed} atmosphere. Owners also appreciate not having to pay for {expensive} dog-sitters, and many say they feel more {productive} when their pet is nearby.",
+      "However, not everyone is {enthusiastic}. Some workers suffer from {allergies}, while others are simply {frightened} of dogs. There are also {practical} problems: who is responsible if a dog damages the furniture?",
+      "Most companies have therefore introduced strict rules about pets' {behaviour}. Dogs that are noisy or {aggressive} are not allowed back, and owners are expected to be {respectful} of colleagues who do not like animals. Some managers even say that lunchtime dog walks have made their teams more {creative}."
+    ],
+    "gaps": [
+      { "root": "INCREASE", "answers": ["increasingly"], "category": "adverb", "label": "Adverbio (-ingly)", "explanation": "INCREASE → increasingly. Modifica al adjetivo 'popular'." },
+      { "root": "RELAX", "answers": ["relaxed"], "category": "adjective", "label": "Adjetivo (-ed)", "explanation": "RELAX → relaxed. Delante de 'atmosphere' va un adjetivo. 'Relaxing' también existe, pero un ambiente 'relaxed' es el que se vive tranquilo." },
+      { "root": "EXPENSE", "answers": ["expensive"], "category": "adjective", "label": "Adjetivo (-ive)", "explanation": "EXPENSE → expensive. Delante del sustantivo 'dog-sitters' va un adjetivo." },
+      { "root": "PRODUCE", "answers": ["productive"], "category": "adjective", "label": "Adjetivo (-ive)", "explanation": "PRODUCE → productive. 'feel more + adjetivo'." },
+      { "root": "ENTHUSIASM", "answers": ["enthusiastic"], "category": "adjective", "label": "Adjetivo (-astic)", "explanation": "ENTHUSIASM → enthusiastic. Después de 'is' va un adjetivo." },
+      { "root": "ALLERGIC", "answers": ["allergies"], "category": "noun", "label": "Sustantivo plural (-y → -ies)", "explanation": "ALLERGIC → allergy → allergies. 'suffer from' + sustantivo; va en plural porque no hay artículo." },
+      { "root": "FRIGHT", "answers": ["frightened"], "category": "adjective", "label": "Adjetivo (-ened)", "explanation": "FRIGHT → frightened. 'frightened of' = tenerle miedo a algo. Es como se SIENTE la persona: -ed." },
+      { "root": "PRACTICE", "answers": ["practical"], "category": "adjective", "label": "Adjetivo (-al)", "explanation": "PRACTICE → practical. Delante de 'problems' va un adjetivo." },
+      { "root": "BEHAVE", "answers": ["behaviour", "behavior"], "category": "noun", "label": "Sustantivo (-iour)", "explanation": "BEHAVE → behaviour (británico) o behavior (americano). Después de 'pets'' va un sustantivo." },
+      { "root": "AGGRESSION", "answers": ["aggressive"], "category": "adjective", "label": "Adjetivo (-ive)", "explanation": "AGGRESSION → aggressive. Coordinado con 'noisy': otro adjetivo." },
+      { "root": "RESPECT", "answers": ["respectful"], "category": "adjective", "label": "Adjetivo (-ful)", "explanation": "RESPECT → respectful = respetuoso. 'Respected' sería 'respetado', y no encaja con 'of colleagues'." },
+      { "root": "CREATE", "answers": ["creative"], "category": "adjective", "label": "Adjetivo (-ive)", "explanation": "CREATE → creative. 'made their teams more + adjetivo'." }
+    ]
+  },
+  {
+    "id": "no-smartphone",
+    "title": "My year without a smartphone",
+    "level": 3,
+    "paragraphs": [
+      "Six months ago, I made a decision that my friends still find {extraordinary}: I gave up my smartphone and replaced it with a basic phone that can only make calls. The first week was deeply {uncomfortable}. I kept reaching for my pocket {automatically}, and I always felt {anxious} whenever I could not check the news.",
+      "Without maps, I got lost {regularly} and often had to stop strangers to ask for {directions}. Most of them, to my {astonishment}, were happy to help. I also rediscovered the {pleasure} of reading a book on the train, and I began to enjoy a sense of {freedom} that I had almost forgotten.",
+      "My {concentration} has improved enormously, and I sleep much better. Of course, there are {disadvantages}. Some of my friends find me {impossible} to contact, but I have no {intention} of going back."
+    ],
+    "gaps": [
+      { "root": "ORDINARY", "answers": ["extraordinary"], "category": "prefix", "label": "Prefijo (extra-)", "explanation": "ORDINARY → extraordinary. 'find something + adjetivo'; EXTRA- = fuera de lo común." },
+      { "root": "COMFORT", "answers": ["uncomfortable"], "category": "prefix", "label": "Prefijo negativo (un-) + -able", "explanation": "COMFORT → uncomfortable. Después de 'was deeply' va un adjetivo, y negativo." },
+      { "root": "AUTOMATIC", "answers": ["automatically"], "category": "adverb", "label": "Adverbio (-ally)", "explanation": "AUTOMATIC → automatically. Los adjetivos en -IC forman el adverbio con -ALLY." },
+      { "root": "ANXIETY", "answers": ["anxious"], "category": "adjective", "label": "Adjetivo (-ious)", "explanation": "ANXIETY → anxious. 'felt + adjetivo'." },
+      { "root": "REGULAR", "answers": ["regularly"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "REGULAR → regularly. Dice CON QUÉ FRECUENCIA se perdía." },
+      { "root": "DIRECT", "answers": ["directions"], "category": "noun", "label": "Sustantivo plural (-ion)", "explanation": "DIRECT → directions. 'ask for directions' = preguntar cómo llegar. Va en plural." },
+      { "root": "ASTONISH", "answers": ["astonishment"], "category": "noun", "label": "Sustantivo (-ment)", "explanation": "ASTONISH → astonishment. 'to my + sustantivo' = para mi sorpresa." },
+      { "root": "PLEASE", "answers": ["pleasure"], "category": "noun", "label": "Sustantivo (-ure)", "explanation": "PLEASE → pleasure. Después de 'the' y antes de 'of' va un sustantivo." },
+      { "root": "FREE", "answers": ["freedom"], "category": "noun", "label": "Sustantivo (-dom)", "explanation": "FREE → freedom. 'a sense of + sustantivo'." },
+      { "root": "CONCENTRATE", "answers": ["concentration"], "category": "noun", "label": "Sustantivo (-ion)", "explanation": "CONCENTRATE → concentration. Después de 'my' va un sustantivo." },
+      { "root": "ADVANTAGE", "answers": ["disadvantages"], "category": "prefix", "label": "Prefijo negativo (dis-)", "explanation": "ADVANTAGE → disadvantages. 'Of course' anuncia lo negativo, y 'there are' pide plural." },
+      { "root": "POSSIBLE", "answers": ["impossible"], "category": "prefix", "label": "Prefijo negativo (im-)", "explanation": "POSSIBLE → impossible. Delante de P, el negativo es IM-." },
+      { "root": "INTEND", "answers": ["intention"], "category": "noun", "label": "Sustantivo (-tion)", "explanation": "INTEND → intention. 'have no intention of + -ing' = no tener intención de." }
+    ]
+  },
+  {
+    "id": "edible-town",
+    "title": "The town that grows its own food",
+    "level": 2,
+    "paragraphs": [
+      "Ten years ago, a group of {residents} in a small English town started planting vegetables in public spaces. Their aim was to make the town less {dependent} on supermarkets. At first, many people thought the plan was completely {impractical}. Today, however, herbs and vegetables grow {freely} outside the police station, the school and even the railway station.",
+      "The project's {organisers} say that anyone can take what they need {directly} from the beds. There has been {remarkably} little theft or damage. Tourism has also {unexpectedly} increased, as visitors come from all over the world to see this {unusual} experiment.",
+      "Local schools regularly organise {educational} visits to the gardens, and several groups of gardening {enthusiasts} in other towns have copied the idea with equal {success}. The founders admit that feeding a whole town is still a distant dream, but they remain {optimistic} about the future."
+    ],
+    "gaps": [
+      { "root": "RESIDE", "answers": ["residents"], "category": "person", "label": "Persona (-ent)", "explanation": "RESIDE → residents. 'a group of' + personas, en plural." },
+      { "root": "DEPEND", "answers": ["dependent"], "category": "adjective", "label": "Adjetivo (-ent)", "explanation": "DEPEND → dependent. 'less dependent ON' = menos dependiente de." },
+      { "root": "PRACTICE", "answers": ["impractical"], "category": "prefix", "label": "Prefijo negativo (im-) + -al", "explanation": "PRACTICE → impractical. 'At first' y 'however' anuncian que al principio lo veían negativo." },
+      { "root": "FREE", "answers": ["freely"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "FREE → freely. Describe CÓMO crecen las plantas." },
+      { "root": "ORGANISE", "answers": ["organisers", "organizers"], "category": "person", "label": "Persona (-er)", "explanation": "ORGANISE → organisers. Son personas que 'say'. Se acepta la grafía americana con Z." },
+      { "root": "DIRECT", "answers": ["directly"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "DIRECT → directly. Modifica al verbo 'take'." },
+      { "root": "REMARK", "answers": ["remarkably"], "category": "adverb", "label": "Adverbio (-ably)", "explanation": "REMARK → remarkable → remarkably. Modifica a 'little'." },
+      { "root": "EXPECT", "answers": ["unexpectedly"], "category": "prefix", "label": "Prefijo negativo (un-) + adverbio", "explanation": "EXPECT → unexpectedly. Entre 'has' e 'increased' va un adverbio, y nadie lo esperaba." },
+      { "root": "USUAL", "answers": ["unusual"], "category": "prefix", "label": "Prefijo negativo (un-)", "explanation": "USUAL → unusual. Vienen de todo el mundo porque es algo raro." },
+      { "root": "EDUCATE", "answers": ["educational"], "category": "adjective", "label": "Adjetivo (-al)", "explanation": "EDUCATE → education → educational. Delante de 'visits' va un adjetivo." },
+      { "root": "ENTHUSIASM", "answers": ["enthusiasts"], "category": "person", "label": "Persona (-ast)", "explanation": "ENTHUSIASM → enthusiasts. 'groups of gardening ___' son personas, en plural." },
+      { "root": "SUCCEED", "answers": ["success"], "category": "noun", "label": "Sustantivo", "explanation": "SUCCEED → success. 'with equal + sustantivo'." },
+      { "root": "OPTIMISM", "answers": ["optimistic"], "category": "adjective", "label": "Adjetivo (-istic)", "explanation": "OPTIMISM → optimistic. 'remain + adjetivo'." }
+    ]
+  },
+  {
+    "id": "gamer-surgeon",
+    "title": "From gamer to surgeon",
+    "level": 3,
+    "paragraphs": [
+      "As a teenager, Daniel spent so many hours playing video games that his parents were {seriously} worried. His teachers described him as {intelligent} but lazy, and few people expected him to be {successful}. Today, at thirty-four, he is one of the country's most {respected} surgeons.",
+      "Daniel believes that his {childhood} hobby was actually an important part of his {education}. Research seems to support him: one study found that surgeons who play video games work more {accurately} than those who do not. The {ability} to coordinate hand and eye is essential in modern surgery, where many {operations} are carried out using cameras and remote controls, and some hospitals are now considering the {possibility} of using games in training.",
+      "Daniel is careful not to give the {impression} that games are a shortcut to medicine. 'I still had to study {incredibly} hard,' he says, with obvious {pride}. But he does think parents should be less {critical} of their children's hobbies. 'You never know which skills will turn out to be {useful}.'"
+    ],
+    "gaps": [
+      { "root": "SERIOUS", "answers": ["seriously"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "SERIOUS → seriously. Modifica al adjetivo 'worried'." },
+      { "root": "INTELLIGENCE", "answers": ["intelligent"], "category": "adjective", "label": "Adjetivo (-ent)", "explanation": "INTELLIGENCE → intelligent. Coordinado con 'lazy': otro adjetivo." },
+      { "root": "SUCCEED", "answers": ["successful"], "category": "adjective", "label": "Adjetivo (-ful)", "explanation": "SUCCEED → success → successful. 'to be + adjetivo'." },
+      { "root": "RESPECT", "answers": ["respected"], "category": "adjective", "label": "Adjetivo (-ed)", "explanation": "RESPECT → respected = respetado por otros. 'Respectful' sería que él respeta." },
+      { "root": "CHILD", "answers": ["childhood"], "category": "noun", "label": "Sustantivo (-hood)", "explanation": "CHILD → childhood. 'his childhood hobby' = el hobby de su infancia." },
+      { "root": "EDUCATE", "answers": ["education"], "category": "noun", "label": "Sustantivo (-ion)", "explanation": "EDUCATE → education. Después de 'his' va un sustantivo." },
+      { "root": "ACCURATE", "answers": ["accurately"], "category": "adverb", "label": "Adverbio (-ly)", "explanation": "ACCURATE → accurately. Describe CÓMO trabajan: 'work more accurately'." },
+      { "root": "ABLE", "answers": ["ability"], "category": "noun", "label": "Sustantivo (-ility)", "explanation": "ABLE → ability. 'The ability to' + infinitivo = la capacidad de." },
+      { "root": "OPERATE", "answers": ["operations"], "category": "noun", "label": "Sustantivo plural (-ion)", "explanation": "OPERATE → operations. 'many' pide plural." },
+      { "root": "POSSIBLE", "answers": ["possibility"], "category": "noun", "label": "Sustantivo (-ility)", "explanation": "POSSIBLE → possibility. 'the ___ of + -ing' pide un sustantivo." },
+      { "root": "IMPRESS", "answers": ["impression"], "category": "noun", "label": "Sustantivo (-ion)", "explanation": "IMPRESS → impression. 'give the impression that' = dar la impresión de que." },
+      { "root": "CREDIBLE", "answers": ["incredibly"], "category": "prefix", "label": "Prefijo negativo (in-) + adverbio", "explanation": "CREDIBLE → incredibly. Intensifica a 'hard'; el prefijo IN- le da el sentido de 'increíblemente'." },
+      { "root": "PROUD", "answers": ["pride"], "category": "noun", "label": "Sustantivo (irregular)", "explanation": "PROUD → pride. 'with obvious + sustantivo'. Es irregular: no se dice 'proudness'." },
+      { "root": "CRITIC", "answers": ["critical"], "category": "adjective", "label": "Adjetivo (-al)", "explanation": "CRITIC → critical. 'less critical of' = menos crítico con." },
+      { "root": "USE", "answers": ["useful"], "category": "adjective", "label": "Adjetivo (-ful)", "explanation": "USE → useful. 'turn out to be + adjetivo', con sentido positivo." }
+    ]
+  }
+]

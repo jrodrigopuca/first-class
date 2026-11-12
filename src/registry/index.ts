@@ -1,6 +1,9 @@
 import type { GameManifest } from "../engine/types";
 import { openClozeManifest } from "../games/open-cloze/manifest";
 import { multipleChoiceClozeManifest } from "../games/multiple-choice-cloze/manifest";
+import { multipleChoiceClozeExamManifest } from "../games/multiple-choice-cloze-exam/manifest";
+import { openClozeExamManifest } from "../games/open-cloze-exam/manifest";
+import { wordFormationExamManifest } from "../games/word-formation-exam/manifest";
 import { keyWordTransformationManifest } from "../games/key-word-transformation/manifest";
 import { wordFormationManifest } from "../games/word-formation/manifest";
 
@@ -18,6 +21,9 @@ export const GAMES: readonly GameManifest[] = [
   openClozeManifest,
   wordFormationManifest,
   keyWordTransformationManifest,
+  multipleChoiceClozeExamManifest,
+  openClozeExamManifest,
+  wordFormationExamManifest,
 ];
 
 export function findGame(id: string): GameManifest | undefined {
