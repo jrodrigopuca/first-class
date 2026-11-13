@@ -1,0 +1,105 @@
+.bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  margin: var(--space-5) calc(-1 * var(--gutter)) 0;
+  padding: var(--space-3) var(--gutter) calc(var(--space-3) + env(safe-area-inset-bottom));
+  background: var(--color-paper-sunk);
+  box-shadow: var(--shadow-bar);
+}
+
+@media (min-width: 40rem) {
+  .bar {
+    margin-inline: 0;
+    padding-inline: var(--space-4);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+}
+
+/* Con el teclado abierto la barra se esconde: no come la mitad del lugar
+   que deja. Corregir lo hace el Enter del último campo. No aplica a los
+   select: el picker nativo no abre el teclado. */
+@media (pointer: coarse) {
+  :where(div):has(input:not([readonly]):focus) > .bar {
+    display: none;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.row > :last-child {
+  flex: 1;
+}
+
+.count {
+  flex: none;
+  min-width: 6.5rem;
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.count b {
+  color: var(--color-ink);
+  font-weight: var(--weight-heavy);
+  font-variant-numeric: var(--numeric-tabular);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@media (min-width: 40rem) {
+  .stack {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+}
+
+.warn {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-highlight-ink);
+}
+
+.warn p,
+.warn ul {
+  margin: 0;
+}
+
+.warn ul {
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--tap-min);
+  height: var(--tap-min);
+  margin: 0 0.15rem;
+  padding: 0 var(--space-2);
+  vertical-align: middle;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: var(--color-highlight);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-weight: var(--weight-heavy);
+  font-variant-numeric: var(--numeric-tabular);
+  cursor: pointer;
+}
+
+.note {
+  display: block;
+  margin-top: var(--space-1);
+  font-weight: var(--weight-regular);
+  color: var(--color-ink-muted);
+}

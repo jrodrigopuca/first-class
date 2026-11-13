@@ -15,6 +15,7 @@ import {
   ProgressSummary,
   ResultScreen,
   Scoreboard,
+  Tick,
 } from "../../engine/ui";
 import {
   countWords,
@@ -268,8 +269,11 @@ export function KeyWordTransformation() {
             // avanzar a la siguiente pregunta dejaba de funcionar. readOnly
             // bloquea la edición pero mantiene foco y teclado vivos.
             readOnly={status === ROUND_STATUS.ANSWERED}
+            // Enter comprueba (y después pasa a la siguiente): "Listo".
+            enterKeyHint="done"
+            inputMode="text"
             autoComplete="off"
-            autoCapitalize="off"
+            autoCapitalize="none"
             autoCorrect="off"
             spellCheck={false}
             onChange={(event) => {
@@ -358,13 +362,25 @@ function HalvesBreakdown({ marking }: { marking: Marking }) {
         </p>
       )}
       <p className={styles.halves}>
-        <span className={marking.firstHalf ? styles.halfOk : styles.halfBad}>
-          {marking.firstHalf ? "✓" : "✗"} {first}
-        </span>
-        <span className={marking.secondHalf ? styles.halfOk : styles.halfBad}>
-          {marking.secondHalf ? "✓" : "✗"} {second}
-        </span>
+        <Half got={marking.firstHalf}>{first}</Half>
+        <Half got={marking.secondHalf}>{second}</Half>
       </p>
     </>
+  );
+}
+
+/** La mitad obtenida lleva la ✓; la que faltó va circulada en birome. */
+function Half({ got, children }: { got: boolean; children: string }) {
+  return got ? (
+    <span className={styles.halfOk}>
+      <Tick className={styles.halfTick} />
+      <span className="visually-hidden">obtenida: </span>
+      {children}
+    </span>
+  ) : (
+    <span className={styles.halfMissed}>
+      <span className="visually-hidden">faltó: </span>
+      {children}
+    </span>
   );
 }

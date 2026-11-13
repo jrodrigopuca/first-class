@@ -1,0 +1,88 @@
+.marks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  column-gap: var(--space-3);
+  padding: var(--space-4) 0;
+  border-top: var(--border-hair) solid var(--color-rule);
+}
+
+.row:first-child {
+  border-top: 0;
+  padding-top: var(--space-2);
+}
+
+/* El margen: el número impreso y, debajo, la marca de la birome. */
+.gutter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding-top: 0.1rem;
+}
+
+.gutter > span:first-child {
+  margin: 0;
+}
+
+.tick,
+.cross {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.tick {
+  color: var(--color-mark-correct);
+}
+
+.cross {
+  color: var(--color-mark);
+}
+
+/* Sin cursiva: lo separan del veredicto el peso 600 y el tamaño. */
+.chunk {
+  margin: 0;
+  font-family: var(--font-paper);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  line-height: 1.3;
+  letter-spacing: var(--tracking-display);
+}
+
+.verdict {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-base);
+  color: var(--color-ink-muted);
+}
+
+.explain {
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-base);
+  line-height: 1.55;
+}
+
+.pencil {
+  color: var(--color-graphite);
+  font-weight: var(--weight-bold);
+}
+
+.struck {
+  color: var(--color-graphite);
+  font-weight: var(--weight-bold);
+  text-decoration: line-through;
+  text-decoration-color: var(--color-mark);
+  text-decoration-thickness: var(--border-mark);
+}
+
+.hand {
+  font-family: var(--font-hand);
+  font-size: var(--text-mark);
+  font-weight: var(--weight-heavy);
+  line-height: 1;
+  color: var(--color-mark);
+}

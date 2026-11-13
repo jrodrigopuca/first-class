@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Button } from "./Button";
 import { BUTTON_VARIANT } from "./constants";
 import { GameCard } from "./GameCard";
+import { ScoreCircle } from "./ScoreBanner";
 import styles from "./ResultScreen.module.css";
 
 const MASTERY_RATIO = 0.85;
@@ -35,6 +36,12 @@ export function ResultScreen({
 
   return (
     <GameCard className={styles.result}>
+      {/* El mismo puntaje circulado que en la práctica intensiva, sin animación. */}
+      <div className={styles.figure}>
+        <ScoreCircle animate={false}>
+          {correctCount} de {total}
+        </ScoreCircle>
+      </div>
       <p className={styles.headline}>
         {correctCount} de {total} correctas · {score} puntos
       </p>

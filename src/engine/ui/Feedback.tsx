@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 import type { ReactNode } from "react";
-import { type FeedbackTone } from "./constants";
+import { FEEDBACK_TONE, type FeedbackTone } from "./constants";
+import { Tick } from "./Marks";
 import styles from "./Feedback.module.css";
 
 interface FeedbackProps {
@@ -14,7 +15,10 @@ export function Feedback({ tone, title, children }: FeedbackProps) {
     // role=status + aria-live: un lector de pantalla anuncia el resultado
     // sin que el usuario tenga que ir a buscarlo con el foco.
     <div className={clsx(styles.feedback, styles[tone])} role="status" aria-live="polite">
-      <p className={styles.title}>{title}</p>
+      <p className={styles.title}>
+        {tone === FEEDBACK_TONE.SUCCESS && <Tick className={styles.tick} />}
+        {title}
+      </p>
       {children !== undefined && <div className={styles.body}>{children}</div>}
     </div>
   );

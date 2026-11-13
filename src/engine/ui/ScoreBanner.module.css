@@ -1,19 +1,59 @@
+/* Encabezado de la hoja: reemplaza la consigna una vez corregido. */
 .banner {
-  padding: var(--space-4) var(--space-5);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-md);
-  background: var(--color-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin: 0 0 var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: var(--border-hair) solid var(--color-rule);
   outline: none;
 }
 
-.score {
+.message {
   margin: 0;
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  color: var(--color-accent-text);
+  max-width: 26rem;
+  font-size: var(--text-base);
+  color: var(--color-ink);
 }
 
-.message {
-  margin: var(--space-1) 0 0;
-  color: var(--color-text);
+.score {
+  position: relative;
+  flex: none;
+  margin: 0;
+  padding: 0.15rem 0.9rem 0;
+  font-family: var(--font-hand);
+  font-size: var(--text-score);
+  font-weight: var(--weight-heavy);
+  line-height: 1.1;
+  color: var(--color-mark);
+  white-space: nowrap;
+  transform: rotate(-3deg);
+}
+
+.score svg {
+  position: absolute;
+  inset: -0.35rem -0.45rem -0.2rem -0.5rem;
+  width: calc(100% + 0.95rem);
+  height: calc(100% + 0.55rem);
+  overflow: visible;
+}
+
+.score path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}
+
+.draw {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+  animation: draw var(--duration-mark) ease-out both;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 400;
+  }
 }

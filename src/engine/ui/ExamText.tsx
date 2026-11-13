@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { splitLeadingPunctuation } from "./gluePunctuation";
 import styles from "./ExamText.module.css";
 
 /**
@@ -24,15 +25,45 @@ export function ExamText({ title, paragraphs, renderGap }: ExamTextProps) {
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.text}>
         {paragraphs.map((paragraph, p) => (
-          <p key={p}>
-            {paragraph.map((segment, s) =>
-              typeof segment === "string" ? segment : <span key={s}>{renderGap(segment.gap)}</span>,
-            )}
-          </p>
+          <p key={p}>{renderParagraph(paragraph, renderGap)}</p>
         ))}
       </div>
     </>
   );
+}
+
+/**
+ * Un espacio y la puntuación que lo sigue van en una unidad que no se
+ * parte: sin esto, la coma después de una palabra corregida podía quedar
+ * sola al principio del renglón siguiente.
+ */
+function renderParagraph(
+  paragraph: readonly Segment[],
+  renderGap: (gapIndex: number) => ReactNode,
+): ReactNode[] {
+  const nodes: ReactNode[] = [];
+  let carry = "";
+
+  paragraph.forEach((segment, s) => {
+    if (typeof segment === "string") {
+      const text = carry === "" ? segment : segment.slice(carry.length);
+      carry = "";
+      if (text !== "") nodes.push(text);
+      return;
+    }
+
+    const next = paragraph[s + 1];
+    const [punctuation] = typeof next === "string" ? splitLeadingPunctuation(next) : [""];
+    carry = punctuation;
+    nodes.push(
+      <span key={s} className={punctuation === "" ? undefined : styles.glue}>
+        {renderGap(segment.gap)}
+        {punctuation}
+      </span>,
+    );
+  });
+
+  return nodes;
 }
 
 /** El número del hueco en un recuadro, como en la hoja del examen. */

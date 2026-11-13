@@ -208,8 +208,11 @@ export function OpenCloze() {
             type="text"
             value={input}
             readOnly={answered}
+            // Enter comprueba (y después pasa a la siguiente): "Listo".
+            enterKeyHint="done"
+            inputMode="text"
             autoComplete="off"
-            autoCapitalize="off"
+            autoCapitalize="none"
             autoCorrect="off"
             spellCheck={false}
             onChange={(event) => {

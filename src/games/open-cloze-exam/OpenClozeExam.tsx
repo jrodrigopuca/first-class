@@ -1,6 +1,28 @@
-import { clsx } from "clsx";
 import { useId, useRef, useState, type KeyboardEvent } from "react";
-import { Button, BUTTON_VARIANT, ExamText, GameCard, GapNumber, ScoreBanner } from "../../engine/ui";
+import {
+  ActionBar,
+  BarCount,
+  BarRow,
+  BarStack,
+  BarWarning,
+  Button,
+  BUTTON_VARIANT,
+  CorrectionRow,
+  CorrectionSheet,
+  ExamText,
+  GameCard,
+  GapChip,
+  gapFieldClass,
+  GapFix,
+  GapNumber,
+  gapStyles,
+  GapTick,
+  Handwritten,
+  Pencil,
+  Rubric,
+  ScoreBanner,
+  Struck,
+} from "../../engine/ui";
 import { normalize } from "../../exam/text";
 import {
   buildPaper,
@@ -41,6 +63,14 @@ export function OpenClozeExam() {
   });
   const issueById = new Map(issues.map(({ paperGap, issue }) => [paperGap.gap.id, issue]));
   const result = checked ? grade(paper, answers) : undefined;
+  const answered = paper.gaps.filter((paperGap) => (answers[paperGap.gap.id] ?? "").trim() !== "").length;
+
+  // El aviso agrupa los espacios por problema: un botón por espacio.
+  const numbersByIssue = new Map<SubmissionIssue, number[]>();
+  for (const { paperGap, issue } of issues) {
+    numbersByIssue.set(issue, [...(numbersByIssue.get(issue) ?? []), paperGap.number]);
+  }
+  const issueGroups = [...numbersByIssue];
 
   const inputId = (number: number) => `${idPrefix}-gap-${number}`;
   const focusGap = (number: number) => document.getElementById(inputId(number))?.focus();
@@ -84,23 +114,25 @@ export function OpenClozeExam() {
 
   return (
     <div className={styles.game}>
-      <p className={styles.instructions}>
-        Escribí UNA palabra en cada espacio. Hay un ejemplo al principio (0). Enter pasa al espacio
-        siguiente; en el último, corrige.
-      </p>
+      <GameCard bleed>
+        {result !== undefined ? (
+          <ScoreBanner ref={resultRef} correct={result.correct} total={result.total} />
+        ) : (
+          <Rubric>
+            <strong>Escribí UNA palabra en cada espacio.</strong> Hay un ejemplo al principio (0). Enter
+            pasa al espacio siguiente; en el último, corrige.
+          </Rubric>
+        )}
 
-      {result !== undefined && <ScoreBanner ref={resultRef} correct={result.correct} total={result.total} />}
-
-      <GameCard>
         <ExamText
           title={paper.text.title}
           paragraphs={paper.text.paragraphs}
           renderGap={(index) => {
             if (index === 0) {
               return (
-                <span className={styles.example}>
+                <span className={gapStyles.gap}>
                   <GapNumber number={0} />
-                  {paper.example.gap.answers[0]}
+                  <span className={gapStyles.example}>{paper.example.gap.answers[0]}</span>
                 </span>
               );
             }
@@ -115,7 +147,7 @@ export function OpenClozeExam() {
             const invalid = showIssues && !checked && issueById.has(gap.id);
 
             return (
-              <span className={styles.gap}>
+              <span className={gapStyles.gap}>
                 <GapNumber number={number} />
                 <input
                   id={inputId(number)}
@@ -126,87 +158,106 @@ export function OpenClozeExam() {
                   // readOnly y no disabled: disabled saca el input del
                   // orden de Tab y no deja recorrer el texto corregido.
                   readOnly={checked}
+                  // Corregido, el campo se achica a la respuesta (field-sizing no
+                  // gana contra un ancho fijo, y Safari no lo soporta).
+                  style={checked ? { width: `${value.length + 1}ch` } : undefined}
                   aria-label={`Espacio ${number}`}
                   aria-invalid={invalid || correct === false}
+                  enterKeyHint={number < paper.gaps.length ? "next" : "done"}
+                  inputMode="text"
                   autoComplete="off"
                   autoCapitalize="none"
                   autoCorrect="off"
                   spellCheck={false}
-                  className={clsx(
-                    styles.input,
-                    invalid && styles.inputInvalid,
-                    correct === true && styles.inputCorrect,
-                    correct === false && styles.inputWrong,
-                  )}
+                  className={gapFieldClass({
+                    filled: value !== "",
+                    missing: invalid,
+                    checked,
+                    correct,
+                    width: "short",
+                  })}
                 />
-                {correct === false && <span className={styles.fix}>{gap.answers[0]}</span>}
+                {correct === true && <GapTick />}
+                {correct === false && <GapFix>{gap.answers[0]}</GapFix>}
               </span>
             );
           }}
         />
       </GameCard>
 
-      <GameCard>
-        {checked ? (
-          <ol className={styles.explanations}>
-            {paper.gaps.map(({ gap, number }) => {
-              const written = (answers[gap.id] ?? "").trim();
-              const correct = isCorrect(gap, written);
-              // Las otras respuestas que también valían: se aprende tanto
-              // como de la correcta.
-              const alternatives = correct
-                ? gap.answers.filter((answer) => answer !== normalize(written))
-                : gap.answers.slice(1);
-              return (
-                <li key={gap.id} className={clsx(styles.row, correct ? styles.rowCorrect : styles.rowWrong)}>
-                  <span className={styles.rowNumber}>{number}</span>
-                  <div>
-                    <p className={styles.verdict}>
-                      {correct ? `✓ «${written}»` : `✗ Escribiste «${written}» · Era «${gap.answers[0]}»`}
-                      {alternatives.length > 0 && (
-                        <span className={styles.also}> · también: {alternatives.join(", ")}</span>
-                      )}
-                      <span className={styles.label}>{gap.label}</span>
-                    </p>
-                    <p className={styles.explanationText}>{gap.explanation}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-        ) : (
-          showIssues &&
-          issues.length > 0 && (
-            <ul className={styles.issues} role="alert">
-              {issues.map(({ paperGap, issue }) => (
-                <li key={paperGap.gap.id}>
-                  <button type="button" className={styles.issueLink} onClick={() => focusGap(paperGap.number)}>
-                    Espacio {paperGap.number}
-                  </button>
-                  : {ISSUE_TEXT[issue]}
-                </li>
-              ))}
-            </ul>
-          )
-        )}
+      {checked && (
+        <CorrectionSheet>
+          {paper.gaps.map(({ gap, number }) => {
+            const written = (answers[gap.id] ?? "").trim();
+            const correct = isCorrect(gap, written);
+            // Las otras respuestas que también valían: se aprende tanto
+            // como de la correcta.
+            const alternatives = correct
+              ? gap.answers.filter((answer) => answer !== normalize(written))
+              : gap.answers.slice(1);
+            return (
+              <CorrectionRow
+                key={gap.id}
+                number={number}
+                correct={correct}
+                title={gap.label}
+                verdict={
+                  <>
+                    {correct ? (
+                      <>
+                        Escribiste «<Pencil>{written}</Pencil>»
+                      </>
+                    ) : (
+                      <>
+                        Escribiste «<Struck>{written}</Struck>» · Era «<Handwritten>{gap.answers[0]}</Handwritten>»
+                      </>
+                    )}
+                    {alternatives.length > 0 && <> · también: {alternatives.join(", ")}</>}
+                  </>
+                }
+              >
+                {gap.explanation}
+              </CorrectionRow>
+            );
+          })}
+        </CorrectionSheet>
+      )}
 
-        <div className={styles.actions}>
-          {checked ? (
-            <>
-              <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => start(buildPaper(pickText(TEXTS, paper.text.id)))}>
-                Otro texto
-              </Button>
-              <Button variant={BUTTON_VARIANT.GHOST} onClick={() => start(buildPaper(paper.text))}>
-                Mismo texto, otros espacios
-              </Button>
-            </>
-          ) : (
-            <Button block variant={BUTTON_VARIANT.PRIMARY} onClick={check}>
-              Corregir
+      <ActionBar>
+        {checked ? (
+          <BarStack>
+            <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => start(buildPaper(pickText(TEXTS, paper.text.id)))}>
+              Otro texto
             </Button>
-          )}
-        </div>
-      </GameCard>
+            <Button variant={BUTTON_VARIANT.GHOST} onClick={() => start(buildPaper(paper.text))}>
+              Mismo texto, otros espacios
+            </Button>
+          </BarStack>
+        ) : (
+          <>
+            {showIssues && issueGroups.length > 0 && (
+              <BarWarning>
+                <ul>
+                  {issueGroups.map(([issue, numbers]) => (
+                    <li key={issue}>
+                      {numbers.map((number) => (
+                        <GapChip key={number} number={number} onClick={() => focusGap(number)} />
+                      ))}{" "}
+                      {ISSUE_TEXT[issue]}
+                    </li>
+                  ))}
+                </ul>
+              </BarWarning>
+            )}
+            <BarRow>
+              <BarCount count={answered} total={paper.gaps.length} noun="respondidos" />
+              <Button variant={BUTTON_VARIANT.PRIMARY} onClick={check}>
+                Corregir
+              </Button>
+            </BarRow>
+          </>
+        )}
+      </ActionBar>
     </div>
   );
 }

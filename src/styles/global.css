@@ -8,16 +8,22 @@
 
 html {
   color-scheme: light dark;
+  -webkit-text-size-adjust: 100%;
+  /* Cuando el navegador lleva el foco a un campo, deja lugar para la barra
+     de acciones fija de abajo: un espacio nunca queda tapado por ella. */
+  scroll-padding-block-end: 7rem;
 }
 
 body {
   margin: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-sans);
+  background: var(--color-desk);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
   font-size: var(--text-base);
-  line-height: 1.55;
+  line-height: var(--leading-ui);
   -webkit-font-smoothing: antialiased;
+  /* Lexend no tiene cursiva: un énfasis olvidado se ve recto, no inclinado de mentira. */
+  font-synthesis: none;
 }
 
 a {
@@ -26,14 +32,32 @@ a {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
   color: inherit;
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
+}
+
+/* Texto solo para lectores de pantalla ("correcto", "era …"). */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* El texto del examen sube a 18 px cuando hay lugar. */
+@media (min-width: 40rem) {
+  :root {
+    --text-paper: 1.125rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

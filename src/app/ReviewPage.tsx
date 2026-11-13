@@ -2,6 +2,7 @@ import { clsx } from "clsx";
 import { useState } from "react";
 import { byWeakness, type FamilyStats } from "../engine/review";
 import { loadProgress } from "../engine/storage";
+import { Arrow, Tick } from "../engine/ui";
 import { toHref } from "../lib/router";
 import { REVIEWABLE_GAMES } from "../registry";
 import styles from "./ReviewPage.module.css";
@@ -84,7 +85,8 @@ export function ReviewPage({ gameId, familyId }: ReviewPageProps) {
     <>
       <div className={styles.header}>
         <a href={toHref("/")} className={styles.back}>
-          ← Todos los juegos
+          <Arrow className={styles.backArrow} />
+          Todos los juegos
         </a>
         <h1 className={styles.title}>Repaso</h1>
         <p className={styles.lead}>
@@ -94,10 +96,13 @@ export function ReviewPage({ gameId, familyId }: ReviewPageProps) {
         </p>
       </div>
 
-      <div className={styles.tabs}>
+      {/* Los filtros son links (cambian la URL): el activo se expone con
+          aria-current, que es el atributo válido para un link. */}
+      <nav className={styles.tabs} aria-label="Filtrar por juego">
         <a
           href={toHref("/review")}
           className={clsx(styles.tab, selected === ALL && styles.tabActive)}
+          aria-current={selected === ALL ? "page" : undefined}
         >
           Todo
         </a>
@@ -106,11 +111,12 @@ export function ReviewPage({ gameId, familyId }: ReviewPageProps) {
             key={game.id}
             href={toHref(`/review/${game.id}`)}
             className={clsx(styles.tab, selected === game.id && styles.tabActive)}
+            aria-current={selected === game.id ? "page" : undefined}
           >
             {game.subtitle}
           </a>
         ))}
-      </div>
+      </nav>
 
       {rows.length === 0 ? (
         <p className={styles.empty}>No hay material de repaso para este juego.</p>
@@ -151,8 +157,14 @@ function FamilyGroup({ row, open, onToggle }: FamilyGroupProps) {
           </span>
           <span className={styles.groupTitle}>{family.title}</span>
         </span>
-        <span className={clsx(styles.score, toneOf(accuracy))}>
-          {accuracy === undefined ? "sin datos" : `${hits}/${attempted}`}
+        <span className={styles.groupEnd}>
+          <span className={clsx(styles.score, toneOf(accuracy))}>
+            {accuracy !== undefined && accuracy >= STRONG_FROM && <Tick className={styles.scoreTick} />}
+            {accuracy === undefined ? "sin datos" : `${hits}/${attempted}`}
+          </span>
+          <svg className={styles.chevron} viewBox="0 0 12 8" aria-hidden="true" focusable="false">
+            <path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          </svg>
         </span>
       </button>
 

@@ -1,6 +1,19 @@
 import { clsx } from "clsx";
 import { useId, useRef, useState, type KeyboardEvent } from "react";
-import { Button, BUTTON_VARIANT, GameCard, GapNumber, ScoreBanner } from "../../engine/ui";
+import {
+  ActionBar,
+  BarCount,
+  BarRow,
+  BarStack,
+  Button,
+  BUTTON_VARIANT,
+  GameCard,
+  gapFieldClass,
+  GapNumber,
+  Rubric,
+  ScoreBanner,
+  Tick,
+} from "../../engine/ui";
 import {
   findSubmissionIssue,
   MARKS_PER_ITEM,
@@ -53,6 +66,7 @@ export function KeyWordTransformationExam() {
   });
   const issueById = new Map(issues.map(({ item, issue }) => [item.id, issue]));
   const result = checked ? grade(paper, answers) : undefined;
+  const answered = paper.filter((item) => (answers[item.id] ?? "").trim() !== "").length;
 
   const inputId = (number: number) => `${idPrefix}-item-${number}`;
   const focusItem = (number: number) => document.getElementById(inputId(number))?.focus();
@@ -95,16 +109,18 @@ export function KeyWordTransformationExam() {
   };
 
   return (
-    <div className={styles.game}>
-      <p className={styles.instructions}>
-        Completá la segunda frase para que signifique lo mismo que la primera, usando la palabra
-        clave sin cambiarla y entre {MIN_WORDS} y {MAX_WORDS} palabras. Cada frase vale{" "}
-        {MARKS_PER_ITEM} puntos. Enter pasa a la siguiente; en la última, corrige.
-      </p>
+    <div className={clsx(styles.game, checked && styles.checked)}>
+      <GameCard bleed>
+        {result !== undefined ? (
+          <ScoreBanner ref={resultRef} correct={result.marks} total={result.total} />
+        ) : (
+          <Rubric>
+            <strong>Completá la segunda frase para que signifique lo mismo que la primera,</strong> usando
+            la palabra clave sin cambiarla y entre {MIN_WORDS} y {MAX_WORDS} palabras. Cada frase vale{" "}
+            {MARKS_PER_ITEM} puntos. Enter pasa a la siguiente; en la última, corrige.
+          </Rubric>
+        )}
 
-      {result !== undefined && <ScoreBanner ref={resultRef} correct={result.marks} total={result.total} />}
-
-      <GameCard>
         <ol className={styles.items}>
           {paper.map((item, i) => {
             const number = i + 1;
@@ -112,78 +128,82 @@ export function KeyWordTransformationExam() {
             const words = countWords(value);
             const issue = issueById.get(item.id);
             const marking = result?.byId.get(item.id);
+            const invalid = showIssues && !checked && issue !== undefined;
             const [before = "", after = ""] = item.gapped.split("___");
 
             return (
-              <li
-                key={item.id}
-                className={clsx(
-                  styles.item,
-                  marking?.marks === MARKS_PER_ITEM && styles.itemFull,
-                  marking !== undefined && marking.marks < MARKS_PER_ITEM && styles.itemPartial,
-                )}
-              >
-                <div className={styles.head}>
-                  <GapNumber number={number} />
+              <li key={item.id} className={styles.item}>
+                <GapNumber number={number} />
+                <div className={styles.body}>
                   <p className={styles.original}>{item.original}</p>
-                </div>
 
-                <span className={styles.keyWord}>{item.keyWord}</span>
+                  <span className={styles.keyWord}>{item.keyWord}</span>
 
-                <p className={styles.gapped}>
-                  {before}
-                  <input
-                    id={inputId(number)}
-                    type="text"
-                    value={value}
-                    onChange={(event) => write(item.id, event.target.value)}
-                    onKeyDown={handleKeyDown(number)}
-                    // readOnly y no disabled: disabled saca el input del
-                    // orden de Tab y no deja recorrer la hoja corregida.
-                    readOnly={checked}
-                    aria-label={`Frase ${number}, con la palabra clave ${item.keyWord}`}
-                    aria-invalid={showIssues && !checked && issue !== undefined}
-                    autoComplete="off"
-                    autoCapitalize="none"
-                    autoCorrect="off"
-                    spellCheck={false}
-                    className={clsx(styles.input, showIssues && !checked && issue !== undefined && styles.inputInvalid)}
-                  />
-                  {after}
-                </p>
-
-                {!checked && (
-                  <p
-                    className={clsx(
-                      styles.counter,
-                      value.trim() !== "" && (words < MIN_WORDS || words > MAX_WORDS) && styles.counterBad,
-                    )}
-                  >
-                    {words} / {MIN_WORDS}–{MAX_WORDS} palabras
-                    {showIssues && issue !== undefined && (
-                      <span className={styles.issue}> · {describeIssue(issue, item.keyWord)}</span>
-                    )}
+                  <p className={styles.gapped}>
+                    {before}
+                    <input
+                      id={inputId(number)}
+                      type="text"
+                      value={value}
+                      onChange={(event) => write(item.id, event.target.value)}
+                      onKeyDown={handleKeyDown(number)}
+                      // readOnly y no disabled: disabled saca el input del
+                      // orden de Tab y no deja recorrer la hoja corregida.
+                      readOnly={checked}
+                      // Corregida, la respuesta vuelve a la línea medida a su
+                      // largo. No field-sizing: Safari no lo soporta.
+                      style={checked ? { width: `${value.length}ch` } : undefined}
+                      aria-label={`Frase ${number}, con la palabra clave ${item.keyWord}`}
+                      aria-invalid={invalid}
+                      enterKeyHint={number < paper.length ? "next" : "done"}
+                      inputMode="text"
+                      autoComplete="off"
+                      autoCapitalize="none"
+                      autoCorrect="off"
+                      spellCheck={false}
+                      className={gapFieldClass({ filled: value !== "", missing: invalid, checked, correct: undefined })}
+                    />
+                    {after}
                   </p>
-                )}
 
-                {marking !== undefined && <ItemFeedback item={item} marking={marking} />}
+                  {!checked && (
+                    <p
+                      className={clsx(
+                        styles.counter,
+                        value.trim() !== "" && (words < MIN_WORDS || words > MAX_WORDS) && styles.counterBad,
+                      )}
+                    >
+                      {words} / {MIN_WORDS}–{MAX_WORDS} palabras
+                      {showIssues && issue !== undefined && (
+                        <span className={styles.issue}> · {describeIssue(issue, item.keyWord)}</span>
+                      )}
+                    </p>
+                  )}
+
+                  {marking !== undefined && <ItemFeedback item={item} marking={marking} />}
+                </div>
               </li>
             );
           })}
         </ol>
+      </GameCard>
 
-        <div className={styles.actions}>
-          {checked ? (
+      <ActionBar>
+        {checked ? (
+          <BarStack>
             <Button variant={BUTTON_VARIANT.PRIMARY} onClick={nextPaper}>
               Otras seis frases
             </Button>
-          ) : (
-            <Button block variant={BUTTON_VARIANT.PRIMARY} onClick={check}>
+          </BarStack>
+        ) : (
+          <BarRow>
+            <BarCount count={answered} total={paper.length} noun="respondidas" />
+            <Button variant={BUTTON_VARIANT.PRIMARY} onClick={check}>
               Corregir
             </Button>
-          )}
-        </div>
-      </GameCard>
+          </BarRow>
+        )}
+      </ActionBar>
     </div>
   );
 }
@@ -195,10 +215,12 @@ function ItemFeedback({ item, marking }: { item: KeyWordItem; marking: Marking }
 
   return (
     <div className={styles.feedback}>
-      <p className={styles.verdict}>
-        {marking.marks} de {MARKS_PER_ITEM}
-        <span className={styles.label}>{item.label}</span>
-      </p>
+      <div className={styles.feedbackHead}>
+        <p className={styles.chunk}>{item.label}</p>
+        <span className={styles.itemMark}>
+          {marking.marks} de {MARKS_PER_ITEM}
+        </span>
+      </div>
 
       {!full && (
         <>
@@ -209,12 +231,8 @@ function ItemFeedback({ item, marking }: { item: KeyWordItem; marking: Marking }
             </p>
           )}
           <p className={styles.halves}>
-            <span className={marking.firstHalf ? styles.halfOk : styles.halfBad}>
-              {marking.firstHalf ? "✓" : "✗"} {first}
-            </span>
-            <span className={marking.secondHalf ? styles.halfOk : styles.halfBad}>
-              {marking.secondHalf ? "✓" : "✗"} {second}
-            </span>
+            <Half got={marking.firstHalf}>{first}</Half>
+            <Half got={marking.secondHalf}>{second}</Half>
           </p>
         </>
       )}
@@ -222,5 +240,24 @@ function ItemFeedback({ item, marking }: { item: KeyWordItem; marking: Marking }
       {alternatives.length > 0 && <p className={styles.note}>También vale: {alternatives.join(" · ")}</p>}
       <p className={styles.explanation}>{item.explanation}</p>
     </div>
+  );
+}
+
+/**
+ * Una de las dos mitades que puntúan. La que obtuviste lleva la ✓; la que
+ * faltó va circulada en birome: no estaba mal, faltaba.
+ */
+function Half({ got, children }: { got: boolean; children: string }) {
+  return got ? (
+    <span className={styles.halfOk}>
+      <Tick className={styles.halfTick} />
+      <span className="visually-hidden">obtenida: </span>
+      {children}
+    </span>
+  ) : (
+    <span className={styles.halfMissed}>
+      <span className="visually-hidden">faltó: </span>
+      {children}
+    </span>
   );
 }

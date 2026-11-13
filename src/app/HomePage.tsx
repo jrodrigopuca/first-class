@@ -1,4 +1,5 @@
 import { GAME_SECTION, type GameSection } from "../engine/types";
+import { Arrow } from "../engine/ui";
 import { GAMES } from "../registry";
 import { toHref } from "../lib/router";
 import styles from "./HomePage.module.css";
@@ -26,6 +27,11 @@ const SECTIONS: readonly SectionInfo[] = [
   },
 ];
 
+/** " · texto" / " · hoja": lo que el subtítulo agrega después de "Part n". */
+function formatOf(subtitle: string): string {
+  return subtitle.replace(/^Part \d+/, "");
+}
+
 export function HomePage() {
   return (
     <>
@@ -36,40 +42,60 @@ export function HomePage() {
         </p>
       </section>
 
-      {SECTIONS.map((section) => {
-        const games = GAMES.filter((game) => game.section === section.id);
-        if (games.length === 0) return null;
+      <div className={styles.sections}>
+        {SECTIONS.map((section) => {
+          const games = GAMES.filter((game) => game.section === section.id);
+          if (games.length === 0) return null;
 
-        return (
-          <section key={section.id} className={styles.section} aria-labelledby={`section-${section.id}`}>
-            <div className={styles.sectionHead}>
-              <h2 id={`section-${section.id}`} className={styles.sectionTitle}>
-                {section.title}
-                <span className={styles.sectionTag}>{section.tag}</span>
-              </h2>
-              <p className={styles.sectionLead}>{section.lead}</p>
-            </div>
+          return (
+            <section key={section.id} className={styles.sheet} aria-labelledby={`section-${section.id}`}>
+              <div className={styles.sectionHead}>
+                <h2 id={`section-${section.id}`} className={styles.sectionTitle}>
+                  {section.title} <span className={styles.sectionTag}>{section.tag}</span>
+                </h2>
+                <p className={styles.sectionLead}>{section.lead}</p>
+              </div>
 
-            <div className={styles.grid}>
-              {games.map((game) => (
-                <a key={game.id} href={toHref(`/games/${game.id}`)} className={styles.card}>
-                  <span className={styles.part}>{game.subtitle}</span>
-                  <h3 className={styles.cardTitle}>{game.title}</h3>
-                  <p className={styles.cardText}>{game.description}</p>
-                </a>
-              ))}
-            </div>
-          </section>
-        );
-      })}
+              <ul className={styles.rows}>
+                {games.map((game) => {
+                  const format = formatOf(game.subtitle);
+                  return (
+                    <li key={game.id}>
+                      <a href={toHref(`/games/${game.id}`)} className={styles.row}>
+                        <span className={styles.part} aria-hidden="true">
+                          <small>PART</small>
+                          <span>{game.part}</span>
+                        </span>
+                        <span>
+                          <span className="visually-hidden">{game.subtitle}: </span>
+                          <h3 className={styles.rowTitle}>
+                            {game.title}
+                            {format !== "" && <span className={styles.rowFormat}> {format}</span>}
+                          </h3>
+                          <p className={styles.rowText}>{game.description}</p>
+                        </span>
+                        <Arrow className={styles.rowArrow} />
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
 
       <a href={toHref("/review")} className={styles.review}>
-        <span className={styles.part}>Repaso</span>
-        <h2 className={styles.cardTitle}>Lo que más fallás</h2>
-        <p className={styles.cardText}>
-          Las explicaciones de la pre-práctica, agrupadas por familia y ordenadas
-          por tus errores reales.
-        </p>
+        <span>
+          <h2 className={styles.rowTitle}>
+            Lo que más fallás <span className={styles.rowFormat}>· Repaso</span>
+          </h2>
+          <p className={styles.rowText}>
+            Las explicaciones de la pre-práctica, agrupadas por familia y ordenadas por tus errores
+            reales.
+          </p>
+        </span>
+        <Arrow className={styles.rowArrow} />
       </a>
     </>
   );

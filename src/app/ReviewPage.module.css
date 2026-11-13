@@ -3,77 +3,111 @@
 }
 
 .back {
-  display: inline-block;
-  margin-bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap-min);
+  margin-left: calc(-1 * var(--space-2));
+  padding: 0 var(--space-2);
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: var(--color-ink-muted);
   transition: color var(--transition);
 }
 
 .back:hover {
-  color: var(--color-accent);
+  color: var(--color-ink);
+}
+
+.backArrow {
+  width: 1rem;
+  height: 1rem;
+  transform: scaleX(-1);
 }
 
 .title {
-  margin: 0;
+  margin: var(--space-1) 0;
+  font-family: var(--font-paper);
   font-size: var(--text-2xl);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: var(--weight-bold);
+  line-height: 1.15;
+  letter-spacing: var(--tracking-display);
 }
 
 .lead {
-  margin: var(--space-2) 0 0;
+  margin: 0;
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: var(--color-ink-muted);
 }
 
+/* En el celular la fila de filtros hace scroll DENTRO de su contenedor,
+   nunca de la página. */
 .tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-bottom: var(--space-5);
+  gap: var(--space-4);
+  margin: 0 calc(-1 * var(--gutter)) var(--space-4);
+  padding: 0 var(--gutter);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  border-bottom: var(--border-hair) solid var(--color-rule);
+}
+
+@media (min-width: 40rem) {
+  .tabs {
+    margin-inline: 0;
+    padding: 0;
+  }
 }
 
 .tab {
-  padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  color: var(--color-text-muted);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  transition: all var(--transition);
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--tap-min);
+  min-height: var(--tap-min);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+  scroll-snap-align: start;
+  transition: color var(--transition), border-color var(--transition);
 }
 
 .tab:hover {
-  border-color: var(--color-accent);
+  color: var(--color-ink);
 }
 
 .tabActive {
-  background: var(--color-accent-soft);
-  border-color: var(--color-accent);
-  color: var(--color-accent-text);
+  color: var(--color-ink);
+  border-bottom-color: var(--color-ink);
 }
 
+/* Los grupos: fichas de una misma hoja, separadas por reglas. */
 .groups {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-
-.group {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
   overflow: hidden;
+  background: var(--color-paper);
+  box-shadow: var(--shadow-sheet);
+  border-radius: var(--radius-md);
 }
 
-.groupOpen {
-  border-color: var(--color-accent);
+@media (max-width: 39.99rem) {
+  .groups {
+    margin-inline: calc(-1 * var(--gutter));
+    border-radius: 0;
+    box-shadow: 0 1px 0 var(--color-rule), 0 -1px 0 var(--color-rule);
+  }
+}
+
+.group + .group {
+  border-top: var(--border-hair) solid var(--color-rule);
 }
 
 .groupHead {
   width: 100%;
+  min-height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,97 +117,129 @@
   border: none;
   text-align: left;
   cursor: pointer;
+  transition: background var(--transition);
 }
 
-.groupTitle {
-  font-size: var(--text-base);
-  font-weight: 600;
+.groupHead:hover,
+.groupOpen .groupHead {
+  background: var(--color-paper-sunk);
+}
+
+.groupHead:focus-visible {
+  outline-offset: -3px;
 }
 
 .groupGame {
   display: block;
-  font-size: var(--text-xs);
-  font-weight: 500;
-  color: var(--color-text-subtle);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   margin-bottom: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.groupTitle {
+  font-family: var(--font-paper);
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+}
+
+.groupEnd {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.chevron {
+  width: 0.75rem;
+  height: 0.5rem;
+  color: var(--color-ink-muted);
+  transition: transform var(--transition);
+}
+
+.groupOpen .chevron {
+  transform: rotate(180deg);
 }
 
 .score {
-  flex-shrink: 0;
-  font-size: var(--text-xs);
-  font-variant-numeric: tabular-nums;
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--radius-sm);
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-variant-numeric: var(--numeric-tabular);
+  font-weight: var(--weight-heavy);
 }
 
+/* El corrector te marcó esto. */
 .weak {
-  background: var(--color-danger-soft);
-  color: var(--color-danger);
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--color-mark);
 }
 
 .mid {
-  background: var(--color-accent-soft);
-  color: var(--color-accent-text);
+  color: var(--color-graphite);
 }
 
 .strong {
-  background: var(--color-success-soft);
-  color: var(--color-success);
+  color: var(--color-mark-correct);
+}
+
+.scoreTick {
+  width: 1rem;
+  height: 1rem;
 }
 
 .untouched {
-  background: var(--color-bg);
-  color: var(--color-text-subtle);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+  color: var(--color-ink-muted);
 }
 
 .entries {
   list-style: none;
   margin: 0;
-  padding: 0 var(--space-4) var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-4);
+  padding: 0 var(--space-4);
+}
+
+.entries li {
+  padding: var(--space-4) 0;
+  border-top: var(--border-hair) solid var(--color-rule);
 }
 
 .prompt {
   margin: 0 0 var(--space-2);
-  font-size: var(--text-sm);
+  font-family: var(--font-paper);
   line-height: 1.7;
 }
 
+/* La frase con la respuesta: en lápiz, subrayada. */
 .filled {
-  font-weight: 700;
-  color: var(--color-accent-text);
-  border-bottom: 2px solid var(--color-accent);
   padding: 0 var(--space-1);
+  border-bottom: var(--border-gap) solid var(--color-graphite);
+  font-weight: var(--weight-bold);
+  color: var(--color-graphite);
 }
 
+/* La raíz o la palabra clave, impresa en una caja como en la hoja. */
 .cue {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  background: var(--color-accent-soft);
-  color: var(--color-accent-text);
-  padding: 0 var(--space-2);
-  border-radius: var(--radius-sm);
   margin-right: var(--space-2);
+  padding: 0.05rem 0.4rem;
+  border: var(--border-hair) solid var(--color-ink);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.06em;
 }
 
 .explanation {
   margin: 0;
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  line-height: 1.6;
+  font-size: var(--text-base);
+  line-height: 1.55;
 }
 
 .empty {
   text-align: center;
-  color: var(--color-text-muted);
+  color: var(--color-ink-muted);
   padding: var(--space-7) 0;
 }

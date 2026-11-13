@@ -208,8 +208,11 @@ export function WordFormationGame() {
             // avanzar a la siguiente pregunta dejaba de funcionar. readOnly
             // bloquea la edición pero mantiene foco y teclado vivos.
             readOnly={status === ROUND_STATUS.ANSWERED}
+            // Enter comprueba (y después pasa a la siguiente): "Listo".
+            enterKeyHint="done"
+            inputMode="text"
             autoComplete="off"
-            autoCapitalize="off"
+            autoCapitalize="none"
             autoCorrect="off"
             spellCheck={false}
             onChange={(event) => {

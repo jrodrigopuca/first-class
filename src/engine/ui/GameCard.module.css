@@ -1,7 +1,42 @@
 .card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  position: relative;
+  background: var(--color-paper);
+  box-shadow: var(--shadow-sheet);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  padding: var(--space-5);
+  padding: var(--space-5) var(--space-4);
+}
+
+@media (min-width: 40rem) {
+  .card {
+    padding: var(--space-6);
+  }
+}
+
+/* En el celular la hoja va de borde a borde: gana 32 px de renglón. */
+@media (max-width: 39.99rem) {
+  .bleed {
+    margin-inline: calc(-1 * var(--gutter));
+    border-radius: 0;
+    box-shadow: 0 1px 0 var(--color-rule), 0 -1px 0 var(--color-rule);
+  }
+}
+
+.rubric {
+  margin: 0 0 var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: var(--border-hair) solid var(--color-rule);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.rubric strong {
+  color: var(--color-ink);
+  font-weight: var(--weight-bold);
+}
+
+.sheetTitle {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-paper);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
 }

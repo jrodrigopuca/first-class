@@ -37,7 +37,7 @@ export function App() {
   }
 
   return (
-    <Layout>
+    <Layout wide>
       <HomePage />
     </Layout>
   );

@@ -1,43 +1,93 @@
 /*
- * Design tokens. Única fuente de verdad del sistema visual.
- * Todo módulo CSS consume var(--*); nadie escribe un color a mano.
- * Cambiás acá y cambia la app entera — incluidos los juegos que
- * todavía no existen.
+ * Design tokens — dirección "La hoja corregida" · fondo Celeste + Lexend.
+ * Única fuente de verdad del sistema visual: todo módulo CSS consume
+ * var(--*); nadie escribe un color a mano.
+ *
+ * Sin cursiva en ningún lado: Lexend no tiene, y body lleva
+ * font-synthesis: none para que el navegador no la invente.
+ *
+ * Tres materiales, tres roles, nunca se mezclan:
+ *   - TINTA  (--color-ink*):      lo impreso — el enunciado, el texto del examen, la app.
+ *   - LÁPIZ  (--color-graphite*): lo que escribe el usuario — sus respuestas. Gris
+ *     neutro, no azulado: sobre la hoja celeste un lápiz azulado se confunde con la tinta.
+ *   - BIROME ROJA (--color-mark*): lo que escribe quien corrige — ✓, ✗, la palabra
+ *     correcta, el puntaje. Solo aparece DESPUÉS de corregir.
+ * Y un cuarto, auxiliar:
+ *   - RESALTADOR (--color-highlight*): dónde estás y lo que falta. Nunca es un error.
+ *
+ * Contraste medido (WCAG 2.x), ver handoff.md §2. Todo texto ≥ 4.5:1 sobre
+ * --color-paper y --color-desk; la línea del espacio ≥ 3:1 sobre --color-paper.
+ *
+ * Fuentes: UNA <link> en index.html (medido: 2 archivos woff2, 52 KB con subset latin):
+ *   https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Lexend:wght@400..700&display=swap
  */
 :root {
-  /* Color */
-  --color-bg: #f8fafc;
-  --color-surface: #ffffff;
-  --color-border: #e2e8f0;
-  --color-text: #0f172a;
-  --color-text-muted: #64748b;
-  --color-text-subtle: #94a3b8;
+  /* ---------- Color: superficies ---------- */
+  --color-desk: #e4ecf4;          /* fondo de página: celeste de carpeta escolar */
+  --color-paper: #fcfdfe;         /* la hoja */
+  --color-paper-sunk: #f1f5f9;    /* hover de fila, barra de acciones */
+  --color-rule: #d4dee9;          /* renglones y separadores (decorativo) */
+  --color-rule-strong: #a9b7c7;
+  --color-margin: #e8a49a;        /* el margen rojo de la hoja (decorativo) */
 
-  --color-accent: #4f46e5;
-  --color-accent-strong: #4338ca;
-  --color-accent-soft: #eef2ff;
-  --color-accent-text: #4338ca;
+  /* ---------- Color: tinta (impreso) ---------- */
+  --color-ink: #172230;           /* 15.8:1 sobre paper · 13.5:1 sobre desk */
+  --color-ink-muted: #4c5a6c;     /* 6.9:1 · 5.9:1 */
+  --color-on-ink: #fcfdfe;        /* texto sobre botón de tinta */
 
-  --color-success: #15803d;
-  --color-success-soft: #f0fdf4;
-  --color-success-border: #bbf7d0;
+  /* ---------- Color: lápiz (respuestas del usuario) ---------- */
+  /* Más oscuro que la tinta apagada y más claro que la tinta, para que una
+     respuesta no se lea como deshabilitada. Medido (WCAG 2.x):
+     10.6:1 sobre paper · 9.0:1 sobre desk · 8.4:1 sobre highlight ·
+     1.49:1 contra --color-ink · 1.53:1 contra --color-ink-muted.
+     (El anterior, #50545b, daba 1.08:1 contra --color-ink-muted.) */
+  --color-graphite: #3a3e45;
+  --color-graphite-line: #7f8c9b; /* 3.4:1 sobre paper · la línea del espacio */
 
-  --color-danger: #b91c1c;
-  --color-danger-soft: #fef2f2;
-  --color-danger-border: #fecaca;
+  /* ---------- Color: birome roja (corrección) ---------- */
+  --color-mark: #b3261e;          /* 6.4:1 · 5.5:1 */
+  --color-mark-correct: var(--color-mark); /* ✓ en rojo, como corrige un profesor (decidido) */
+  --color-mark-soft: #f9e5e2;     /* opcional, no usado en los mockups */
 
-  /* Tipografía */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  /* ---------- Color: resaltador ---------- */
+  --color-highlight: #ffe27a;
+  --color-highlight-ink: #7a5600; /* 6.5:1 · 5.6:1 */
 
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.375rem;
-  --text-2xl: 1.75rem;
+  /* ---------- Color: foco ---------- */
+  --color-focus: #172230;
 
-  /* Espaciado */
+  /* ---------- Tipografía ---------- */
+  /* Lexend para todo lo que no es corrección. --font-paper y --font-ui quedan
+     separados a propósito: si algún día el texto del examen cambia de familia,
+     se cambia un token y no 40 módulos. Ya no hay fuente monoespaciada: números,
+     KEY WORD y raíz usan --font-ui + --numeric-tabular. */
+  --font-paper: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --font-ui: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "Kalam", "Segoe Print", "Bradley Hand", cursive;   /* SOLO la birome roja */
+  --numeric-tabular: tabular-nums;
+
+  --weight-regular: 400;
+  --weight-medium: 500;           /* rótulos de la corrección (reemplaza la cursiva) */
+  --weight-bold: 600;             /* títulos, respuestas */
+  --weight-heavy: 700;            /* botones, números en caja */
+
+  /* Escala mobile-first. Lexend es ancha: la escala de texto de lectura no sube
+     de 17px en el celular para no partir renglones de más. Nada de lectura < 14px. */
+  --text-xs: 0.8125rem;   /* 13 · contador de palabras, raíz, "PART" */
+  --text-sm: 0.875rem;    /* 14 */
+  --text-base: 1rem;      /* 16 · UI y explicaciones */
+  --text-paper: 1.0625rem;/* 17 · texto del examen e inputs (≥16: iOS no hace zoom); 18 desde 640px */
+  --text-lg: 1.1875rem;   /* 19 · título del texto, títulos de fila, rótulo de corrección */
+  --text-xl: 1.375rem;    /* 22 · títulos de sección */
+  --text-2xl: 1.75rem;    /* 28 · h1 */
+  --text-mark: 1.25rem;   /* 20 · palabra correcta en birome */
+  --text-score: 2.25rem;  /* 36 · el puntaje circulado */
+
+  --leading-paper: 2;
+  --leading-ui: 1.5;
+  --tracking-display: -0.02em;    /* Lexend viene abierta: los títulos se cierran un poco */
+
+  /* ---------- Espaciado (mismos nombres y valores que hoy + --space-8) ---------- */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -45,44 +95,64 @@
   --space-5: 1.5rem;
   --space-6: 2rem;
   --space-7: 3rem;
+  --space-8: 4rem;
 
-  /* Formas y movimiento */
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
+  /* ---------- Forma ---------- */
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.05);
-  --shadow-md: 0 4px 16px rgb(15 23 42 / 0.08);
+  --border-hair: 1px;
+  --border-gap: 2px;
+  --border-mark: 2px;
 
+  --shadow-sheet: 0 1px 0 rgb(23 34 48 / 0.05), 0 2px 6px rgb(23 34 48 / 0.06);
+  --shadow-bar: 0 -1px 0 var(--color-rule), 0 -6px 16px rgb(23 34 48 / 0.08);
+
+  /* ---------- Objetivos táctiles ---------- */
+  --tap-min: 2.75rem;
+
+  /* ---------- Movimiento ---------- */
   --transition: 150ms ease;
+  --duration-mark: 420ms;
 
+  /* ---------- Layout ---------- */
   --layout-max: 44rem;
+  --layout-wide: 64rem;
+  --gutter: var(--space-4);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0b1120;
-    --color-surface: #111827;
-    --color-border: #1f2937;
-    --color-text: #f1f5f9;
-    --color-text-muted: #94a3b8;
-    --color-text-subtle: #64748b;
+    /* De noche: azul noche, no negro. */
+    --color-desk: #0c131c;
+    --color-paper: #142030;
+    --color-paper-sunk: #1b293b;
+    --color-rule: #263649;
+    --color-rule-strong: #3d5068;
+    --color-margin: #6e3b33;
 
-    --color-accent: #818cf8;
-    --color-accent-strong: #a5b4fc;
-    --color-accent-soft: #1e1b4b;
-    --color-accent-text: #c7d2fe;
+    --color-ink: #e4ecf5;          /* 13.8:1 · 15.7:1 */
+    --color-ink-muted: #9fb1c6;    /* 7.5:1 · 8.5:1 */
+    --color-on-ink: #142030;
 
-    --color-success: #4ade80;
-    --color-success-soft: #052e1a;
-    --color-success-border: #14532d;
+    /* Mismo criterio que en claro: entre la tinta y la tinta apagada.
+       Medido: 10.2:1 sobre paper · 11.5:1 sobre desk · 6.5:1 sobre highlight ·
+       1.36:1 contra --color-ink · 1.36:1 contra --color-ink-muted.
+       (El anterior, #b5bac2, daba 1.12:1 contra --color-ink-muted.) */
+    --color-graphite: #cbcbcf;
+    --color-graphite-line: #7488a0;/* 4.5:1 */
 
-    --color-danger: #f87171;
-    --color-danger-soft: #3b0a0a;
-    --color-danger-border: #7f1d1d;
+    --color-mark: #ff8a7a;         /* 7.2:1 · 8.1:1 */
+    --color-mark-soft: #2e1d22;
 
-    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-    --shadow-md: 0 4px 16px rgb(0 0 0 / 0.5);
+    --color-highlight: #4a3e12;    /* el texto encima va en --color-ink (8.9:1) */
+    --color-highlight-ink: #f0cb5a;/* 10.5:1 */
+
+    --color-focus: #f0cb5a;
+
+    --shadow-sheet: 0 0 0 1px var(--color-rule);
+    --shadow-bar: 0 -1px 0 var(--color-rule), 0 -6px 16px rgb(0 0 0 / 0.5);
   }
 }

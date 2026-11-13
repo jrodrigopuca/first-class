@@ -1,6 +1,29 @@
-import { clsx } from "clsx";
 import { useId, useRef, useState } from "react";
-import { Button, BUTTON_VARIANT, ExamText, GameCard, GapNumber, ScoreBanner } from "../../engine/ui";
+import {
+  ActionBar,
+  BarCount,
+  BarNote,
+  BarRow,
+  BarStack,
+  BarWarning,
+  Button,
+  BUTTON_VARIANT,
+  CorrectionRow,
+  CorrectionSheet,
+  ExamText,
+  GameCard,
+  GapChip,
+  gapFieldClass,
+  GapFix,
+  GapNumber,
+  gapStyles,
+  GapTick,
+  Handwritten,
+  Pencil,
+  Rubric,
+  ScoreBanner,
+  Struck,
+} from "../../engine/ui";
 import { buildPaper, grade, pickText, type Paper } from "./paper";
 import { TEXTS } from "./texts";
 import styles from "./MultipleChoiceClozeExam.module.css";
@@ -66,23 +89,25 @@ export function MultipleChoiceClozeExam() {
 
   return (
     <div className={styles.game}>
-      <p className={styles.instructions}>
-        Elegí en cada espacio la opción que mejor completa el texto. Hay un ejemplo al principio
-        (0). Respondé en el orden que quieras y corregí al final.
-      </p>
+      <GameCard bleed>
+        {result !== undefined ? (
+          <ScoreBanner ref={resultRef} correct={result.correct} total={result.total} />
+        ) : (
+          <Rubric>
+            <strong>Elegí en cada espacio la opción que mejor completa el texto.</strong> Hay un ejemplo
+            al principio (0). Respondé en el orden que quieras y corregí al final.
+          </Rubric>
+        )}
 
-      {result !== undefined && <ScoreBanner ref={resultRef} correct={result.correct} total={result.total} />}
-
-      <GameCard>
         <ExamText
           title={paper.text.title}
           paragraphs={paper.text.paragraphs}
           renderGap={(index) => {
             if (index === 0) {
               return (
-                <span className={styles.example}>
+                <span className={gapStyles.gap}>
                   <GapNumber number={0} />
-                  {paper.example.gap.answer}
+                  <span className={gapStyles.example}>{paper.example.gap.answer}</span>
                 </span>
               );
             }
@@ -97,7 +122,7 @@ export function MultipleChoiceClozeExam() {
             const invalid = showWarning && chosen === undefined;
 
             return (
-              <span className={styles.gap}>
+              <span className={gapStyles.gap}>
                 <GapNumber number={number} />
                 <select
                   id={selectId(number)}
@@ -105,13 +130,7 @@ export function MultipleChoiceClozeExam() {
                   onChange={(event) => choose(gap.id, event.target.value)}
                   aria-label={`Espacio ${number}`}
                   aria-invalid={invalid || correct === false}
-                  className={clsx(
-                    styles.select,
-                    chosen === undefined && styles.selectEmpty,
-                    invalid && styles.selectInvalid,
-                    correct === true && styles.selectCorrect,
-                    correct === false && styles.selectWrong,
-                  )}
+                  className={gapFieldClass({ filled: chosen !== undefined, missing: invalid, checked, correct })}
                 >
                   {/* hidden: se muestra mientras no hay elección, pero no figura en la lista */}
                   <option value="" disabled hidden>
@@ -123,68 +142,76 @@ export function MultipleChoiceClozeExam() {
                     </option>
                   ))}
                 </select>
-                {correct === false && <span className={styles.fix}>{gap.answer}</span>}
+                {correct === true && <GapTick />}
+                {correct === false && <GapFix>{gap.answer}</GapFix>}
               </span>
             );
           }}
         />
       </GameCard>
 
-      <GameCard>
-        {checked ? (
-          <ol className={styles.explanations}>
-            {paper.gaps.map(({ gap, number }) => {
-              const chosen = answers[gap.id] ?? "";
-              const correct = chosen === gap.answer;
-              return (
-                <li key={gap.id} className={clsx(styles.row, correct ? styles.rowCorrect : styles.rowWrong)}>
-                  <span className={styles.rowNumber}>{number}</span>
-                  <div>
-                    <p className={styles.verdict}>
-                      {correct ? `✓ «${chosen}»` : `✗ Elegiste «${chosen}» · Era «${gap.answer}»`}
-                      <span className={styles.label}>{gap.label}</span>
-                    </p>
-                    <p className={styles.explanationText}>{gap.explanation}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-        ) : (
-          showWarning &&
-          missing.length > 0 && (
-            <p className={styles.warning} role="alert">
-              {missing.length === 1 ? "Te falta 1 espacio" : `Te faltan ${missing.length} espacios`} (
-              {missing.map((paperGap, i) => (
-                <span key={paperGap.gap.id}>
-                  {i > 0 && ", "}
-                  <button type="button" className={styles.issueLink} onClick={() => focusGap(paperGap.number)}>
-                    {paperGap.number}
-                  </button>
-                </span>
-              ))}
-              ). En el examen no se resta: respondé siempre.
-            </p>
-          )
-        )}
+      {checked && (
+        <CorrectionSheet>
+          {paper.gaps.map(({ gap, number }) => {
+            const chosen = answers[gap.id] ?? "";
+            const correct = chosen === gap.answer;
+            return (
+              <CorrectionRow
+                key={gap.id}
+                number={number}
+                correct={correct}
+                title={gap.label}
+                verdict={
+                  correct ? (
+                    <>
+                      Elegiste «<Pencil>{chosen}</Pencil>»
+                    </>
+                  ) : (
+                    <>
+                      Elegiste «<Struck>{chosen}</Struck>» · Era «<Handwritten>{gap.answer}</Handwritten>»
+                    </>
+                  )
+                }
+              >
+                {gap.explanation}
+              </CorrectionRow>
+            );
+          })}
+        </CorrectionSheet>
+      )}
 
-        <div className={styles.actions}>
-          {checked ? (
-            <>
-              <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => start(buildPaper(pickText(TEXTS, paper.text.id)))}>
-                Otro texto
-              </Button>
-              <Button variant={BUTTON_VARIANT.GHOST} onClick={() => start(buildPaper(paper.text))}>
-                Mismo texto, otros espacios
-              </Button>
-            </>
-          ) : (
-            <Button block variant={BUTTON_VARIANT.PRIMARY} onClick={check}>
-              Corregir
+      <ActionBar>
+        {checked ? (
+          <BarStack>
+            <Button variant={BUTTON_VARIANT.PRIMARY} onClick={() => start(buildPaper(pickText(TEXTS, paper.text.id)))}>
+              Otro texto
             </Button>
-          )}
-        </div>
-      </GameCard>
+            <Button variant={BUTTON_VARIANT.GHOST} onClick={() => start(buildPaper(paper.text))}>
+              Mismo texto, otros espacios
+            </Button>
+          </BarStack>
+        ) : (
+          <>
+            {showWarning && missing.length > 0 && (
+              <BarWarning>
+                <p>
+                  {missing.length === 1 ? "Te falta 1 espacio:" : `Te faltan ${missing.length} espacios:`}{" "}
+                  {missing.map((paperGap) => (
+                    <GapChip key={paperGap.gap.id} number={paperGap.number} onClick={() => focusGap(paperGap.number)} />
+                  ))}
+                  <BarNote>En el examen no se resta: respondé siempre.</BarNote>
+                </p>
+              </BarWarning>
+            )}
+            <BarRow>
+              <BarCount count={paper.gaps.length - missing.length} total={paper.gaps.length} noun="respondidos" />
+              <Button variant={BUTTON_VARIANT.PRIMARY} onClick={check}>
+                Corregir
+              </Button>
+            </BarRow>
+          </>
+        )}
+      </ActionBar>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { GameIdentityProvider } from "../engine/GameIdentityProvider";
+import { Arrow } from "../engine/ui";
 import { findGame } from "../registry";
 import { toHref } from "../lib/router";
 import styles from "./GamePage.module.css";
@@ -15,7 +16,8 @@ export function GamePage({ gameId }: GamePageProps) {
       <div className={styles.notFound}>
         <p>No existe ningún juego con el id “{gameId}”.</p>
         <a href={toHref("/")} className={styles.back}>
-          ← Volver al inicio
+          <Arrow className={styles.backArrow} />
+          Volver al inicio
         </a>
       </div>
     );
@@ -27,11 +29,14 @@ export function GamePage({ gameId }: GamePageProps) {
     <>
       <div className={styles.header}>
         <a href={toHref("/")} className={styles.back}>
-          ← Todos los juegos
+          <Arrow className={styles.backArrow} />
+          Todos los juegos
         </a>
         <h1 className={styles.title}>{game.title}</h1>
         <p className={styles.subtitle}>
-          {game.subtitle} · {game.description}
+          {game.subtitle}
+          {/* En el celular se oculta: repite la consigna que está arriba de la hoja. */}
+          <span className={styles.subtitleDesc}> · {game.description}</span>
         </p>
       </div>
 
