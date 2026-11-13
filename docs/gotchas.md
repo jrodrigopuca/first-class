@@ -166,3 +166,34 @@ interface Props {
 Es más verboso, y a cambio distingue "no pasé la prop" de "la pasé en
 undefined". Aparece seguido con CSS Modules, porque `styles.x` es
 `string | undefined`.
+
+---
+
+## 9. `:focus` no significa "el teclado está abierto"
+
+**Síntoma:** en el celular, después de escribir en un espacio desaparece
+la barra de abajo y ya no hay forma de corregir.
+
+**Causa:** la barra se escondía con `:has(input:focus)` en pantallas
+táctiles, para no comerle lugar al teclado. Pero el teclado se puede
+cerrar (flecha, botón atrás de Android, tocar fuera en algunos
+navegadores) **sin que el campo pierda el foco**. Con el foco puesto, la
+barra no vuelve nunca.
+
+**Por qué no lo cazó ninguna verificación:** en Chrome headless la
+página no tiene foco de ventana, y `:focus` **no aplica** aunque
+`document.activeElement` sea el campo. Toda regla CSS con `:focus` o
+`:focus-within` queda sin probar. Para verla hay que activar
+`Emulation.setFocusEmulationEnabled({ enabled: true })` por DevTools
+Protocol, y comprobar con `!!document.querySelector("input:focus")` que
+de verdad aplica antes de confiar en el resultado.
+
+**Medido así:** en un celular real, en los Parts 2, 3 y 4. Lo encontró el
+usuario la primera vez que lo jugó en el teléfono.
+
+**Arreglo:** la barra queda siempre visible. Detectar el teclado midiendo
+`visualViewport` es frágil y cambia entre iOS y Android. Si alguna vez se
+vuelve a intentar, la condición tiene que ser **el teclado visible**, no
+el foco, y hay que probarlo en un dispositivo real antes de dar por buena
+la idea.
+

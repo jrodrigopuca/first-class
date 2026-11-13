@@ -175,6 +175,9 @@ celular de verdad.
 
 - [ ] Jugado un intento completo de cada juego de práctica intensiva en
       un celular (iOS o Android).
+- [x] La barra de "Corregir" sigue disponible después de escribir. Fallaba:
+      se escondía con el foco y no volvía al cerrar el teclado (arreglado,
+      ver `docs/gotchas.md` #9).
 - [ ] El teclado virtual no tapa el espacio que se está completando.
 - [ ] Enter / "Siguiente" del teclado del celular avanza al próximo
       espacio.

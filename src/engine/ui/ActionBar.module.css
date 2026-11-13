@@ -16,14 +16,12 @@
   }
 }
 
-/* Con el teclado abierto la barra se esconde: no come la mitad del lugar
-   que deja. Corregir lo hace el Enter del último campo. No aplica a los
-   select: el picker nativo no abre el teclado. */
-@media (pointer: coarse) {
-  :where(div):has(input:not([readonly]):focus) > .bar {
-    display: none;
-  }
-}
+/* La barra NO se esconde con el teclado abierto, a propósito. Se probó
+   esconderla con `:has(input:focus)` y en un celular real dejaba sin forma
+   de corregir: el teclado se cierra (flecha, botón atrás) y el campo SIGUE
+   enfocado, así que la barra no volvía. Ver docs/gotchas.md #9.
+   En iPhone el teclado tapa la barra igual; en Android queda arriba del
+   teclado. Las dos cosas están bien: "Corregir" siempre tiene que existir. */
 
 .row {
   display: flex;
