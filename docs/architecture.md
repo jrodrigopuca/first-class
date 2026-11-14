@@ -9,7 +9,7 @@ registry/  la única capa que conoce a TODOS los juegos
   ↓
 games/     un juego = una carpeta. Aislados entre sí.
   ↓
-engine/    ronda, puntaje, repetición espaciada, UI compartida
+engine/    ronda, puntaje, repetición espaciada, UI compartida (ver design.md)
 exam/      reglas del B2 First: normalizar, contar palabras, texto con huecos,
            puntaje del Part 4
   ↓
@@ -107,8 +107,15 @@ intensiva no tiene repaso: el campo ni siquiera existe en su tipo.
 
 Los juegos de la práctica intensiva **no usan** `useGameRound`: corrigen
 todo al final, como el examen. Se apoyan en `exam/gappedText.ts` (parser,
-reglas de forma, sorteo) y en `ExamText` / `GapNumber` / `ScoreBanner` de
-`engine/ui`. Ver `games/open-cloze-exam/` como el ejemplo más chico.
+reglas de forma, sorteo) y en las piezas de `engine/ui`: la hoja
+(`GameCard`), el texto (`ExamText`), el espacio (`gapFieldClass`), la
+corrección (`ScoreBanner`, `CorrectionSheet`) y la barra fija
+(`ActionBar`). Ver `games/open-cloze-exam/` como el ejemplo más chico.
+
+**Estilos:** antes de escribir CSS en un juego, fijate si la pieza ya
+existe en `engine/ui` y usá los tokens de `src/styles/tokens.css`. Las
+reglas de color (el rojo solo después de corregir, entre otras) están en
+[design.md](design.md).
 
 ```tsx
 const srs = useSpacedRepetition<MiPregunta>();
@@ -130,7 +137,7 @@ no cambiara al sumar juegos con reglas muy distintas.
 
 ## Tests
 
-197 tests, ~1 segundo. Puestos donde cazan el bug al menor costo:
+201 tests, ~1 segundo. Puestos donde cazan el bug al menor costo:
 
 | Archivo | Qué protege |
 | ------- | ----------- |
@@ -143,6 +150,8 @@ no cambiara al sumar juegos con reglas muy distintas.
 | `exam/gappedText.test.ts` | Las reglas de forma de un texto con huecos y el sorteo de 8 en orden |
 | `games/*-exam/texts.test.ts` | Las reglas propias de cada Part, con un caso que rompe cada una |
 | `games/*-exam/paper.test.ts` | El intento: ocho huecos, validación previa (una palabra, raíz copiada), corrección |
+| `exam/keyWord.ts` (vía los tests del Part 4) | El puntaje en dos mitades y la validación del Part 4, compartidos por los dos juegos |
+| `engine/ui/gluePunctuation.test.ts` | Qué puntuación se pega a un espacio para no quedar sola al principio de un renglón |
 
 Los **invariantes pedagógicos** son los que ningún compilador ve:
 

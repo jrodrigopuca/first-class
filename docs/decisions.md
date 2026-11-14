@@ -385,3 +385,43 @@ otro. No es adivinar la abstracción (#12): es el mismo código dos veces.
 conviene que el motor acepte un puntaje en vez de un booleano, con el
 caso medido en la mano.
 
+---
+
+## 19. Dirección visual: "La hoja corregida"
+
+**Qué:** la app se ve como una hoja de examen. Cuatro materiales con un
+solo rol cada uno: tinta (lo impreso), lápiz (las respuestas), birome
+roja (la corrección) y resaltador (el foco y lo que falta). Fondo
+celeste de carpeta escolar, Lexend para todo y Kalam solo para la
+birome. El detalle está en [design.md](design.md).
+
+**Por qué:** la versión anterior eran los valores por defecto de
+Tailwind (slate, índigo, fuente del sistema, tarjetas redondeadas que
+flotan). El usuario la describió como "una interfaz clásica realizada
+por una AI". La dirección nueva sale del mundo del producto, y su firma
+—la corrección en birome con el tachado y la palabra reescrita a mano—
+es algo que ninguna otra app tiene, porque no corrige exámenes.
+
+**Lo que eligió el usuario, entre opciones comparadas lado a lado:** la
+corrección tal como se propuso, el fondo celeste (sobre beige y salvia),
+Lexend (sobre Fira Sans y Literata + Inclusive Sans), la home en dos
+columnas, la ✓ en rojo y la animación del puntaje.
+
+**La regla que más importa:** **el rojo solo aparece después de
+corregir.** Lo que falta antes de corregir va en resaltador. Es la
+regla del código ("una respuesta inválida no es un error") llevada a lo
+visual.
+
+**Costo:** Lexend no tiene cursiva, así que los rótulos se separan por
+peso, tamaño o color. Y la UI pasó a tener piezas propias en
+`engine/ui` (espacio, corrección, barra fija) que hay que reutilizar en
+vez de copiar estilos en cada juego.
+
+**Lo que se aprendió en un celular real:** esconder la barra de
+"Corregir" con `:focus` para dejarle lugar al teclado dejaba sin forma
+de corregir ([gotchas #9](gotchas.md)). La barra queda siempre visible.
+
+**Cuándo reconsiderarla:** si se testea con usuarios y la ✓ roja se lee
+como error, `--color-mark-correct` pasa a verde (es un token). Si la app
+deja de ser práctica de examen, la metáfora de la hoja pierde sentido.
+

@@ -28,7 +28,12 @@ Por separado: `npm run typecheck`, `npm run lint`, `npm test`,
 | Part 4 · hoja | Key Word Transformation, formato examen | 60 frases propias |
 | — | **Repaso** (`#/review`) | agrupa todas las explicaciones |
 
-228 ítems de pre-práctica · 45 textos y 60 frases de práctica intensiva · 197 tests.
+228 ítems de pre-práctica · 45 textos y 60 frases de práctica intensiva · 201 tests.
+
+Dos secciones: **pre-práctica**, frase por frase y con repetición
+espaciada, para aprender; y **práctica intensiva**, con el formato del
+examen y corrección al final, para ensayar. Pensada primero para el
+celular.
 
 ## Cómo funciona, en tres frases
 
@@ -43,7 +48,7 @@ en `#/review`, ordenadas por lo que más fallás.
 ```
 src/
 ├── lib/        utilidades puras: shuffle, router
-├── exam/       reglas del B2 First: normalizar, contar palabras
+├── exam/       reglas del B2 First: contar palabras, texto con huecos, puntaje del Part 4
 ├── engine/     ronda, puntaje, repetición espaciada, UI compartida
 ├── games/      un juego = una carpeta, aisladas entre sí
 ├── registry/   la única capa que conoce a todos los juegos
@@ -58,6 +63,8 @@ src/
 | [decisions.md](docs/decisions.md) | Antes de cambiar algo que ya está decidido. Cada decisión dice **cuándo reconsiderarla** |
 | [gotchas.md](docs/gotchas.md) | Cuando algo se comporta raro. Todo medido, nada supuesto |
 | [content.md](docs/content.md) | Para agregar preguntas — la tarea más frecuente |
+| [design.md](docs/design.md) | Antes de tocar estilos o agregar una pantalla: tokens, piezas y reglas de color |
+| [BACKLOG.md](BACKLOG.md) | Lo pendiente, con estado y criterios de aceptación |
 
 ## Límites conocidos
 

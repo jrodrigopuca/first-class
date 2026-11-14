@@ -164,12 +164,16 @@ la habilidad. Primero hay que confirmar jugando si se extraña.
 
 ## 7. Probar la UI en un celular real
 
-**Estado:** Pendiente · **Prioridad:** baja · **Tipo:** verificación
+**Estado:** En curso · **Prioridad:** alta · **Tipo:** verificación
 
-Todo lo nuevo se verificó en Chrome headless, incluido el ancho de 390 px,
-pero no en un dispositivo real: el teclado virtual, el selector nativo del
-`<select>` y los inputs dentro del texto se comportan distinto en un
-celular de verdad.
+Todo se verificó en Chrome headless, incluido el ancho de 390 px, pero el
+teclado virtual, el selector nativo del `<select>` y los inputs dentro
+del texto se comportan distinto en un celular de verdad.
+
+La primera prueba en un teléfono ya encontró un bug que ninguna
+verificación automática vio (la barra de "Corregir" desaparecía). Por eso
+subió de prioridad: el rediseño ([design.md](docs/design.md)) se pensó
+para el celular y todavía no se validó entero en uno.
 
 **Criterios de aceptación**
 
@@ -182,6 +186,12 @@ celular de verdad.
 - [ ] Enter / "Siguiente" del teclado del celular avanza al próximo
       espacio.
 - [ ] Sin scroll horizontal ni textos cortados.
+- [ ] Part 1 en iPhone: ya corregido, la opción elegida se ve tachada en
+      rojo dentro del desplegable. Si Safari no dibuja el tachado en un
+      `<select>`, el plan B es dibujarlo con un `::after` sobre el
+      contenedor del espacio.
+- [ ] En iPhone, la barra de abajo respeta la zona del gesto de inicio
+      (`safe-area-inset-bottom`).
 
 ---
 
@@ -201,3 +211,42 @@ que ve dos palabras para lo mismo.
       (actualizados si hace falta).
 - [ ] No cambian identificadores de código (`gap`, `GapNumber`…), que
       están en inglés.
+
+---
+
+## 9. Unificar las etiquetas del contenido
+
+**Estado:** Pendiente · **Prioridad:** baja · **Tipo:** contenido
+
+Las etiquetas (`label`) de las preguntas mezclan idiomas y mayúsculas:
+"have something done", "Pasiva en futuro", "deny + -ing". De 800
+etiquetas, 337 empiezan con mayúscula y 463 con minúscula. Antes no se
+notaba porque el CSS las pasaba a MAYÚSCULAS; con el rediseño se ven
+como vienen, en los títulos de cada corrección.
+
+**Criterios de aceptación**
+
+- [ ] Hay una regla escrita en `docs/content.md` (por ejemplo: la
+      estructura en inglés en minúscula, la descripción en español con
+      mayúscula inicial).
+- [ ] Todas las etiquetas de los 8 juegos la cumplen.
+- [ ] Un test la verifica, y se lo vio fallar con una etiqueta que no la
+      cumple.
+- [ ] Ningún id cambia: solo el texto de `label`.
+
+---
+
+## 10. La flecha del desplegable en modo oscuro
+
+**Estado:** Pendiente · **Prioridad:** baja · **Tipo:** UX
+
+La flecha de los desplegables del Part 1 · texto es una imagen con el
+color fijo (`#7f8c9b`), igual en claro y en oscuro. En oscuro se ve, pero
+no sigue los tokens.
+
+**Criterios de aceptación**
+
+- [ ] La flecha usa el color del lápiz o de la tinta apagada según el
+      modo (con `mask-image` + `background-color`, o dos imágenes).
+- [ ] Verificado en el navegador, en claro y en oscuro.
+

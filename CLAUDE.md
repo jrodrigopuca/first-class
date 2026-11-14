@@ -7,10 +7,12 @@ App de práctica para el B2 First con repetición espaciada. Vite + React
 
 | Situación | Documento |
 | --------- | --------- |
-| Vas a cambiar algo ya decidido | [docs/decisions.md](docs/decisions.md) — 18 decisiones con su razonamiento y su gatillo de revisión |
+| Vas a cambiar algo ya decidido | [docs/decisions.md](docs/decisions.md) — 19 decisiones con su razonamiento y su gatillo de revisión |
 | Algo se comporta raro | [docs/gotchas.md](docs/gotchas.md) — 9 trampas medidas |
 | Vas a agregar un juego o tocar capas | [docs/architecture.md](docs/architecture.md) |
 | Vas a agregar preguntas | [docs/content.md](docs/content.md) |
+| Vas a tocar estilos o UI | [docs/design.md](docs/design.md) — tokens, piezas de `engine/ui` y reglas de color |
+| Querés saber qué falta | [BACKLOG.md](BACKLOG.md) — pendientes con criterios de aceptación |
 
 **No re-litigues una decisión sin leer su entrada primero.** Cada una
 dice explícitamente cuándo conviene revertirla.
